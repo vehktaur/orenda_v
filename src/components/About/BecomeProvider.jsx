@@ -1,4 +1,4 @@
-import magnifier from '../assets/magnifier.gif';
+import magnifier from '../../assets/magnifier.gif';
 
 const BecomeProvider = ({ bg }) => {
   return (

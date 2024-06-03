@@ -1,4 +1,4 @@
-import ProviderImages from './ProviderImages';
+import { aboutProviderImages } from '../../utils/providerImages';
 
 const ProvidersInAbout = () => {
   return (
@@ -12,7 +12,22 @@ const ProvidersInAbout = () => {
         of experienced therapists is here to support you on your journey to
         emotional well-being.
       </p>
-      <ProviderImages />
+      <div className="container mx-auto ~p-0/4 max-w-[67.75rem]">
+        <div className="grid grid-cols-5 md:grid-cols-10 gap-2.5">
+          {aboutProviderImages.map((src, index) => (
+            <div
+              key={index}
+              className="bg-[#F1F1F1] ~xs/xl:~size-[3.2rem]/[5.625rem] rounded-lg overflow-hidden flex flex-col justify-end"
+            >
+              <img
+                src={src}
+                alt={`Provider ${index}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

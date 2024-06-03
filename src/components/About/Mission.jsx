@@ -1,4 +1,4 @@
-import streets_mission from '../assets/streets_mission.jpg';
+import streets_mission from '../../assets/streets_mission.jpg';
 
 const Mission = () => {
   return (

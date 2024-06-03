@@ -1,4 +1,4 @@
-import about_skyscraper from '../assets/about_skyscraper.png';
+import about_skyscraper from '../../assets/about_skyscraper.png';
 
 const AboutIntro = () => {
   return (

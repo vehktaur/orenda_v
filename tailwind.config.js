@@ -21,6 +21,13 @@ export default {
       backgroundSize: {
         'footer-size': 'auto, auto, 50% 100%'
       },
+      boxShadow: {
+        'provider-card': '0px 1px 3px 0px rgba(0, 0, 0, 0.08)',
+      },
+      colors: {
+        'orenda-purple': '#2E0086',
+        'orenda-green': '#127801'
+      },
       fontFamily: {
         footer: ['"Open Sans"', 'sans-serif'],
         heading: ["'Ogg Text TRIAL'", 'serif'],
@@ -28,10 +35,6 @@ export default {
       },
       screens: {
         xs: '20rem'
-      },
-      colors: {
-        'orenda-purple': '#2E0086',
-        'orenda-green': '#127801'
       }
     }
   },

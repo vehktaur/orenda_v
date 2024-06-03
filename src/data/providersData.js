@@ -1,6 +1,6 @@
-const providersData = [
+export const providersData = [
   {
-    image: 'path/to/rakin-rahman.jpg',
+    image: '../src/assets/providers/about/0.png',
     name: 'Rakin Rahman',
     credentials: 'PMHNP-BC',
     agesSeen: {
@@ -13,7 +13,7 @@ const providersData = [
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/tanya-monroe.jpg',
+    image: '../src/assets/providers/about/1.png',
     name: 'Tanya Monroe',
     credentials: 'PMHNP-BC',
     agesSeen: {
@@ -22,13 +22,13 @@ const providersData = [
       adults: '18 - 64 yrs'
     },
     statesLicensed: ['New Jersey'],
-    availability: '',
+    availability: null,
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/siora-mirsagatova.jpg',
+    image: '../src/assets/providers/about/2.png',
     name: 'Siora Mirsagatova',
-    credentials: 'APRN, PMHNP-BC',
+    credentials: 'APRN | PMHNP-BC',
     agesSeen: {
       children: '5+ yrs',
       teens: '13 - 17 yrs',
@@ -39,7 +39,7 @@ const providersData = [
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/michelle-krill.jpg',
+    image: '../src/assets/providers/about/3.png',
     name: 'Michelle Krill',
     credentials: 'PMHNP-BC',
     agesSeen: {
@@ -52,7 +52,7 @@ const providersData = [
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/danielle-overton-miller.jpg',
+    image: '../src/assets/providers/about/4.png',
     name: 'Danielle Overton-Miller',
     credentials: 'PMHNP-BC',
     agesSeen: {
@@ -65,7 +65,7 @@ const providersData = [
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/jeremy-walsh.jpg',
+    image: '../src/assets/providers/about/5.png',
     name: 'Jeremy Walsh',
     credentials: 'PMHNP-BC',
     agesSeen: {
@@ -78,7 +78,7 @@ const providersData = [
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/phillip-mcdonald.jpg',
+    image: '../src/assets/providers/about/6.png',
     name: 'Phillip McDonald',
     credentials: 'PMHNP-BC',
     agesSeen: {
@@ -89,7 +89,7 @@ const providersData = [
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/sarah-sakirsky.jpg',
+    image: '../src/assets/providers/about/7.png',
     name: 'Sarah Sakirsky',
     credentials: 'APRN, PMHNP-BC',
     agesSeen: {
@@ -100,18 +100,18 @@ const providersData = [
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/anne-mongiello.jpg',
+    image: '../src/assets/providers/about/0.png',
     name: 'Anne Mongiello',
     credentials: 'APRN, PMHNP-BC',
     agesSeen: {
       adults: '18 - 64 yrs'
     },
     statesLicensed: ['New York', 'New Jersey'],
-    availability: '',
+    availability: null,
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/ketrie-saintelus.jpg',
+    image: '../src/assets/providers/about/0.png',
     name: 'Ketrie Saintelus',
     credentials: 'PMHNP-BC',
     agesSeen: {
@@ -122,7 +122,7 @@ const providersData = [
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/kelli-hamilton.jpg',
+    image: '../src/assets/providers/about/0.png',
     name: 'Kelli Hamilton',
     credentials: 'PMHNP-BC',
     agesSeen: {
@@ -133,14 +133,14 @@ const providersData = [
     bookingLink: 'https://booking.url'
   },
   {
-    image: 'path/to/celeste-johnson.jpg',
+    image: '../src/assets/providers/about/0.png',
     name: 'Celeste Johnson',
     credentials: 'PMHNP-BC',
     agesSeen: {
       adults: '18 - 64 yrs'
     },
     statesLicensed: ['New York'],
-    availability: '',
+    availability: null,
     bookingLink: 'https://booking.url'
   }
 ];
