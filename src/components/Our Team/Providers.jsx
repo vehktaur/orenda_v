@@ -14,15 +14,21 @@ const Providers = () => {
   };
 
   return (
-    <div>
+    <div className="px-4">
       <div className="max-w-7xl mx-auto mt-[4.94rem]">
-        <div className="grid auto-cols-fr grid-cols-4 items-start gap-x-7 gap-y-10">
+        <div className="grid auto-cols-fr grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-7 gap-y-10 justify-items-center content-center items-center">
           {providersData.map((provider) => {
             return (
-              <div className="max-w-[18.75rem] rounded-md shadow">
-                <div className="bg-[#f1f1f1] ~h-[9.5rem]/[13.75rem] flex items-center justify-center">
+              <div className="max-w-[20.7rem] w-[100%] rounded-md shadow relative">
+                <div className="absolute inset-0 bg-black opacity-0 hover:opacity-100 transition-opacity duration-1000 text-white p-6 flex flex-col gap-4 rounded-md cursor-pointer">
+                  <h3 className='font-semibold'>About Provider</h3>
+                  <p className='text-clip overflow-hidden text-[0.85rem]'>{provider.about}</p>
+                  <button className='w-full border rounded-[1.5rem] px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6'>Book now</button>
+                  <div className='flex justify-center'><a className='text-[0.875rem] font-semibold hover:underline' href="/">More Info</a></div>
+                </div>
+                <div className="bg-[#f1f1f1] ~h-[9.5rem]/[13.75rem] flex items-end justify-center">
                   <img
-                    className="w-[80%] h-full block object-contain"
+                    className="w-[80%] h-[90%] block object-contain"
                     src={provider.image}
                     alt=""
                   />
@@ -56,14 +62,14 @@ const Providers = () => {
                       {showStatesLicensed(provider.statesLicensed)}
                     </p>
                   </div>
-                  <div className="flex justify-between pt-4">
+                  <div className="flex justify-between pt-4 gap-3">
                     {provider.availability && (
-                      <span className="rounded-lg border border-[#E1EEE4] bg-[#ECF5EB] py-2 ~px-0.5/[0.62rem] text-xs">
+                      <span className="rounded-lg border w-fit border-[#E1EEE4] bg-[#ECF5EB] p-1 py-2 ~px-0.5/[0.62rem] text-xs">
                         {provider.availability}
                       </span>
                     )}
 
-                    <button className="block ms-auto rounded-[1.5rem] text-white text-xs bg-orenda-purple py-[0.62rem] px-4 min-w-[9.81rem] md:min-w-[6.81rem]">
+                    <button className="w-fit block ms-auto rounded-[1.5rem] text-white text-xs bg-orenda-purple py-[0.62rem] px-4 min-w-[9rem] md:min-w-[4.81rem] xl:min-w-[6.81rem]">
                       Book online
                     </button>
                   </div>

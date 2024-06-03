@@ -2,7 +2,7 @@ import Logo from './Logo';
 
 const Header = () => {
   return (
-    <header className="p-5 text-center ~text-sm/lg font-body sticky bg-white top-0">
+    <header className="p-5 text-center ~text-sm/lg font-body sticky bg-white top-0 z-10">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Logo />
         <nav className="hidden md:block">
