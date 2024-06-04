@@ -1,0 +1,38 @@
+.treat-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-block: 4rem;
+}
+
+.stick-cards {
+  row-gap: 1.5rem;
+  margin-top: 3em;
+  justify-content: center;
+  align-items: center;
+}
+
+.stckers {
+  display: flex;
+  position: relative;
+}
+.stickyy {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ebe7dc;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  gap: 1rem;
+  p {
+    font-size: clamp(0.75rem, 1vw, 1rem);
+    text-align: center;
+    font-weight: bold;
+  }
+}
+.stickyy img {
+  object-fit: scale-down;
+}
+
+

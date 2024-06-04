@@ -4,7 +4,7 @@ import OurTeam from './components/Our Team/OurTeam';
 function App() {
   return (
     <>
-      <OurTeam />
+      <About />
     </>
   );
 }

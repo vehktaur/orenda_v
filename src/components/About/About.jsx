@@ -7,6 +7,7 @@ import GetStarted from './GetStarted';
 import Footer from '../Footer';
 import ProvidersInAbout from './ProvidersInAbout';
 import TeamInAbout from './TeamInAbout';
+import Treat from './Treat/Treat';
 const About = () => (
   <>
     <Header />
@@ -18,6 +19,7 @@ const About = () => (
       <TeamInAbout />
       <BecomeProvider bg="#f5f5f5" />
       <Mission />
+      <Treat />
       <GetStarted />
     </main>
     <Footer />
