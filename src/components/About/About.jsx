@@ -1,21 +1,21 @@
 import HR from '../HR';
 import Header from '../Header';
-import Team from './Team';
 import BecomeProvider from './BecomeProvider';
 import AboutIntro from './AboutIntro';
 import Mission from './Mission';
 import GetStarted from './GetStarted';
 import Footer from '../Footer';
 import ProvidersInAbout from './ProvidersInAbout';
+import TeamInAbout from './TeamInAbout';
 const About = () => (
   <>
     <Header />
-    <main className="font-body">
+    <main className="font-dm-sans">
       <AboutIntro />
       <HR />
       <ProvidersInAbout />
       <HR />
-      <Team />
+      <TeamInAbout />
       <BecomeProvider bg="#f5f5f5" />
       <Mission />
       <GetStarted />

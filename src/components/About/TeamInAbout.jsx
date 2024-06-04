@@ -9,7 +9,7 @@ import img7 from '../../assets/team_members/7.jpg';
 import img8 from '../../assets/team_members/8.jpg';
 import img9 from '../../assets/team_members/9.jpg';
 
-const Team = () => {
+const TeamInAbout = () => {
   const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
   return (
@@ -28,4 +28,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default TeamInAbout;

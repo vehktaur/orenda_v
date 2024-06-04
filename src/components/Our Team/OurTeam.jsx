@@ -4,14 +4,16 @@ import Footer from '../Footer';
 import Header from '../Header';
 import OurTeamIntro from './OurTeamIntro';
 import Providers from './Providers';
+import Team from './Team';
 
 const OurTeam = () => {
   return (
     <>
       <Header />
       <OurTeamIntro />
-      <Providers />
+      <Providers itemsPerPage={12} />
       <BecomeProvider bg="white" />
+      <Team itemsPerPage={8} />
       <ContactUs />
       <Footer />
     </>

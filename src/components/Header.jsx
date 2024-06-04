@@ -2,11 +2,11 @@ import Logo from './Logo';
 
 const Header = () => {
   return (
-    <header className="p-5 text-center ~text-sm/lg font-body sticky bg-white top-0 z-10">
+    <header className="p-5 text-center ~text-sm/lg font-dm-sans sticky bg-white top-0 z-10">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Logo />
         <nav className="hidden md:block">
-          <ul className="flex ~gap-4/12 items-center justify-between">
+          <ul className="flex ~gap-2/12 items-center justify-between">
             {[
               ['Home', '/'],
               ['Our Team', '/'],
@@ -15,10 +15,13 @@ const Header = () => {
               ['Privacy Policy', '/'],
               ['Contact Us', '/']
             ].map(([title, url]) => (
-              <li
-                key={title}
-              >
-                <a className="cursor-pointer transition block hover:text-orenda-purple hover:font-bold" href={url}>{title}</a>
+              <li key={title}>
+                <a
+                  className="cursor-pointer transition block hover:text-orenda-purple hover:font-bold"
+                  href={url}
+                >
+                  {title}
+                </a>
               </li>
             ))}
           </ul>
