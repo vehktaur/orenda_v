@@ -22,7 +22,7 @@ export default {
         'footer-size': 'auto, auto, 50% 100%'
       },
       boxShadow: {
-        'provider-card': '0px 1px 3px 0px rgba(0, 0, 0, 0.08)',
+        'provider-card': '0px 1px 3px 0px rgba(0, 0, 0, 0.08)'
       },
       colors: {
         'orenda-purple': '#2E0086',
@@ -32,6 +32,9 @@ export default {
         'open-sans': ['"Open Sans"', 'sans-serif'],
         heading: ["'Ogg Text TRIAL'", 'serif'],
         'dm-sans': ['"DM Sans"', 'sans-serif']
+      },
+      listStyleImage: {
+        dot: 'url("./src/assets/disc.svg")'
       },
       screens: {
         xs: '20rem'

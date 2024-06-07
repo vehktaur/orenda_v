@@ -11,9 +11,9 @@ const OurTeam = () => {
     <>
       <Header />
       <OurTeamIntro />
-      <Providers itemsPerPage={12} />
+      <Providers itemsPerPage={12} numberOfColumns={4} />
       <BecomeProvider bg="white" />
-      <Team itemsPerPage={8} />
+      <Team itemsPerPage={8}/>
       <ContactUs />
       <Footer />
     </>

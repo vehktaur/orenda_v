@@ -15,13 +15,21 @@
 @layer base {
   html {
     color: #070707;
-    box-sizing: border-box
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #F5F5F5 inset !important;
   }
 }
 
 @layer components {
   main p {
-    @apply ~text-sm/lg;
+    @apply ~text-sm/lg font-dm-sans;
   }
   .heading {
     @apply font-bold ~sm/xl:~text-lg/[2.625rem] text-center font-heading;

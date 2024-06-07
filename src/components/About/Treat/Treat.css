@@ -1,22 +1,14 @@
-.treat-wrapper {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding-block: 4rem;
-}
 
 .stick-cards {
   row-gap: 1.5rem;
   margin-top: 3em;
-  justify-content: center;
-  align-items: center;
 }
 
 .stckers {
   display: flex;
   position: relative;
 }
-.stickyy {
+.ailment {
   display: flex;
   flex-direction: column;
   border: 1px solid #ebe7dc;
@@ -31,8 +23,11 @@
     font-weight: bold;
   }
 }
-.stickyy img {
+.ailment img {
   object-fit: scale-down;
+  display: inline-block;
+  width: 100%;
+  max-width: clamp(3.38rem,4vw,5.75rem);
 }
 
 

@@ -7,80 +7,41 @@ import panic from '../../../assets/panic.png';
 import depression from '../../../assets/depression.png';
 
 const Treat = () => {
+  const ailments = [
+    { image: panic, text: 'Anxiety and Panic Disorders' },
+    { image: adhd, text: 'Hyperactivity disorders (ADHD/ADD)' },
+    { image: depression, text: 'Depression and mood Disorders' },
+    { image: trauma, text: 'Trauma and PTSD' },
+    { image: bipolar, text: 'Bipolar Disorder' },
+    { image: trauma, text: 'Borderline Personality Disorder' },
+    { image: depression, text: 'Eating and Sleeping Disorders' },
+    { image: panic, text: 'Relationship Issues' },
+    { image: depression, text: 'Stress Management' },
+    { image: adhd, text: 'Life changes and Transitions' },
+    { image: adhd, text: 'Grief and Loss' },
+    { image: depression, text: 'LGBTQ+ Issues' },
+    { image: trauma, text: 'Self-esteem and Identity Exploration' },
+    { image: panic, text: 'Parenting and Family Dynamics' },
+    { image: trauma, text: 'Work-related Stress and Burnout' }
+  ];
   return (
-    <div className="treat-container px-5">
-      <div className="treat-wrapper">
-        <div className="txtss">
+    <div className="treat-container ~/sm:~px-1/5">
+      <div className="treat-wrapper max-w-7xl mx-auto py-16">
+        <div>
           <h1 className="heading mb-4">What we Treat</h1>
-          <p className='font-body text-center'>
+          <p className="px-2 font-body text-center">
             We offer therapy and medication management for a wide range of
             mental health concerns, including:
           </p>
         </div>
 
-        <div className="stick-cards grid grid-cols-3 lg:grid-cols-5 justify-items-center content-center justify-center">
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={panic} alt="" />
-            <p>Anxiety and Panic Disorders</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={adhd} alt="" />
-            <p>Hyperactivity disorders (ADHD/ADD)</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={depression} alt="" />
-            <p>Depression and mood Disorders</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={trauma} alt="" />
-            <p>Trauma and PTSD</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={bipolar} alt="" />
-            <p>Bipolar Disorder</p>
-          </div>
-
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={trauma} alt="" />
-            <p>Borderline Personality Disorder</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={depression} alt="" />
-            <p>Eating and Sleeping Disorders</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={panic} alt="" />
-            <p>Relationship Issues</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={depression} alt="" />
-            <p>Stress Management</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={adhd} alt="" />
-            <p>Life changes and Transitions</p>
-          </div>
-
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={adhd} alt="" />
-            <p>Grief and Loss</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={depression} alt="" />
-            <p>LGBTQ+ Issues</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={trauma} alt="" />
-            <p>Self-esteem and Identity Exploration</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={panic} alt="" />
-            <p>Parenting and Family Dynamics</p>
-          </div>
-          <div className="stickyy ~w-[7.875rem]/[12.25rem] ~h-[7.25rem]/[11.25rem]">
-            <img src={trauma} alt="" />
-            <p>Work-related Stress and Burnout</p>
-          </div>
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-y-6 justify-items-center py-8 max-w-[61.25rem] mx-auto">
+          {ailments.map((ailment) => (
+            <div key={ailment.text} className="ailment w-full max-h-[10rem] sm:max-h-[unset]">
+              <img src={ailment.image} alt="" />
+              <p>{ailment.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

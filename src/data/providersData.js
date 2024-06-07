@@ -1,4 +1,4 @@
-export const providersData = [
+const providersData = [
   {
     image: '../src/assets/providers/main/0.png',
     name: 'Rakin Rahman',
@@ -12,7 +12,7 @@ export const providersData = [
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
-
+    
     I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.
     `
   },
@@ -284,7 +284,9 @@ export const providersData = [
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
-    about: `offers talk therapy`
+    about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
+
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
   },
   {
     image: '../src/assets/providers/main/19.png',
@@ -491,3 +493,5 @@ export const providersData = [
     I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
   }
 ];
+
+export default providersData;

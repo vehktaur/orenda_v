@@ -8,11 +8,11 @@ const TeamMemberCard = ({member }) => {
           alt={member.name}
         />
       </div>
-      <h3 className="font-semibold ~text-sm/base font-open-sans mt-3">
+      <h3 className="font-semibold ~text-sm/base font-open-sans mt-3 text-center md:text-start">
         {member.name}
       </h3>
-      <div className="flex gap-2 items-center">
-        <span className="size-2">
+      <div className="flex gap-2 items-center text-center">
+        <span className="size-2 hidden md:block">
           <svg
             width="8"
             height="8"
@@ -23,7 +23,7 @@ const TeamMemberCard = ({member }) => {
             <circle id="Ellipse 263" cx="4" cy="4" r="4" fill="#C2C2C2" />
           </svg>
         </span>
-        <span className="~text-xs/sm font-open-sans">{member.position}</span>
+        <span className="~text-xs/sm font-open-sans mx-auto md:mx-0">{member.position}</span>
       </div>
     </div>
   );

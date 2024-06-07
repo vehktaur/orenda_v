@@ -1,15 +1,8 @@
-import { useState } from 'react';
 import { useSwiper } from 'swiper/react';
 
-const NavButtons = ({
-  setItemOffset,
-  setEndOffSet,
-  itemsPerPage,
-  numberOfSlides
-}) => {
+const NavButtons = ({ prevIndex, numberOfSlides, prevSlide, nextSlide }) => {
   const swiper = useSwiper();
 
-  const [prevIndex, setPrevIndex] = useState(1);
   return (
     <div className="max-w-7xl mx-auto">
       <div className="p-4 flex items-center justify-center md:justify-end gap-6">
@@ -21,9 +14,7 @@ const NavButtons = ({
               : 'bg-orenda-purple'
           } rounded-full p-2.5`}
           onClick={() => {
-            setItemOffset((prevOffset) => prevOffset - itemsPerPage);
-            setEndOffSet((prevOffset) => prevOffset - itemsPerPage);
-            setPrevIndex((index) => (index == 1 ? index : index - 1));
+            prevSlide();
             swiper.slidePrev();
           }}
         >
@@ -51,14 +42,12 @@ const NavButtons = ({
         <button
           disabled={prevIndex === numberOfSlides}
           className={`${
-            prevIndex == numberOfSlides ? 'bg-[#B0B0B0] cursor-not-allowed' : 'bg-orenda-purple'
+            prevIndex == numberOfSlides
+              ? 'bg-[#B0B0B0] cursor-not-allowed'
+              : 'bg-orenda-purple'
           } rounded-full p-2.5`}
           onClick={() => {
-              setItemOffset((prevOffset) => prevOffset + itemsPerPage);
-              setEndOffSet((prevOffset) => prevOffset + itemsPerPage);
-            setPrevIndex((index) =>
-              index == numberOfSlides ? index : index + 1
-            );
+            nextSlide();
             swiper.slideNext();
           }}
         >

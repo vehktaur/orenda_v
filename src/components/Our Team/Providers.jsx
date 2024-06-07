@@ -7,11 +7,24 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import NavButtons from './NavButtons';
 import { useState } from 'react';
-import { providersData } from '../../data/providersData';
+import providersData from '../../data/providersData';
 
-const Providers = ({ itemsPerPage }) => {
+const Providers = ({ itemsPerPage, numberOfColumns }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffSet] = useState(itemOffset + itemsPerPage);
+
+  const [prevIndex, setPrevIndex] = useState(1);
+
+  const nextSlide = () => {
+    setItemOffset((prevOffset) => prevOffset + itemsPerPage);
+    setEndOffSet((prevOffset) => prevOffset + itemsPerPage);
+    setPrevIndex((index) => (index == numberOfSlides ? index : index + 1));
+  };
+  const prevSlide = () => {
+    setItemOffset((prevOffset) => prevOffset - itemsPerPage);
+    setEndOffSet((prevOffset) => prevOffset - itemsPerPage);
+    setPrevIndex((index) => (index == 1 ? index : index - 1));
+  };
 
   const numberOfSlides = Math.ceil(providersData.length / itemsPerPage);
   return (
@@ -22,17 +35,15 @@ const Providers = ({ itemsPerPage }) => {
         slidesPerView={1}
       >
         {[...Array(numberOfSlides)].map((_, index) => (
-          <SwiperSlide key={index}>
-            <ProvidersSection itemOffset={itemOffset} endOffset={endOffset} />
+          <SwiperSlide className='swiper-no-swiping' key={index}>
+            <ProvidersSection itemOffset={itemOffset} endOffset={endOffset} numberOfColumns={numberOfColumns} />
           </SwiperSlide>
         ))}
         <NavButtons
-          setItemOffset={setItemOffset}
-          itemOffset={itemOffset}
-          endOffset={endOffset}
-          setEndOffSet={setEndOffSet}
-          itemsPerPage={itemsPerPage}
           numberOfSlides={numberOfSlides}
+          prevSlide={prevSlide}
+          nextSlide={nextSlide}
+          prevIndex={prevIndex}
         />
       </Swiper>
     </div>
