@@ -92,14 +92,9 @@ const ContactUsPage = () => {
                 </h2>
                 <Input label="Your Name" type="text" id="your name" />
                 <Input label="Email Address" type="email" id="email address" />
-                <Input label="Phone Number" type="number" id="phone number" />
+                <Input label="Phone Number" type="tel" id="phone number" />
                 <Input label="Subject" type="text" id="subject" />
-                <Input
-                  label="Message"
-                  type="text"
-                  id="Message"
-                  textArea={true}
-                />
+                <Input label="Message" type="textarea" id="Message" />
                 <button className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg">
                   Submit
                 </button>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Input = ({ label, type, id, className, textArea }) => {
+const Input = ({ label, type, id, className }) => {
   const [value, setValue] = useState('');
   const [isFocus, setIsFocus] = useState(false);
 
@@ -13,8 +13,8 @@ const Input = ({ label, type, id, className, textArea }) => {
   };
 
   return (
-    <div className="relative text-left">
-      {textArea ? (
+    <div className="relative text-left bg-inherit">
+      {type == 'textarea' ? (
         <textarea
           rows={1}
           id={id}
@@ -41,9 +41,9 @@ const Input = ({ label, type, id, className, textArea }) => {
         />
       )}
       <label
-        className={`block font-medium text-[#0F0F0F] absolute inset-0 transition-all peer-autofill:-translate-y-6 peer-autofill:text-[#616161] peer-autofill:~text-xs/sm duration-200 pb-10 ${
+        className={`block font-medium bg-inherit h-[0.1rem] text-[#0F0F0F] absolute top-0 right-0 left-0 transition-all peer-autofill:-translate-y-6 peer-autofill:text-[#616161] peer-autofill:~text-xs/sm duration-300 pb-8 ${
           isFocus
-            ? '~text-xs/sm text-[#616161] -translate-y-6'
+            ? '~text-xs/sm text-[#616161] -translate-y-7 bg-transparent pb-0'
             : '~text-sm/lg -translate-y-1'
         } `}
         htmlFor={id}

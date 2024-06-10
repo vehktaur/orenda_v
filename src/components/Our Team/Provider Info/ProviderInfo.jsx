@@ -3,6 +3,14 @@ import Header from '../../Header';
 import providersData from '../../../data/providersData';
 import ProviderInfoUl from './ProviderInfoUl';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import ReviewsNavigation from './ReviewsNavigation';
+
 const HR = () => (
   <div className="sm:hidden bg-[rgb(239,235,223)] max-w-[63.75rem] mx-auto mt-6 mb-4">
     <hr />
@@ -45,6 +53,7 @@ const ProviderInfo = () => {
       }
     });
   };
+
   return (
     <>
       <Header />
@@ -177,29 +186,53 @@ const ProviderInfo = () => {
                 <HR />
               </div>
             </div>
+
             <div className="sm:~px-3/6 sm:~py-4/8">
               <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                 Reviews from Clients
               </h2>
-              <div className="leading-6 grid gap-6">
-                <p>
-                  “Rakin actually cares about your needs, your unique situation,
-                  and how your meds are affecting you. He takes the time to
-                  check in with care in check-ups, and isn't a 5-minute “hi,
-                  here's a prescription, bye,” kind of practitioner, which is
-                  rare and VERY appreciated. I would recommend to anyone looking
-                  for long-lasting care that feels compassionate and
-                  well-informed!”
-                </p>
-                <p>
-                  “Dr. Rahman was very kind, thoughtful and helpful. Highly
-                  recommend!”
-                </p>
-              </div>
+              <Swiper modules={[Navigation, Pagination]}>
+                <SwiperSlide>
+                  <div className="leading-6 grid gap-6">
+                    <p>
+                      “Rakin actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”
+                    </p>
+                    <p>
+                      “Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”
+                    </p>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="leading-6 grid gap-6">
+                    <p>
+                      “Rakin actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”
+                    </p>
+                    <p>
+                      “Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”
+                    </p>
+                  </div>
+                </SwiperSlide>
+
+                <HR />
+
+                <ReviewsNavigation />
+              </Swiper>
             </div>
           </div>
-
-          <HR />
 
           <div className="mt-12 ~mb-[6.13rem]/[11.44rem]">
             <div className="flex gap-6 flex-col items-center sm:flex-row sm:justify-end">

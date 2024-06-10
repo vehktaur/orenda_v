@@ -15,17 +15,21 @@ const Team = ({ itemsPerPage }) => {
   const [endOffset, setEndOffSet] = useState(itemOffset + itemsPerPage);
   const numberOfSlides = Math.ceil(teamData.length / itemsPerPage);
 
-  const [prevIndex, setPrevIndex] = useState(1);
-
   const nextSlide = () => {
     setItemOffset((prevOffset) => prevOffset + itemsPerPage);
     setEndOffSet((prevOffset) => prevOffset + itemsPerPage);
-    setPrevIndex((index) => (index == numberOfSlides ? index : index + 1));
   };
   const prevSlide = () => {
     setItemOffset((prevOffset) => prevOffset - itemsPerPage);
     setEndOffSet((prevOffset) => prevOffset - itemsPerPage);
-    setPrevIndex((index) => (index == 1 ? index : index - 1));
+  };
+
+  const handleSlideChange = (swiper) => {
+    if (swiper.activeIndex > swiper.previousIndex) {
+      nextSlide();
+    } else {
+      prevSlide();
+    }
   };
 
   return (
@@ -34,28 +38,25 @@ const Team = ({ itemsPerPage }) => {
         <h2 className="heading ~mb-12/[4.81rem]">Meet Our Team</h2>
         <div className="md:block hidden">
           <Swiper
+            onSlideChange={handleSlideChange}
             spaceBetween={50}
             modules={[Navigation, Pagination]}
             slidesPerView={1}
+            autoHeight={true}
           >
             {[...Array(numberOfSlides)].map((_, index) => (
-              <SwiperSlide
-                spaceBetween={50}
-                className="swiper-no-swiping"
-                key={index}
-              >
+              <SwiperSlide spaceBetween={50} key={index}>
                 <TeamMembersSection
                   itemOffset={itemOffset}
                   endOffset={endOffset}
                 />
               </SwiperSlide>
             ))}
-            <NavButtons
-              prevIndex={prevIndex}
-              numberOfSlides={numberOfSlides}
-              prevSlide={prevSlide}
-              nextSlide={nextSlide}
-            />
+            <div className="~md/xl:~pe-0/8">
+              <div className="max-w-[14rem] ms-auto flex justify-end">
+                <NavButtons />
+              </div>
+            </div>
           </Swiper>
         </div>
         <div className="md:hidden">

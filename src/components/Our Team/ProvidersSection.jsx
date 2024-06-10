@@ -15,13 +15,15 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
 
   const sectionProvidersData = providersData.slice(itemOffset, endOffset);
 
+  let gridClasses = `grid auto-cols-fr grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-${numberOfColumns} ${
+            numberOfColumns == 5 ? 'gap-x-4' : '~gap-x-0/7'
+          } gap-y-10 justify-items-center items-center`
+
   return (
     <div className="p-4">
       <div className="max-w-7xl mx-auto mt-[4.94rem]">
         <div
-          className={`grid auto-cols-fr grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-${numberOfColumns} ${
-            numberOfColumns == 5 ? 'gap-x-4' : '~gap-x-0/7'
-          } gap-y-10 justify-items-center items-center`}
+          className={gridClasses}          
         >
           {sectionProvidersData.map((provider) => {
             return (
