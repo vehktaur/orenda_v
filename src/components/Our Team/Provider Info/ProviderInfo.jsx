@@ -1,6 +1,6 @@
-import Footer from '../Footer';
-import Header from '../Header';
-import providersData from '../../data/providersData';
+import Footer from '../../Footer';
+import Header from '../../Header';
+import providersData from '../../../data/providersData';
 import ProviderInfoUl from './ProviderInfoUl';
 
 const HR = () => (
