@@ -24,21 +24,9 @@ const Newsletter = () => {
             className="rounded-2xl ~space-y-10/[3.5rem] ~pt-[2.38rem]/10 ~pb-[2.81rem]/20 mt-10 md:mt-0"
             onSubmit={onSubmit}
           >
-            <Input
-              label="First Name"
-              type="text"
-              id="first name"
-            />
-            <Input
-              label="Last Name"
-              type="text"
-              id="last name"
-            />
-            <Input
-              label="Email*"
-              type="email"
-              id="email"
-            />
+            <Input key='firstName' label="First Name" type="text" id="firstName" />
+            <Input key = 'lastName' label="Last Name" type="text" id="lastName" />
+            <Input key='newsLetterEmail' label="Email*" type="email" id="email" />
 
             <button className="font-open-sans w-full max-w-[16.31rem] mx-auto sm:mx-0 block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg">
               Subscribe

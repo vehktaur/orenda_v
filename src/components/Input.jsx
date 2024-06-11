@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Input = ({ label, type, id, className }) => {
+const Input = ({ before, label, type, id, className, after }) => {
   const [value, setValue] = useState('');
   const [isFocus, setIsFocus] = useState(false);
 
@@ -41,9 +41,13 @@ const Input = ({ label, type, id, className }) => {
         />
       )}
       <label
-        className={`block font-medium bg-inherit h-[0.1rem] text-[#0F0F0F] absolute top-0 right-0 left-0 transition-all peer-autofill:-translate-y-6 peer-autofill:text-[#616161] peer-autofill:~text-xs/sm duration-300 pb-8 ${
+        className={`block font-medium bg-inherit h-[0.1rem] text-[#0F0F0F] absolute top-0 right-0 left-0 transition-all peer-autofill:-translate-y-6 before:overflow-visible peer-autofill:text-[#616161] peer-autofill:~text-xs/sm duration-300 pb-8 ${
+          before === 'email' && 'before:content-email before:mr-2'
+        } ${
+          before === 'phone' && 'before:content-phone before:mr-2 before:mt-4'
+        } before:!translate-y-7  ${
           isFocus
-            ? '~text-xs/sm text-[#616161] -translate-y-7 bg-transparent pb-0'
+            ? '~text-xs/sm text-[#616161] -translate-y-7 bg-transparent pb-0 before:content-[""] before:mr-0'
             : '~text-sm/lg -translate-y-1'
         } `}
         htmlFor={id}

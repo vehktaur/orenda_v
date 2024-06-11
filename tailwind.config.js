@@ -28,6 +28,11 @@ export default {
         'orenda-purple': '#2E0086',
         'orenda-green': '#127801'
       },
+      content: {
+        email: 'url("./src/assets/dark_email.svg")',
+        phone: 'url("./src/assets/dark_call.svg")',
+        empty: '',
+      },
       fontFamily: {
         'open-sans': ['"Open Sans"', 'sans-serif'],
         heading: ["'Ogg Text TRIAL'", 'serif'],

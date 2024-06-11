@@ -90,11 +90,31 @@ const ContactUsPage = () => {
                 <h2 className="font-bold font-dm-sans ~mb-2/4 ~text-lg/[1.75rem]">
                   Send Us a Message
                 </h2>
-                <Input label="Your Name" type="text" id="your name" />
-                <Input label="Email Address" type="email" id="email address" />
-                <Input label="Phone Number" type="tel" id="phone number" />
-                <Input label="Subject" type="text" id="subject" />
-                <Input label="Message" type="textarea" id="Message" />
+                <Input
+                  key="yourName"
+                  label="Your Name"
+                  type="text"
+                  id="yourName"
+                />
+                <Input
+                  key="emailAddress"
+                  label="Email Address"
+                  type="email"
+                  id="emailAddress"
+                />
+                <Input
+                  key="phoneNumber"
+                  label="Phone Number"
+                  type="tel"
+                  id="phoneNumber"
+                />
+                <Input key="subject" label="Subject" type="text" id="subject" />
+                <Input
+                  key="message"
+                  label="Message"
+                  type="textarea"
+                  id="message"
+                />
                 <button className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg">
                   Submit
                 </button>

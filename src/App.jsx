@@ -9,9 +9,9 @@ function App() {
     <>
       {/* <About /> */}
       {/* <OurTeam /> */}
-      <ProviderInfo />
+      {/* <ProviderInfo /> */}
       {/* <ContactUsPage /> */}
-      {/* <Insurance /> */}
+      <Insurance />
     </>
   );
 }
