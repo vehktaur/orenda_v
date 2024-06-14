@@ -1,9 +1,7 @@
-import Header from '../Header';
 import BecomeProvider from './BecomeProvider';
 import AboutIntro from './AboutIntro';
 import Mission from './Mission';
 import GetStarted from './GetStarted';
-import Footer from '../Footer';
 import ProvidersInAbout from './ProvidersInAbout';
 import TeamInAbout from './TeamInAbout';
 import Treat from './Treat/Treat';
@@ -18,7 +16,6 @@ const HR = () => {
 
 const About = () => (
   <>
-    <Header />
     <main className="font-dm-sans">
       <AboutIntro />
       <HR />
@@ -30,7 +27,6 @@ const About = () => (
       <Treat />
       <GetStarted />
     </main>
-    <Footer />
   </>
 );
 

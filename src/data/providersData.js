@@ -140,7 +140,7 @@ const providersData = [
   },
   {
     image: '../src/assets/providers/main/9.png',
-    name: 'Ketrie Saintelus',
+    name: 'Ketie Saintelus',
     credentials: 'PMHNP-BC',
     agesSeen: {
       adults: '18 - 64 yrs'

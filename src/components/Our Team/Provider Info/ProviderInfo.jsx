@@ -1,14 +1,9 @@
-import Footer from '../../Footer';
-import Header from '../../Header';
 import providersData from '../../../data/providersData';
 import ProviderInfoUl from './ProviderInfoUl';
+import { useParams } from 'react-router-dom';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import ReviewsNavigation from './ReviewsNavigation';
 
 const HR = () => (
@@ -18,7 +13,9 @@ const HR = () => (
 );
 
 const ProviderInfo = () => {
-  const rakin = providersData[0];
+  const { index } = useParams();
+
+  const provider = providersData[index];
   const focusAreas = [
     'Academic Stress',
     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -56,27 +53,28 @@ const ProviderInfo = () => {
 
   return (
     <>
-      <Header />
       <main className="px-4 font-dm-sans ~mt-7/[5.5rem]">
         <div className="max-w-7xl mx-auto">
           <div className="rounded-lg sm:border sm:border-[#EFEBDF]">
             <div className="flex flex-col md:rounded-t-lg md:flex-row sm:~gap-8/[3.5rem] sm:border md:border-[#EFEBDF]">
               <div className="md:order-last bg-[#f1f1f1] rounded-t-lg w-full md:flex sm:flex-col md:justify-end max-w-[39.25rem] relative">
-                <div className="rounded-lg border w-fit border-[#E1EEE4] bg-[#F0FDF3] py-2 ~px-0.5/[0.62rem] ~text-[0.7rem]/xs font-dm-sans font-medium absolute ~top-2/[1.37rem] ~left-2/6">
-                  {rakin.availability}
-                </div>
+                {provider.availability && (
+                  <div className="rounded-lg border w-fit border-[#E1EEE4] bg-[#F0FDF3] py-2 ~px-0.5/[0.62rem] ~text-[0.7rem]/xs font-dm-sans font-medium absolute ~top-2/[1.37rem] ~left-2/6">
+                    {provider.availability}
+                  </div>
+                )}
                 <img
                   className="md:min-w-[80%] mx-auto max-h-[38.5rem] h-auto max-w-[10.48rem] block"
-                  src={rakin.image}
-                  alt={rakin.name}
+                  src={provider.image}
+                  alt={provider.name}
                 />
               </div>
               <div className="md:max-w-[50%] sm:~px-2/10 sm:py-6">
                 <h1 className="~text-base/[2rem] font-bold ~mt-[0.63rem]/[2.56rem] mb-2">
-                  {rakin.name}
+                  {provider.name}
                 </h1>
                 <p className="flex flex-col sm:flex-row gap-2 text-[#7C7C7C] ~text-xs/sm font-bold">
-                  <span>{rakin.credentials}</span>
+                  <span>{provider.credentials}</span>
                   <span>
                     Adult Psychiatric & Mental Health Nurse Practitioner, NY
                   </span>
@@ -84,7 +82,9 @@ const ProviderInfo = () => {
                 <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-center ~mt-2/[1.38rem] ~mb-5/6">
                   Specialising in geriatric care
                 </p>
-                <p className="whitespace-pre-line leading-6">{rakin.about}</p>
+                <p className="whitespace-pre-line leading-6">
+                  {provider.about}
+                </p>
               </div>
             </div>
 
@@ -95,14 +95,14 @@ const ProviderInfo = () => {
                 <div className="sm:border-b sm:border-[#EFEBDF] sm:~px-3/6 sm:~py-4/8">
                   <h2 className="font-bold ~text-sm/xl ~mb-2/4">Ages Seen</h2>
                   <p>
-                    {rakin.agesSeen.children && (
-                      <span>{`Children: (${rakin.agesSeen.children}) `}</span>
+                    {provider.agesSeen.children && (
+                      <span>{`Children: (${provider.agesSeen.children}) `}</span>
                     )}
-                    {rakin.agesSeen.teens && (
-                      <span>{`Teens: (${rakin.agesSeen.teens}) `}</span>
+                    {provider.agesSeen.teens && (
+                      <span>{`Teens: (${provider.agesSeen.teens}) `}</span>
                     )}
-                    {rakin.agesSeen.adults && (
-                      <span>{`Adults: (${rakin.agesSeen.adults})`}</span>
+                    {provider.agesSeen.adults && (
+                      <span>{`Adults: (${provider.agesSeen.adults})`}</span>
                     )}
                   </p>
                 </div>
@@ -125,7 +125,7 @@ const ProviderInfo = () => {
                   <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                     States Licensed
                   </h2>
-                  <p>{showStatesLicensed(rakin.statesLicensed)}</p>
+                  <p>{showStatesLicensed(provider.statesLicensed)}</p>
                 </div>
                 <div className="hidden sm:block sm:~px-2/4 sm:~py-3/6">
                   <ProviderInfoUl
@@ -195,7 +195,7 @@ const ProviderInfo = () => {
                 <SwiperSlide>
                   <div className="leading-6 grid gap-6">
                     <p>
-                      “Rakin actually cares about your needs, your unique
+                      “provider actually cares about your needs, your unique
                       situation, and how your meds are affecting you. He takes
                       the time to check in with care in check-ups, and isn't a
                       5-minute “hi, here's a prescription, bye,” kind of
@@ -212,7 +212,7 @@ const ProviderInfo = () => {
                 <SwiperSlide>
                   <div className="leading-6 grid gap-6">
                     <p>
-                      “Rakin actually cares about your needs, your unique
+                      “provider actually cares about your needs, your unique
                       situation, and how your meds are affecting you. He takes
                       the time to check in with care in check-ups, and isn't a
                       5-minute “hi, here's a prescription, bye,” kind of
@@ -246,7 +246,6 @@ const ProviderInfo = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 };

@@ -4,10 +4,6 @@ import NavButtons from './NavButtons';
 import TeamMemberCard from './TeamMemberCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from 'react';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import TeamMembersSection from './TeamMembersSection';
 
 const Team = ({ itemsPerPage }) => {

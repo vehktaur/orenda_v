@@ -5,10 +5,6 @@ import NavButtons from './NavButtons';
 import { useState } from 'react';
 import providersData from '../../data/providersData';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
 const Providers = ({ itemsPerPage, numberOfColumns }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffSet] = useState(itemOffset + itemsPerPage);

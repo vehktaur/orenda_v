@@ -1,5 +1,3 @@
-import Header from '../Header';
-import Footer from '../Footer';
 import Team from '../Our Team/Team';
 import ContactUs from '../Our Team/ContactUs';
 import call from '../../assets/call.svg';
@@ -16,14 +14,15 @@ import multiplan from '../../assets/multiplan_insurance.png';
 import FAQ from './FAQ';
 import Newsletter from './Newsletter';
 import Input from '../Input';
+import { useForm } from 'react-hook-form';
 
 const ContactUsPage = () => {
-  const onSubmit = (event) => {
-    event.preventDefault();
+  const { register, handleSubmit, watch } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
   };
   return (
     <>
-      <Header />
       <main className="px-5 ~mt-8/[7.5rem]">
         <div className="max-w-7xl mx-auto">
           <h1 className="heading">Contact Us</h1>
@@ -85,7 +84,7 @@ const ContactUsPage = () => {
             <div className="flex-1">
               <form
                 className="text-start bg-[#fafafa] border rounded-2xl ~px-[1.69rem]/10 ~space-y-10/[3.5rem] ~pt-[2.38rem]/10 ~pb-[2.81rem]/20 mt-10 md:mt-0"
-                onSubmit={onSubmit}
+                onSubmit={handleSubmit(onSubmit)}
               >
                 <h2 className="font-bold font-dm-sans ~mb-2/4 ~text-lg/[1.75rem]">
                   Send Us a Message
@@ -95,25 +94,40 @@ const ContactUsPage = () => {
                   label="Your Name"
                   type="text"
                   id="yourName"
+                  register={register}
+                  watch={watch}
                 />
                 <Input
                   key="emailAddress"
                   label="Email Address"
                   type="email"
                   id="emailAddress"
+                  register={register}
+                  watch={watch}
                 />
                 <Input
                   key="phoneNumber"
                   label="Phone Number"
                   type="tel"
                   id="phoneNumber"
+                  register={register}
+                  watch={watch}
                 />
-                <Input key="subject" label="Subject" type="text" id="subject" />
+                <Input
+                  key="subject"
+                  label="Subject"
+                  type="text"
+                  id="subject"
+                  register={register}
+                  watch={watch}
+                />
                 <Input
                   key="message"
                   label="Message"
                   type="textarea"
                   id="message"
+                  register={register}
+                  watch={watch}
                 />
                 <button className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg">
                   Submit
@@ -241,7 +255,6 @@ const ContactUsPage = () => {
       <ContactUs />
       <FAQ />
       <Newsletter />
-      <Footer />
     </>
   );
 };

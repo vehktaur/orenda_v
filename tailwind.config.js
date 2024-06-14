@@ -31,7 +31,6 @@ export default {
       content: {
         email: 'url("./src/assets/dark_email.svg")',
         phone: 'url("./src/assets/dark_call.svg")',
-        empty: '',
       },
       fontFamily: {
         'open-sans': ['"Open Sans"', 'sans-serif'],
@@ -42,6 +41,7 @@ export default {
         dot: 'url("./src/assets/disc.svg")'
       },
       screens: {
+        forLabel: '23.75rem',
         xs: '20rem'
       }
     }

@@ -25,7 +25,7 @@ const faq = [
   },
   {
     question: `Can your providers prescribe medication?`,
-    answer: `Yes, our providers include psychiatrists who can prescribe medication if it is deemed necessary as part of your treatment plan.`
+    answer: `Yes, our providers prescribe medication. We also have a team of Registered Nurses licensed to support your medication management in partnership with your provider. Please note that your provider is not obligated to send a particular prescription or dosage if they do not infer that it is safe for you to take that medication, based on your assessment.`
   }
 ];
 

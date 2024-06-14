@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const Header = () => {
@@ -9,21 +10,20 @@ const Header = () => {
           <nav>
             <ul className="flex ~md/xl:~gap-3.5/12 items-center justify-between">
               {[
-                ['Home', '/'],
-                ['Our Team', '/'],
-                ['Insurance', '/'],
-                ['About', '/'],
-                ['Privacy Policy', '/'],
-                ['Contact Us', '/']
+                ['Home', '/Home'],
+                ['Our Team', '/Our Team'],
+                ['Insurance', '/Insurance'],
+                ['About', '/About'],
+                ['Privacy Policy', '/Privacy Policy'],
+                ['Contact Us', '/Contact Us']
               ].map(([title, url]) => (
-                <li key={title}>
-                  <a
-                    className="cursor-pointer transition block hover:text-orenda-purple hover:font-bold"
-                    href={url}
-                  >
-                    {title}
-                  </a>
-                </li>
+                <Link
+                  key={title}
+                  className="cursor-pointer transition block hover:text-orenda-purple hover:font-bold"
+                  to={url}
+                >
+                  {title}
+                </Link>
               ))}
             </ul>
           </nav>
