@@ -5,23 +5,23 @@ const faq = [
   },
   {
     question: `Do you accept my insurance?`,
-    answer: `We accept most major insurance plans. Please contact our office or check with your insurance provider to confirm coverage.`
+    answer: `Yes, we accept most major insurance plans. Please contact our office to verify your insurance coverage.`
   },
   {
     question: `What qualifications do your Providers have?`,
-    answer: `Our providers are all licensed and certified professionals with extensive experience in their respective fields. They are dedicated to providing high-quality care.`
+    answer: `Our providers are licensed, board-certified Psychiatric & Mental Health Nurse Practitioners with advanced degrees in psychology, counselling, and Nursing. They have extensive experience and training in various therapeutic modalities to address a wide range of mental health concerns.`
   },
   {
     question: `What types of therapy do you offer?`,
-    answer: `We offer a variety of therapy options including individual therapy, couples therapy, family therapy, and group therapy. Please contact us for more details.`
+    answer: `We offer a range of evidence-based therapies, including dialectical behavior therapy (DBT), mindfulness-based approaches, and more. Your therapist will work with you to determine the most suitable treatment approach for your needs.`
   },
   {
     question: `How do you ensure confidentiality?`,
-    answer: `We follow strict confidentiality protocols to ensure that your personal information and therapy sessions are kept private and secure.`
+    answer: `Protecting your privacy is a top priority. Our therapists adhere to strict confidentiality guidelines, and your personal information will be kept secure in accordance with legal and ethical standards.`
   },
   {
     question: `What is your cancellation policy?`,
-    answer: `Our cancellation policy requires a minimum of 24 hours notice for any cancellations or rescheduling of appointments. Failure to provide sufficient notice may result in a cancellation fee.`
+    answer: `We require 24-hour notice for appointment cancellations or rescheduling. Missed appointments or late cancellations are subject to a fee.`
   },
   {
     question: `Can your providers prescribe medication?`,

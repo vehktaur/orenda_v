@@ -1,11 +1,9 @@
 import faq from '../../data/faq';
 import Accordion from './Accordion';
-import call from '../../assets/call.svg';
-import email from '../../assets/email.svg';
 
 const FAQ = () => {
   return (
-    <div className="px-6 ~pt-10/32 ~mb-[6.38rem]/[12.66rem]">
+    <div className="px-5 ~pt-10/32 ~mb-[6.38rem]/[12.66rem]">
       <div className="max-w-[48.88rem] mx-auto">
         <h1 className="heading ~mb-6/8">Frequently Asked Questions</h1>
         <div className="~space-y-[1.12rem]/[1.25rem] font-open-sans">
@@ -18,7 +16,7 @@ const FAQ = () => {
           ))}
         </div>
         <div className="font-bold text-center ~mt-8/10">
-          <p className='text-base'>Can't find your question?</p>
+          <p className="text-base">Can't find your question?</p>
           <p className="flex justify-center items-center gap-4 mt-4 ~text-base/lg">
             <span className="flex items-center gap-2">
               <svg

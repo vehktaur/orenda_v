@@ -1,14 +1,14 @@
-const TeamMemberCard = ({member }) => {
+const TeamMemberCard = ({ member }) => {
   return (
     <div>
-      <div className="~size-[6.875rem]/[15.625rem] rounded-2xl overflow-hidden">
+      <div className="~size-[6.875rem]/[15.625rem] bg-[#f1f1f1] rounded-2xl overflow-hidden ~pt-2/4">
         <img
           className="size-full object-cover"
           src={member.image}
           alt={member.name}
         />
       </div>
-      <h3 className="font-semibold ~text-sm/base font-open-sans mt-3 text-center md:text-start">
+      <h3 className="font-semibold ~text-sm/lg font-open-sans mt-3 text-center md:text-start">
         {member.name}
       </h3>
       <div className="flex gap-2 items-center text-center">
@@ -23,7 +23,9 @@ const TeamMemberCard = ({member }) => {
             <circle id="Ellipse 263" cx="4" cy="4" r="4" fill="#C2C2C2" />
           </svg>
         </span>
-        <span className="~text-xs/sm font-open-sans mx-auto md:mx-0">{member.position}</span>
+        <span className="~text-xs/sm font-open-sans mx-auto md:mx-0">
+          {member.position}
+        </span>
       </div>
     </div>
   );

@@ -1,36 +1,50 @@
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const Header = () => {
   return (
     <header className="p-5 text-center ~text-sm/lg font-dm-sans sticky bg-white top-0 z-10">
-      <div className="max-w-7xl mx-auto flex ~md/xl:~gap-6/[9rem] justify-between items-center">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Logo />
-        <div className=" hidden md:flex items-center justify-between flex-1">
+        <div className=" hidden md:block">
           <nav>
-            <ul className="flex ~md/xl:~gap-3.5/12 items-center justify-between">
+            <ul className="flex items-center justify-between ~md/xl:~gap-2.5/12 transition duration-1000">
               {[
-                ['Home', '/Home'],
-                ['Our Team', '/Our Team'],
-                ['Insurance', '/Insurance'],
-                ['About', '/About'],
-                ['Privacy Policy', '/Privacy Policy'],
-                ['Contact Us', '/Contact Us']
+                ['Home', '/home'],
+                ['Our Team', '/our team'],
+                ['Insurance', '/insurance'],
+                ['About', '/about'],
+                ['Blog', '/blog'],
+                ['Privacy Policy', '/privacy policy'],
+                ['Contact Us', '/contact']
               ].map(([title, url]) => (
-                <Link
+                <NavLink
                   key={title}
-                  className="cursor-pointer transition block hover:text-orenda-purple hover:font-bold"
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'text-orenda-purple font-bold'
+                      : 'hover:text-orenda-purple hover:font-bold'
+                  }
                   to={url}
                 >
                   {title}
-                </Link>
+                </NavLink>
               ))}
             </ul>
           </nav>
-          <button className="text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors px-4 py-2.5 border border-orenda-purple rounded-3xl font-semibold">
+          <Link
+            to="/our team"
+            className="text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors px-4 py-2 border border-orenda-purple rounded-3xl font-semibold md:hidden"
+          >
             Book Now
-          </button>
+          </Link>
         </div>
+        <Link
+          to="/our team"
+          className="text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors px-4 py-2 border border-orenda-purple rounded-3xl font-semibold hidden md:block"
+        >
+          Book Now
+        </Link>
         <button className="~xs/md:~size-6/8 grid items-center md:hidden">
           <span className="w-full block ~h-[0.19rem]/[0.25rem] rounded-full bg-[#070707]"></span>
           <span className="w-full block ~h-[0.19rem]/[0.25rem] rounded-full bg-[#070707]"></span>

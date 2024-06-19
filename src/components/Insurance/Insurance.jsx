@@ -97,7 +97,7 @@ const Insurance = () => {
     <PageNumberContext.Provider value={pageNumber}>
       <div className="relative font-dm-sans">
         {false && (
-          <div className="absolute px-6 inset-0 max-h-screen bg-[#070707B3] z-50 grid place-items-center">
+          <div className="absolute px-5 inset-0 max-h-screen bg-[#070707B3] z-50 grid place-items-center">
             <div className="w-full bg-[#FAFAFA] rounded-3xl max-w-[41.44rem] ~px-4/10 ~pt-6/[2.38rem] ~pb-[2.69rem]/[3.38rem]">
               <h2 className="flex justify-between font-medium ~text-lg/[1.75rem] ~mb-8/[2.81rem]">
                 <span>Insurance Details</span>
@@ -127,7 +127,7 @@ const Insurance = () => {
             </div>
           </div>
         )}
-        <main className="px-6 ~mt-8/[7.5rem] ~mb-[3.31rem]/[10rem]">
+        <main className="px-5 ~mt-8/[7.5rem] ~mb-[3.31rem]/[10rem]">
           <h1 className="heading ~mb-2/4">Let's check your plan!</h1>
           <p className="max-w-[38.32rem] mx-auto text-center">
             Please complete this form to verify if your insurance is in network

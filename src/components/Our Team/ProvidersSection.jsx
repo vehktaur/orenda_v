@@ -70,7 +70,7 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                     <div className="flex justify-center">
                       <Link
                         className="text-[0.875rem] font-semibold hover:underline"
-                        to={`/Provider/${index}`}
+                        to={`/provider/${index}`}
                       >
                         More Info
                       </Link>

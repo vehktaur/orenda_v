@@ -1,4 +1,4 @@
-import providersData from '../../../data/providersData';
+import providersData from '../../data/providersData';
 import ProviderInfoUl from './ProviderInfoUl';
 import { useParams } from 'react-router-dom';
 
@@ -57,14 +57,14 @@ const ProviderInfo = () => {
         <div className="max-w-7xl mx-auto">
           <div className="rounded-lg sm:border sm:border-[#EFEBDF]">
             <div className="flex flex-col md:rounded-t-lg md:flex-row sm:~gap-8/[3.5rem] sm:border md:border-[#EFEBDF]">
-              <div className="md:order-last bg-[#f1f1f1] rounded-t-lg w-full md:flex sm:flex-col md:justify-end max-w-[39.25rem] relative">
+              <div className="md:order-last bg-[#f1f1f1] rounded-t-lg w-full md:flex sm:flex-col md:justify-end md:max-w-[39.25rem] relative">
                 {provider.availability && (
                   <div className="rounded-lg border w-fit border-[#E1EEE4] bg-[#F0FDF3] py-2 ~px-0.5/[0.62rem] ~text-[0.7rem]/xs font-dm-sans font-medium absolute ~top-2/[1.37rem] ~left-2/6">
                     {provider.availability}
                   </div>
                 )}
                 <img
-                  className="md:min-w-[80%] mx-auto max-h-[38.5rem] h-auto max-w-[10.48rem] block"
+                  className="md:min-w-[80%] mx-auto max-h-[38.5rem] h-auto ~/md:~max-w-[10.48rem]/[22rem] block"
                   src={provider.image}
                   alt={provider.name}
                 />

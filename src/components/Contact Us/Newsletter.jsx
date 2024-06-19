@@ -3,14 +3,14 @@ import newsletter from '../../assets/newsletter.svg';
 import Input from '../Input';
 
 const onSubmit = (data) => {
-  console.log(data)
+  console.log(data);
 };
 
 const Newsletter = () => {
   const { register, handleSubmit, watch } = useForm();
   return (
-    <div className="~py-10/14 px-6 mb-8">
-      <div className="max-w-7xl mx-auto bg-[#f5f5f5] flex flex-col sm:flex-row ~px-6/28 pb-14 pt-8 items-center gap-6 sm:gap-10">
+    <div className="~py-10/14 px-5 mb-8">
+      <div className="max-w-7xl mx-auto bg-[#f5f5f5] flex flex-col sm:flex-row ~px-5/28 pb-14 pt-8 items-center gap-6 sm:gap-10">
         <div className="sm:order-last flex-shrink-0">
           <img className="~size-[8.1875rem]/[25.525rem]" src={newsletter}></img>
         </div>

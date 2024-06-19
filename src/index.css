@@ -47,7 +47,7 @@
 
 @layer components {
   main p {
-    @apply ~text-sm/lg font-dm-sans;
+    @apply ~text-sm/xl font-dm-sans;
   }
   .heading {
     @apply font-bold ~sm/xl:~text-lg/[2.625rem] text-center font-heading;

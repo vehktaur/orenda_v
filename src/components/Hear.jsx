@@ -4,7 +4,7 @@ import ReviewsNavigation from './Our Team/Provider Info/ReviewsNavigation';
 
 const Hear = () => {
   return (
-    <div className="bg-[#F5F5F5] px-6">
+    <div className="bg-[#F5F5F5] px-5">
       <h2 className="heading mb-8">Hear from out Clients</h2>
       <div className="max-w-[58.13rem] mx-auto ~px-8/[5.44rem]">
         <Swiper modules={[Navigation, Pagination]}>
