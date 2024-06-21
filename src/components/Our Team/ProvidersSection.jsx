@@ -64,7 +64,7 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                       numberOfColumns === 5 ? 'gap-2' : 'gap-4'
                     }`}
                   >
-                    <button className="w-full border rounded-3xl px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6 font-medium">
+                    <button className="border rounded-3xl px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6 font-medium">
                       Book now
                     </button>
                     <div className="flex justify-center">
@@ -140,10 +140,10 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                   <div className="flex justify-between pt-4 gap-3">
                     {provider.availability && (
                       <span
-                        className={`rounded-lg grid place-items-center border border-[#E1EEE4] bg-[#F0FDF3] ${
+                        className={`rounded-lg grid place-items-center border border-[#E1EEE4] bg-[#F0FDF3] text-nowrap ${
                           numberOfColumns === 5
                             ? 'p-1 text-[0.625rem]'
-                            : '~px-3/[0.625rem] py-2 ~text-[0.625rem]/xs'
+                            : '~xl/2xl:~px-1.5/3 py-2 ~text-[0.625rem]/xs'
                         } font-dm-sans`}
                       >
                         {provider.availability}
@@ -151,7 +151,7 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                     )}
 
                     <button
-                      className={`w-fit block ms-auto rounded-3xl text-white text-xs bg-orenda-purple px-4 min-w-[9rem] md:min-w-[2.81rem] xl:min-w-fit font-open-sans ${
+                      className={`w-fit block ms-auto rounded-3xl text-white text-xs bg-orenda-purple ~px-2/4 min-w-[9rem] md:min-w-[2.81rem] xl:min-w-fit font-open-sans ${
                         numberOfColumns === 5 ? 'py-2' : ' py-[0.62rem]'
                       }`}
                     >

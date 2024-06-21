@@ -19,7 +19,7 @@ const Input = ({ before, label, type, id, register, watch }) => {
   useEffect(() => handleBlur(), [pageNumber]);
 
   return (
-    <div className="relative text-left bg-inherit">
+    <div className="relative text-justify bg-inherit">
       {type == 'textarea' ? (
         <textarea
           id={id}

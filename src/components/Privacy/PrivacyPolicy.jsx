@@ -140,7 +140,7 @@ const PrivacyPolicy = () => {
             </h2>
             <p>
               Texts/SMS will be used to convey information related to
-              appointment times / dates / reminders, intake documentatuon
+              appointment times / dates / reminders, intake documentation
               completion, and non-clinical administrative matters.
             </p>
           </div>
@@ -148,7 +148,7 @@ const PrivacyPolicy = () => {
             <h2 className="font-heading ~text-base/[1.375rem] ~mb-2/4 font-bold">
               Clinical Information via Text/SMS:
             </h2>
-            <ul className="font-dm-sans ~text-sm/xl list-inside list-disc ps-4">
+            <ul className="font-dm-sans ~text-sm/xl list-outside list-disc ~pl-4/8 text-justify">
               <li>
                 We will only engage in text/SMS communication involving clinical
                 information (such as medication refills or changes in pharmacy)
@@ -174,7 +174,7 @@ const PrivacyPolicy = () => {
               communications for the purposes outlined above unless you choose
               to opt out as described above.
             </p>
-            <ul className="font-dm-sans ~text-sm/xl list-inside list-disc ps-4">
+            <ul className="font-dm-sans ~text-sm/xl list-outside list-disc ~pl-4/8 text-justify">
               <li>
                 We prioritize the security and confidentiality of all
                 communications. However, please be aware that text messaging is

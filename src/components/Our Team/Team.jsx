@@ -48,10 +48,9 @@ const Team = ({ itemsPerPage }) => {
                 />
               </SwiperSlide>
             ))}
-            <div className="~md/xl:~pe-0/8 mt-8">
-              <div className="max-w-[14rem] ms-auto flex justify-end">
-                <NavButtons />
-              </div>
+
+            <div className="max-w-[13.7rem] ms-auto flex justify-end mt-8">
+              <NavButtons />
             </div>
           </Swiper>
         </div>

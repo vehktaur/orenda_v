@@ -14,7 +14,7 @@ const Mission = () => {
             />
           </div>
           <div>
-            <h2 className="heading mb-4 sm:text-left hidden sm:block ">
+            <h2 className="heading mb-4 sm:text-justify hidden sm:block ">
               Our Mission
             </h2>
             <p className="mt-4 sm:max-w-[37.2rem]">

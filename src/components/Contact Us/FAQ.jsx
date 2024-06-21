@@ -3,7 +3,7 @@ import Accordion from './Accordion';
 
 const FAQ = () => {
   return (
-    <div className="px-5 ~pt-10/32 ~mb-[6.38rem]/[12.66rem]">
+    <div className="px-5 ~pt-10/32 ~mb-[6.38rem]/[12.66rem] text-justify">
       <div className="max-w-[48.88rem] mx-auto">
         <h1 className="heading ~mb-6/8">Frequently Asked Questions</h1>
         <div className="~space-y-[1.12rem]/[1.25rem] font-open-sans">

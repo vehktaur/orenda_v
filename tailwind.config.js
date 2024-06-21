@@ -30,12 +30,15 @@ export default {
       },
       content: {
         email: 'url("/src/assets/dark_email.svg")',
-        phone: 'url("/src/assets/dark_call.svg")',
+        phone: 'url("/src/assets/dark_call.svg")'
       },
       fontFamily: {
         'open-sans': ['"Open Sans"', 'sans-serif'],
         heading: ["'Ogg Text TRIAL'", 'serif'],
         'dm-sans': ['"DM Sans"', 'sans-serif']
+      },
+      gridTemplateColumns: {
+        team: 'repeat(4, minmax(0, 15.625rem))'
       },
       listStyleImage: {
         dot: 'url("/src/assets/disc.svg")'

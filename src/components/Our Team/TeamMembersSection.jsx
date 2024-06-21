@@ -5,7 +5,7 @@ const TeamMembersSection = ({ itemOffset, endOffset }) => {
   const sectionTeamData = teamData.slice(itemOffset, endOffset);
 
   return (
-    <div className="grid grid-cols-4 gap-x-4 gap-y-12 items-center justify-center">
+    <div className="grid grid-cols-team gap-x-8 gap-y-12 justify-between">
       {sectionTeamData.map((member, index) => (
         <TeamMemberCard key={index + 50} member={member} />
       ))}

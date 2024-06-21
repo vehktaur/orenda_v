@@ -26,7 +26,7 @@ const ContactUsPage = () => {
       <main className="px-5 ~mt-8/[7.5rem]">
         <div className="max-w-7xl mx-auto">
           <h1 className="heading">Contact Us</h1>
-          <div className="~mt-8/[3.75rem] text-center md:text-start md:flex gap-10">
+          <div className="~mt-8/[3.75rem] text-center md:text-justify md:flex gap-10">
             <div className="md:flex-1">
               <div>
                 <h2 className="font-heading ~text-lg/[1.375rem] mb-4">
@@ -83,7 +83,7 @@ const ContactUsPage = () => {
             </div>
             <div className="flex-1">
               <form
-                className="text-start bg-[#fafafa] border rounded-2xl ~px-[1.69rem]/10 ~space-y-10/[3.5rem] ~pt-[2.38rem]/10 ~pb-[2.81rem]/20 mt-10 md:mt-0"
+                className="text-justify bg-[#fafafa] border rounded-2xl ~px-[1.69rem]/10 ~space-y-10/[3.5rem] ~pt-[2.38rem]/10 ~pb-[2.81rem]/20 mt-10 md:mt-0"
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <h2 className="font-bold font-dm-sans ~mb-2/4 ~text-lg/[1.75rem]">
@@ -135,7 +135,7 @@ const ContactUsPage = () => {
               </form>
             </div>
           </div>
-          <div className="text-center md:text-start mt-6 space-y-10 md:flex mb-10 sm:~gap-0/[21rem]">
+          <div className="text-center md:text-justify mt-6 space-y-10 md:flex mb-10 sm:~gap-0/[21rem]">
             <div className="md:hidden sm:flex gap-20 items-start">
               <div className="flex-shrink-0">
                 <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">

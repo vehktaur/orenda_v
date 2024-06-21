@@ -8,13 +8,45 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York', 'New Jersey', 'Connecticut', 'Massachusetts'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
-    about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
-    
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.
-    `
+    about: `Mr. Rakin Rahman is an experienced adult psychiatric and mental health nurse practitioner currently practising at Orenda Psychiatry. Patients in Smyrna and Brooklyn, NY, can consult him for various concerns, including anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks.
+
+    After graduating with bachelor’s degrees from the State University of New York, Binghamton, and Massachusetts College of Pharmacy and Health Sciences, Mr. Rahman attended Case Western Reserve University, where he earned his master’s degree in psychiatric mental health nursing.
+
+    Mr. Rahman is certified by the American Nurses Credentialing Center. He has received several awards, including the Residential Life Team Developer, Hinman College Den Of Distinction, and Residential Life Community Developer awards. Rakin aims to provide a holistic outlook in his practice. He believes that there should be a partnership between provider and client and strives to create a welcoming compassionate, and open environment.
+    `,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/1.png',
@@ -25,12 +57,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New Jersey'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/2.png',
@@ -41,12 +103,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Connecticut', 'New Jersey'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/3.png',
@@ -57,12 +149,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Massachusetts'],
     availability: 'Available in 1-2 days',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/4.png',
@@ -73,12 +195,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/5.png',
@@ -89,12 +241,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New Jersey'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/6.png',
@@ -103,12 +285,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York', 'New Jersey', 'Connecticut'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/7.png',
@@ -117,12 +329,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New Jersey'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/8.png',
@@ -131,12 +373,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York', 'New Jersey'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/9.png',
@@ -145,12 +417,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/10.png',
@@ -159,12 +461,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Connecticut', 'New Jersey'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/11.png',
@@ -173,12 +505,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/12.png',
@@ -189,12 +551,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New Jersey'],
     availability: 'Available in 3 days',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/13.png',
@@ -203,12 +595,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York'],
     availability: 'Available in 2 days',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/14.png',
@@ -219,12 +641,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Connecticut', 'New Jersey'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/15.png',
@@ -235,12 +687,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/16.png',
@@ -251,26 +733,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Connecticut'],
     availability: 'Available in 2 days',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
-  },
-  {
-    image: '../src/assets/providers/main/17.png',
-    name: 'Christelle Dubic',
-    credentials: 'PMHNP-BC | NP',
-    agesSeen: {
-      adults: '18 - 64 yrs'
-    },
-    statesLicensed: ['New York', 'New Jersey', '2 more'],
-    availability: 'Available in 1 week',
-    bookingLink: 'https://booking.url',
-    about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
-
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/18.png',
@@ -281,12 +779,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/19.png',
@@ -295,12 +823,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/20.png',
@@ -310,12 +868,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Massachusetts'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/21.png',
@@ -324,12 +912,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York', 'New Jersey', '2 more'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/22.png',
@@ -339,12 +957,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New Jersey'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/23.png',
@@ -354,12 +1002,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Connecticut'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/24.png',
@@ -369,12 +1047,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Connecticut'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/25.png',
@@ -383,12 +1091,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York', 'New Jersey', '2 more'],
     availability: 'Available in 1 week',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/26.png',
@@ -397,12 +1135,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/27.png',
@@ -413,12 +1181,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New Jersey'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/28.png',
@@ -428,12 +1226,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Connecticut'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/29.png',
@@ -443,12 +1271,42 @@ const providersData = [
       teens: '13 - 17 yrs',
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New Jersey'],
     availability: 'Available in 4 days',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/30.png',
@@ -457,12 +1315,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/31.png',
@@ -471,12 +1359,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Connecticut'],
     availability: 'Available in 1 week',
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                      situation, and how your meds are affecting you. He takes
+                      the time to check in with care in check-ups, and isn't a
+                      5-minute “hi, here's a prescription, bye,” kind of
+                      practitioner, which is rare and VERY appreciated. I would
+                      recommend to anyone looking for long-lasting care that
+                      feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                      recommend!”`
+    ]
   },
   {
     image: '../src/assets/providers/main/32.png',
@@ -485,12 +1403,42 @@ const providersData = [
     agesSeen: {
       adults: '18 - 64 yrs'
     },
+    languagesSpoken: ['English', 'Bengali'],
+    focusAreas: [
+      'Academic Stress',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management',
+      'Pre-College Fears',
+      'Anxiety',
+      'Depression',
+      'Panic Attack',
+      'Prescription / Refill'
+    ],
+    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    educationAndBackground: [
+      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
+      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
+      'State University of New York, Binghamton (Bachelor’s)'
+    ],
+    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
+    boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['Connecticut'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`
+    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    reviews: [
+      `“Provider actually cares about your needs, your unique
+                          situation, and how your meds are affecting you. He takes
+                          the time to check in with care in check-ups, and isn't a
+                          5-minute “hi, here's a prescription, bye,” kind of
+                          practitioner, which is rare and VERY appreciated. I would
+                          recommend to anyone looking for long-lasting care that
+                          feels compassionate and well-informed!”`,
+      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
+                          recommend!”`
+    ]
   }
 ];
 

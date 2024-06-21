@@ -1,14 +1,14 @@
 const TeamMemberCard = ({ member }) => {
   return (
     <div>
-      <div className="~size-[6.875rem]/[15.625rem] bg-[#f1f1f1] rounded-2xl overflow-hidden ~pt-2/4">
+      <div className="~h-[6.875rem]/[15.625rem] w-full bg-[#f1f1f1] rounded-2xl overflow-hidden ~pt-2/4">
         <img
           className="size-full object-cover"
           src={member.image}
           alt={member.name}
         />
       </div>
-      <h3 className="font-semibold ~text-sm/lg font-open-sans mt-3 text-center md:text-start">
+      <h3 className="font-semibold ~text-sm/lg font-open-sans mt-3 text-center md:text-justify">
         {member.name}
       </h3>
       <div className="flex gap-2 items-center text-center">

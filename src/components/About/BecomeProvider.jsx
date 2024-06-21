@@ -8,10 +8,10 @@ const BecomeProvider = ({ bg }) => {
           <img className="~size-[8.1875rem]/[25.525rem]" src={magnifier}></img>
         </div>
         <div className="w-full">
-          <h2 className="heading sm:py-1 mb-3 sm:text-left">
+          <h2 className="heading sm:py-1 mb-3 sm:text-justify">
             Become an Orenda Provider!
           </h2>
-          <p className="max-w-[35.625rem] font-medium text-center sm:text-left ~text-sm/xl">
+          <p className="max-w-[35.625rem] font-medium text-center sm:text-justify ~text-sm/xl">
             Would you like to join our team of providers? Click the button below
             to start with us.
           </p>
