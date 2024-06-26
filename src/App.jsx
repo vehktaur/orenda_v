@@ -7,6 +7,7 @@ import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import PrivacyPolicy from './components/Privacy/PrivacyPolicy';
 import ProviderInfo from './components/Provider Info/ProviderInfo';
+import BecomeProviderPage from './components/BecomeProviderPage/BecomeProviderPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="insurance" element={<Insurance />} />
           <Route path="privacy policy" element={<PrivacyPolicy />} />
           <Route path="provider/:index" element={<ProviderInfo />} />
+          <Route path="become provider" element={<BecomeProviderPage />} />
         </Route>
       </Routes>
     </ScrollToTop>

@@ -2,10 +2,16 @@ import { useContext, useEffect, useState } from 'react';
 import Input from '../Input';
 import { PageNumberContext } from './Insurance';
 
-const FormSteps = ({ register, watch }) => {
-  const { name, ref, onChange } = register('Insurance Carrier');
-
+const FormSteps = ({ register, watch, errors }) => {
   const pageNumber = useContext(PageNumberContext);
+
+  const { name, ref, onChange } = register('Insurance Carrier', {
+    required: {
+      value: pageNumber === 3 ? true : false,
+      message: 'This field is required'
+    }
+  });
+
   const [isFocus, setIsFocus] = useState(false);
 
   console.log(watch('Insurance Carrier'));
@@ -53,6 +59,7 @@ const FormSteps = ({ register, watch }) => {
             id={field.id}
             register={register}
             watch={watch}
+            errors={errors}
           />
         ))}
       </>
@@ -83,6 +90,7 @@ const FormSteps = ({ register, watch }) => {
             id={field.id}
             register={register}
             watch={watch}
+            errors={errors}
           />
         ))}
       </>
@@ -104,7 +112,7 @@ const FormSteps = ({ register, watch }) => {
           />
           <label
             onClick={() => setTypeText()}
-            className={`block forLabel:text-nowrap font-medium bg-inherit h-[0.1rem] text-[#0F0F0F] absolute top-0 right-0 left-0 transition-all peer-autofill:-translate-y-6 before:overflow-visible peer-autofill:text-[#616161] peer-autofill:~text-xs/sm duration-300 ~pb-8/10 ${
+            className={`block forLabel:text-nowrap font-medium ~text-sm/xl text-left bg-inherit h-[0.1rem] text-[#0F0F0F] absolute top-0 right-0 left-0 transition-all peer-autofill:-translate-y-6 before:overflow-visible peer-autofill:text-[#616161] peer-autofill:~text-xs/sm duration-300 ~pb-8/10 ${
               isFocus && fieldType !== 'file'
                 ? '~text-xs/sm text-[#616161] -translate-y-7 bg-transparent pb-0 before:hidden'
                 : '~text-sm/lg -translate-y-1'
@@ -124,6 +132,10 @@ const FormSteps = ({ register, watch }) => {
               )
             </span>
           </label>
+
+          <p className="text-sm text-red-500 mt-2">
+            {errors?.['Insurance Carrier']?.message}
+          </p>
         </div>
         <Input
           key="membershipID"
@@ -132,6 +144,7 @@ const FormSteps = ({ register, watch }) => {
           id="membershipID"
           register={register}
           watch={watch}
+          errors={errors}
         />
         <Input
           key="groupNumber"
@@ -140,6 +153,7 @@ const FormSteps = ({ register, watch }) => {
           id="groupNumber"
           register={register}
           watch={watch}
+          errors={errors}
         />
       </>
     );

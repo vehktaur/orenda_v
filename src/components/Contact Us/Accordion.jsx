@@ -9,7 +9,7 @@ const Accordion = ({ question, answer }) => {
         accordionOpen ? 'orenda-purple' : '[#E3E3E3]'
       } ${accordionOpen ? 'bg-[#f8f8ff]' : ''} rounded-lg`}
     >
-      <div className="">
+      <div>
         <button
           onClick={() => setAccordionOpen(!accordionOpen)}
           className="flex justify-between items-center gap-2 w-full"

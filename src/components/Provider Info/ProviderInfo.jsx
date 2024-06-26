@@ -60,9 +60,7 @@ const ProviderInfo = () => {
                 <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-center ~mt-2/[1.38rem] ~mb-5/6">
                   Specialising in geriatric care
                 </p>
-                <p className="whitespace-pre-line leading-6">
-                  {provider.about}
-                </p>
+                <p className="whitespace-pre-line">{provider.about}</p>
               </div>
             </div>
 
@@ -138,7 +136,7 @@ const ProviderInfo = () => {
 
               <HR />
 
-              <div className="sm:border space-y-4 sm:space-y-0 mb-4 sm:mb-0 border-t-0 sm:border-[#EFEBDF] sm:basis-1/2">
+              <div className="sm:border-l space-y-4 sm:space-y-0 mb-4 sm:mb-0 sm:border-[#EFEBDF] sm:basis-1/2">
                 <div className="sm:border-b  sm:border-[#EFEBDF] sm:~px-4/8 sm:~py-5/10">
                   <ProviderInfoUl
                     h2="Focus Areas"
@@ -175,24 +173,26 @@ const ProviderInfo = () => {
               </div>
             </div>
 
-            <div className="sm:~px-3/6 ~py-4/8">
-              <h2 className="font-bold ~text-sm/xl ~mb-2/4">
-                Reviews from Clients
-              </h2>
-              <Swiper modules={[Navigation, Pagination]}>
-                {provider.reviews.map((review) => (
-                  <SwiperSlide>
-                    <div className="leading-6 grid gap-6">
-                      <p>{review}</p>
-                    </div>
-                  </SwiperSlide>
-                ))}
+            {provider.reviews && (
+              <div className="sm:~px-3/6 ~py-4/8">
+                <h2 className="font-bold ~text-sm/xl ~mb-2/4">
+                  Reviews from Clients
+                </h2>
+                <Swiper modules={[Navigation, Pagination]} spaceBetween={50}>
+                  {provider.reviews.map((review) => (
+                    <SwiperSlide className="swiper-no-swiping">
+                      <div className="leading-6 grid gap-6">
+                        <p>{review}</p>
+                      </div>
+                    </SwiperSlide>
+                  ))}
 
-                <HR />
+                  <HR />
 
-                <ReviewsNavigation />
-              </Swiper>
-            </div>
+                  <ReviewsNavigation />
+                </Swiper>
+              </div>
+            )}
           </div>
 
           <div className="mt-12 ~mb-[6.13rem]/[11.44rem]">

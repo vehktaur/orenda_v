@@ -14,13 +14,27 @@ import multiplan from '../../assets/multiplan_insurance.png';
 import FAQ from './FAQ';
 import Newsletter from './Newsletter';
 import Input from '../Input';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 const ContactUsPage = () => {
-  const { register, handleSubmit, watch } = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors, isSubmitSuccessful }
+  } = useForm({
+    reValidateMode: 'onChange'
+  });
   const onSubmit = (data) => {
     console.log(data);
   };
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful]);
   return (
     <>
       <main className="px-5 ~mt-8/[7.5rem]">
@@ -96,6 +110,7 @@ const ContactUsPage = () => {
                   id="yourName"
                   register={register}
                   watch={watch}
+                  errors={errors}
                 />
                 <Input
                   key="emailAddress"
@@ -104,6 +119,7 @@ const ContactUsPage = () => {
                   id="emailAddress"
                   register={register}
                   watch={watch}
+                  errors={errors}
                 />
                 <Input
                   key="phoneNumber"
@@ -112,6 +128,7 @@ const ContactUsPage = () => {
                   id="phoneNumber"
                   register={register}
                   watch={watch}
+                  errors={errors}
                 />
                 <Input
                   key="subject"
@@ -120,6 +137,7 @@ const ContactUsPage = () => {
                   id="subject"
                   register={register}
                   watch={watch}
+                  errors={errors}
                 />
                 <Input
                   key="message"
@@ -128,6 +146,7 @@ const ContactUsPage = () => {
                   id="message"
                   register={register}
                   watch={watch}
+                  errors={errors}
                 />
                 <button className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg">
                   Submit

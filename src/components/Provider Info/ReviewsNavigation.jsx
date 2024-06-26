@@ -32,7 +32,7 @@ const ReviewsNavigation = () => {
         </svg>
       </button>
       <button
-      className={activeIndex == numberOfSlides && 'cursor-not-allowed'}
+        className={activeIndex == numberOfSlides ? 'cursor-not-allowed' : ''}
         onClick={() => {
           swiper.slideNext();
           setActiveIndex(swiper.activeIndex + 1);

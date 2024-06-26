@@ -17,6 +17,7 @@
     color: #070707;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    accent-color: #333;
   }
 
   input:-webkit-autofill,
@@ -46,13 +47,21 @@
 }
 
 @layer components {
-  main p, main li {
+  main p,
+  main li {
     @apply ~text-sm/xl font-dm-sans text-justify;
+  }
+  form h3 {
+    @apply ~text-sm/xl font-dm-sans;
   }
   .heading {
     @apply font-bold ~sm/xl:~text-lg/[2.625rem] text-center font-heading;
   }
   .footer__heading {
     @apply font-bold ~sm/xl:~text-sm/lg text-justify ~mb-2/4;
+  }
+
+  .fieldset {
+    @apply border border-[#D6D6D6] font-dm-sans rounded-2xl ~pt-6/[1.69rem] ~pb-[3.25rem]/[4.06rem] ~pl-4/[3.63rem] ~pr-4/[4.75rem];
   }
 }

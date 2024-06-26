@@ -9,6 +9,7 @@ const providersData = [
       adults: '18 - 64 yrs'
     },
     languagesSpoken: ['English'],
+    mainFocus: null,
     focusAreas: [
       'Academic Stress',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -682,47 +683,36 @@ const providersData = [
     image: '../src/assets/providers/main/15.png',
     name: 'Robin Blaize',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: {
-      children: '5+ yrs',
-      teens: '13 - 17 yrs',
-      adults: '18 - 64 yrs'
-    },
-    languagesSpoken: ['English', 'Bengali'],
+    agesSeen: ['Young adults', 'Adults', 'Individuals'],
+    languagesSpoken: ['English'],
+    mainFocus: [
+      'Alcoholism',
+      'Post-Traumatic Stress Disorder (PTSD)',
+      `Women's Mental Health Issues`,
+      `Attention-Deficit / Hyperactivity Disorder (ADHD)`
+    ],
     focusAreas: [
-      'Academic Stress',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Alcoholism',
       'Medication Management',
-      'Pre-College Fears',
+      'Prescription / Refill',
       'Anxiety',
       'Depression',
-      'Panic Attack',
-      'Prescription / Refill'
+      `Attention-Deficit / Hyperactivity Disorder (ADHD)`,
+      'Post-Traumatic Stress Disorder (PTSD)',
+      `Women's Mental Health Issues`
     ],
-    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
-    educationAndBackground: [
-      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
-      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
-      'State University of New York, Binghamton (Bachelor’s)'
+    treatmentApproaches: ['Psychodynamic'],
+    educationAndBackground: [`Pace University, Master's in Nursing`],
+    specialties: [
+      'Adult Psychiatric & Mental Health Nurse Practitioner',
+      'Family Psychiatric & Mental Health Nurse Practitioner'
     ],
-    specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
-    about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
-
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
-    reviews: [
-      `“Provider actually cares about your needs, your unique
-                      situation, and how your meds are affecting you. He takes
-                      the time to check in with care in check-ups, and isn't a
-                      5-minute “hi, here's a prescription, bye,” kind of
-                      practitioner, which is rare and VERY appreciated. I would
-                      recommend to anyone looking for long-lasting care that
-                      feels compassionate and well-informed!”`,
-      `“Dr. Rahman was very kind, thoughtful and helpful. Highly
-                      recommend!”`
-    ]
+    about: `New York State board certified Psychiatric Mental Health Nurse Practitioner through the life-span. Compassionate clinician experienced in working with individuals with generalized anxiety disorder, major depression, PTSD, ADHD, bipolar disorder schizophrenia and substance use disorder. Dedicated to collaborating with clients to reach their treatment goals.`,
+    reviews: ['']
   },
   {
     image: '../src/assets/providers/main/16.png',
