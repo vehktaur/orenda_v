@@ -100,7 +100,7 @@ const SelectCheckboxes = ({
                       onClick={(event) => {
                         event.stopPropagation();
                         clearSelect('Other (select)');
-                        resetField(`States Licensed`);
+                        resetField('States Licensed');
                       }}
                     >
                       Other (select)
