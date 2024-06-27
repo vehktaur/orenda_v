@@ -8,7 +8,7 @@ const ReviewsNavigation = () => {
   const numberOfSlides = swiper.slides.length;
 
   return (
-    <div className="flex gap-4 sm:ms-auto justify-between sm:justify-start sm:max-w-28 sm:~mt-8/[3.13rem]">
+    <div className="flex gap-4 sm:ms-auto justify-between sm:justify-start sm:max-w-28 mt-6">
       <button
         className={activeIndex == 1 && 'cursor-not-allowed'}
         onClick={() => {

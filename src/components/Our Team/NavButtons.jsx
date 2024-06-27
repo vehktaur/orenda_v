@@ -1,59 +1,73 @@
-import { useState } from 'react';
 import { useSwiper } from 'swiper/react';
 
-const ReviewsNavigation = () => {
+const NavButtons = () => {
   const swiper = useSwiper();
 
-  const [activeIndex, setActiveIndex] = useState(swiper.activeIndex + 1);
-  const numberOfSlides = swiper.slides.length;
+  let numberOfSlides = swiper.slides.length;
+  let activeIndex = swiper.activeIndex + 1;
 
   return (
-    <div className="flex gap-4 sm:ms-auto justify-between sm:justify-start sm:max-w-28 sm:~mt-8/[3.13rem]">
-      <button
-        className={activeIndex == 1 && 'cursor-not-allowed'}
-        onClick={() => {
-          swiper.slidePrev();
-          setActiveIndex(swiper.activeIndex + 1);
-        }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
+    <div className="max-w-7xl mx-auto">
+      <div className="p-4 flex items-center justify-center md:justify-end gap-6">
+        <button
+          disabled={activeIndex == 1}
+          className={`${
+            activeIndex == 1
+              ? 'bg-[#B0B0B0] cursor-not-allowed'
+              : 'bg-orenda-purple'
+          } rounded-full ~p-1.5/2.5`}
+          onClick={() => swiper.slidePrev()}
         >
-          <path
-            d="M31.6667 20H9.99999M18.3333 10L9.51184 18.8215C8.86096 19.4724 8.86096 20.5276 9.51184 21.1785L18.3333 30"
-            stroke={activeIndex === 1 ? '#D5D5D5' : '#2E0086'}
-            stroke-width="3"
-            stroke-linecap="round"
-          />
-        </svg>
-      </button>
-      <button
-        className={activeIndex == numberOfSlides ? 'cursor-not-allowed' : ''}
-        onClick={() => {
-          swiper.slideNext();
-          setActiveIndex(swiper.activeIndex + 1);
-        }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Arrows">
+              <path
+                id="Icon"
+                d="M25.3334 16L8.00004 16M14.6667 24L7.60952 16.9428C7.08882 16.4221 7.08882 15.5779 7.60952 15.0572L14.6667 8"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </g>
+          </svg>
+        </button>
+        <span className="font-bold">
+          {activeIndex} / {numberOfSlides}
+        </span>
+        <button
+          disabled={activeIndex === numberOfSlides}
+          className={`${
+            activeIndex == numberOfSlides
+              ? 'bg-[#B0B0B0] cursor-not-allowed'
+              : 'bg-orenda-purple'
+          } rounded-full ~p-1.5/2.5`}
+          onClick={() => swiper.slideNext()}
         >
-          <path
-            d="M8.33398 20H30.0007M21.6673 10L30.4888 18.8215C31.1397 19.4724 31.1397 20.5276 30.4888 21.1785L21.6673 30"
-            stroke={activeIndex === numberOfSlides ? '#D5D5D5' : '#2E0086'}
-            stroke-width="3"
-            stroke-linecap="round"
-          />
-        </svg>
-      </button>
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Arrows">
+              <path
+                id="Icon"
+                d="M6.66663 16H24M17.3333 8L24.3905 15.0572C24.9112 15.5779 24.9112 16.4221 24.3905 16.9428L17.3333 24"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
     </div>
   );
 };
-export default ReviewsNavigation;
+export default NavButtons;

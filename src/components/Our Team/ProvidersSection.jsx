@@ -3,24 +3,46 @@ import { Link } from 'react-router-dom';
 
 const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
   const showStatesLicensed = (states) => {
-    if (states.length === 1) {
+    if (states && states.length === 1) {
       return `${states[0]}`;
-    } else if (states.length === 2) {
+    } else if (states && states.length === 2) {
       return `${states[0]} & ${states[1]}`;
-    } else if (states.length > 2) {
+    } else if (states && states.length > 2) {
       return `${states[0]}, ${states[1]} & more.`;
     } else {
       return '';
     }
   };
 
+  const showAgesSeen = (agesSeen) => {
+    if (agesSeen) {
+      return agesSeen.map((category, index, array) => {
+        const divider = index === array.length - 1 ? '.' : ', ';
+
+        if (category === 'Children') {
+          return `${category} (<13)${divider}`;
+        } else if (category === 'Teenagers') {
+          return `${category} (13-17)${divider}`;
+        } else if (category === 'Young Adults') {
+          return `${category} (18-24)${divider}`;
+        } else if (category === 'Adults') {
+          return `${category} (25-64)${divider}`;
+        } else if (category === 'Seniors') {
+          return `${category} (65+)${divider}`;
+        } else {
+          return `${category}${divider}`;
+        }
+      });
+    }
+  };
+
   const sectionProvidersData = providersData.slice(itemOffset, endOffset);
 
-  let gridClasses = `grid auto-cols-fr grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ${
+  let gridClasses = `grid auto-cols-fr grid-cols-1 ${
     numberOfColumns === 5
       ? 'gap-x-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'
-      : '~gap-x-0/7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
-  } gap-y-10 justify-items-center items-center`;
+      : '~gap-x-0/7 sm:grid-cols-2 lg:grid-cols-3 forProviders:grid-cols-4'
+  } gap-y-10 justify-items-center items-stretch`;
 
   return (
     <div className="p-4">
@@ -28,7 +50,7 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
         <div className={gridClasses}>
           {sectionProvidersData.map((provider) => {
             const index = providersData.findIndex(
-              (obj) => obj.name === provider.name
+              (obj) => obj.name === provider?.name
             );
             return (
               <div
@@ -56,7 +78,7 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                           : 'line-clamp-[10] md:line-clamp-[13]'
                       } overflow-hidden text-[0.85rem]`}
                     >
-                      {provider.about}
+                      {provider?.about}
                     </p>
                   </div>
                   <div
@@ -64,9 +86,12 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                       numberOfColumns === 5 ? 'gap-2' : 'gap-4'
                     }`}
                   >
-                    <button className="border rounded-3xl px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6 font-medium">
+                    <Link
+                      className="border block rounded-3xl px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6 font-medium text-center"
+                      to={`/provider/${index}`}
+                    >
                       Book now
-                    </button>
+                    </Link>
                     <div className="flex justify-center">
                       <Link
                         className="text-[0.875rem] font-semibold hover:underline"
@@ -86,8 +111,8 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                 >
                   <img
                     className="w-[80%] h-[90%] block object-contain"
-                    src={provider.image}
-                    alt={provider.name}
+                    src={provider?.image}
+                    alt={provider?.name}
                   />
                 </div>
                 <div className={numberOfColumns === 5 ? 'px-3' : 'px-4'}>
@@ -96,14 +121,14 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                       numberOfColumns === 5 ? 'text-xs mt-2' : 'text-sm ~mt-2/4'
                     } font-medium font-dm-sans`}
                   >
-                    {provider.credentials}
+                    {provider?.credentials}
                   </p>
                   <h3
                     className={`~text-base/lg font-bold font-open-sans ${
                       numberOfColumns === 5 ? 'py-1' : 'py-2'
                     }`}
                   >
-                    {provider.name}
+                    {provider?.name}
                   </h3>
                   <div className="pt-1 px-1 pb-2 bg-[#f5f5f5] rounded-[0.25rem]">
                     <p className="text-xs font-medium font-dm-sans text-[#6A6A6A] pb-1">
@@ -114,15 +139,7 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                         numberOfColumns === 5 ? 'text-[0.625rem]' : 'text-xs'
                       } font-open-sans`}
                     >
-                      {provider.agesSeen.children && (
-                        <span>{`Children: (${provider.agesSeen.children}) `}</span>
-                      )}
-                      {provider.agesSeen.teens && (
-                        <span>{`Teens: (${provider.agesSeen.teens}) `}</span>
-                      )}
-                      {provider.agesSeen.adults && (
-                        <span>{`Adults: (${provider.agesSeen.adults})`}</span>
-                      )}
+                      {provider.agesSeen && showAgesSeen(provider?.agesSeen)}
                     </p>
                   </div>
                   <div className="pt-[0.62rem]">
@@ -134,11 +151,11 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                         numberOfColumns === 5 ? 'text-xs' : 'text-sm'
                       } font-medium font-dm-sans`}
                     >
-                      {showStatesLicensed(provider.statesLicensed)}
+                      {showStatesLicensed(provider?.statesLicensed)}
                     </p>
                   </div>
                   <div className="flex justify-between pt-4 gap-3">
-                    {provider.availability && (
+                    {provider?.availability && (
                       <span
                         className={`rounded-lg grid place-items-center border border-[#E1EEE4] bg-[#F0FDF3] text-nowrap ${
                           numberOfColumns === 5
@@ -146,7 +163,7 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                             : '~xl/2xl:~px-1.5/3 py-2 ~text-[0.625rem]/xs'
                         } font-dm-sans`}
                       >
-                        {provider.availability}
+                        {provider?.availability}
                       </span>
                     )}
 

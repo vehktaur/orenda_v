@@ -48,7 +48,8 @@ export default {
       },
       screens: {
         forLabel: '23.75rem',
-        xs: '20rem'
+        xs: '20rem',
+        forProviders: '70rem'
       }
     }
   },

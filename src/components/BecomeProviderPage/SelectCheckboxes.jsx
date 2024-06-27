@@ -106,7 +106,7 @@ const SelectCheckboxes = ({
             return (
               <div
                 key={number + option}
-                className="flex ~gap-2/4 items-center px-4 ~py-[0.94rem]/[1.19rem] border border-[#C9C9C9] rounded-lg"
+                className="flex ~gap-2/4 items-center px-4 ~py-[0.94rem]/[1.19rem] border border-[#C9C9C9] rounded-lg hover:border-[#ecf5eb] hover:bg-[#ecf5eb]"
               >
                 <input
                   className="~size-[1.125rem]/6 border border-[#C9C9C9] rounded-sm"
@@ -120,7 +120,7 @@ const SelectCheckboxes = ({
                     }
                   })}
                 />
-                <label className="text-[#070707]" htmlFor={number + option}>
+                <label className="text-[#070707] w-full cursor-pointer" htmlFor={number + option}>
                   {option}
                 </label>
               </div>
