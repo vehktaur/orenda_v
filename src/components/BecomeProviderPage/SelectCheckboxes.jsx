@@ -7,11 +7,10 @@ const SelectCheckboxes = ({
   register,
   errors,
   name,
-  selected,
-  setSelected,
   resetField
 }) => {
   const [selectOpen, setSelectOpen] = useState(false);
+  const [selected, setSelected] = useState(['Other (select)']);
 
   const otherCheckboxes = ['Georgia', 'South Carolina', 'Alaska', 'Maryland'];
 

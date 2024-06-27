@@ -7,8 +7,6 @@ const BPStepOne = ({
   register,
   watch,
   errors,
-  selected,
-  setSelected,
   resetField,
 }) => {
   return (
@@ -48,8 +46,6 @@ const BPStepOne = ({
         register={register}
         errors={errors}
         name="States Licensed"
-        selected={selected}
-        setSelected={setSelected}
         resetField={resetField}
       />
 

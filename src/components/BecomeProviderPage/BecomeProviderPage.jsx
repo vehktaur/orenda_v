@@ -35,7 +35,6 @@ const BecomeProviderPage = () => {
     }
   };
 
-  const [selected, setSelected] = useState(['Other (select)']);
 
   return (
     <main className="px-5 mb-40">
@@ -60,8 +59,6 @@ const BecomeProviderPage = () => {
                 register={register}
                 watch={watch}
                 errors={errors}
-                selected={selected}
-                setSelected={setSelected}
                 resetField={resetField}
               />
             )}
