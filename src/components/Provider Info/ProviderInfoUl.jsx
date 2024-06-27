@@ -1,6 +1,6 @@
 const ProviderInfoUl = ({ h2, listArray, classes }) => {
 
-  const effectiveListArray = listArray || ['Null'];
+  const effectiveListArray = listArray || ['Nil'];
 
   return (
     <div>
@@ -8,7 +8,7 @@ const ProviderInfoUl = ({ h2, listArray, classes }) => {
       <ul className="list-image-dot ps-4 ~text-sm/lg ~space-y-2/[1.06rem]">
         {effectiveListArray.map((item) => (
           <li
-            className={`~mb-4/[${classes?.mb}rem] leading-${classes.lineHeight}`}
+            className={`~mb-4/[${classes?.mb}rem] leading-${classes.lineHeight} text-left`}
             key={item}
           >
             {item}

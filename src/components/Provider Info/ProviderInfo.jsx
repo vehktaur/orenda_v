@@ -29,7 +29,7 @@ const ProviderInfo = () => {
         }
       });
     } else {
-      return 'Nill';
+      return 'Nil';
     }
   };
 

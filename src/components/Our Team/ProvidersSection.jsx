@@ -10,9 +10,10 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
     } else if (states && states.length > 2) {
       return `${states[0]}, ${states[1]} & more.`;
     } else {
-      return '';
+      return 'Nil';
     }
   };
+  
 
   const showAgesSeen = (agesSeen) => {
     if (agesSeen) {
