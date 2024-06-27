@@ -10,7 +10,6 @@ const BPStepOne = ({
   selected,
   setSelected,
   resetField,
-  trigger,
 }) => {
   return (
     <div className="space-y-6">
@@ -52,7 +51,6 @@ const BPStepOne = ({
         selected={selected}
         setSelected={setSelected}
         resetField={resetField}
-        trigger={trigger}
       />
 
       <SelectCheckboxes

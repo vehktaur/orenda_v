@@ -13,11 +13,8 @@ const BecomeProviderPage = () => {
     watch,
     clearErrors,
     resetField,
-    trigger,
     formState: { errors, isDirty, isValid }
   } = useForm();
-
-  console.log(watch(['States Licensed', 'Other States Licensed']));
 
   const onSubmit = (data) => {
     if (formStep === 3) {
@@ -36,11 +33,9 @@ const BecomeProviderPage = () => {
       setTimeout(() => clearErrors(), 1);
       window.scrollTo(0, 100);
     }
-
-    console.log('works');
   };
 
-  const [selected, setSelected] = useState('Other (select)');
+  const [selected, setSelected] = useState(['Other (select)']);
 
   return (
     <main className="px-5 mb-40">
@@ -68,7 +63,6 @@ const BecomeProviderPage = () => {
                 selected={selected}
                 setSelected={setSelected}
                 resetField={resetField}
-                trigger={trigger}
               />
             )}
 

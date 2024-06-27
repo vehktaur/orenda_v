@@ -9,20 +9,53 @@ const SelectCheckboxes = ({
   name,
   selected,
   setSelected,
-  resetField,
-  trigger
+  resetField
 }) => {
   const [selectOpen, setSelectOpen] = useState(false);
 
-  const otherCheckboxes = [
-    'Illinois',
-    'California',
-    'Pennsylvania',
-    'Maryland'
-  ];
+  const otherCheckboxes = ['Georgia', 'South Carolina', 'Alaska', 'Maryland'];
 
   const handleSelect = (checkbox) => {
-    setSelected(checkbox);
+    setSelected((prevSelected) => {
+      // Remove 'Other (select)' from the previous selection
+      let updatedSelected = prevSelected.filter(
+        (item) => item !== 'Other (select)'
+      );
+
+      if (updatedSelected.includes(checkbox)) {
+        // If the checkbox is already selected, remove it
+        updatedSelected = updatedSelected.filter((item) => item !== checkbox);
+
+        // If removing the checkbox leaves the selection empty, add 'Other (select)'
+        if (updatedSelected.length === 0) {
+          updatedSelected = ['Other (select)'];
+        }
+      } else {
+        // If the checkbox is not selected, add it to the selection
+        updatedSelected = [...updatedSelected, checkbox];
+      }
+
+      return updatedSelected;
+    });
+    setSelectOpen(false);
+  };
+
+  const showSelected = (selected, setSelected) => {
+    if (selected && selected.length > 0) {
+      return selected
+        .map((item, index, array) => {
+          const divider = index === array.length - 1 ? '' : ', ';
+          return item + divider;
+        })
+        .join('');
+    } else {
+      setSelected(['Other (select)']);
+      return 'Other (select)';
+    }
+  };
+
+  const clearSelect = (value) => {
+    setSelected([value]);
     setSelectOpen(false);
   };
 
@@ -49,7 +82,7 @@ const SelectCheckboxes = ({
                   }}
                   className="w-full block relative bg-arrow bg-arrow-position bg-arrow-size bg-no-repeat text-[#070707] text-left"
                 >
-                  {selected}
+                  {showSelected(selected)}
                   <div
                     className={`absolute bg-white border border-[#C9C9C9] rounded-lg top-[120%] left-0 right-0 transition-all duration-300 ease-in-out grid justify-items-start overflow-hidden p-2${
                       selectOpen
@@ -60,15 +93,14 @@ const SelectCheckboxes = ({
                     <label
                       key="Other"
                       className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
-                        selected === 'Other (select)'
-                          ? 'bg-[#f3f3f3]'
-                          : 'hover:bg-[#f3f3f3]'
+                        selected.includes('Other (select)')
+                          ? 'bg-[#ecf5eb]'
+                          : 'hover:bg-[#ecf5eb]'
                       }`}
                       onClick={(event) => {
                         event.stopPropagation();
-                        handleSelect('Other (select)');
-                        resetField(`Other States Licensed`);
-                        // trigger('States Licensed', { shouldFocus: true });
+                        clearSelect('Other (select)');
+                        resetField(`States Licensed`);
                       }}
                     >
                       Other (select)
@@ -80,9 +112,9 @@ const SelectCheckboxes = ({
                         }}
                         key={checkbox}
                         className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
-                          selected === checkbox
-                            ? 'bg-[#f3f3f3]'
-                            : 'hover:bg-[#f3f3f3]'
+                          selected.includes(checkbox)
+                            ? 'bg-[#ecf5eb]'
+                            : 'hover:bg-[#ecf5eb]'
                         }`}
                       >
                         {checkbox}
@@ -92,9 +124,14 @@ const SelectCheckboxes = ({
                             event.stopPropagation();
                             handleSelect(checkbox);
                           }}
-                          type="radio"
+                          type="checkbox"
                           value={checkbox}
-                          {...register(`Other ${name}`)}
+                          {...register(name, {
+                            required: {
+                              value: true,
+                              message: 'Please select at least one'
+                            }
+                          })}
                         />
                       </label>
                     ))}
@@ -115,12 +152,15 @@ const SelectCheckboxes = ({
                   id={number + option}
                   {...register(name, {
                     required: {
-                      value: name !== 'States Licensed',
+                      value: true,
                       message: 'Please select at least one'
                     }
                   })}
                 />
-                <label className="text-[#070707] w-full cursor-pointer" htmlFor={number + option}>
+                <label
+                  className="text-[#070707] w-full cursor-pointer"
+                  htmlFor={number + option}
+                >
                   {option}
                 </label>
               </div>
