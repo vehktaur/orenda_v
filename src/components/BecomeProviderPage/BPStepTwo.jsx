@@ -103,7 +103,7 @@ const BPStepTwo = ({ register, errors }) => {
                     ) || 'Pdf & Jpeg Only!'
                 }
               })}
-              accept='image/jpeg, application/pdf'
+              accept="image/jpeg, application/pdf"
             />
           </div>
         </div>

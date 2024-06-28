@@ -341,12 +341,7 @@ const providersData = [
     statesLicensed: null,
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
-    about: `Danielle is a board certified psychiatric mental health nurse practitioner. She is passionate about
-    providing quality, compassionate and comprehensive mental health services to adolescents and
-    adults. Danielle possesses strong clinical skills enhanced by natural ability to build rapport with
-    patients. She follows evidence-based guidelines blended with clinical experience, personal
-    observation and intuition. As a PMHNP, Danielle's role is multifaceted, including educator, metal
-    health advocate and therapist.
+    about: `Danielle is a board certified psychiatric mental health nurse practitioner. She is passionate about providing quality, compassionate and comprehensive mental health services to adolescents and adults. Danielle possesses strong clinical skills enhanced by natural ability to build rapport with patients. She follows evidence-based guidelines blended with clinical experience, personal observation and intuition. As a PMHNP, Danielle's role is multifaceted, including educator, metal health advocate and therapist.
 
     Serving New York and Brooklyn, NY residents, she offers virtual consultations at Orenda Psychiatry, ensuring accessible support for all. Ms. Overton-Miller obtained a master's degree in psychiatric mental health nursing from D'Youville University.`,
     reviews: [
@@ -401,11 +396,7 @@ const providersData = [
     ],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
-    about: `Jena M. Simon, DNP, is a Double Board-Certified nurse practitioner specializing in psychiatric
-    mental health and family health. After graduating from Columbia University in 2010 as a Family
-    and Oncology Nurse Practitioner, Dr. Simon worked in New York City at a large tertiary medical
-    center caring for adults with sickle cell disease. In this role, she became attuned to the needs of
-    people living with chronic illness and chronic pain.
+    about: `Jena M. Simon, DNP, is a Double Board-Certified nurse practitioner specializing in psychiatric mental health and family health. After graduating from Columbia University in 2010 as a Family and Oncology Nurse Practitioner, Dr. Simon worked in New York City at a large tertiary medical center caring for adults with sickle cell disease. In this role, she became attuned to the needs of people living with chronic illness and chronic pain.
 
     Dr. Simon takes an integrative and holistic approach to mental health. As a family nurse practitioner, she considers how physical health impacts mood and relationships. She is passionate about partnering with clients to find practical and creative ways to feel better. She is skilled in medication management and several therapy techniques, including motivational interviewing, psychodynamic therapy, cognitive behavioral therapy, and solution-focused brief therapy.`,
     reviews: [
@@ -544,12 +535,10 @@ const providersData = [
     statesLicensed: null,
     availability: null,
     bookingLink: 'https://booking.url',
-    about: `Anne Mongiello uses her empathetic and evidence-based approach as the guide through the
-    complexities of various psychiatric challenges, including panic attacks, obsessive-compulsive
-    disorder (OCD), attention-deficit/hyperactivity disorder (ADD/ADHD), and bipolar disorder.
+    about: `Anne Mongiello uses her empathetic and evidence-based approach as the guide through the complexities of various psychiatric challenges, including panic attacks, obsessive-compulsive disorder (OCD), attention-deficit/hyperactivity disorder (ADD/ADHD), and bipolar disorder.
      
     She extends her expertise through virtual consultations, welcoming patients from New York and Brooklyn, NY.
-
+    
     She is committed to providing accessible and personalized care for her patients, and dedicated to helping them navigate their mental health journeys with expertise and tailored support. Her focus spans a spectrum of concerns, such as anxiety, depressions, panic attacks, insomnia, prescription/refill needs, bulimia nervosa, and medication management.
 
 
@@ -597,8 +586,7 @@ const providersData = [
     statesLicensed: null,
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
-    about: `Ketie Saintelus is a board-certified Family Nurse Practitioner and Psychiatry Nurse Practitioner,
-    licensed by the state of New York to provide family-centered healthcare to patients of all ages.
+    about: `Ketie Saintelus is a board-certified Family Nurse Practitioner and Psychiatry Nurse Practitioner, licensed by the state of New York to provide family-centered healthcare to patients of all ages. 
     Her scope of practice encompasses health promotion, disease prevention, diagnosis and management of common and complex health medical and psychiatry problems.
     
     Ketie's philosophy of patient care centers around equality for all. Her goals in practice are to treat
@@ -638,14 +626,11 @@ const providersData = [
     statesLicensed: ['Connecticut'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
-    about: `I have comprehensive approach to care and relationships. I emphasize holistic care of the body
-    and mind. As a provider who is dual board certified in psychiatric mental health and primary
-    care, I am equipped to partner with my clients to meet their psychological and medical needs
-    with an open mind. 
+    about: `I have comprehensive approach to care and relationships. I emphasize holistic care of the body and mind. As a provider who is dual board certified in psychiatric mental health and primary care, I am equipped to partner with my clients to meet their psychological and medical needs with an open mind.
 
     I recognize the profound connection between mental health and physical health, and I use an integrative process to help my clients on their journey to well-being. I partner with clients using psychodynamic therapy and evidence-based pharmacology. I have experience treating depression, anxiety, ADHD, OCD, and sleep issues.
     
-    In my spare time, I enjoy the outdoors, running and biking, reading, cooking, and spending time with my dog, Roman`,
+    In my spare time, I enjoy the outdoors, running and biking, reading, cooking, and spending time with my dog, Roman.`,
     reviews: [
       `“She took the time to ask me questions that were not just yes or no and even give me advice
       about my symptoms. She truly listened and wanted to understand what I was actually going
@@ -695,9 +680,7 @@ const providersData = [
     statesLicensed: ['Alaska'],
     availability: 'Available in 3 days',
     bookingLink: 'https://booking.url',
-    about: `Bethany Malugin is a distinguished adult psychiatric and mental health nurse practitioner who
-    follows a patient-centered approach during her sessions, addressing anxiety, bipolar disorder,
-    obsessive-compulsive disorder (OCD), panic attacks, and hyperactive disorder.
+    about: `Bethany Malugin is a distinguished adult psychiatric and mental health nurse practitioner who follows a patient-centered approach during her sessions, addressing anxiety, bipolar disorder, obsessive-compulsive disorder (OCD), panic attacks, and hyperactive disorder.
 
     With a master’s degree in nursing from Drexel University, Ms. Malugin strives to provide evidence-based treatments tailored to each patient’s unique needs and utilizes a holistic perspective to support patients in achieving their highest mental and emotional well-being.`,
     reviews: [
@@ -747,10 +730,9 @@ const providersData = [
     
     Brian aims to empower his patients actively with a commitment to combining personal insights, evidence-based research, medicine, and talk therapy. He hopes to empower clients to actively participate in their care so that they can lead a richer and more fulfilling life.`,
     reviews: [
-      `“It was my son's first virtual visit with Brian and it is evident that he truly stands out in his field.
-      His genuine kindness and unwavering empathy made my son feel comfortable and understood. Brian’s exceptional listening skills ensured that my son was not only heard but truly supported.
-      My son is looking forward to his next session.” - Michele S.
-      “Could not speak more highly of this provider, I felt heard and understood for the first time in my adult life. It was nice for someone to listen to my concerns but also be deeply empathetic. It honestly felt like I wanted to cry with many other providers not listening to their client's concerns or worries. I also appreciated that he shared information to help make the most informed choice for yourself whatever that choice ends up being so that you're making a choice that feels right for you. I feel so much less ashamed of what I've been going through my entire life and less like there's something wrong with me. I'd recommend him to everyone who needs a caring provider.” - Initials hidden`,
+      `“It was my son's first virtual visit with Brian and it is evident that he truly stands out in his field. His genuine kindness and unwavering empathy made my son feel comfortable and understood. Brian’s exceptional listening skills ensured that my son was not only heard but truly supported.
+      My son is looking forward to his next session.” - Michele S.`,
+      `“Could not speak more highly of this provider, I felt heard and understood for the first time in my adult life. It was nice for someone to listen to my concerns but also be deeply empathetic. It honestly felt like I wanted to cry with many other providers not listening to their client's concerns or worries. I also appreciated that he shared information to help make the most informed choice for yourself whatever that choice ends up being so that you're making a choice that feels right for you. I feel so much less ashamed of what I've been going through my entire life and less like there's something wrong with me. I'd recommend him to everyone who needs a caring provider.” - Initials hidden`,
       `“Having sessions with Brian has had such a big impact on my life, I’m really glad that the stigmatism of 'therapy’ is dropping away more and more.” - EV`
     ]
   },
@@ -790,11 +772,10 @@ const providersData = [
     statesLicensed: null,
     availability: 'Available in 3 days',
     bookingLink: 'https://booking.url',
-    about: `Carla Rosey is a board certified Psychiatric Mental Health Nurse Practitioner with 5 years of
-    nursing experience in the psychiatric field ranging from community mental health crisis
-    stabilization and substance abuse treatment to adult inpatient care.
+    about: `Carla Rosey is a board certified Psychiatric Mental Health Nurse Practitioner with 5 years of nursing experience in the psychiatric field ranging from community mental health crisis stabilization and substance abuse treatment to adult inpatient care.
 
     With years of experience sponsored with several certifications, Carla focuses on the treatment of mood disorders, trauma, psychotic disorders, chronic mental illness through a patient-centered approach, detailed psychiatric assessment, psycho-therapeutic intervention, and medication management. 
+    
     Carla provides her patients with care that is individualized, comprehensive and free of stigma to help them feel empowered to cope with their mental health matters. She utilizes a collaborative and real-life approach to develop goals and interventions strategies that will best meet the needs of the patient.`,
     reviews: [
       `“It was my son's first virtual visit with Brian and it is evident that he truly stands out in his field.
@@ -861,13 +842,7 @@ const providersData = [
     statesLicensed: null,
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
-    about: `I am a board certified psychiatric NP with AgniPsych & Wellness. My wholistic approach to
-    treatment involves combining evidence-based psychopharmacology with a therapeutic process
-    that prioritizes the individual and their goals over their symptoms. I have experience helping
-    people overcome depression, anxiety and ADHD. While there is currently no cure for addiction,
-    I have helped those afflicted by this condition to lead a healthy and happy life. I rely on my
-    clinical experience for diagnosis and pharmacology, however what sets me apart is my expertise
-    in talk-therapy and ability to relate to others.
+    about: `I am a board certified psychiatric NP with AgniPsych & Wellness. My wholistic approach to treatment involves combining evidence-based psychopharmacology with a therapeutic process that prioritizes the individual and their goals over their symptoms. I have experience helping people overcome depression, anxiety and ADHD. While there is currently no cure for addiction, I have helped those afflicted by this condition to lead a healthy and happy life. I rely on my clinical experience for diagnosis and pharmacology, however what sets me apart is my expertise in talk-therapy and ability to relate to others.
 
     I myself have been through the challenges of divorce, single parenthood and the daunting task going back to school to qualify myself for my dream job. I am happily remarried and am a proud mother of three, the most recent of which we welcomed to our family earlier this year. I know what it’s like to be down and how difficult it can be to rediscover your stride. I am a firm believer that if you surround yourself with a loving and supportive team that this is a realistic goal for anyone. A productive relationship with an understanding practitioner who can help you navigate your challenges and provide the skillset to conquer them is among the first steps. I find that those who are able to share this philosophy, have the willingness to own their journey in life, and are supported by the appropriate pharmacology, will find all that they are looking for.
 `,
@@ -994,11 +969,7 @@ const providersData = [
     statesLicensed: ['Connecticut', 'Massachusetts'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
-    about: `Cassandra Williams offers comprehensive treatment to patients with various mental health
-    concerns. While treating anxiety, hyperactive disorders, bipolar disorder, or other mental health
-    conditions, Ms. Williams utilizes her knowledge of psychotherapy modalities to develop
-    personalized treatment plans to meet each patient's needs.
-    
+    about: `Cassandra Williams offers comprehensive treatment to patients with various mental health concerns. While treating anxiety, hyperactive disorders, bipolar disorder, or other mental health conditions, Ms. Williams utilizes her knowledge of psychotherapy modalities to develop personalized treatment plans to meet each patient's needs.
 
     She takes an empathetic approach towards empowering her patients to overcome challenges,fostering resilience and promoting their holistic well-being.`,
     reviews: [
