@@ -79,7 +79,7 @@ const SelectCheckboxes = ({
                   onClick={() => {
                     setSelectOpen(!selectOpen);
                   }}
-                  className="w-full block relative bg-arrow bg-arrow-position bg-arrow-size bg-no-repeat text-[#070707] text-left"
+                  className="w-full block relative bg-arrow bg-arrow-position bg-arrow-size bg-no-repeat text-[#070707] text-left pr-8"
                 >
                   {showSelected(selected)}
                   <div

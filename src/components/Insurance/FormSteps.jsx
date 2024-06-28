@@ -5,13 +5,6 @@ import { PageNumberContext } from './Insurance';
 const FormSteps = ({ register, watch, errors }) => {
   const pageNumber = useContext(PageNumberContext);
 
-  const { name, ref, onChange } = register('Insurance Carrier', {
-    required: {
-      value: pageNumber === 3 ? true : false,
-      message: 'This field is required'
-    }
-  });
-
   const [isFocus, setIsFocus] = useState(false);
 
   console.log(watch('Insurance Carrier'));
@@ -104,11 +97,14 @@ const FormSteps = ({ register, watch, errors }) => {
             key={'insuranceCarrier'}
             className="block outline-none bg-transparent w-full border-b border-[#D1D1D1] pb-4 forLabel:pb-2"
             type={fieldType}
-            ref={ref}
-            name={name}
             onFocus={handleFocus}
-            onChange={onChange}
-            onBlur={handleBlur}
+            {...register('Insurance Carrier', {
+              onBlur: () => handleBlur(),
+              required: {
+                value: pageNumber === 3 ? true : false,
+                message: 'This field is required'
+              }
+            })}
           />
           <label
             onClick={() => setTypeText()}

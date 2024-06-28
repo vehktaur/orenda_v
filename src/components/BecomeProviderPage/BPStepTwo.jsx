@@ -1,7 +1,15 @@
+import { useEffect, useState } from 'react';
 import SelectCheckboxes from './SelectCheckboxes';
 import Radios from './Radios';
 import upload from '../../assets/upload.svg';
 const BPStepTwo = ({ register, errors }) => {
+  const [selectedFileName, setSelectedFileName] = useState('');
+
+  const handleSelectedFile = (event) => {
+    const file = event?.target.files[0];
+    setSelectedFileName(file?.name);
+  };
+
   return (
     <div className="space-y-6">
       <SelectCheckboxes
@@ -68,10 +76,21 @@ const BPStepTwo = ({ register, errors }) => {
             >
               Choose file
             </label>
-            <p className="text-sm text-red-500 mt-2">{errors?.['CV/Resume']?.message}</p>
+            {selectedFileName && (
+              <p className="~text-sm/base text-[#5a9154] text-center px-6">{selectedFileName}</p>
+            )}
+            <p className="text-sm text-red-500 mt-2">
+              {errors?.['CV/Resume']?.message}
+            </p>
             <input
               hidden
               {...register('CV/Resume', {
+                onChange: (event) => {
+                  handleSelectedFile(event);
+                },
+                onBlur: (event) => {
+                  handleSelectedFile(event);
+                },
                 required: { value: true, message: 'Please add your CV/Resume' }
               })}
               type="file"

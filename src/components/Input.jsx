@@ -22,14 +22,7 @@ const Input = ({ before, label, type, id, register, watch, errors }) => {
   } else {
     pattern = false;
   }
-  const { name, ref, onChange, onBlur } = register(label, {
-    onBlur: handleBlur,
-    required: {
-      value: true,
-      message: 'This field is required'
-    },
-    pattern: pattern
-  });
+
   const pageNumber = useContext(PageNumberContext);
 
   useEffect(() => handleBlur(), [pageNumber, watch(label)]);
@@ -38,25 +31,33 @@ const Input = ({ before, label, type, id, register, watch, errors }) => {
     <div className="relative text-justify bg-inherit">
       {type == 'textarea' ? (
         <textarea
-          id={id}
-          name={name}
-          ref={ref}
-          onFocus={handleFocus}
-          onChange={onChange}
-          onBlur={onBlur}
-          className={`~text-sm/lg outline-none block bg-transparent w-full border-b border-[#D1D1D1] pb-2 peer`}
           type={type}
+          {...register(label, {
+            onBlur: () => handleBlur(),
+            required: {
+              value: true,
+              message: 'This field is required'
+            },
+            pattern: pattern
+          })}
+          id={id}
+          onFocus={handleFocus}
+          className={`~text-sm/lg outline-none block bg-transparent w-full border-b border-[#D1D1D1] pb-2 peer`}
         />
       ) : (
         <input
-          id={id}
-          name={name}
-          ref={ref}
-          onFocus={handleFocus}
-          onChange={onChange}
-          onBlur={onBlur}
-          className={`~text-sm/lg outline-none block bg-transparent w-full border-b border-[#D1D1D1] pb-2 peer`}
           type={type}
+          {...register(label, {
+            onBlur: () => handleBlur(),
+            required: {
+              value: true,
+              message: 'This field is required'
+            },
+            pattern: pattern
+          })}
+          id={id}
+          onFocus={handleFocus}
+          className={`~text-sm/lg outline-none block bg-transparent w-full border-b border-[#D1D1D1] pb-2 peer`}
         />
       )}
       <label
