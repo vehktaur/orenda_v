@@ -3,7 +3,7 @@ import { useSwiper } from 'swiper/react';
 const NavButtons = () => {
   const swiper = useSwiper();
 
-  let numberOfSlides = swiper.slides.length;
+  let numberOfSlides = swiper.slides.length || '6';
   let activeIndex = swiper.activeIndex + 1;
 
   return (
