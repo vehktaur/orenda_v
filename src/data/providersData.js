@@ -41,7 +41,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Tanya Monroe.png',
+    image: providersImages.Tanya_Monroe,
     name: 'Tanya Monroe',
     credentials: 'PMHNP-BC',
     agesSeen: [
@@ -94,7 +94,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Theresa Levy.png',
+    image: providersImages.Theresa_Levy,
     name: 'Theresa Levy',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: [
@@ -139,7 +139,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Michelle Krill.png',
+    image: providersImages.Michelle_Krill,
     name: 'Michelle Krill',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
@@ -169,7 +169,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Myea Meighan.png',
+    image: providersImages.Myea_Meighan,
     name: 'Myea Meighan',
     credentials: 'PMHNP-BC | APRN',
     agesSeen: ['Individuals', 'Young adults', 'Adults'],
@@ -201,7 +201,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Nwamaka Onyeogo.png',
+    image: providersImages.Nwamaka_Onyeogo,
     name: 'Nwamaka Onyeogo',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
@@ -240,7 +240,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Nerlande Celestin.png',
+    image: providersImages.Nerlande_Celestin,
     name: 'Nerlande Celestin',
     credentials: 'NP',
     agesSeen: ['Individuals', 'Young adults', 'Adults', 'Seniors'],
@@ -268,7 +268,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Natasha Dillon.png',
+    image: providersImages.Natasha_Dillon,
     name: 'Natasha Dillon',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Individuals', 'Young adults', 'Adults'],
@@ -309,7 +309,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Danielle Overton-Miller.png',
+    image: providersImages.Danielle_Overton - Miller,
     name: 'Danielle Overton-Miller',
     credentials: 'PMHNP-BC | NP',
     agesSeen: [`Teenagers`, `Young adults`, `Adults`],
@@ -363,7 +363,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Jena Simon.png',
+    image: providersImages.Jena_Simon,
     name: 'Jena Simon',
     credentials: 'PMHNP-BC | NP',
     agesSeen: [`Young adults`, `Adults`, `Seniors`],
@@ -422,7 +422,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Jeremy Walsh.png',
+    image: providersImages.Jeremy_Walsh,
     name: 'Jeremy Walsh',
     credentials: 'PMHNP-BC | APRN',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
@@ -452,7 +452,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Phillip McDonald.png',
+    image: providersImages.Phillip_McDonald,
     name: 'Phillip McDonald',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
@@ -488,7 +488,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Sarah Sakirsky.png',
+    image: providersImages.Sarah_Sakirsky,
     name: 'Sarah Sakirsky',
     credentials: 'APRN, PMHNP-BC',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
@@ -516,7 +516,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Anne Mongiello.png',
+    image: providersImages.Anne_Mongiello,
     name: 'Anne Mongiello',
     credentials: 'APRN, PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Adults'],
@@ -564,7 +564,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Ketie Saintelus.png',
+    image: providersImages.Ketie_Saintelus,
     name: 'Ketie Saintelus',
     credentials: 'PMHNP-BC',
     agesSeen: ['Children', 'Teenagers', 'Young adults', 'Adults'],
@@ -616,7 +616,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Kelli Hamilton.png',
+    image: providersImages.Kelli_Hamilton,
     name: 'Kelli Hamilton',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Adults', 'Seniors'],
@@ -667,7 +667,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Bethany Malugin.png',
+    image: providersImages.Bethany_Malugin,
     name: 'Bethany Malugin',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Adults'],
@@ -710,7 +710,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Brian Yudhistira.png',
+    image: providersImages.Brian_Yudhistira,
     name: 'Brian Yudhistira',
     credentials: 'PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Adults', 'Seniors'],
@@ -755,7 +755,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Carla Rosey.png',
+    image: providersImages.Carla_Rosey,
     name: 'Carla Rosey',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Adults'],
@@ -805,7 +805,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Perpetual Gyimah.png',
+    image: providersImages.Perpetual_Gyimah,
     name: 'Perpetual Gyimah',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
@@ -844,7 +844,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Kimberly Levitt.png',
+    image: providersImages.Kimberly_Levitt,
     name: 'Kimberly Levitt',
     credentials: 'NP | PMHNP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -883,7 +883,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Robin Blaize.png',
+    image: providersImages.Robin_Blaize,
     name: 'Robin Blaize',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Adults', 'Individuals'],
@@ -918,7 +918,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Trisha Mayorga.png',
+    image: providersImages.Trisha_Mayorga,
     name: 'Trisha Mayorga',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
@@ -960,7 +960,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Cassandra Williams.png',
+    image: providersImages.Cassandra_Williams,
     name: 'Cassandra Williams',
     credentials: 'PMHNP',
     agesSeen: ['Teenagers', 'Young adults', 'Adults'],
@@ -1011,7 +1011,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Vanessa Hernandez.png',
+    image: providersImages.Vanessa_Hernandez,
     name: 'Vanessa Hernandez',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Adults'],
@@ -1048,7 +1048,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Sarah Otto.png',
+    image: providersImages.Sarah_Otto,
     name: 'Sarah Otto',
     credentials: 'PMHNP | NP | FNP-BC',
     agesSeen: [
@@ -1091,7 +1091,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Victoria Lanzara.png',
+    image: providersImages.Victoria_Lanzara,
     name: 'Victoria Lanzara',
     credentials: 'PMHNP-BC | NP ',
     agesSeen: [
@@ -1136,7 +1136,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Catherine Colson.png',
+    image: providersImages.Catherine_Colson,
     name: 'Catherine Colson',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -1194,7 +1194,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/William Da Silva.png',
+    image: providersImages.William_Da_Silva,
     name: 'William Da Silva',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -1244,7 +1244,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Ricky Luong.png',
+    image: providersImages.Ricky_Luong,
     name: 'Ricky Luong',
     credentials: 'PMHNP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -1279,7 +1279,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Kerry Callender.png',
+    image: providersImages.Kerry_Callender,
     name: 'Kerry Callender',
     credentials: 'MSN | PMHNP-BC',
     agesSeen: ['Young adults', 'Adults', 'Senior'],
@@ -1336,7 +1336,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Kristiana Manich.png',
+    image: providersImages.Kristiana_Manich,
     name: 'Kristiana Manich',
     credentials: 'NP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -1375,7 +1375,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Kristofer Generales.png',
+    image: providersImages.Kristofer_Generales,
     name: 'Kristofer Generales',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Young adults', 'Adults', 'Individuals'],
@@ -1418,7 +1418,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Latiema Merilus.png',
+    image: providersImages.Latiema_Merilus,
     name: 'Latiema Merilus',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
@@ -1452,7 +1452,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Lenny Gets.png',
+    image: providersImages.Lenny_Gets,
     name: 'Lenny Gets',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
@@ -1487,7 +1487,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Lindon Richards.png',
+    image: providersImages.Lindon_Richards,
     name: 'Lindon Richards',
     credentials: 'NP | PMHNP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -1524,7 +1524,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Marcia Jarvis.png',
+    image: providersImages.Marcia_Jarvis,
     name: 'Marcia Jarvis',
     credentials: 'DNP | PMHNP-BC | MS ',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -1550,7 +1550,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Lori Hume.png',
+    image: providersImages.Lori_Hume,
     name: 'Lori Hume',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
@@ -1582,7 +1582,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Michael Hawthorne.png',
+    image: providersImages.Michael_Hawthorne,
     name: 'Michael Hawthorne',
     credentials: 'PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults', 'Senior'],
@@ -1617,7 +1617,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Melissa Docteur.png',
+    image: providersImages.Melissa_Docteur,
     name: 'Melissa Docteur',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
@@ -1651,7 +1651,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Mary Asiedu.png',
+    image: providersImages.Mary_Asiedu,
     name: 'Mary Asiedu',
     credentials: 'PMHNP',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
@@ -1680,7 +1680,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Sevindzh Izrailova.png',
+    image: providersImages.Sevindzh_Izrailova,
     name: 'Sevindzh Izrailova',
     credentials: 'PMHNP-BC | MS',
     agesSeen: ['Young adults', 'Adults', 'Individuals'],
@@ -1718,7 +1718,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Sharon Ostiguy.png',
+    image: providersImages.Sharon_Ostiguy,
     name: 'Sharon Ostiguy',
     credentials: 'PMHNP-BC | MS',
     agesSeen: ['Young adults', 'Adults', 'Individuals'],
@@ -1760,7 +1760,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Shelley Padgett.png',
+    image: providersImages.Shelley_Padgett,
     name: 'Shelley Padgett',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -1798,7 +1798,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Sheri Watson.png',
+    image: providersImages.Sheri_Watson,
     name: 'Sheri Watson',
     credentials: 'PMHNP-BC | NP',
     agesSeen: [
@@ -1843,7 +1843,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Sitora Mirsoatova.png',
+    image: providersImages.Sitora_Mirsoatova,
     name: 'Sitora Mirsoatova',
     credentials: 'PMHNP-BC | APRN',
     agesSeen: ['Young adults', 'Adults', 'Individuals'],
@@ -1882,7 +1882,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Tahara Miah.png',
+    image: providersImages.Tahara_Miah,
     name: 'Tahara Miah',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Adults', 'Young adults', 'Individuals'],
@@ -1921,7 +1921,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Trisha Joseph.png',
+    image: providersImages.Trisha_Joseph,
     name: 'Trisha Joseph',
     credentials: 'NP | PMHNP-BC',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
@@ -1963,7 +1963,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Jessica Chichester.png',
+    image: providersImages.Jessica_Chichester,
     name: 'Jessica Chichester',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Young adults', 'Adults'],
@@ -2005,7 +2005,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Sarah Sakirsky.png',
+    image: providersImages.Sarah_Sakirsky,
     name: 'Sarah Sakirsky',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Adults'],
@@ -2040,7 +2040,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Chelsea Chaffee.png',
+    image: providersImages.Chelsea_Chaffee,
     name: 'Chelsea Chaffee',
     credentials: 'APRN',
     agesSeen: ['Young adults', 'Adults'],
@@ -2088,7 +2088,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Daferti Afflick.png',
+    image: providersImages.Daferti_Afflick,
     name: 'Daferti Afflick',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Young adults', 'Adults'],
@@ -2130,7 +2130,7 @@ const providersData = [
     ]
   },
   {
-    image: '../src/assets/providers/main/Diana Yakubova.png',
+    image: providersImages.Diana_Yakubova,
     name: 'Diana Yakubova',
     credentials: 'APRN | NP | Nurse Practitioner',
     agesSeen: null,
@@ -2162,7 +2162,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Olga Kosichenko.png',
+    image: providersImages.Olga_Kosichenko,
     name: 'Olga Kosichenko',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -2195,7 +2195,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Mamadou Barry.png',
+    image: providersImages.Mamadou_Barry,
     name: 'Mamadou Barry',
     credentials: 'PMHNP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -2223,7 +2223,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Leah Molina.png',
+    image: providersImages.Leah_Molina,
     name: 'Leah Molina',
     credentials: 'APRN | RN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -2256,7 +2256,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Cheryl Kelly.png',
+    image: providersImages.Cheryl_Kelly,
     name: 'Cheryl Kelly',
     credentials: 'NP',
     agesSeen: ['Individuals', 'Adults'],
@@ -2289,7 +2289,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Barbara Borgella.png',
+    image: providersImages.Barbara_Borgella,
     name: 'Barbara Borgella',
     credentials: 'APRN | MSN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
@@ -2322,7 +2322,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Kerryann Penny.png',
+    image: providersImages.Kerryann_Penny,
     name: 'Kerryann Penny',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -2360,7 +2360,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Nicole Raczy.png',
+    image: providersImages.Nicole_Raczy,
     name: 'Nicole Raczy',
     credentials: 'APRN | RN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
@@ -2398,7 +2398,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Derrick Adusei.png',
+    image: providersImages.Derrick_Adusei,
     name: 'Derrick Adusei',
     credentials: 'APRN | RN',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
@@ -2434,7 +2434,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Miok Im.png',
+    image: providersImages.Miok_Im,
     name: 'Miok Im',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
@@ -2468,7 +2468,7 @@ const providersData = [
     reviews: null
   },
   {
-    image: '../src/assets/providers/main/Danielle Cora.png',
+    image: providersImages.Danielle_Cora,
     name: 'Danielle Cora',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
