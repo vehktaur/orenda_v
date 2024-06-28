@@ -83,7 +83,7 @@ const ProviderInfo = () => {
                     Adult Psychiatric & Mental Health Nurse Practitioner, NY
                   </span>
                 </p>
-                <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-center ~mt-2/[1.38rem] ~mb-5/6 ~text-xs/sm">
+                <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-left ~mt-2/[1.38rem] ~mb-5/6 ~text-xs/sm text-nowrap">
                   Specialising in geriatric care
                 </p>
                 <p className="whitespace-pre-line ~text-sm/base">
