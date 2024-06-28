@@ -7,7 +7,7 @@ const NavButtons = ({ numberOfSlides }) => {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="p-4 flex items-center justify-center md:justify-end gap-6">
+      <div className="p-4 flex items-center justify-center lg:justify-end gap-6">
         <button
           disabled={activeIndex == 1}
           className={`${
