@@ -77,13 +77,17 @@ const BPStepTwo = ({ register, errors }) => {
               Choose file
             </label>
             {selectedFileName && (
-              <p className="~text-sm/base text-[#5a9154] text-center px-6">{selectedFileName}</p>
+              <p className="~text-sm/base text-[#5a9154] text-center px-6">
+                {selectedFileName}
+              </p>
             )}
             <p className="text-sm text-red-500 mt-2">
               {errors?.['CV/Resume']?.message}
             </p>
             <input
               hidden
+              type="file"
+              id="uploadCV"
               {...register('CV/Resume', {
                 onChange: (event) => {
                   handleSelectedFile(event);
@@ -91,10 +95,15 @@ const BPStepTwo = ({ register, errors }) => {
                 onBlur: (event) => {
                   handleSelectedFile(event);
                 },
-                required: { value: true, message: 'Please add your CV/Resume' }
+                required: { value: true, message: 'Please add your CV/Resume' },
+                validate: {
+                  acceptedFormats: (files) =>
+                    ['image/jpeg', 'application/pdf'].includes(
+                      files[0]?.type
+                    ) || 'Pdf & Jpeg Only!'
+                }
               })}
-              type="file"
-              id="uploadCV"
+              accept='image/jpeg, application/pdf'
             />
           </div>
         </div>

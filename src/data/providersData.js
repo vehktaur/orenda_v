@@ -1,6 +1,8 @@
+import providersImages from '../assets/providers/main/providerImages';
+
 const providersData = [
   {
-    image: '../src/assets/providers/main/Rakin Rahman.png',
+    image: providersImages.Rakin_Rahman,
     name: 'Rakin Rahman',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],

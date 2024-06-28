@@ -103,8 +103,20 @@ const FormSteps = ({ register, watch, errors }) => {
               required: {
                 value: pageNumber === 3 ? true : false,
                 message: 'This field is required'
+              },
+              validate: {
+                acceptedFormats: (files) => {
+                  if (fieldType === 'file') {
+                    return (
+                      ['image/jpeg', 'image/png', 'application/pdf'].includes(
+                        files[0]?.type
+                      ) || 'Pdf & Jpeg Only!'
+                    );
+                  }
+                }
               }
             })}
+            // accept="image/jpeg, image/png, application/pdf"
           />
           <label
             onClick={() => setTypeText()}
