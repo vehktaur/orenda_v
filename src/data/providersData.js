@@ -309,7 +309,7 @@ const providersData = [
     ]
   },
   {
-    image: providersImages.Danielle_Overton - Miller,
+    image: providersImages.Danielle_Overton_Miller,
     name: 'Danielle Overton-Miller',
     credentials: 'PMHNP-BC | NP',
     agesSeen: [`Teenagers`, `Young adults`, `Adults`],
