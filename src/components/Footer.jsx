@@ -36,8 +36,12 @@ const Footer = () => {
           <h2 className="footer__heading">Contact</h2>
           <div>
             <p>Email. Call. Text.</p>
-            <p>admin@orendapsych.com</p>
-            <p>(347) 707 - 7735</p>
+            <p>
+              <a href="mailto:admin@orendapsych.com">admin@orendapsych.com</a>
+            </p>
+            <p>
+              <a href="tel:+3477077735">(347) 707 - 7735</a>
+            </p>
           </div>
         </div>
       </div>
