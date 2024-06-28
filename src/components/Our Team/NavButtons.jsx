@@ -1,9 +1,8 @@
 import { useSwiper } from 'swiper/react';
 
-const NavButtons = () => {
+const NavButtons = ({ numberOfSlides }) => {
   const swiper = useSwiper();
 
-  let numberOfSlides = swiper.slides.length || '6';
   let activeIndex = swiper.activeIndex + 1;
 
   return (

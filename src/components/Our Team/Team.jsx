@@ -50,7 +50,7 @@ const Team = ({ itemsPerPage }) => {
             ))}
 
             <div className="max-w-[13.7rem] ms-auto flex justify-end mt-8">
-              <NavButtons />
+              <NavButtons numberOfSlides={numberOfSlides} />
             </div>
           </Swiper>
         </div>

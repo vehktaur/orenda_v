@@ -44,7 +44,7 @@ const Providers = ({ itemsPerPage, numberOfColumns }) => {
             />
           </SwiperSlide>
         ))}
-        <NavButtons />
+        <NavButtons numberOfSlides={numberOfSlides} />
       </Swiper>
     </div>
   );
