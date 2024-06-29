@@ -2,29 +2,60 @@ import teamImages from '../assets/team_members/teamImages';
 
 const teamData = [
   {
-    image: teamImages.valerie,
-    name: 'Valerie',
-    position: 'Email Marketing Specialist'
+    image: teamImages.gretchel,
+    name: 'Gretchel',
+    position: 'Admin'
   },
   {
-    image: teamImages.sylvia,
-    name: 'Sylvia',
-    position: 'Chief Technology Officer'
+    image: teamImages.memsy,
+    name: 'Memsy',
+    position: 'Admin'
   },
   {
-    image: teamImages.progress,
-    name: 'Progress',
-    position: 'Hiring Manager'
+    image: teamImages.keisha,
+    name: 'Keisha',
+    position: 'Admin'
+  },
+  {
+    image: teamImages.mmeno,
+    name: 'Mmeno',
+    position: 'Admin'
+  },
+  {
+    image: teamImages.cess,
+    name: 'Cess',
+    position: 'Admin'
+  },
+  {
+    image: teamImages.darianny,
+    name: 'Darianny',
+    position: 'Admin'
   },
   {
     image: teamImages.righteous,
     name: 'Righteous',
-    position: 'Office Assistant'
+    position: 'Admin'
+  },
+  {
+    image: teamImages.sylvia,
+    name: 'Sylvia',
+    position: 'Admin'
   },
   {
     image: teamImages.rhei,
     name: 'Rhei',
+    position: 'Admin'
+  },
+  {
+    image: teamImages.valerie,
+    name: 'Valerie',
     position: 'Email Marketing Specialist'
+  },
+
+  {
+    image: teamImages.progress,
+    name: 'Progress',
+    position: 'Hiring Manager'
   },
   {
     image: teamImages.precious,
@@ -51,26 +82,13 @@ const teamData = [
     name: 'Neil',
     position: 'Asst. Sales Manager'
   },
-  {
-    image: teamImages.mmeno,
-    name: 'Mmeno',
-    position: 'Front Desk'
-  },
-  {
-    image: teamImages.memsy,
-    name: 'Memsy',
-    position: 'Customer Support'
-  },
+
   {
     image: teamImages.kevin,
     name: 'Kevin',
     position: 'Customer Support'
   },
-  {
-    image: teamImages.keisha,
-    name: 'Keisha',
-    position: 'Customer Support'
-  },
+
   {
     image: teamImages.justine,
     name: 'Justine',
@@ -111,11 +129,7 @@ const teamData = [
     name: 'Itoro',
     position: 'Customer Support'
   },
-  {
-    image: teamImages.gretchel,
-    name: 'Gretchel',
-    position: 'Customer Support'
-  },
+
   {
     image: teamImages.gene,
     name: 'Gene',
@@ -129,16 +143,6 @@ const teamData = [
   {
     image: teamImages.ella,
     name: 'Ella',
-    position: 'Customer Support'
-  },
-  {
-    image: teamImages.darianny,
-    name: 'Darianny',
-    position: 'Customer Support'
-  },
-  {
-    image: teamImages.cess,
-    name: 'Cess',
     position: 'Customer Support'
   },
   {

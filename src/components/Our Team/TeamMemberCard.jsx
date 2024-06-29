@@ -3,7 +3,7 @@ const TeamMemberCard = ({ member }) => {
     <div>
       <div className="~h-[6.875rem]/[15.625rem] w-full bg-[#f1f1f1] rounded-2xl overflow-hidden ~pt-2/4">
         <img
-          className="size-full object-cover"
+          className="size-full object-contain"
           src={member.image}
           alt={member.name}
         />
