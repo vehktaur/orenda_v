@@ -15,12 +15,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="about" element={<About />} />
-          <Route path="our team" element={<OurTeam />} />
+          <Route path="our-team" element={<OurTeam />} />
           <Route path="contact" element={<ContactUsPage />} />
           <Route path="insurance" element={<Insurance />} />
-          <Route path="privacy policy" element={<PrivacyPolicy />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="provider/:index" element={<ProviderInfo />} />
-          <Route path="become provider" element={<BecomeProviderPage />} />
+          <Route path="become-a-provider" element={<BecomeProviderPage />} />
         </Route>
       </Routes>
     </ScrollToTop>

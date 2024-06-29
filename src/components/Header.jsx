@@ -11,11 +11,11 @@ const Header = () => {
             <ul className="flex items-center justify-between ~md/xl:~gap-2.5/12 transition duration-1000">
               {[
                 ['Home', '/'],
-                ['Our Team', '/our team'],
-                ['Insurance', '/insurance'],
+                ['Our Team', '/our-team'],
+-               ['Insurance', '/insurance'],
                 ['About', '/about'],
                 ['Blog', '/'],
-                ['Privacy Policy', '/privacy policy'],
+                ['Privacy Policy', '/privacy-policy'],
                 ['Contact Us', '/contact']
               ].map(([title, url]) => (
                 <NavLink
