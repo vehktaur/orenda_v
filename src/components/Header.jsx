@@ -12,7 +12,7 @@ const Header = () => {
               {[
                 ['Home', '/'],
                 ['Our Team', '/our-team'],
--               ['Insurance', '/insurance'],
+                ['Insurance', '/insurance'],
                 ['About', '/about'],
                 ['Blog', '/'],
                 ['Privacy Policy', '/privacy-policy'],
