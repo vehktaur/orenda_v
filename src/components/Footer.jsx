@@ -9,17 +9,17 @@ const Footer = () => {
             <Logo />
             <div className="mb-[2.63rem]">
               <h2 className="footer__heading">Mailing Address</h2>
-              <p className="max-w-[14.5rem]">
+              <address className="max-w-[14.5rem] not-italic font-dm-sans">
                 347 fifth Ave Suite 1402 - 235, New York, NY 10016
-              </p>
+              </address>
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-12 md:~gap-[1.69rem]/[5.06rem]">
             <div className=" min-w-[6.8rem]">
               <h2 className="footer__heading">Office Location</h2>
-              <p className="max-w-[14.5rem]">
+              <address className="max-w-[14.5rem] not-italic font-dm-sans">
                 80 Fifth Avenue office #903 - 10, New York, NY 10011.
-              </p>
+              </address>
             </div>
             <div className="min-w-fit">
               <h2 className="footer__heading">Hours</h2>

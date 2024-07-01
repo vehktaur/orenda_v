@@ -4,6 +4,8 @@ const providersData = [
   {
     image: providersImages.Rakin_Rahman,
     name: 'Rakin Rahman',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English'],
@@ -43,6 +45,8 @@ const providersData = [
   {
     image: providersImages.Tanya_Monroe,
     name: 'Tanya Monroe',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
     agesSeen: [
       'Teenagers',
@@ -96,6 +100,8 @@ const providersData = [
   {
     image: providersImages.Theresa_Levy,
     name: 'Theresa Levy',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: [
       'Teenagers',
@@ -141,6 +147,8 @@ const providersData = [
   {
     image: providersImages.Michelle_Krill,
     name: 'Michelle Krill',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -171,6 +179,8 @@ const providersData = [
   {
     image: providersImages.Myea_Meighan,
     name: 'Myea Meighan',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | APRN',
     agesSeen: ['Individuals', 'Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -203,6 +213,7 @@ const providersData = [
   {
     image: providersImages.Nwamaka_Onyeogo,
     name: 'Nwamaka Onyeogo',
+    professionalTitle: 'Nurse Practitioner (Psychiatry), NY',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -242,6 +253,7 @@ const providersData = [
   {
     image: providersImages.Nerlande_Celestin,
     name: 'Nerlande Celestin',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP',
     agesSeen: ['Individuals', 'Young adults', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -270,6 +282,8 @@ const providersData = [
   {
     image: providersImages.Natasha_Dillon,
     name: 'Natasha Dillon',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Individuals', 'Young adults', 'Adults'],
     languagesSpoken: ['English', 'Russian'],
@@ -311,6 +325,8 @@ const providersData = [
   {
     image: providersImages.Danielle_Overton_Miller,
     name: 'Danielle Overton-Miller',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
     agesSeen: [`Teenagers`, `Young adults`, `Adults`],
     languagesSpoken: ['English', 'Bengali'],
@@ -360,6 +376,7 @@ const providersData = [
   {
     image: providersImages.Jena_Simon,
     name: 'Jena Simon',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
     agesSeen: [`Young adults`, `Adults`, `Seniors`],
     languagesSpoken: ['English', 'Bengali'],
@@ -415,6 +432,8 @@ const providersData = [
   {
     image: providersImages.Jeremy_Walsh,
     name: 'Jeremy Walsh',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | APRN',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
     languagesSpoken: ['English', 'Bengali'],
@@ -445,6 +464,8 @@ const providersData = [
   {
     image: providersImages.Phillip_McDonald,
     name: 'Phillip McDonald',
+    professionalTitle: `Pediatric Gastroenterologist
+     Modesto, CA`,
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -481,6 +502,8 @@ const providersData = [
   {
     image: providersImages.Sarah_Sakirsky,
     name: 'Sarah Sakirsky',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN, PMHNP-BC',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -509,6 +532,8 @@ const providersData = [
   {
     image: providersImages.Anne_Mongiello,
     name: 'Anne Mongiello',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN, PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -555,6 +580,7 @@ const providersData = [
   {
     image: providersImages.Ketie_Saintelus,
     name: 'Ketie Saintelus',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC',
     agesSeen: ['Children', 'Teenagers', 'Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -606,6 +632,8 @@ const providersData = [
   {
     image: providersImages.Kelli_Hamilton,
     name: 'Kelli Hamilton',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -654,6 +682,7 @@ const providersData = [
   {
     image: providersImages.Bethany_Malugin,
     name: 'Bethany Malugin',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -695,6 +724,7 @@ const providersData = [
   {
     image: providersImages.Brian_Yudhistira,
     name: 'Brian Yudhistira',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -739,6 +769,7 @@ const providersData = [
   {
     image: providersImages.Carla_Rosey,
     name: 'Carla Rosey',
+    professionalTitle: 'Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -788,6 +819,8 @@ const providersData = [
   {
     image: providersImages.Perpetual_Gyimah,
     name: 'Perpetual Gyimah',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English'],
@@ -827,6 +860,7 @@ const providersData = [
   {
     image: providersImages.Kimberly_Levitt,
     name: 'Kimberly Levitt',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP | PMHNP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English', 'Bengali'],
@@ -860,6 +894,8 @@ const providersData = [
   {
     image: providersImages.Robin_Blaize,
     name: 'Robin Blaize',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Adults', 'Individuals'],
     languagesSpoken: ['English'],
@@ -895,6 +931,8 @@ const providersData = [
   {
     image: providersImages.Trisha_Mayorga,
     name: 'Trisha Mayorga',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English', 'Spanish'],
@@ -937,6 +975,8 @@ const providersData = [
   {
     image: providersImages.Cassandra_Williams,
     name: 'Cassandra Williams',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
     agesSeen: ['Teenagers', 'Young adults', 'Adults'],
     languagesSpoken: ['English', 'Spanish'],
@@ -984,6 +1024,8 @@ const providersData = [
   {
     image: providersImages.Vanessa_Hernandez,
     name: 'Vanessa Hernandez',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -1021,6 +1063,7 @@ const providersData = [
   {
     image: providersImages.Sarah_Otto,
     name: 'Sarah Otto',
+    professionalTitle: 'Nurse Practitioner, NY',
     credentials: 'PMHNP | NP | FNP-BC',
     agesSeen: [
       'Children',
@@ -1064,6 +1107,8 @@ const providersData = [
   {
     image: providersImages.Victoria_Lanzara,
     name: 'Victoria Lanzara',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP ',
     agesSeen: [
       'Children',
@@ -1109,6 +1154,7 @@ const providersData = [
   {
     image: providersImages.Catherine_Colson,
     name: 'Catherine Colson',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitione',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -1143,11 +1189,7 @@ const providersData = [
     statesLicensed: null,
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
-    about: `Catherine Colson is a board-certified mental health nurse practitioner. Catherine prioritizes
-    listening, compassion, and cultivating a collaborative relationship with her patients. She is
-    interested in anything and everything her patients want to tell her. Her ultimate goal is to foster
-    growth so her patients can become their best selves.
-    
+    about: `Catherine Colson is a board-certified mental health nurse practitioner. Catherine prioritizes listening, compassion, and cultivating a collaborative relationship with her patients. She is interested in anything and everything her patients want to tell her. Her ultimate goal is to foster growth so her patients can become their best selves.
 
     Catherine’s treatment approach is trauma-based. She treats ADHD, anxiety, depression, grief, medication management, obsessive compulsive disorder, self esteem problems, sleep disorders, insomnia, stress, dual diagnosis, trauma, PTSD, and mood disorders. When she’s not working, Catherine loves spending time with her two big dogs and being outside in her vegetable garden.
     
@@ -1167,6 +1209,8 @@ const providersData = [
   {
     image: providersImages.William_Da_Silva,
     name: 'William Da Silva',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -1217,6 +1261,8 @@ const providersData = [
   {
     image: providersImages.Ricky_Luong,
     name: 'Ricky Luong',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English', 'CHinese(Cantonese)'],
@@ -1252,6 +1298,7 @@ const providersData = [
   {
     image: providersImages.Kerry_Callender,
     name: 'Kerry Callender',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'MSN | PMHNP-BC',
     agesSeen: ['Young adults', 'Adults', 'Senior'],
     languagesSpoken: ['English'],
@@ -1282,12 +1329,8 @@ const providersData = [
     statesLicensed: null,
     availability: null,
     bookingLink: 'https://booking.url',
-    about: `Kerry truly believes that being present and forming a team approach with patients is one of the
-    most important aspects of patient care. Realizing that each patient is unique, working together
-    with patients towards their goals, while being passionate about individual empowerment allows
-    my skills to become another instrument they can use to navigate their lives. My focus is
-    primarily on mood disorders, anxiety, depression and ADHD. assessment and safety planning.
-
+    about: `Kerry truly believes that being present and forming a team approach with patients is one of the most important aspects of patient care. Realizing that each patient is unique, working together with patients towards their goals, while being passionate about individual empowerment allows my skills to become another instrument they can use to navigate their lives. My focus is primarily on mood disorders, anxiety, depression and ADHD. assessment and safety planning.
+    
     Kerry's approach to treatment is multifaceted. She puts an equal emphasis on medication management as she does talk therapy. Medication is prescribed to address the symptoms and talk therapy provides a better understanding of the issues at hand and methods in which we can overcome them to help achieve your best life possible.
     
     We work together to identify your challenges and develop a formal diagnosis so that the appropriate medication can be prescribed. We then continue our work in talking together to better understand the issues and their impacts as they pertain to you in your unique situation.`,
@@ -1307,8 +1350,9 @@ const providersData = [
     ]
   },
   {
-    image: providersImages.Kristiana_Manich,
-    name: 'Kristiana Manich',
+    image: providersImages.Kristina_Manich,
+    name: 'Kristina Manich',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -1348,6 +1392,7 @@ const providersData = [
   {
     image: providersImages.Kristofer_Generales,
     name: 'Kristofer Generales',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Young adults', 'Adults', 'Individuals'],
     languagesSpoken: ['English'],
@@ -1391,6 +1436,7 @@ const providersData = [
   {
     image: providersImages.Latiema_Merilus,
     name: 'Latiema Merilus',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English'],
@@ -1425,6 +1471,7 @@ const providersData = [
   {
     image: providersImages.Lenny_Gets,
     name: 'Lenny Gets',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English', 'Russian', 'Ukrainian'],
@@ -1460,6 +1507,7 @@ const providersData = [
   {
     image: providersImages.Lindon_Richards,
     name: 'Lindon Richards',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP | PMHNP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -1482,7 +1530,6 @@ const providersData = [
     bookingLink: 'https://booking.url',
     about: `A dedicated adult psychiatric and mental health nurse practitioner, Mr. Lindon Richards, is highly skilled in assisting physicians in treating and managing various mental health disorders. As part of his formal education, Mr. Richards graduated from New York University with a master’s degree in nursing.
 
-
     Patients from Brooklyn, NY, can consult Mr. Richards at Orenda Psychiatry for hyperactive disorders, anxiety, bipolar disorder, panic attacks, and post-traumatic stress disorder counseling.
     
     Mr. Richards is committed to providing patients with the care they deserve. He helps them find suitable treatment plans and supports them throughout their mental health journey.`,
@@ -1497,6 +1544,7 @@ const providersData = [
   {
     image: providersImages.Marcia_Jarvis,
     name: 'Marcia Jarvis',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'DNP | PMHNP-BC | MS ',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -1523,6 +1571,7 @@ const providersData = [
   {
     image: providersImages.Lori_Hume,
     name: 'Lori Hume',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English'],
@@ -1555,6 +1604,8 @@ const providersData = [
   {
     image: providersImages.Michael_Hawthorne,
     name: 'Michael Hawthorne',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults', 'Senior'],
     languagesSpoken: ['English'],
@@ -1590,6 +1641,8 @@ const providersData = [
   {
     image: providersImages.Melissa_Docteur,
     name: 'Melissa Docteur',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English'],
@@ -1624,6 +1677,8 @@ const providersData = [
   {
     image: providersImages.Mary_Asiedu,
     name: 'Mary Asiedu',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English'],
@@ -1653,6 +1708,8 @@ const providersData = [
   {
     image: providersImages.Sevindzh_Izrailova,
     name: 'Sevindzh Izrailova',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | MS',
     agesSeen: ['Young adults', 'Adults', 'Individuals'],
     languagesSpoken: ['English'],
@@ -1691,6 +1748,8 @@ const providersData = [
   {
     image: providersImages.Sharon_Ostiguy,
     name: 'Sharon Ostiguy',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | MS',
     agesSeen: ['Young adults', 'Adults', 'Individuals'],
     languagesSpoken: ['English'],
@@ -1733,6 +1792,8 @@ const providersData = [
   {
     image: providersImages.Shelley_Padgett,
     name: 'Shelley Padgett',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English', 'Bengali'],
@@ -1771,6 +1832,8 @@ const providersData = [
   {
     image: providersImages.Sheri_Watson,
     name: 'Sheri Watson',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
     agesSeen: [
       'Children',
@@ -1807,7 +1870,7 @@ const providersData = [
     about: `Dedicated to enhancing mental well-being, Ms. Sheri Watson is a highly skilled adult psychiatric & mental health nurse practitioner in New York and Brooklyn, NY. She provides virtual consultations through Orenda Psychiatry.
 
 
-    Specializing in concerns like hyperactive disorder (ADD / ADHD) and panic attacks and also providing post-traumatic stress disorder (PTSD) counseling and psychiatry follow-up, she offers personalized and empathetic care. Ms. Watson earned her master's degree in nursing from Pace University and is passionate about guiding her patients toward mental wellness and ensuring their emotional health`,
+    Specializing in concerns like hyperactive disorder (ADD / ADHD) and panic attacks and also providing post-traumatic stress disorder (PTSD) counseling and psychiatry follow-up, she offers personalized and empathetic care. Ms. Watson earned her master's degree in nursing from Pace University and is passionate about guiding her patients toward mental wellness and ensuring their emotional health.`,
     reviews: [
       `“My experience with Ms. Watson was outstanding. Her kindness, intelligence, and excellent bedside manners instantly put me at ease, creating a comforting atmosphere. She demonstrated a thorough understanding of my mental health concerns, addressing them with great care and professionalism. I highly recommend her for anyone seeking compassionate and skilled care!” - Robert M.`,
       `“Dr. Watson was very kind, professional, and took the time to get to know my daughter and her interest. She made her feel at ease!!” - Ava R.`
@@ -1816,6 +1879,8 @@ const providersData = [
   {
     image: providersImages.Sitora_Mirsoatova,
     name: 'Sitora Mirsoatova',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | APRN',
     agesSeen: ['Young adults', 'Adults', 'Individuals'],
     languagesSpoken: ['English'],
@@ -1855,6 +1920,8 @@ const providersData = [
   {
     image: providersImages.Tahara_Miah,
     name: 'Tahara Miah',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Teenagers', 'Adults', 'Young adults', 'Individuals'],
     languagesSpoken: ['English', 'Bengali'],
@@ -1894,6 +1961,8 @@ const providersData = [
   {
     image: providersImages.Trisha_Joseph,
     name: 'Trisha Joseph',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'NP | PMHNP-BC',
     agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -1928,7 +1997,7 @@ const providersData = [
     
     She offers comprehensive services such as therapy and medication reviews, focusing on a patient-centric approach to effective mental health care.
     
-    I am also board certified as a Women’s Health Nurse Practitioner with over 18 years treating women with gynecological conditions and pregnancy at New York Presbyterian Hospital-Columbia campus. A vast number of these women suffered from anxiety, depression, and trauma which prompted me to go back to school for psychiatry. I bring to you my strong background in Women’s Health and can manage patients with mental health issues regardless of gender.show less
+    I am also board certified as a Women’s Health Nurse Practitioner with over 18 years treating women with gynecological conditions and pregnancy at New York Presbyterian Hospital-Columbia campus. A vast number of these women suffered from anxiety, depression, and trauma which prompted me to go back to school for psychiatry. I bring to you my strong background in Women’s Health and can manage patients with mental health issues regardless of gender.
     
     Some fun facts about me ismy passion for hiking , traveling, playing mas in Caribbean carnivals, watching and attending golf tournaments, tennis matches, football, and basketball games.`,
     reviews: null
@@ -1936,6 +2005,7 @@ const providersData = [
   {
     image: providersImages.Jessica_Chichester,
     name: 'Jessica Chichester',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -1965,8 +2035,7 @@ const providersData = [
     statesLicensed: null,
     availability: null,
     bookingLink: 'https://booking.url',
-    about: `Being an experienced adult psychiatric and mental health nurse practitioner, Ms. Jessica
-    Chichester delivers expert care through virtual consultations at Orenda Psychiatry in New York, NY.
+    about: `Being an experienced adult psychiatric and mental health nurse practitioner, Ms. Jessica Chichester delivers expert care through virtual consultations at Orenda Psychiatry in New York, NY.
 
     Ms. Chichester offers personalized support to patients with post-traumatic stress disorder (PTSD), hyperactive disorder (ADD / ADHD), and bipolar disorder. Holding a master's degree in nursing from the State University of New York, Ms. Chichester is committed to empowering individuals on their distinct mental health journeys. Her comprehensive approach ensures that her clients receive the tailored guidance they need to thrive.`,
     reviews: [
@@ -1976,43 +2045,58 @@ const providersData = [
     ]
   },
   {
-    image: providersImages.Sarah_Sakirsky,
-    name: 'Sarah Sakirsky',
-    credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Adults'],
-    languagesSpoken: ['English', 'Bengali'],
-    focusAreas: [
-      'Academic Stress',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management',
-      'Pre-College Fears',
-      'Anxiety',
+    image: providersImages.Celeste_Johnson,
+    name: 'Celeste_Johnson',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
+    credentials: 'PMHNP',
+    agesSeen: ['Young adults', 'Adults', 'Seniors'],
+    languagesSpoken: ['English'],
+    mainFocus: [
+      'Alcoholism',
       'Depression',
-      'Panic Attack',
-      'Prescription / Refill'
+      'Post-Traumatic Stress Disorder (PTSD)',
+      'Domestic violence',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      ''
     ],
-    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
+    focusAreas: [
+      'Alcoholism',
+      'Depression',
+      'Post-Traumatic Stress Disorder (PTSD)',
+      'Anxiety',
+      'Domestic Violence',
+      'Sleep Disorder',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management'
+    ],
+    treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
     educationAndBackground: [
-      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
-      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
-      'State University of New York, Binghamton (Bachelor’s)'
+      `Wilkes University, Master's in Psychiatric Mental Health Nursing`,
+      `Monmouth University, Master's in Family Nursing`,
+      `Touro College and University System, Bay Shore, Master's in Public Health`,
+      `New Jersey City University (Bachelor's)`,
+      `City University of New York, York College (Bachelor's)`
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: null,
     availability: 'Available in 1 week',
     bookingLink: 'https://booking.url',
-    about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
-
-    I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
+    about: `Celeste Johnson is a qualified adult psychiatric & mental health nurse practitioner who provides dedicated help to her patients by diagnosing and treating various mental health conditions, including hyperactivity disorder (ADD / ADHD), anxiety, panic attack, bipolar disorder, post-traumatic stress disorder (PTSD), and obsessive-compulsive disorder (OCD).
+    
+    Ms. Johnson currently practices at Orenda Psychiatry in Brooklyn, New York, and Smyrna, NY. She carefully understands every patient's condition during consultations and prepares individualized treatment plans. It often involves a combination of medications, talk therapy, and at-home care. She also tracks their progress during psychiatry follow-ups.
+    
+    Ms. Johnson believes in building long-term relationships with her patients to support them throughout their mental health journey. She aims to provide ethical and high-quality care to help them enjoy a good quality of life. She is known to be a compassionate, non-judgmental, and approachable professional.`,
     reviews: [
-      `“Provider actually cares about your needs, your unique situation, and how your meds are affecting you. He takes the time to check in with care in check-ups, and isn't a 5-minute “hi, here's a prescription, bye,” kind of practitioner, which is rare and VERY appreciated. I would recommend to anyone looking for long-lasting care that feels compassionate and well-informed!”`,
-      `“Dr. Rahman was very kind, thoughtful and helpful. Highly recommend!”`
+      `“Ms Johnson was very easy to talk to. I felt comfortable explaining and being open about all my symptoms. It’s important to feel like you are being heard by a provider, I felt that my concerns were addressed.” - Initials hidden.`,
+      `“Warm and helpful. I felt much better after our meeting.” - Julie K.`,
+      `“She is an active listener and is very knowledgeable.” - Nancy K.`
     ]
   },
   {
     image: providersImages.Chelsea_Chaffee,
     name: 'Chelsea Chaffee',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN',
     agesSeen: ['Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -2041,14 +2125,9 @@ const providersData = [
     statesLicensed: null,
     availability: null,
     bookingLink: 'https://booking.url',
-    about: `Chelsea Chaffee is a board-certified adult psychiatric & mental health nurse practitioner based in
-    New York. She received her Doctorate in Nursing Practice from Columbia University and has
-    experience in both in-patient and out-patient psychiatry. Her areas of focus include perinatal
-    mental health, premenstrual dysphoric disorder, menopause, fertility challenges including fetal
-    loss, anxiety, depression, life transitions, sleep disorders, spirituality, and more. She enjoys
-    offering psychotherapy in addition to medication management.
-    Chelsea believes in a holistic approach and collaborating with clients to develop a treatment plan
-    that best meets their individual needs.
+    about: `Chelsea Chaffee is a board-certified adult psychiatric & mental health nurse practitioner based in New York. She received her Doctorate in Nursing Practice from Columbia University and has experience in both in-patient and out-patient psychiatry. Her areas of focus include perinatal mental health, premenstrual dysphoric disorder, menopause, fertility challenges including fetal loss, anxiety, depression, life transitions, sleep disorders, spirituality, and more. She enjoys offering psychotherapy in addition to medication management.
+
+    Chelsea believes in a holistic approach and collaborating with clients to develop a treatment plan that best meets their individual needs.
     `,
     reviews: [
       `“Really listened and seems invested in my mental health journey. Lovely experience” - Kristen
@@ -2061,6 +2140,8 @@ const providersData = [
   {
     image: providersImages.Daferti_Afflick,
     name: 'Daferti Afflick',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Young adults', 'Adults'],
     languagesSpoken: ['English'],
@@ -2088,8 +2169,7 @@ const providersData = [
     statesLicensed: ['Georgia'],
     availability: null,
     bookingLink: 'https://booking.url',
-    about: `Based in Brooklyn, NY, Ms. Daferti Afflick is a dedicated adult psychiatric and mental health
-    nurse practitioner offering virtual consultations at Orenda Psychiatry.
+    about: `Based in Brooklyn, NY, Ms. Daferti Afflick is a dedicated adult psychiatric and mental health nurse practitioner offering virtual consultations at Orenda Psychiatry.
 
     With a master's degree in nursing from Molloy University, Ms. Afflick is skilled at managing various mental health concerns. She helps patients deal with issues like anxiety, bipolar disorder, panic attacks, and post-traumatic stress disorder. She also offers prescription refills 
     
@@ -2103,7 +2183,8 @@ const providersData = [
   {
     image: providersImages.Diana_Yakubova,
     name: 'Diana Yakubova',
-    credentials: 'APRN | NP | Nurse Practitioner',
+    professionalTitle: 'Nurse Practitioner',
+    credentials: 'APRN | NP',
     agesSeen: null,
     languagesSpoken: ['English'],
     mainFocus: null,
@@ -2135,6 +2216,8 @@ const providersData = [
   {
     image: providersImages.Olga_Kosichenko,
     name: 'Olga Kosichenko',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -2168,6 +2251,8 @@ const providersData = [
   {
     image: providersImages.Mamadou_Barry,
     name: 'Mamadou Barry',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -2196,6 +2281,7 @@ const providersData = [
   {
     image: providersImages.Leah_Molina,
     name: 'Leah Molina',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | RN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -2229,6 +2315,8 @@ const providersData = [
   {
     image: providersImages.Cheryl_Kelly,
     name: 'Cheryl Kelly',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'NP',
     agesSeen: ['Individuals', 'Adults'],
     languagesSpoken: ['English'],
@@ -2262,6 +2350,8 @@ const providersData = [
   {
     image: providersImages.Barbara_Borgella,
     name: 'Barbara Borgella',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | MSN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English'],
@@ -2295,6 +2385,8 @@ const providersData = [
   {
     image: providersImages.Kerryann_Penny,
     name: 'Kerryann Penny',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -2333,6 +2425,8 @@ const providersData = [
   {
     image: providersImages.Nicole_Raczy,
     name: 'Nicole Raczy',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | RN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
@@ -2371,6 +2465,8 @@ const providersData = [
   {
     image: providersImages.Derrick_Adusei,
     name: 'Derrick Adusei',
+    professionalTitle:
+      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | RN',
     agesSeen: ['Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English'],
@@ -2407,6 +2503,7 @@ const providersData = [
   {
     image: providersImages.Miok_Im,
     name: 'Miok Im',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
     languagesSpoken: ['English'],
@@ -2441,6 +2538,7 @@ const providersData = [
   {
     image: providersImages.Danielle_Cora,
     name: 'Danielle Cora',
+    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],

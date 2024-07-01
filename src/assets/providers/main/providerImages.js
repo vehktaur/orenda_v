@@ -21,7 +21,7 @@ import Kerry_Callender from './Kerry Callender.png';
 import Kerryann_Penny from './Kerryann Penny.png';
 import Ketie_Saintelus from './Ketie Saintelus.png';
 import Kimberly_Levitt from './Kimberly Levitt.png';
-import Kristiana_Manich from './Kristiana Manich.png';
+import Kristina_Manich from './Kristina Manich.png';
 import Kristofer_Generales from './Kristofer Generales.png';
 import Latiema_Merilus from './Latiema Merilus.png';
 import Leah_Molina from './Leah Molina.png';
@@ -86,7 +86,7 @@ const providersImages = {
   Kerryann_Penny,
   Ketie_Saintelus,
   Kimberly_Levitt,
-  Kristiana_Manich,
+  Kristina_Manich,
   Kristofer_Generales,
   Latiema_Merilus,
   Leah_Molina,

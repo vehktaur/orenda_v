@@ -67,7 +67,7 @@ const ProviderInfo = () => {
                     {provider?.availability}
                   </div>
                 )}
-                <img 
+                <img
                   className="mx-auto ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto ~/md:~max-w-[80%]/[22rem] block"
                   src={provider?.image}
                   alt={provider?.name}
@@ -78,10 +78,10 @@ const ProviderInfo = () => {
                   {provider?.name}
                 </h1>
                 <p className="flex flex-col sm:flex-row md:flex-col xl:flex-row gap-2 text-[#7C7C7C] ~text-xs/sm font-bold">
-                  <span>{provider?.credentials}</span>
-                  <span>
-                    Adult Psychiatric & Mental Health Nurse Practitioner, NY
+                  <span className="text-left word">
+                    {provider?.credentials}
                   </span>
+                  <span>{provider?.professionalTitle}</span>
                 </p>
                 <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-left ~mt-2/[1.38rem] ~mb-5/6 ~text-xs/sm text-nowrap">
                   Specialising in geriatric care
@@ -200,7 +200,9 @@ const ProviderInfo = () => {
                   {provider?.reviews.map((review) => (
                     <SwiperSlide className="swiper-no-swiping">
                       <div>
-                        <p className=" ~text-sm/base leading-7">{review}</p>
+                        <blockquote className=" ~text-sm/base leading-7">
+                          {review}
+                        </blockquote>
                       </div>
                     </SwiperSlide>
                   ))}
