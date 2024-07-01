@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="about" element={<About />} />
           <Route path="our-team" element={<OurTeam />} />
-          <Route path="contact" element={<ContactUsPage />} />
+          <Route path="contact-us" element={<ContactUsPage />} />
           <Route path="insurance" element={<Insurance />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="provider/:index" element={<ProviderInfo />} />
