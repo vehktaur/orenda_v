@@ -2,11 +2,10 @@ import { useRef, useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 import hamburger from '../../assets/hamburger.png';
-import close from '../../assets/hamburger-close.svg'
+import close from '../../assets/hamburger-close.svg';
 import { NavLink } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-
 
 gsap.registerPlugin(useGSAP);
 
@@ -28,10 +27,10 @@ const Navbar = () => {
   const openSesame = () => {
     if (!navOpen) {
       tl.current.play();
-      document.body.style.overflow = 'hidden';
+      document.body.classList.toggle('no-scroll');
     } else {
       tl.current.reverse();
-      document.body.style.overflow = 'auto';
+      document.body.classList.toggle('no-scroll');
     }
 
     setNavOpen(!navOpen);

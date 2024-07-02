@@ -107,6 +107,9 @@
   display: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
 @media screen and (max-width: 1174px) {
   .nav-list {
     gap: 2em;
@@ -130,11 +133,11 @@
 }
 
 @media (min-width: 1038px) {
-  .nav-list-mobile {
+  .nav-list-mobile,
+  .overlay {
     display: none !important;
   }
-
-  body {
+  .no-scroll {
     overflow: auto !important;
   }
 }
