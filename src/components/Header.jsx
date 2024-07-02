@@ -16,19 +16,20 @@ const Header = () => {
                 ['About', '/about'],
                 ['Blog', '/'],
                 ['Privacy Policy', '/privacy-policy'],
-                ['Contact Us', '/contact']
+                ['Contact Us', '/contact-us']
               ].map(([title, url]) => (
-                <NavLink
-                  key={title}
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'text-orenda-purple font-bold'
-                      : 'hover:text-orenda-purple hover:font-bold'
-                  }
-                  to={url}
-                >
-                  {title}
-                </NavLink>
+                <li key={title}>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive
+                        ? 'text-orenda-purple font-bold'
+                        : 'hover:text-orenda-purple hover:font-bold'
+                    }
+                    to={url}
+                  >
+                    {title}
+                  </NavLink>
+                </li>
               ))}
             </ul>
           </nav>

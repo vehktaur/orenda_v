@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.nav-container {
+  background-color: #fff;
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  z-index: 49;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.nav-list {
+  display: flex;
+  gap: 3em;
+  list-style-type: none;
+  font-family: 'DM sans';
+}
+
+.nav-list li {
+  cursor: pointer;
+}
+
+.nav-list-mobile {
+  display: grid;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  position: absolute;
+  top: -100vh;
+  left: 0px;
+  right: 0px;
+  justify-items: center;
+  gap: 1rem;
+  padding: 1.125rem 1.125rem 2.5rem;
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-top: 2px solid rgba(60, 64, 67, 0.15);
+  border-inline: 2px solid rgba(60, 64, 67, 0.15);
+  z-index: 2;
+}
+
+.nav-link {
+  display: block;
+  width: 130px;
+  text-align: center;
+  font-weight: 500;
+  padding: 0.5em;
+  border-radius: 2rem;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.nav-link:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+.nav-link.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.contact button {
+  background-color: white;
+  outline: none;
+  padding: 0.4em 0.9em;
+  font-size: 1rem;
+  border-radius: 1.5em;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  color: #2e0086;
+  border: 1px solid #2e0086;
+  font-family: 'open sans';
+}
+
+.contact button:hover {
+  color: #fff;
+  background-color: #2e0086;
+}
+
+.nav-list li:hover {
+  color: #2e0086;
+  font-weight: 600;
+}
+
+.hamburger,
+.hamburger-btn {
+  display: none;
+}
+
+@media screen and (max-width: 1174px) {
+  .nav-list {
+    gap: 2em;
+  }
+}
+
+@media screen and (max-width: 1038px) {
+  .nav-list,
+  .contact {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+}
+
+@media (min-width: 1038px) {
+  .nav-list-mobile {
+    display: none !important;
+  }
+
+  body {
+    overflow: auto !important;
+  }
+}
