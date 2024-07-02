@@ -1,5 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import streets_mission from '../../assets/streets_mission.jpg';
+import streets_mission_small from '../../assets/streets_mission-small.jpg';
 
 const Mission = () => {
   return (
@@ -12,6 +13,7 @@ const Mission = () => {
               effect="blur"
               className="w-full object-cover max-w-[32.25rem] mx-auto sm:mx-0"
               src={streets_mission}
+              placeholderSrc={streets_mission_small}
               alt="Our Mission Img"
             />
           </div>
