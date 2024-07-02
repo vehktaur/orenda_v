@@ -14,6 +14,9 @@ const Mission = () => {
               className="w-full object-cover max-w-[32.25rem] mx-auto sm:mx-0"
               src={streets_mission}
               placeholderSrc={streets_mission_small}
+              wrapperProps={{
+                style: { transitionDelay: '0.5s' }
+              }}
               alt="Our Mission Img"
             />
           </div>

@@ -12,11 +12,11 @@ const AboutIntro = () => {
         <div className="mx-auto max-w-[43.125rem] sm:order-last">
           <LazyLoadImage
             effect="blur"
-            className="w-full"
+            className="w-full bg-[]"
             src={about_skyscraper}
             placeholderSrc={about_skyscraper_small}
             wrapperProps={{
-              style: {transitionDelay: "1s"},
+              style: {transitionDelay: "0.5s"},
           }}
             alt="Management buildings"
           />
