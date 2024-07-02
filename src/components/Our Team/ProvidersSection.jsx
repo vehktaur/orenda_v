@@ -13,7 +13,6 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
       return 'Nil';
     }
   };
-  
 
   const showAgesSeen = (agesSeen) => {
     if (agesSeen) {
@@ -111,9 +110,10 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
                   } flex items-end justify-center`}
                 >
                   <img
-                    className="w-[80%] h-[90%] block object-contain"
+                    className="size-[90%] block object-contain"
                     src={provider?.image}
                     alt={provider?.name}
+                    loading='lazy'
                   />
                 </div>
                 <div className={numberOfColumns === 5 ? 'px-3' : 'px-4'}>

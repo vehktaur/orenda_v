@@ -1,4 +1,6 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import about_skyscraper from '../../assets/about_skyscraper.png';
+import about_skyscraper_small from '../../assets/about_skyscraper-small.png';
 
 const AboutIntro = () => {
   return (
@@ -8,9 +10,11 @@ const AboutIntro = () => {
           Medication Management and Therapy at Your Convenience
         </h1>
         <div className="mx-auto max-w-[43.125rem] sm:order-last">
-          <img
+          <LazyLoadImage
+            effect="blur"
             className="w-full"
             src={about_skyscraper}
+            placeholderSrc={about_skyscraper_small}
             alt="Management buildings"
           />
         </div>
