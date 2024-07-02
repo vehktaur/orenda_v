@@ -16,7 +16,7 @@ const AboutIntro = () => {
             src={about_skyscraper}
             placeholderSrc={about_skyscraper_small}
             wrapperProps={{
-              style: {transitionDelay: "0.5s"},
+              style: {transitionDelay: "0.1s"},
           }}
             alt="Management buildings"
           />

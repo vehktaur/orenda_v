@@ -15,7 +15,7 @@ const Mission = () => {
               src={streets_mission}
               placeholderSrc={streets_mission_small}
               wrapperProps={{
-                style: { transitionDelay: '0.5s' }
+                style: { transitionDelay: '0.1s' }
               }}
               alt="Our Mission Img"
             />
