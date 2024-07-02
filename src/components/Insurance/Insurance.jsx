@@ -51,13 +51,13 @@ const Insurance = () => {
   const openModal = () => {
     setShowModal(true);
     window.scrollTo(0, 0);
-    document.body.style.overflow = 'hidden';
+    document.body.classList.toggle('overflow-hidden');
   };
   const closeModal = () => {
     setShowModal(false);
-    document.body.style.overflow = 'auto';
-    reset();
+    document.body.classList.toggle('overflow-hidden');
     changePageNumber(1);
+    reset();
     animateFields();
   };
 
