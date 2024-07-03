@@ -1,0 +1,77 @@
+@font-face {
+  font-family: OggExtraBold;
+  src: url(../../../fonts/OggText-Extrabold-BF646c18fc56511.otf);
+}
+
+@font-face {
+  font-family: OggBold;
+  src: url(../../../fonts/OggText-Bold-BF646c18fc4aabb.ttf);
+}
+
+
+.available-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.available-wrapper h1 {
+  font-family: OggExtraBold;
+  font-size: 40px;
+  font-weight: 700;
+  color: #070707;
+}
+
+.available-wrapper p {
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.04px;
+  text-align: left;
+}
+
+.avail-img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    gap: 1.5em;
+}
+.avail-img img {
+    width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .avail-img {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+  .avail-img img {
+    max-width: 100%;
+  }
+  .available-wrapper h1{
+    font-size: clamp(30px, 5vw, 44px);
+    font-family: OggBold;
+  }
+  .available-wrapper p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  
+}
+
+
+@media screen and (max-width: 450px) {
+  .avail-img {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 100%;
+  }
+}

@@ -1,0 +1,241 @@
+@font-face {
+  font-family: OggExtraBold;
+  src: url(../../../fonts/OggText-Extrabold-BF646c18fc56511.otf);
+}
+@font-face {
+  font-family: OggBold;
+  src: url(../../../fonts/OggText-Bold-BF646c18fc4aabb.ttf);
+}
+
+.journey-container {
+  padding-top: 3em;
+  padding-bottom: 5em;
+  margin-bottom: 5em;
+  background-color: #fff;
+}
+.journey-wrapper h1 {
+  font-family: OggExtraBold;
+  font-size: 38px;
+  color: #070707;
+  text-align: center;
+}
+.journey-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.icon-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 88%;
+  margin-top: 3em;
+  margin-bottom: 5em;
+}
+
+.icon-prop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  justify-content: space-between;
+  gap: 1em;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  background-color: #f2f2f2;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+.icon img {
+  width: 40px;
+}
+.icon-prop h3 {
+  font-family: OggExtraBold;
+}
+.icon-prop p {
+  font-family: "DM sans";
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+hr {
+  background-color: #d9d9d9;
+  width: 80%;
+}
+
+.patient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: fit-content;
+  max-height: 900px;
+  min-width: 700px;
+  width: 1000px;
+  max-width: 1350px; */
+  width: 100%;
+  margin-top: 4em;
+  border-radius: 15px;
+  /* padding-top: 4em; */
+  border: 1px solid #d4d4d4;
+}
+
+.existing-patient {
+  background-image: url("../../../assets/blur.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 100%;
+  height: 75vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.9em;
+  padding: 3em;
+  color: #fff;
+  align-items: center;
+}
+.existing-patient p {
+  font-family: "open sans";
+  font-size: 15px;
+}
+.existing-patient h2 {
+  font-family: "Nunito sans";
+  letter-spacing: 1px;
+}
+.existing-patient button {
+  font-family: "open sans";
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background: none;
+  border: 1px solid #fff;
+  padding: 8px 16px 8px 16px;
+  border-radius: 25px;
+  max-width: 26em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.4em;
+  transition: background-color 0.3s;
+}
+.existing-patient button:hover {
+  background-color: #2e0086;
+  border: #2e0086;
+}
+
+.new-patient {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  width: 100%;
+  height: 75vh;
+}
+
+.new-patient h2 {
+  font-family: OggBold;
+  font-size: 23px;
+  color: #070707;
+}
+.new-patient p {
+  font-family: "open sans";
+  font-weight: 500;
+  font-size: 15px;
+}
+.new-patient button {
+  font-family: "open sans";
+  font-size: 13px;
+  font-weight: 500;
+  color: #2e0086;
+  background: none;
+  border: 1px solid #2e0086;
+  padding: 8px 20px 8px 20px;
+  border-radius: 25px;
+  max-width: 26em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.4em;
+  transition: background-color 0.3s;
+}
+.new-patient button:hover {
+  background-color: #2e0086;
+  color: #fff;
+}
+button:hover .color-img {
+  filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width: 900px) {
+  .icon-cards {
+    flex-direction: column;
+    gap: 3.5em;
+  }
+  .icon-prop {
+    padding-bottom: 3em;
+    border-bottom: 1px solid rgb(95, 94, 94);
+    width: 100%;
+    max-width: 450px;
+  }
+  .icon-prop h3 {
+    font-size: clamp(18px, 5vw, 24px);
+    text-align: center;
+  }
+
+  .icon-prop p {
+    font-size: clamp(20px, 4vw, 16px);
+  }
+
+  .patient {
+    flex-direction: column;
+    border: none;
+  }
+  .existing-patient {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  .new-patient p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .new-patient h2 {
+    font-size: 30px;
+    font-family: OggBold;
+    text-align: center;
+  }
+  .existing-patient p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .existing-patient h2 {
+    font-size: 30px;
+    font-family: OggBold;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 538px){
+  .icon-prop p{
+    font-size: unset;
+  }
+
+  .icon-prop{
+    gap: .5em;
+  }
+
+  .journey-wrapper h1{
+    font-size: 2rem;
+  }
+}

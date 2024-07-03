@@ -1,0 +1,112 @@
+@font-face {
+  font-family: OggBold;
+  src: url(../../fonts/OggText-Bold-BF646c18fc4aabb.ttf);
+}
+@font-face {
+  font-family: OggBold;
+  src: url(../../fonts/OggText-Bold-BF646c18fc4aabb.ttf);
+}
+
+.network_container {
+  margin-bottom: 5em;
+}
+
+.network_wrapper {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/dotted.png"); /* Update the path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10em 1rem; /* Adjust padding as needed */
+  position: relative;
+}
+
+.slider .marquee_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4em;
+}
+
+.slider .marquee_main img {
+  padding-right: 11em;
+}
+
+.header h3{
+  justify-content: center;
+  display: flex;
+  font-family: OggBold;
+  font-size: 34px;
+  margin-bottom: 2em;
+  color: #070707;
+}
+.texts {
+  justify-content: center;
+  display: flex;
+  font-family: OggBold;
+  font-size: 25px;
+  color: #AEAEAE;
+  margin-bottom: 2em;
+}
+
+.text {
+  justify-content: center;
+  display: flex;
+  font-family: "DM sans";
+  font-size: 1.3em;
+} 
+
+.nets {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 6em;
+  margin-bottom: 2.7em;
+}
+.netss {
+  display: none;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+  .network_wrapper {
+    padding: 4em 1rem;
+  }
+  .header h3{
+    justify-content: center;
+    display: flex;
+    font-family: OggBold;
+    font-size: clamp(30px, 5vw, 44px);
+    margin-bottom: 2em;
+    color: #070707;
+  }
+  .texts{
+    font-size: clamp(25px, 4vw, 40px);
+  }
+  .nets{
+    display: none;
+  }
+  .netss {
+    display: inline;
+    overflow: hidden;
+  }
+  .netss .marquee_main_mob img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .netss .marquee_main_mob img{
+    margin-left: 4em;
+  }
+  .netss .marquee_main_mob .marq {
+    margin-right: 6em !important;
+  }
+}

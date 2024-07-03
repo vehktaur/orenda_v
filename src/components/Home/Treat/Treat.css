@@ -1,0 +1,64 @@
+@font-face {
+  font-family: OggExtraBold;
+  src: url(../../../fonts/OggText-Extrabold-BF646c18fc56511.otf);
+}
+
+.treat-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 5em;
+}
+
+.treat-wrapper .txtss h1 {
+  font-family: OggExtraBold;
+  text-align: center;
+  font-size: 3rem;
+}
+.treat-wrapper .txtss p {
+  font-family: "DM sans";
+  margin-top: 2em;
+  font-size: 20px;
+  font-weight: 400;
+  color: #070707;
+}
+.stick-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 3em;
+  justify-content: center;
+  align-items: center;
+}
+
+.stckers {
+  display: flex;
+  position: relative;
+}
+.sticky {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ebe7dc;
+  border-radius: 5px;
+  width: 195px;
+  height: 181px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  gap: 15px;
+}
+.sticky img {
+  position: relative;
+  object-fit: scale-down;
+}
+.stckers .sticky p {
+  font-family: DM Sans;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: #070707;
+}
+

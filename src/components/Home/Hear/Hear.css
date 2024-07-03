@@ -1,0 +1,47 @@
+@font-face {
+  font-family: OggExtraBold;
+  src: url(../../../fonts/OggText-Extrabold-BF646c18fc56511.otf);
+}
+@font-face {
+  font-family: OggBold;
+  src: url(../../../fonts/OggText-Bold-BF646c18fc4aabb.ttf);
+}
+
+
+.hear-container {
+  justify-content: center;
+  background-image: url("../../../assets/hearback.png"); /* Update the path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10em 1rem; /* Adjust padding as needed */
+  position: relative;
+}
+.initials {
+  border: 2px solid #BDBCBC;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: clamp(18px, 4vw, 28px);
+}
+
+
+.hear-text {
+  font-size: clamp(30px, 4vw, 42px);
+  font-family: OggBold;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 640px) {
+  .sslide {
+    margin-bottom: 2rem;
+  }
+  .crystal {
+    padding-top: 4rem;
+    padding-left: 4rem;
+  }
+}

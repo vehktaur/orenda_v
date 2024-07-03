@@ -1,0 +1,72 @@
+@font-face {
+    font-family: OggExtraBold;
+    src: url(../../../fonts/OggText-Extrabold-BF646c18fc56511.otf);
+}
+
+.phead-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.phead-wrapper{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-family: OggExtraBold;
+    gap: 14rem;
+}
+
+.phead-wrapper h1{
+    font-size: 3rem;
+}
+
+/* .phead-button{
+    margin-left: auto;
+} */
+
+.phead-button button{
+    background-color: #2e0086;
+    outline: none;
+    padding: 0.4em 0.9em;
+    font-size: 16px;
+    border-radius: 1.5em;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    color: #fff;
+    border: 1px solid #2e0086;
+    font-family: "open sans";
+    
+}
+
+@media screen and (max-width: 942px){
+    .phead-wrapper{
+        justify-content: center;
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 838px){
+    .phead-wrapper h1{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 562px){
+    .phead-wrapper h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 458px){
+    .phead-button{
+        display: none;
+    }
+
+    .phead-wrapper{
+        justify-content: center;
+    }
+}

@@ -1,0 +1,134 @@
+@font-face {
+  font-family: OggExtraBold;
+  src: url(../../../fonts/OggText-Extrabold-BF646c18fc56511.otf);
+}
+@font-face {
+  font-family: OggBold;
+  src: url(../../../fonts/OggText-Bold-BF646c18fc4aabb.ttf);
+}
+.location-container {
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-bottom: 3em;
+}
+.location-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.location-wrapper h1 {
+  font-family: OggExtraBold;
+  line-height: 1em;
+  color: #070707;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 56.7px;
+  text-align: left;
+  margin-bottom: 0.3em;
+}
+
+.location-wrapper h2 {
+  font-family: OggExtraBold;
+}
+
+.location-wrapper p {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.07px;
+ 
+  color: #565656;
+}
+
+.loc-prop {
+  background: url(../../../assets/ellipcycle.png) no-repeat;
+  background-position: bottom right;
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+  padding: 1.4em;
+  background-color: #f8f8ff;
+  border-radius: 32px;
+  margin-top: 2em;
+  width: 100%;
+  position: relative;
+}
+
+.newview {
+  max-width: 520px;
+  width: 100%;
+  display: block;
+}
+.loc-prop-txt {
+  background: url(../../../assets/swirly.png) no-repeat;
+  background-position: top right;
+  background-size: clamp(3.41
+  rem,14vw,6.99rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.loc-prop-txt button {
+  background-color: #2e0086;
+  outline: none;
+  padding: 0.7em 0.9em;
+  font-size: 16px;
+  border-radius: 1.5em;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  color: #fff;
+  border: 1px solid #2e0086;
+  font-family: "open sans";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 200px; */
+  gap: 0.4em;
+}
+.loc-prop-txt button:hover{
+  color: #2e0086;
+  background-color: #fff;
+}
+button:hover .purple {
+  filter: invert(80%) sepia(100%) saturate(6700%) hue-rotate(258deg) brightness(93%) contrast(110%);
+}
+.loc-prop-txt h2 {
+  font-family: OggBold;
+  /* font-size: 23px; */
+  font-weight: 700;
+  /* line-height: 40px;
+  text-align: left; */
+}
+.loc-prop-txt p {
+  color: #070707;
+}
+
+.swirly {
+  position: absolute;
+  right: 130px;
+  top: 25px;
+
+}
+.ellipcycle {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  right: 0;
+  border-bottom-right-radius: 32px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .location-wrapper h1{
+    font-family: 'OggBold' !important;
+    text-align: center;
+  }
+}
