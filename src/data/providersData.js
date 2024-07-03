@@ -28,7 +28,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Mr. Rakin Rahman is an experienced adult psychiatric and mental health nurse practitioner currently practising at Orenda Psychiatry. Patients in Smyrna and Brooklyn, NY, can consult him for various concerns, including anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks.
@@ -81,7 +81,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New Jersey'],
+    statesLicensed: ['New York', 'New Jersey'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Ms. Tanya Monroe is an adult psychiatric & mental health nurse practitioner. Working at Orenda Psychiatry in Brooklyn and Smyrna, NY, she accepts patients suffering from hyperactivity disorders (ADD / ADHD), anxiety, bipolar disorder, post-traumatic stress disorder (PTSD), and obsessive-compulsive disorder (OCD).
@@ -135,7 +135,7 @@ const providersData = [
       'Family Psychiatric & Mental Health Nurse Practitioner'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New Jersey'],
+    statesLicensed: ['New York', 'New Jersey'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am an experienced psychiatric nurse Practitioner helping people from all lifespans, with areas of expertise in treating anxiety, depression, OCD, ADHD, Bipolar Disorder, and personality disorders. I am a compassionate person who provides a warm and down to earth approach in meeting the person who is on their journey to mental wellness. Together we can come up with a plan that works for you and with your concerns in mind. `,
@@ -166,7 +166,7 @@ const providersData = [
     educationAndBackground: [`Russell Sage College, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available in 1-2 days',
     bookingLink: 'https://booking.url',
     about: `Serving the residents of New York City and Brooklyn, NY, Ms. Michelle Krill is an experienced adult psychiatric and mental health nurse practitioner. She provides virtual consultations via Orenda Psychiatry.
@@ -200,7 +200,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available in 1-2 days',
     bookingLink: 'https://booking.url',
     about: `Ms. Myea Meighan, an accomplished adult psychiatric and mental health nurse practitioner at Orenda Psychiatry, offers virtual consultations to the New York and Brooklyn, NY communities.
@@ -236,7 +236,14 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New Jersey', 'Maine', 'Oregon', 'Maryland', 'Delaware'],
+    statesLicensed: [
+      'New York',
+      'New Jersey',
+      'Maine',
+      'Oregon',
+      'Maryland',
+      'Delaware'
+    ],
     availability: 'Available in 1-2 days',
     bookingLink: 'https://booking.url',
     about: `Ms. Nwamaka Onyeogo is an accomplished adult psychiatric & mental health nurse practitioner offering virtual consultations through Orenda Psychiatry in New York, NY. With experience in treating conditions like bipolar disorder, anxiety, obsessive-compulsive disorder (OCD), and various mental health issues, she provides compassionate and personalized care.
@@ -269,7 +276,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: null,
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available in 1-2 days',
     bookingLink: 'https://booking.url',
     about: `Ms. Nerlande Celestin is an NY-based adult psychiatric and mental health nurse practitioner. Practicing at Orenda Psychiatry, she serves the residents of New York and Brooklyn, NY. She is dedicated to providing comprehensive and compassionate care to people facing mental health challenges.
@@ -311,7 +318,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New Jersey'],
+    statesLicensed: ['New York', 'New Jersey'],
     availability: 'Available in 1-2 days',
     bookingLink: 'https://booking.url',
     about: `Natasha Dillon graduated from Fairleigh Dickinson University as a psychiatric nurse practitioner for all ages and she is Board Certified by ANCC. She graduated with a Master in Nursing Science in 2017 from Ternopil State Medical University. She is in the medical field for 20 years; she has years of experience as a registered nurse in the hospital and she connected with thousands of patients in her career and participated in many meaningful moments in their lives.
@@ -354,7 +361,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Danielle is a board certified psychiatric mental health nurse practitioner. She is passionate about providing quality, compassionate and comprehensive mental health services to adolescents and adults. Danielle possesses strong clinical skills enhanced by natural ability to build rapport with patients. She follows evidence-based guidelines blended with clinical experience, personal observation and intuition. As a PMHNP, Danielle's role is multifaceted, including educator, metal health advocate and therapist.
@@ -405,6 +412,7 @@ const providersData = [
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
     statesLicensed: [
+      'New York',
       'Oregon',
       'Maryland',
       'Massachusetts',
@@ -452,7 +460,7 @@ const providersData = [
     educationAndBackground: [`New York University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Mr. Jeremy Walsh is a skilled adult psychiatric and mental health nurse practitioner. He extends his services at Hurley Dermatology, delivering holistic care with empathy and expertise via virtual consultations.
@@ -485,7 +493,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Being an adult psychiatric and mental health nurse practitioner, Mr. Phillip Mcdonald merges clinical expertise with compassionate care to support individuals on their mental health journey. He extends his services at Orenda Psychiatry, Brooklyn, NY, via virtual consultations.
@@ -523,7 +531,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Sarah Sakirsky is a Board Certified Psychiatric Nurse Practitioner with experience in inpatient and private practice settings. She graduated with her Masters from Decker School of Nursing at Binghamton University. Sarah utilizes a combination of medication management and therapy in helping her patients achieve favorable outcomes. She is a compassionate and attentive provider. Her mission is to deliver a precise diagnosis and individually tailored treatment plan for each patient.`,
@@ -557,7 +565,7 @@ const providersData = [
     educationAndBackground: [`New York University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Anne Mongiello uses her empathetic and evidence-based approach as the guide through the complexities of various psychiatric challenges, including panic attacks, obsessive-compulsive disorder (OCD), attention-deficit/hyperactivity disorder (ADD/ADHD), and bipolar disorder.
@@ -609,7 +617,7 @@ const providersData = [
       'Family Psychiatric & Mental Health Nurse Practitioner'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Ketie Saintelus is a board-certified Family Nurse Practitioner and Psychiatry Nurse Practitioner, licensed by the state of New York to provide family-centered healthcare to patients of all ages. 
@@ -651,7 +659,7 @@ const providersData = [
     educationAndBackground: [`New York University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['Connecticut'],
+    statesLicensed: ['New York', 'Connecticut'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I have comprehensive approach to care and relationships. I emphasize holistic care of the body and mind. As a provider who is dual board certified in psychiatric mental health and primary care, I am equipped to partner with my clients to meet their psychological and medical needs with an open mind.
@@ -706,7 +714,7 @@ const providersData = [
     educationAndBackground: [`Drexel University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['Alaska'],
+    statesLicensed: ['New York', 'Alaska'],
     availability: 'Available in 3 days',
     bookingLink: 'https://booking.url',
     about: `Bethany Malugin is a distinguished adult psychiatric and mental health nurse practitioner who follows a patient-centered approach during her sessions, addressing anxiety, bipolar disorder, obsessive-compulsive disorder (OCD), panic attacks, and hyperactive disorder.
@@ -750,7 +758,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
 
     availability: 'Available in 3 days',
     bookingLink: 'https://booking.url',
@@ -800,7 +808,7 @@ const providersData = [
       'Family Psychiatric & Mental Health Nurse Practitioner'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available in 3 days',
     bookingLink: 'https://booking.url',
     about: `Carla Rosey is a board certified Psychiatric Mental Health Nurse Practitioner with 5 years of nursing experience in the psychiatric field ranging from community mental health crisis stabilization and substance abuse treatment to adult inpatient care.
@@ -846,7 +854,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available in 2 days',
     bookingLink: 'https://booking.url',
     about: `Serving the residents of Brooklyn, NY, Ms. Perpetual Gyimah is a diligent adult psychiatric and mental health nurse practitioner at Orenda Psychiatry. As a part of her higher education, Ms. Gyimah acquired her master's degree in nursing from the City University of New York, Hunter College.
@@ -873,7 +881,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `I am a board certified psychiatric NP with AgniPsych & Wellness. My wholistic approach to treatment involves combining evidence-based psychopharmacology with a therapeutic process that prioritizes the individual and their goals over their symptoms. I have experience helping people overcome depression, anxiety and ADHD. While there is currently no cure for addiction, I have helped those afflicted by this condition to lead a healthy and happy life. I rely on my clinical experience for diagnosis and pharmacology, however what sets me apart is my expertise in talk-therapy and ability to relate to others.
@@ -922,7 +930,7 @@ const providersData = [
       'Family Psychiatric & Mental Health Nurse Practitioner'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `New York State board certified Psychiatric Mental Health Nurse Practitioner through the life-span. Compassionate clinician experienced in working with individuals with generalized anxiety disorder, major depression, PTSD, ADHD, bipolar disorder schizophrenia and substance use disorder. Dedicated to collaborating with clients to reach their treatment goals.`,
@@ -958,7 +966,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available in 2 days',
     bookingLink: 'https://booking.url',
     about: `Ms. Trisha Mayorga is an adult psychiatric & mental health nurse practitioner based in New York and Brooklyn, NY. She offers virtual consultations at Orenda Psychiatry.
@@ -1006,7 +1014,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['Connecticut', 'Massachusetts'],
+    statesLicensed: ['New York', 'Connecticut', 'Massachusetts'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Cassandra Williams offers comprehensive treatment to patients with various mental health concerns. While treating anxiety, hyperactive disorders, bipolar disorder, or other mental health conditions, Ms. Williams utilizes her knowledge of psychotherapy modalities to develop personalized treatment plans to meet each patient's needs.
@@ -1049,7 +1057,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Vanessa is a Brooklyn native who carries 14 years of nursing experience combining emergency medicine, internal medicine, and psychiatry. She is a double board- certified nurse practitioner in psychiatry and family medicine. She is a clinician that partners with clients in exploring their own unique path to mental health and wellness in a warm, empathetic and safe environment.
@@ -1090,7 +1098,7 @@ const providersData = [
     educationAndBackground: [`Pace University, Master's in Nursing`],
     specialties: ['Nurse Practitioner (Psychiatry)'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['South Carolina'],
+    statesLicensed: ['New York', 'South Carolina'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Ms. Sarah Otto is a skilled and compassionate nurse practitioner specializing in psychiatry. At Orenda Psychiatry, she assists physicians in offering comprehensive mental healthcare services to patients in New York and Brooklyn, NY.
@@ -1138,7 +1146,7 @@ const providersData = [
       'Adult Psychiatric & Mental Health Nurse Practitioner'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Victoria is a board certified psychiatric mental health nurse practitioner. She brings nine years of experience, which includes working inpatient intensive care treatment and more recently outpatient care in private practice. She is a warm and compassionate practitioner who incorporates medication management in conjunction with psychotherapy.
@@ -1186,7 +1194,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Catherine Colson is a board-certified mental health nurse practitioner. Catherine prioritizes listening, compassion, and cultivating a collaborative relationship with her patients. She is interested in anything and everything her patients want to tell her. Her ultimate goal is to foster growth so her patients can become their best selves.
@@ -1244,7 +1252,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Mr. William Da silva is a skilled adult psychiatric and mental health nurse practitioner from New York and Brooklyn, NY. He practices at Orenda Psychiatry and offers virtual consultations. His educational qualifications include a master's degree in nursing from New York University.
@@ -1281,7 +1289,7 @@ const providersData = [
     educationAndBackground: [`Pace University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Mr. Ricky Luong is an adult psychiatric & mental health nurse practitioner at Orenda Psychiatry in Brooklyn, Smyrna, and New York, NY. He is a qualified professional with a master’s degree in nursing from Pace University.
@@ -1326,7 +1334,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Kerry truly believes that being present and forming a team approach with patients is one of the most important aspects of patient care. Realizing that each patient is unique, working together with patients towards their goals, while being passionate about individual empowerment allows my skills to become another instrument they can use to navigate their lives. My focus is primarily on mood disorders, anxiety, depression and ADHD. assessment and safety planning.
@@ -1378,7 +1386,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board-certified psychiatric nurse practitioner. With over 20 years of nursing, I have experience helping people of all ages cope with addiction, eating disorders, women's mental health issues, ADHD, mood disorder and anxiety. I believe in partnering with my clients utilizing a holistic approach including diet , exercise, psychopharmacology, aromatherapy, relaxation, and mindfulness. My mission is to provide an environment that is educational, supportive, and free from judgement.`,
@@ -1417,7 +1425,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Mr. Kristofer Generales is an expert adult psychiatric & mental health nurse practitioner. He obtained his doctoral degree in nursing practice from Fairfield University and understands that mental well-being is integral to transformative growth.
@@ -1454,7 +1462,7 @@ const providersData = [
     educationAndBackground: [`Wilkes University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Ms. Latiema Merilus is an adult psychiatric & mental health nurse practitioner serving the New York and Brooklyn, NY communities. She has experience in helping patients facing hyperactivity disorder, anxiety, panic attacks, bipolar disorder, obsessive-compulsive disorder, and more.
@@ -1492,7 +1500,7 @@ const providersData = [
       `Family Psychiatric & Mental Health Nurse Practitioner`
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Lenny listens to patients’ needs while getting to know them on a personal level. Although the nursing profession can be challenging, Lenny finds it incredibly fulfilling to be able to guide and support people through what is often the most difficult time of their lives.`,
@@ -1525,7 +1533,7 @@ const providersData = [
     educationAndBackground: [`New York University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `A dedicated adult psychiatric and mental health nurse practitioner, Mr. Lindon Richards, is highly skilled in assisting physicians in treating and managing various mental health disorders. As part of his formal education, Mr. Richards graduated from New York University with a master’s degree in nursing.
@@ -1562,7 +1570,7 @@ const providersData = [
     educationAndBackground: null,
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Jarvis is passionate about caring for the mind, body, and spirit and combines all three elements of care with her clients. She believes the patient is an equal partner in the therapeutic alliance and works to empower them to take charge of their health care. NP Jarvis will provide psychiatric evaluation, supportive psychotherapy, medications, and medication education to assist herpatients in living the best version of themselves. Patients will feel cared for, listened to, and empowered.`,
@@ -1589,7 +1597,7 @@ const providersData = [
     educationAndBackground: [`New York University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Ms. Lori Hume is a dedicated adult psychiatric & mental health nurse practitioner, extending her expertise through virtual consultations at Orenda Psychiatry in Brooklyn, NY.
@@ -1630,7 +1638,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['Georgia'],
+    statesLicensed: ['New York', 'Georgia'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Michael is a psychiatric mental health practitioner with over 20 years of experience in medicine.His approach is one that utilizes medication management in conjunction with talk-therapy. In his treatment style he views himself more of a partner who considers the "whole person" rather than strictly a medical clinician.
@@ -1666,7 +1674,7 @@ const providersData = [
       'Family Psychiatric & Mental Health Nurse Practitioner'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Hello my name is Melissa Docteur and I am a board certified psychiatric mental health nurse practitioner. I received my masters from Hunter college, and I also have a bachelor’s degree from SUNY Albany where I double majored in human biology and communications. My approach is to provide therapeutic and holistic care with medication management when necessary. As a PMHNP my goal is to provide a welcoming and safe space for patients to freely express themselves so that effective treatment can be provided.
@@ -1695,7 +1703,7 @@ const providersData = [
     educationAndBackground: [`New York University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Dr. Asiedu has a DNP and is board certified in psychiatry. She was trained at New York University and specializes in mental health across the lifespan. Her focus in treatment is to explore avenues to help overcome mental health impairments while striving to help each patient live their life to their fullest. Her approach is one that implements therapy in conjunction with medication management.
@@ -1729,7 +1737,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available in 1 week',
     bookingLink: 'https://booking.url',
     about: `Ms. Sevindzh Izrailova is an adult psychiatric & mental health nurse practitioner at Orenda Psychiatry in New York, Brooklyn, and Smyrna, NY. She earned her master’s degree inpsychiatric mental health nursing from Pace University.
@@ -1775,7 +1783,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available in 1 week',
     bookingLink: 'https://booking.url',
     about: `Ms. Sharon Ostiguy is a dedicated adult psychiatric and mental health nurse practitioner. She offers her services at Orenda Psychiatry, welcoming patients from all communities in the Brooklyn, New York, and Smyrna, NY, areas.
@@ -1818,7 +1826,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Shelley Padgett is a warm and compassionate psychiatric provider. Her approach to treatment follows a holistic model that combines talk therapy and medication as needed. She enjoys getting to know her patients on a personal level. She creates a space that is safe and free of judgement. Shelley is down to earth and through empathy, she forms meaningful connections with her patients. Shelly has over 20 years of nursing experience. She is highly skilled in psychopharmacology. She specializes in the treatment of mood and anxiety disorders, bipolar disorder, PTSD, sleep disorders, and ADHD.`,
@@ -1864,7 +1872,7 @@ const providersData = [
     educationAndBackground: ['Pace University, Master’s in Nursing'],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Dedicated to enhancing mental well-being, Ms. Sheri Watson is a highly skilled adult psychiatric & mental health nurse practitioner in New York and Brooklyn, NY. She provides virtual consultations through Orenda Psychiatry.
@@ -1904,7 +1912,7 @@ const providersData = [
     educationAndBackground: ['New York University, Master’s in Nursing'],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['New Jersey'],
+    statesLicensed: ['New York', 'New Jersey'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Ms. Sitora Mirsoatova is a caring, non-judgmental, and friendly adult psychiatric & mental health nurse practitioner. She helps patients facing mental health issues such as anxiety, hyperactivity disorder, bipolar disorder, post-traumatic stress disorder, and obsessive-compulsive disorder.
@@ -1946,7 +1954,7 @@ const providersData = [
     educationAndBackground: ['New York University, Master’s in Nursing'],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
@@ -1988,7 +1996,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Based out of New York and Brooklyn, NY, Ms. Trisha Joseph is an adult psychiatric and mental health nurse practitioner who provides virtual consultations at Orenda Psychiatry. She holds a master's degree in nursing from the State University of New York, Binghamton.
@@ -2032,7 +2040,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Being an experienced adult psychiatric and mental health nurse practitioner, Ms. Jessica Chichester delivers expert care through virtual consultations at Orenda Psychiatry in New York, NY.
@@ -2079,7 +2087,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: 'Available in 1 week',
     bookingLink: 'https://booking.url',
     about: `Celeste Johnson is a qualified adult psychiatric & mental health nurse practitioner who provides dedicated help to her patients by diagnosing and treating various mental health conditions, including hyperactivity disorder (ADD / ADHD), anxiety, panic attack, bipolar disorder, post-traumatic stress disorder (PTSD), and obsessive-compulsive disorder (OCD).
@@ -2122,7 +2130,7 @@ const providersData = [
     educationAndBackground: [`Columbia University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Chelsea Chaffee is a board-certified adult psychiatric & mental health nurse practitioner based in New York. She received her Doctorate in Nursing Practice from Columbia University and has experience in both in-patient and out-patient psychiatry. Her areas of focus include perinatal mental health, premenstrual dysphoric disorder, menopause, fertility challenges including fetal loss, anxiety, depression, life transitions, sleep disorders, spirituality, and more. She enjoys offering psychotherapy in addition to medication management.
@@ -2166,7 +2174,7 @@ const providersData = [
     educationAndBackground: [`Molloy University, Master's in Nursing`],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['Georgia'],
+    statesLicensed: ['New York', 'Georgia'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Based in Brooklyn, NY, Ms. Daferti Afflick is a dedicated adult psychiatric and mental health nurse practitioner offering virtual consultations at Orenda Psychiatry.
@@ -2199,7 +2207,7 @@ const providersData = [
     educationAndBackground: [`New York University, Master's in Nursing`],
     specialties: ['Nurse Practitioner'],
     boardCertification: null,
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Diana Yakubova is a dedicated and compassionate Psychiatric Nurse Practitioner with a wealth of clinical experience and a commitment to providing personalized care to patients. Fluent in both English and Russian, Diana brings a culturally sensitive approach to her practice, ensuring all patients feel heard and understood.
@@ -2241,7 +2249,7 @@ const providersData = [
       'Adult Psychiatric & Mental Health Nurse Practitioner'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `As a mental health care provider, I bring compassion resilience, and personal experience to my practice. I believe in the healing power of connection, empathy, and both physical and emotional well-being. My own challenges have fueled my commitment to helping others navigate tough times. My goal is to provide support and guidance, offering a safe space for exploration and resilience-building. With a deep understanding of the human mind, I aim to empower individuals to lead fulfilling lives through therapy, medication management, and lifestyle interventions.
@@ -2267,7 +2275,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: null,
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Mr. Barry is a psychiatric nurse practitioner with 5 years of experience in the field of mental health, including forensic psychiatry. While his background may seem impressive on paper, his critical eye sees the flaws and shortcomings in the current state of mental health care. He has witnessed first-hand the inadequacies in the system, from lack of resources and funding to stigma and discrimination against those struggling with mental illness. With a passion for helping individuals overcome their struggles and achieve optimal well-being, he brings a compassionate and empathetic approach to his practice.
@@ -2305,7 +2313,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `As an Outpatient Psychiatric Nurse Practitioner, I offer comprehensive care to individuals and families facing mental health challenges. With a Master's in Psychiatric Mental Health Nursing and over 14 years of nursing experience, including extensive work at the U.S. Department of Veterans Affairs, I'm committed to advancing mental health practice. I prioritize creating positive cognitive and behavioral changes for my clients and their families. My expertise includes ACLS, BLS, and PRI certifications, enabling me to deliver high-quality care across diverse settings.
@@ -2340,7 +2348,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: null,
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Ms. Cheryl Kelly is a psychiatric mental health nurse practitioner offering virtual consultations through Orenda Psychiatry in New York. She has over 20 years of nursing experience and specializes in treating anxiety, depression, ADHD, addiction, and PTSD. Cheryl believes in building therapeutic relationships based on kindness, compassion and respect. She is dedicated to offer psychiatric evaluations, medication management and psychotherapy in a safe and non-judgemental space to enhance mental well-being. Cheryl works in collaboration with the patient to tailor treatment plans to meet their unique needs and lifestyle to facilitate healing.
@@ -2375,7 +2383,7 @@ const providersData = [
       'Family Psychiatric & Mental Health Nurse Practitioner'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Barbara Borgella is a board-certified psychiatric mental-health nurse practitioner who focuses on long-term patient recovery with the use of evidence-based clinical practice. Patients can expect Barbara to be a knowledgeable, well-rounded and culturally competent provider. Her experience includes treating patients with ADHD, anxiety, depression obsessive-compulsive (OCD), insomnia, trauma, PTSD and mood disorders.
@@ -2411,7 +2419,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Mrs. Penny is a DNP prepared Board-Certified Psychiatric Mental Health Nurse Practitioner who obtained her MS degree from Adelphi University and doctorate degree from Chatham University. She is passionate about helping her clients achieve their mental health goals and live their best lives. Kerry Ann has a strong understanding of mental health disorders and is able to effectively diagnose and treat them. She assists her patients in pursuing healing by conducting comprehensive psychiatric assessment and focusing on her client's interpretation of optimal health.
@@ -2451,7 +2459,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: null,
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Ms. Nicole Raczy is a nurse practitioner specializing in psychiatry who offers virtual care through Orenda Psychiatry. She obtained her master’s degree in psychiatric and mental health nursing from Pace University. 
@@ -2491,7 +2499,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: null,
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Derrick Adusei is a compassionate and dedicated mental health specialist with a profound understanding of the challenges faced by individuals dealing with mental health issues. With a passion for making a difference in people's lives, Derrick specializes in treating patients across the lifespan, from children to older adults.
@@ -2524,7 +2532,7 @@ const providersData = [
     ],
     specialties: ['Adult Psychiatric & Mental Health Nurse Practitioner'],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: null,
+    statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Miok is a dual board-certified professional in both psychiatry and family practice, boasting an extensive career that spans both inpatient and outpatient care settings. With nearly two decades of experience in healthcare, she initially embarked on her journey as a registered nurse, and a decade ago, she successfully completed her family nurse practitioner program. For the past decade, Miok has been dedicated to serving in skilled nursing homes, where she collaborates with a team of professionals to conduct thorough psychiatric assessments, addressing conditions such as depression, anxiety, insomnia, PTSD, and bipolar I and II. Her expertise also encompasses a wealth of experience in pain management.
@@ -2563,7 +2571,7 @@ const providersData = [
       'Nurse Practitioner (Psychiatry)'
     ],
     boardCertification: ['American Nurses Credentialing Center'],
-    statesLicensed: ['Connecticut', 'North Carolina'],
+    statesLicensed: ['New York', 'Connecticut', 'North Carolina'],
     availability: null,
     bookingLink: 'https://booking.url',
     about: `Danielle is a Board-Certified Psychiatric Nurse Practitioner in Brooklyn, New York who has over 15 + years of nursing experience. She earned her Post-Masters PMHNP from Hunter college. Danielle’s service to others is what drives her passion for psychiatry. Her approach to care is simple, and that is, to listen with empathy and hold everyone in a space of love, good intention, and grace. She believes that everyone is unique, and their story must be heard. Danielle specializes in treating adults with depression, anxiety, bipolar, PTSD, ADHD, and interpersonal relationship issues.

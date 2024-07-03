@@ -74,7 +74,7 @@ const ProvidersInAbout = () => {
                   ref={image}
                   src={providersData[index].image}
                   alt={`Provider ${index}`}
-                  className="provider__images w-full h-full object-cover"
+                  className="provider__images size-full object-cover"
                 />
               </div>
             ))}

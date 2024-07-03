@@ -28,7 +28,7 @@ const Newsletter = () => {
           <img className="~size-[8.1875rem]/[25.525rem]" src={newsletter}></img>
         </div>
         <div className="text-center sm:text-justify">
-          <h2 className="heading sm:py-1 mb-3 sm:text-justify">
+          <h2 className="heading sm:py-1 mb-3 ~text-xl/[2.625rem] sm:text-left">
             Subscribe to our Newsletter
           </h2>
           <p className="max-w-[34.5rem]">

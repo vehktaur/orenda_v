@@ -40,13 +40,13 @@ const ContactUsPage = () => {
       <main className="px-5 ~mt-8/[7.5rem]">
         <div className="max-w-7xl mx-auto">
           <h1 className="heading">Contact Us</h1>
-          <div className="~mt-8/[3.75rem] text-center md:text-justify md:flex gap-10">
+          <div className="~mt-8/[3.75rem] text-center md:text-left md:flex gap-10">
             <div className="md:flex-1">
               <div>
                 <h2 className="font-heading ~text-lg/[1.375rem] mb-4">
                   Providing Mental Healthcare with Convenience
                 </h2>
-                <p className="~leading-6/8 max-w-[32.13rem] mx-auto md:mx-0">
+                <p className="~leading-6/8 max-w-[32.13rem] mx-auto md:mx-0 text-center md:text-justify">
                   We have a team of over 25 Customer support specialists and
                   registered nurses, contact them over your preferred choice of
                   communication
@@ -154,23 +154,23 @@ const ContactUsPage = () => {
               </form>
             </div>
           </div>
-          <div className="text-center md:text-justify mt-6 space-y-10 md:flex mb-10 sm:~gap-0/[21rem]">
+          <div className="text-center md:text-left mt-6 space-y-10 md:flex mb-10 sm:~gap-0/[21rem]">
             <div className="md:hidden sm:flex gap-20 items-start">
               <div className="flex-shrink-0">
                 <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
                   Operating Hours
                 </h2>
                 <div className="~leading-6/8">
-                  <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                  <p>Saturday: 9:00 AM - 1:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p className='text-center md:text-left'>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                  <p className='text-center md:text-left'>Saturday: 9:00 AM - 1:00 PM</p>
+                  <p className='text-center md:text-left'>Sunday: Closed</p>
                 </div>
               </div>
               <div className="mt-10 sm:mt-0">
                 <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
                   Emergency Contact Information{' '}
                 </h2>
-                <p>
+                <p className='text-center md:text-left'>
                   If you are in immediate danger, call{' '}
                   <span className="text-red-900 font-semibold">911</span> or
                   visit your nearest emergency room
@@ -183,10 +183,10 @@ const ContactUsPage = () => {
                   Main Contact Information
                 </h2>
                 <div>
-                  <p>Address: 80 5th Avenue</p>
-                  <p>Phone: (347) 707-7735</p>
-                  <p>Fax: (347) 745-0992</p>
-                  <p>
+                  <p className='text-center md:text-left'>Address: 80 5th Avenue</p>
+                  <p className='text-center md:text-left'>Phone: (347) 707-7735</p>
+                  <p className='text-center md:text-left'>Fax: (347) 745-0992</p>
+                  <p className='text-center md:text-left'>
                     Email:
                     <a
                       className="underline"
@@ -198,13 +198,13 @@ const ContactUsPage = () => {
                 </div>
               </div>
               <div>
-                <p className="my-8 flex flex-col">
+                <p className="my-8 flex flex-col text-center md:text-left">
                   <strong>For new appointments, please email: </strong>
                   <a className="underline" href="mailto:intake@orendapsych.com">
                     intake@orendapsych.com
                   </a>
                 </p>
-                <p className="flex flex-col">
+                <p className="flex flex-col text-center md:text-left">
                   <strong>For billing questions, please email: </strong>
                   <a
                     className="underline"
@@ -220,7 +220,7 @@ const ContactUsPage = () => {
                 <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
                   Appointment Scheduling
                 </h2>
-                <p>
+                <p className='text-center md:text-left'>
                   <a
                     className="text-orenda-purple font-semibold underline"
                     href="/"
@@ -232,7 +232,7 @@ const ContactUsPage = () => {
               </div>
               <div>
                 <h3>Insurance and Payment Information</h3>
-                <p>We accept the following insurance providers:</p>
+                <p className='text-center md:text-left'>We accept the following insurance providers:</p>
                 <div className="flex flex-wrap gap-6 items-center justify-center md:justify-start mt-6">
                   <span className="max-w-[8.54rem]">
                     <img

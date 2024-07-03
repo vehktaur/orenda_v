@@ -1,17 +1,31 @@
+import { useState } from 'react';
 import faq from '../../data/faq';
 import Accordion from './Accordion';
 
 const FAQ = () => {
+  const [FAQs, setFAQs] = useState(faq);
+
+  const setIsOpen = (question) => {
+    setFAQs((prevFAQ) =>
+      prevFAQ.map((faq) => ({
+        ...faq,
+        isOpen: faq.question === question ? !faq.isOpen : false
+      }))
+    );
+  };
+
   return (
     <div className="px-5 ~pt-10/32 ~mb-[6.38rem]/[12.66rem] text-justify">
       <div className="max-w-[48.88rem] mx-auto">
         <h1 className="heading ~mb-6/8">Frequently Asked Questions</h1>
         <div className="~space-y-[1.12rem]/[1.25rem] font-open-sans">
-          {faq.map((faq) => (
+          {FAQs.map((faq) => (
             <Accordion
               key={faq.question}
               question={faq.question}
               answer={faq.answer}
+              isOpen={faq.isOpen}
+              setIsOpen={setIsOpen}
             />
           ))}
         </div>

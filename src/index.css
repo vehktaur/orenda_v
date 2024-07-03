@@ -55,7 +55,7 @@
     @apply ~text-sm/xl font-dm-sans;
   }
   .heading {
-    @apply font-bold ~sm/xl:~text-lg/[2.625rem] text-center font-heading;
+    @apply font-bold ~text-[1.35rem]/[2.625rem] text-center font-heading;
   }
   .footer__heading {
     @apply font-bold ~sm/xl:~text-sm/lg text-justify ~mb-2/4;

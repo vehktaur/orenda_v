@@ -1,4 +1,4 @@
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import teamData from '../../data/teamData';
 import NavButtons from './NavButtons';
 import TeamMemberCard from './TeamMemberCard';
@@ -56,22 +56,16 @@ const Team = ({ itemsPerPage }) => {
         </div>
         <div className="md:hidden">
           <Swiper
-            slidesPerView={2}
-            breakpoints={{
-              400: {
-                slidesPerView: 3,
-                spaceBetween: 20
-              },
-              600: {
-                slidesPerView: 4,
-                spaceBetween: 40
-              }
+            autoplay={{
+              delay: 2000
             }}
+            slidesPerView="auto"
             spaceBetween={50}
-            modules={[Pagination]}
+            loop={true}
+            modules={[Pagination, Navigation, Autoplay]}
           >
             {teamData.map((member, index) => (
-              <SwiperSlide key={index + 50}>
+              <SwiperSlide style={{ width: 'auto' }} key={index + 50}>
                 <TeamMemberCard member={member} />
               </SwiperSlide>
             ))}

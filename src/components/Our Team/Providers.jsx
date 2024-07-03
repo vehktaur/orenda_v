@@ -28,7 +28,7 @@ const Providers = ({ itemsPerPage, numberOfColumns }) => {
 
   const numberOfSlides = Math.ceil(providersData.length / itemsPerPage);
   return (
-    <div>
+    <div className='max-w-7xl mx-auto ~mt-12/[4.94rem] px-5'>
       <Swiper
         onSlideChange={handleSlideChange}
         spaceBetween={50}

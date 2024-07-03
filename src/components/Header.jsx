@@ -34,14 +34,14 @@ const Header = () => {
             </ul>
           </nav>
           <Link
-            to="/our team"
+            to="/our-team"
             className="text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors px-4 py-2 border border-orenda-purple rounded-3xl font-semibold md:hidden"
           >
             Book Now
           </Link>
         </div>
         <Link
-          to="/our team"
+          to="/our-team"
           className="text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors px-4 py-2 border border-orenda-purple rounded-3xl font-semibold hidden md:block"
         >
           Book Now

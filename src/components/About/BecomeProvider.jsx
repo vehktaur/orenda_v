@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import magnifier from '../../assets/magnifier.gif';
 
 const BecomeProvider = ({ bg }) => {
@@ -16,9 +17,9 @@ const BecomeProvider = ({ bg }) => {
             to start with us.
           </p>
 
-          <button className="mt-[2.12rem] mx-auto sm:mx-0 sm:max-w-[15.125rem] border text-orenda-green border-orenda-green py-2.5 px-4 block rounded-[2.5rem] hover:bg-orenda-green hover:text-white font-semibold transition-colors ~text-sm/xl w-full">
+          <Link to='/become-a-provider' className="mt-[2.12rem] mx-auto sm:mx-0 sm:max-w-[15.125rem] border text-orenda-green border-orenda-green py-2.5 px-4 block rounded-[2.5rem] hover:bg-orenda-green hover:text-white font-semibold transition-colors ~text-sm/xl w-full text-center">
             Start Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>
