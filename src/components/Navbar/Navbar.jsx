@@ -49,10 +49,10 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/Our Team">Our Team</NavLink>
+            <NavLink to="/our-team">Our Team</NavLink>
           </li>
           <li>
-            <NavLink to="/Insurance">Insurance</NavLink>
+            <NavLink to="/insurance">Insurance</NavLink>
           </li>
           <li>
             <NavLink to="/about">About</NavLink>
@@ -61,11 +61,11 @@ const Navbar = () => {
             <NavLink to={'/blogs'}>Blog</NavLink>
           </li>
           <li>
-            <NavLink to="/privacypolicy">Privacy policy</NavLink>
+            <NavLink to="/privacy-policy">Privacy policy</NavLink>
           </li>
 
           <li>
-            <NavLink to="/contact">Contact Us</NavLink>
+            <NavLink to="/contact-us">Contact Us</NavLink>
           </li>
         </ul>
 
@@ -84,12 +84,12 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li onClick={() => openSesame()}>
-            <NavLink className="nav-link" to="/Our Team">
+            <NavLink className="nav-link" to="/our-team">
               Our Team
             </NavLink>
           </li>
           <li onClick={() => openSesame()}>
-            <NavLink className="nav-link" to="/Insurance">
+            <NavLink className="nav-link" to="/insurance">
               Insurance
             </NavLink>
           </li>
@@ -104,13 +104,13 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li onClick={() => openSesame()}>
-            <NavLink className="nav-link" to="/privacypolicy">
+            <NavLink className="nav-link" to="/privacy-policy">
               Privacy policy
             </NavLink>
           </li>
 
           <li onClick={() => openSesame()}>
-            <NavLink className="nav-link" to="/contact">
+            <NavLink className="nav-link" to="/contact-us">
               Contact Us
             </NavLink>
           </li>
