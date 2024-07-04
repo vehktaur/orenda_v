@@ -37,7 +37,7 @@ const ContactUsPage = () => {
   }, [isSubmitSuccessful]);
   return (
     <>
-      <main className="px-5 ~mt-8/[7.5rem]">
+      <main className="px-5 md:~px-10/14 ~mt-8/[7.5rem]">
         <div className="max-w-7xl mx-auto">
           <h1 className="heading">Contact Us</h1>
           <div className="~mt-8/[3.75rem] text-center md:text-left md:flex gap-10">
