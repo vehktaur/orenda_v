@@ -9,7 +9,7 @@ const BecomeProvider = ({ bg }) => {
           <img className="~size-[8.1875rem]/[25.525rem]" src={magnifier}></img>
         </div>
         <div className="w-full">
-          <h2 className="heading sm:py-1 mb-3 sm:text-justify">
+          <h2 className="heading sm:py-1 mb-3 sm:text-left">
             Become an Orenda Provider!
           </h2>
           <p className="max-w-[35.625rem] font-medium text-center sm:text-justify ~text-sm/xl">

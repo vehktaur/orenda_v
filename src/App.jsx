@@ -9,6 +9,11 @@ import PrivacyPolicy from './components/Privacy/PrivacyPolicy';
 import ProviderInfo from './components/Provider Info/ProviderInfo';
 import BecomeProviderPage from './components/BecomeProviderPage/BecomeProviderPage';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+
 function App() {
   return (
     <ScrollToTop>
@@ -28,3 +33,5 @@ function App() {
 }
 
 export default App;
+
+library.add(fab, fas, far);
