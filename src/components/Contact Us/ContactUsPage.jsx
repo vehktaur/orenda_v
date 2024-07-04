@@ -216,7 +216,7 @@ const ContactUsPage = () => {
               </div>
             </div>
             <div>
-              <div>
+              <div className='~mb-6/10'>
                 <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
                   Appointment Scheduling
                 </h2>
@@ -231,9 +231,9 @@ const ContactUsPage = () => {
                 </p>
               </div>
               <div>
-                <h3>Insurance and Payment Information</h3>
+                <h2 className='font-heading ~text-lg/[1.375rem] ~mb-2/4'>Insurance and Payment Information</h2>
                 <p className='text-center md:text-left'>We accept the following insurance providers:</p>
-                <div className="flex flex-wrap gap-6 items-center justify-center md:justify-start mt-6">
+                <div className="flex flex-wrap gap-6 items-center justify-center md:justify-start mt-8">
                   <span className="max-w-[8.54rem]">
                     <img
                       src={uhc}

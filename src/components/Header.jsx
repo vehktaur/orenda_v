@@ -82,7 +82,7 @@ const Header = () => {
           >
             Book Now
           </Link>
-          <div className="placeholder ~xs/lg:~size-6/8 relative">
+          <div className="~xs/lg:~size-6/8 relative lg:hidden">
             <button
               onClick={() => displayMenu()}
               className="absolute inset-0 grid items-center lg:hidden z-[5]"
@@ -101,10 +101,13 @@ const Header = () => {
               ></span>
               <span
                 className={`w-full block h-1 rounded-full transition-all duration-1000 ${
-                  navOpen ? 'bg-white absolute -rotate-45' : 'bg-[#212121] relative'
+                  navOpen
+                    ? 'bg-white absolute -rotate-45'
+                    : 'bg-[#212121] relative'
                 }`}
               ></span>
             </button>
+            {/* <button onClick={() => displayMenu()}></button> */}
           </div>
           <div
             ref={(el) => (navMenuLayer = el)}
