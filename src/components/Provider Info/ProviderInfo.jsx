@@ -3,7 +3,6 @@ import ProviderInfoUl from './ProviderInfoUl';
 import { useParams } from 'react-router-dom';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
 import ReviewsNavigation from './ReviewsNavigation';
 
 const HR = () => (
@@ -196,7 +195,7 @@ const ProviderInfo = () => {
                 <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                   Reviews from Clients
                 </h2>
-                <Swiper modules={[Navigation, Pagination]} spaceBetween={50}>
+                <Swiper spaceBetween={50}>
                   {provider?.reviews.map((review) => (
                     <SwiperSlide className="swiper-no-swiping">
                       <div>

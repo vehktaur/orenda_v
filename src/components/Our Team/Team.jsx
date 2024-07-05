@@ -1,15 +1,16 @@
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import teamData from '../../data/teamData';
 import NavButtons from './NavButtons';
 import TeamMemberCard from './TeamMemberCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import TeamMembersSection from './TeamMembersSection';
 
 const Team = ({ itemsPerPage }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffSet] = useState(itemOffset + itemsPerPage);
   const numberOfSlides = Math.ceil(teamData.length / itemsPerPage);
+  const teamSwiperHanger = useRef();
 
   const nextSlide = () => {
     setItemOffset((prevOffset) => prevOffset + itemsPerPage);
@@ -21,6 +22,7 @@ const Team = ({ itemsPerPage }) => {
   };
 
   const handleSlideChange = (swiper) => {
+    teamSwiperHanger?.current.scrollIntoView(true);
     if (swiper.activeIndex > swiper.previousIndex) {
       nextSlide();
     } else {
@@ -32,11 +34,14 @@ const Team = ({ itemsPerPage }) => {
     <div className="px-5 md:~px-6/12 py-8 bg-[#F5F5F5]">
       <div className="max-w-7xl mx-auto">
         <h2 className="heading ~mb-12/[4.81rem]">Meet Our Team</h2>
-        <div className="md:block hidden">
+        <div className="md:block hidden relative">
+          <div
+            ref={teamSwiperHanger}
+            className="absolute -top-28 w-full invisible"
+          ></div>
           <Swiper
             onSlideChange={handleSlideChange}
             spaceBetween={50}
-            modules={[Navigation, Pagination]}
             slidesPerView={1}
             autoHeight={true}
           >
@@ -62,7 +67,7 @@ const Team = ({ itemsPerPage }) => {
             slidesPerView="auto"
             spaceBetween={50}
             loop={true}
-            modules={[Pagination, Navigation, Autoplay]}
+            modules={[Autoplay]}
           >
             {teamData.map((member, index) => (
               <SwiperSlide style={{ width: 'auto' }} key={index + 50}>

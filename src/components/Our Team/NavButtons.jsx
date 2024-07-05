@@ -9,7 +9,6 @@ const NavButtons = ({ numberOfSlides }) => {
     <div className="max-w-7xl mx-auto">
       <div className="p-4 flex items-center justify-center lg:justify-end gap-6">
         <button
-          disabled={activeIndex == 1}
           className={`${
             activeIndex == 1
               ? 'bg-[#B0B0B0] cursor-not-allowed'
@@ -39,7 +38,6 @@ const NavButtons = ({ numberOfSlides }) => {
           {activeIndex} / {numberOfSlides}
         </span>
         <button
-          disabled={activeIndex === numberOfSlides}
           className={`${
             activeIndex == numberOfSlides
               ? 'bg-[#B0B0B0] cursor-not-allowed'

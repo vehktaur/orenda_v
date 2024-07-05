@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ProvidersSection from './ProvidersSection';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import NavButtons from './NavButtons';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import providersData from '../../data/providersData';
 import ProviderCard from './ProviderCard';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 const Providers = ({ itemsPerPage, numberOfColumns }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffSet] = useState(itemOffset + itemsPerPage);
+
+  const providerSwiperHanger = useRef();
 
   const nextSlide = () => {
     setItemOffset((prevOffset) => prevOffset + itemsPerPage);
@@ -21,6 +23,7 @@ const Providers = ({ itemsPerPage, numberOfColumns }) => {
   };
 
   const handleSlideChange = (swiper) => {
+    providerSwiperHanger?.current.scrollIntoView(true);
     if (swiper.activeIndex > swiper.previousIndex) {
       nextSlide();
     } else {
@@ -32,14 +35,17 @@ const Providers = ({ itemsPerPage, numberOfColumns }) => {
   return (
     <>
       <div
-        className={`max-w-7xl mx-auto ~mt-12/[4.94rem] px-5 ${
+        className={`max-w-7xl mx-auto ~mt-12/[4.94rem] px-5 relative ${
           numberOfColumns === 5 ? 'hidden md:block' : ''
         }`}
       >
+        <div
+          ref={providerSwiperHanger}
+          className="absolute -top-28 w-full invisible"
+        ></div>
         <Swiper
           onSlideChange={handleSlideChange}
           spaceBetween={50}
-          modules={[Navigation, Pagination]}
           slidesPerView={1}
         >
           {[...Array(numberOfSlides)].map((_, index) => (
@@ -62,7 +68,7 @@ const Providers = ({ itemsPerPage, numberOfColumns }) => {
           slidesPerView="auto"
           spaceBetween={24}
           loop={true}
-          modules={[Pagination, Navigation, Autoplay]}
+          modules={[Autoplay]}
           centeredSlides={true}
         >
           {providersData.map((provider) => {
