@@ -29,7 +29,7 @@ const Team = ({ itemsPerPage }) => {
   };
 
   return (
-    <div className="px-5 py-8 bg-[#F5F5F5]">
+    <div className="px-5 md:~px-6/12 py-8 bg-[#F5F5F5]">
       <div className="max-w-7xl mx-auto">
         <h2 className="heading ~mb-12/[4.81rem]">Meet Our Team</h2>
         <div className="md:block hidden">

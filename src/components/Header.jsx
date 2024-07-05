@@ -19,9 +19,9 @@ const Header = () => {
     timeline.current.fromTo(
       [navMenuLayer, navMenu],
       {
-        x: '110vw'
+        xPercent: 110
       },
-      { x: 0, duration: 0.5, stagger: 0.14 }
+      { xPercent: 0, duration: 0.5, stagger: 0.14 }
     );
   });
 
@@ -138,7 +138,11 @@ const Header = () => {
                       key={title}
                     >
                       <NavLink
-                        className="block ~px-5/12 ~py-2/3 w-full ~text-base/lg text-white hover:bg-[#eee] hover:text-[#333] font-medium transition-colors duration-300"
+                        className={({ isActive }) =>
+                          isActive
+                            ? 'block ~px-5/12 ~py-2/3 w-full ~text-base/lg bg-[#eee] text-[#333] font-medium transition-colors duration-300'
+                            : 'block ~px-5/12 ~py-2/3 w-full ~text-base/lg text-white hover:bg-[#eee] hover:text-[#333] font-medium transition-colors duration-300'
+                        }
                         to={url}
                       >
                         <span className="mr-3 hover:text-[#333]">
