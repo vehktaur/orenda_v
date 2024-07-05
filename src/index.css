@@ -58,7 +58,7 @@
     @apply font-bold ~text-[1.35rem]/[2.625rem] text-center font-heading;
   }
   .footer__heading {
-    @apply font-bold ~sm/xl:~text-sm/lg text-justify ~mb-2/4;
+    @apply font-bold ~sm/xl:~text-sm/lg text-left ~mb-2/4;
   }
 
   .fieldset {

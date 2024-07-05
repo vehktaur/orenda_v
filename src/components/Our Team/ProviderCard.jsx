@@ -1,10 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ProviderCard = ({
-  numberOfColumns,
-  provider,
-  index
-}) => {
+const ProviderCard = ({ numberOfColumns, provider, index }) => {
   const showStatesLicensed = (states) => {
     if (states && states.length === 1) {
       return `${states[0]}`;
@@ -23,22 +19,19 @@ const ProviderCard = ({
         const divider = index === array.length - 1 ? '.' : ', ';
 
         if (category === 'Children') {
-          return `${category} (<13)${divider}`;
-        } else if (category === 'Teenagers') {
-          return `${category} (13-17)${divider}`;
-        } else if (category === 'Young Adults') {
-          return `${category} (18-24)${divider}`;
+          return `${category} (<13 yrs)${divider}`;
+        } else if (category === 'Teens') {
+          return `${category} (13-17 yrs)${divider}`;
         } else if (category === 'Adults') {
-          return `${category} (25-64)${divider}`;
+          return `${category} (18-64 yrs)${divider}`;
         } else if (category === 'Seniors') {
-          return `${category} (65+)${divider}`;
+          return `${category} (65+ yrs)${divider}`;
         } else {
           return `${category}${divider}`;
         }
       });
     }
   };
-
 
   return (
     <div
