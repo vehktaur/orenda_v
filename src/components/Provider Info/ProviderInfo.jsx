@@ -75,9 +75,7 @@ const ProviderInfo = () => {
                   {provider?.name}
                 </h1>
                 <p className="flex flex-col gap-1 text-[#7C7C7C] ~text-xs/sm font-bold text-left ">
-                  <span>
-                    {provider?.credentials}
-                  </span>
+                  <span>{provider?.credentials}</span>
                   <span>{provider?.professionalTitle}</span>
                 </p>
                 {false && (
@@ -95,23 +93,25 @@ const ProviderInfo = () => {
 
             <div className="sm:flex sm:border border-t-0 sm:border-[#EFEBDF]">
               <div className="flex flex-col gap-6 sm:gap-0 sm:basis-1/2">
-                <div className="sm:border-b sm:border-[#EFEBDF] sm:~px-3/6 sm:~py-4/8">
+                <div className="sm:border-b sm:border-[#EFEBDF] sm:~px-2/4 sm:~py-3/6">
                   <h2 className="font-bold ~text-sm/xl ~mb-2/4">Ages Seen</h2>
-                  <p className='~text-sm/lg'>{showAgesSeen(provider?.agesSeen)}</p>
+                  <p className="~text-sm/lg">
+                    {showAgesSeen(provider?.agesSeen)}
+                  </p>
                 </div>
                 <div className="flex flex-col sm:items-center gap-6 sm:gap-0 sm:~px-2/4 sm:~py-3/6 sm:flex-row sm:border-y sm:border-[#EFEBDF]">
                   <div>
                     <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                       Practice Name
                     </h2>
-                    <p className='~text-sm/lg'>Orenda Psychiatry</p>
+                    <p className="~text-sm/lg">Orenda Psychiatry</p>
                   </div>
                   <div className="hidden sm:block h-[80%] max-h-[3.5rem] w-[2px] rounded-lg bg-[#D0D0D0] mx-7"></div>
                   <div>
                     <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                       Languages Spoken
                     </h2>
-                    <p className='~text-sm/lg'>
+                    <p className="~text-sm/lg">
                       {provider?.languagesSpoken.map(
                         (language, index, languages) => {
                           if (index === languages.length - 1) {
@@ -128,23 +128,25 @@ const ProviderInfo = () => {
                   <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                     States Licensed
                   </h2>
-                  <p className='~text-sm/lg'>{showStatesLicensed(provider?.statesLicensed)}</p>
+                  <p className="~text-sm/lg">
+                    {showStatesLicensed(provider?.statesLicensed)}
+                  </p>
                 </div>
                 <div className="hidden space-y-4 sm:block sm:~px-2/4 sm:~py-3/6">
                   <ProviderInfoUl
                     h2="Education"
                     listArray={provider?.education}
-                    classes={{ mb: 1.31, lineHeight: 'normal' }}
+                    classes={{ mb: 1.31 }}
                   />
                   <ProviderInfoUl
                     h2="Board Certification"
                     listArray={provider?.boardCertification}
-                    classes={{ mb: 1.06, lineHeight: 'normal' }}
+                    classes={{ mb: 1.06 }}
                   />
                   <ProviderInfoUl
                     h2="Treatment Approaches"
                     listArray={provider?.treatmentApproaches}
-                    classes={{ mb: 1.06, lineHeight: 'normal' }}
+                    classes={{ mb: 1.06 }}
                   />
 
                   <HR />
@@ -158,14 +160,14 @@ const ProviderInfo = () => {
                   <ProviderInfoUl
                     h2="Specialties"
                     listArray={provider?.specialties}
-                    classes={{ mb: 1.06, lineHeight: 'normal' }}
+                    classes={{ mb: 1.06 }}
                   />
                 </div>
                 <div className="sm:~px-4/8 sm:~py-5/10">
                   <ProviderInfoUl
                     h2="Focus Areas"
                     listArray={provider?.focusAreas}
-                    classes={{ mb: 1.06, lineHeight: 'normal' }}
+                    classes={{ mb: 1.06 }}
                   />
                 </div>
               </div>
@@ -173,17 +175,17 @@ const ProviderInfo = () => {
                 <ProviderInfoUl
                   h2="Education & Background"
                   listArray={provider?.education}
-                  classes={{ mb: 1.31, lineHeight: 'normal' }}
+                  classes={{ mb: 1.31 }}
                 />
                 <ProviderInfoUl
                   h2="Board Certification"
                   listArray={provider?.boardCertification}
-                  classes={{ mb: 1.06, lineHeight: 'normal' }}
+                  classes={{ mb: 1.06 }}
                 />
                 <ProviderInfoUl
                   h2="Treatment Approaches"
                   listArray={provider?.treatmentApproaches}
-                  classes={{ mb: 1.06, lineHeight: 'normal' }}
+                  classes={{ mb: 1.06 }}
                 />
                 <HR />
               </div>
