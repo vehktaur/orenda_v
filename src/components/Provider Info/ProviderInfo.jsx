@@ -133,7 +133,7 @@ const ProviderInfo = () => {
                 <div className="hidden space-y-4 sm:block sm:~px-2/4 sm:~py-3/6">
                   <ProviderInfoUl
                     h2="Education"
-                    listArray={provider?.educationAndBackground}
+                    listArray={provider?.education}
                     classes={{ mb: 1.31, lineHeight: 'normal' }}
                   />
                   <ProviderInfoUl
@@ -172,7 +172,7 @@ const ProviderInfo = () => {
               <div className="sm:hidden space-y-4">
                 <ProviderInfoUl
                   h2="Education & Background"
-                  listArray={provider?.educationAndBackground}
+                  listArray={provider?.education}
                   classes={{ mb: 1.31, lineHeight: 'normal' }}
                 />
                 <ProviderInfoUl

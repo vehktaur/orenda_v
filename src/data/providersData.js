@@ -21,7 +21,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
-    educationAndBackground: [
+    education: [
       'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
       'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
       'State University of New York, Binghamton (Bachelor’s)'
@@ -74,7 +74,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic', 'Transpersonal'],
-    educationAndBackground: [
+    education: [
       'Walden University, Master’s in Psychiatric Mental Health Nursing',
       'William Paterson University (Bachelor’s)'
     ],
@@ -127,7 +127,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Wilkes University, Master's in Nursing`],
+    education: [`Wilkes University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York', 'New Jersey'],
     availability: null,
@@ -157,7 +157,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychoanalytic'],
-    educationAndBackground: [`Russell Sage College, Master's in Nursing`],
+    education: [`Russell Sage College, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 1-2 days',
@@ -188,7 +188,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Stony Brook, Master's in Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -220,7 +220,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Northern Kentucky University, Master's in Psychiatric Mental Health Nursing`,
       `Walden University, Master's in Adult Gerontology Nursing`,
       `Drexel University (Bachelor's)`,
@@ -262,7 +262,7 @@ const providersData = [
       'Depression'
     ],
     treatmentApproaches: null,
-    educationAndBackground: [
+    education: [
       `Molloy University, Post-Master's Certificate in Psychiatric Nursing`
     ],
     boardCertification: null,
@@ -299,7 +299,7 @@ const providersData = [
       'Obsessive Compulsive Disorder (OCD)'
     ],
     treatmentApproaches: ['Psychodynamic', 'Integrative', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `Fairleigh Dickinson University, Master’s in Psychiatric Mental Health Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -340,7 +340,7 @@ const providersData = [
       'Depression'
     ],
     treatmentApproaches: ['Psychoanalytic'],
-    educationAndBackground: [
+    education: [
       `D'Youville University, Master's in Psychiatric Mental Health Nursing`,
       `Daemen University (Bachelor's)`,
       `Trocaire College (Associate's)`
@@ -370,13 +370,14 @@ const providersData = [
     name: 'Jena Simon',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: [`Young adults`, `Adults`, `Seniors`],
+    agesSeen: [`Adults`, `Seniors`],
     languagesSpoken: ['English', 'Bengali'],
     specialties: [
-      'Eating Disorders',
-      `Depression`,
-      'APostpartum Depression and Anxiety',
-      'Anxiety'
+      `Genomic Testing`,
+      `Bipolar Disorder`,
+      `Chronic Pain`,
+      `Anxiety and Depression`,
+      `Eating Disorders`
     ],
     focusAreas: [
       'Anorexia',
@@ -389,7 +390,7 @@ const providersData = [
       'Postpartum Anxiety'
     ],
     treatmentApproaches: ['Psychodynamic', `Transpersonal`],
-    educationAndBackground: [
+    education: [
       `Case Western Reserve University, Doctor of Nursing Practice`,
       `Columbia University, Master's in Family and Oncology Nursing
       `
@@ -441,7 +442,7 @@ const providersData = [
       'LGBT Care'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
+    education: [`New York University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
@@ -471,7 +472,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Stony Brook, Master's in Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -508,7 +509,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Binghamton, Master's in Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -542,7 +543,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
+    education: [`New York University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -588,7 +589,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychoanalytic', 'Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Long Island University, Master's in Family Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -618,8 +619,15 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Young adults', 'Adults', 'Seniors'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'Eating Disorder(s)',
+      'Gender Affirming Care',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Anorexia',
       'Eating Disorder',
@@ -630,8 +638,8 @@ const providersData = [
       'Depression',
       'Medication Management'
     ],
-    treatmentApproaches: ['Psychodynamic', 'Person-Centered'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
+    treatmentApproaches: ['Psychodynamic', 'Person-Centered', 'Strenght-Based'],
+    education: [`New York University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York', 'Connecticut'],
     availability: 'Available Today',
@@ -691,7 +699,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Drexel University, Master's in Nursing`],
+    education: [`Drexel University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York', 'Alaska'],
     availability: 'Available in 3 days',
@@ -737,7 +745,7 @@ const providersData = [
       'Obsessive Compulsive Disorder (OCD)'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `D'Youville University, Master's in Psychiatric Mental Health Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -780,7 +788,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Pace University, Master's in Psychiatric Nursing`,
       `Lehman College (Bachelor's)`
     ],
@@ -826,7 +834,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       'City University of New York, Hunter College, Master’s in Nursing'
     ],
     boardCertification: ['ANCC'],
@@ -850,7 +858,7 @@ const providersData = [
     languagesSpoken: ['English', 'Bengali'],
     focusAreas: null,
     treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
-    educationAndBackground: [
+    education: [
       'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
       'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
       'State University of New York, Binghamton (Bachelor’s)'
@@ -899,7 +907,7 @@ const providersData = [
       `Women's Mental Health Issues`
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Pace University, Master's in Nursing`],
+    education: [`Pace University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -932,7 +940,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `City University of New York, Hunter College, Master's in Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -979,7 +987,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
       'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
       'State University of New York, Binghamton (Bachelor’s)'
@@ -1020,7 +1028,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Stony Brook, Master's in Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -1062,7 +1070,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [`Pace University, Master's in Nursing`],
+    education: [`Pace University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York', 'South Carolina'],
     availability: 'Available Today',
@@ -1104,7 +1112,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Stony Brook, Master's in Psychiatric Mental Health Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -1151,7 +1159,7 @@ const providersData = [
       'Humanistic',
       'Interpersonal'
     ],
-    educationAndBackground: [
+    education: [
       `D'Youville University, Master's in Psychiatric and Mental Health Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -1206,7 +1214,7 @@ const providersData = [
       'Humanistic',
       'Interpersonal'
     ],
-    educationAndBackground: [
+    education: [
       `New York University, Master's in Psychiatric Mental Health Nursing`,
       `Mercy University (Bachelor's)`,
       `State University of New York, Westchester Community College (Associate's)`
@@ -1246,7 +1254,7 @@ const providersData = [
       'Panic Attack'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [`Pace University, Master's in Nursing`],
+    education: [`Pace University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
@@ -1286,7 +1294,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Strength-Based', 'Psychodynamic'],
-    educationAndBackground: [
+    education: [
       'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
       'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
       'State University of New York, Binghamton (Bachelor’s)'
@@ -1339,7 +1347,7 @@ const providersData = [
       'Existential',
       'Motivational Interviewing'
     ],
-    educationAndBackground: [
+    education: [
       `State University of New York, Binghamton, Master's in Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -1373,7 +1381,7 @@ const providersData = [
       'Eating Disorder'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       'Fairfield University, Doctor of Nursing Practice'
     ],
     boardCertification: ['ANCC'],
@@ -1411,7 +1419,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Wilkes University, Master's in Nursing`],
+    education: [`Wilkes University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1445,7 +1453,7 @@ const providersData = [
       'Sleep Disorder'
     ],
     treatmentApproaches: ['Integrative', 'Psychoanalytic'],
-    educationAndBackground: [`Monmouth University, Master's in Nursing`],
+    education: [`Monmouth University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1477,7 +1485,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
+    education: [`New York University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1513,7 +1521,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Cognitive Behavioral (CBT)', 'Psychodynamic'],
-    educationAndBackground: null,
+    education: null,
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1539,7 +1547,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
+    education: [`New York University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1572,7 +1580,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychoanalytic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `Regis College, Post-Master's Certificate in Psychiatric Nursing`,
       `South University, Savannah, Master's in Adult Gerontology Nursing`
     ],
@@ -1604,7 +1612,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychoanalytic'],
-    educationAndBackground: [
+    education: [
       `City University of New York, Hunter College, Master's in Nursing`,
       `State University of New York, Albany (Bachelor's)`
     ],
@@ -1635,7 +1643,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
+    education: [`New York University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1666,7 +1674,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Transpersonal', 'Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Pace University, Master's in Psychiatric Mental Health Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -1711,7 +1719,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Interpersonal'],
-    educationAndBackground: [
+    education: [
       `Pace University, Master's in Psychiatric Mental Health Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -1753,7 +1761,7 @@ const providersData = [
       'Dialectical (DBT)',
       'Person-Centered'
     ],
-    educationAndBackground: [
+    education: [
       `University of Alabama, Birmingham, Master's in Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -1800,7 +1808,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: ['Pace University, Master’s in Nursing'],
+    education: ['Pace University, Master’s in Nursing'],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1839,7 +1847,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: ['New York University, Master’s in Nursing'],
+    education: ['New York University, Master’s in Nursing'],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York', 'New Jersey'],
     availability: null,
@@ -1880,7 +1888,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Interpersonal', 'Psychodynamic', 'Strength-Based'],
-    educationAndBackground: ['New York University, Master’s in Nursing'],
+    education: ['New York University, Master’s in Nursing'],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1919,7 +1927,7 @@ const providersData = [
       'Prescription / Refill'
     ],
     treatmentApproaches: ['Humanistic', 'Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Binghamton, Master's in Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -1942,14 +1950,14 @@ const providersData = [
     name: 'Jessica Chichester',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
-      'Anxiety',
-      'Eating Disorders',
-      'School-related anxiety',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Postpartum Depression'
+      'Medication Assisted Treatment (MAT)',
+      'Eating Disorder(s)',
+      'Gender Affirming Care',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
     ],
     focusAreas: [
       'Anxiety',
@@ -1962,7 +1970,7 @@ const providersData = [
       'Postpartum Depression'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Master's in Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -2003,7 +2011,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `Wilkes University, Master's in Psychiatric Mental Health Nursing`,
       `Monmouth University, Master's in Family Nursing`,
       `Touro College and University System, Bay Shore, Master's in Public Health`,
@@ -2052,7 +2060,7 @@ const providersData = [
       `Postpartum Depression`
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Columbia University, Master's in Nursing`],
+    education: [`Columbia University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -2096,7 +2104,7 @@ const providersData = [
       'Post-Traumatic Stress Disorder (PTSD)'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`Molloy University, Master's in Nursing`],
+    education: [`Molloy University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York', 'Georgia'],
     availability: null,
@@ -2128,7 +2136,7 @@ const providersData = [
       'Weight Loss Consultation.'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [`New York University, Master's in Nursing`],
+    education: [`New York University, Master's in Nursing`],
     boardCertification: null,
     statesLicensed: ['New York'],
     availability: null,
@@ -2164,7 +2172,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       'Hunter College, Certificate in Psychiatric Mental Health Nursing'
     ],
     boardCertification: ['ANCC'],
@@ -2186,7 +2194,7 @@ const providersData = [
     specialties: null,
     focusAreas: null,
     treatmentApproaches: null,
-    educationAndBackground: [
+    education: [
       'Hunter College, Certificate in Psychiatric Mental Health Nursing'
     ],
     boardCertification: null,
@@ -2219,7 +2227,7 @@ const providersData = [
       'Eating Disorder'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `D'Youville University, Master's in Psychiatric and Mental Health Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -2250,7 +2258,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: null,
-    educationAndBackground: [
+    education: [
       `Pace University, Master's in Psychiatric and Mental Health Nursing`
     ],
     boardCertification: null,
@@ -2281,7 +2289,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Molloy University, Master's in Psychiatric and Mental Health Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -2312,7 +2320,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Adelphi University, Master's in Psychiatric and Mental Health Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -2347,7 +2355,7 @@ const providersData = [
       'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `Pace University, Master's in Psychiatric and Mental Health Nursing`
     ],
     boardCertification: null,
@@ -2381,7 +2389,7 @@ const providersData = [
       'Attention-Deficit / Hyperactivity Disorder (ADHD)'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    educationAndBackground: [
+    education: [
       `Walden University, Certificate in Psychiatric and Mental Health Nursing
 `
     ],
@@ -2414,7 +2422,7 @@ const providersData = [
       'Panic Attack'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    educationAndBackground: [
+    education: [
       `State University of New York, Buffalo, Master's in Nursing`
     ],
     boardCertification: ['ANCC'],
@@ -2448,7 +2456,7 @@ const providersData = [
       'Depression'
     ],
     treatmentApproaches: null,
-    educationAndBackground: [
+    education: [
       `Walden University, Master's in Psychiatric and Mental Health Nursing`
     ],
     boardCertification: ['ANCC'],
