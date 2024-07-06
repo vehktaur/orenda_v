@@ -37,7 +37,7 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
     <div
       className={`${
         numberOfColumns === 5
-          ? 'max-w-[18rem] pb-[0.94rem] min-w-[18.625rem] h-[23.75rem] md:min-w-[unset] md:h-[unset]'
+          ? 'max-w-[18rem] pb-[0.94rem] min-w-[18.625rem] h-[23.5rem] md:min-w-[unset] md:h-[unset]'
           : 'max-w-[20.7rem] pb-4'
       } w-full rounded-md shadow relative overflow-hidden`}
     >
@@ -133,7 +133,7 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
             <span
               className={`rounded-lg grid place-items-center border border-[#E1EEE4] bg-[#F0FDF3] text-nowrap ${
                 numberOfColumns === 5
-                  ? 'p-1 text-[0.625rem]'
+                  ? 'p-1 px-1.5 text-[0.625rem]'
                   : '~xl/2xl:~px-1.5/3 py-2 ~text-[0.625rem]/xs'
               } font-dm-sans`}
             >
@@ -143,8 +143,8 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
 
           <Link
             to={`/provider/${index}`}
-            className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple ~px-2/4 min-w-[9rem] md:min-w-[2.81rem] xl:min-w-fit font-open-sans ${
-              numberOfColumns === 5 ? 'py-2' : ' py-[0.62rem]'
+            className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans ${
+              numberOfColumns === 5 ? 'py-2 min-w-[7.5rem] ~px-2/3' : ' py-[0.62rem] min-w-[9rem] ~px-2/4'
             }`}
           >
             Book online
