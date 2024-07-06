@@ -54,7 +54,7 @@ const ProviderInfo = () => {
 
   return (
     <>
-      <main className="px-4 font-dm-sans ~mt-7/[5.5rem]">
+      <main className="px-4 sm:~px-6/10 font-dm-sans ~mt-7/[5.5rem]">
         <div className="max-w-7xl mx-auto">
           <div className="rounded-lg sm:border sm:border-[#EFEBDF]">
             <div className="flex flex-col md:rounded-t-lg md:flex-row md:~gap-0/[3.5rem] sm:border md:border-[#EFEBDF]">
@@ -74,8 +74,8 @@ const ProviderInfo = () => {
                 <h1 className="~text-base/[2rem] font-bold ~mt-[0.63rem]/[2.56rem] mb-2">
                   {provider?.name}
                 </h1>
-                <p className="flex flex-col gap-1 text-[#7C7C7C] ~text-xs/sm font-bold">
-                  <span className="text-left word">
+                <p className="flex flex-col gap-1 text-[#7C7C7C] ~text-xs/sm font-bold text-left ">
+                  <span>
                     {provider?.credentials}
                   </span>
                   <span>{provider?.professionalTitle}</span>
@@ -132,7 +132,7 @@ const ProviderInfo = () => {
                 </div>
                 <div className="hidden space-y-4 sm:block sm:~px-2/4 sm:~py-3/6">
                   <ProviderInfoUl
-                    h2="Education & Background"
+                    h2="Education"
                     listArray={provider?.educationAndBackground}
                     classes={{ mb: 1.31, lineHeight: 'normal' }}
                   />
@@ -190,15 +190,15 @@ const ProviderInfo = () => {
             </div>
 
             {provider?.reviews && (
-              <div className="sm:~px-3/6 ~py-4/8">
-                <h2 className="font-bold ~text-sm/xl ~mb-2/4">
+              <div className="sm:~px-3/6 ~py-4/8 max-w-[80ch] mx-auto">
+                <h2 className="font-bold ~text-sm/xl ~mb-2/4 md:text-center">
                   Reviews from Clients
                 </h2>
                 <Swiper spaceBetween={50}>
                   {provider?.reviews.map((review) => (
                     <SwiperSlide className="swiper-no-swiping">
                       <div>
-                        <blockquote className=" ~text-sm/base leading-7">
+                        <blockquote className=" ~text-sm/base leading-7 text-justify">
                           {review}
                         </blockquote>
                       </div>

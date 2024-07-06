@@ -52,7 +52,7 @@ const ProvidersInAbout = () => {
   }, []);
 
   return (
-    <div className="px-5">
+    <div className="px-5 sm:~px-8/12">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="heading mb-4">Meet Our Providers</h2>
         <p className="~mt-4/6 ~mb-6/[3.25rem] max-w-[65.75rem] mx-auto text-center">
@@ -64,7 +64,7 @@ const ProvidersInAbout = () => {
           to emotional well-being.
         </p>
         <div className="container mx-auto ~p-0/4 max-w-[67.75rem]">
-          <div className="grid grid-cols-5 md:grid-cols-10 gap-2.5">
+          <div className="grid grid-cols-5 md:grid-cols-10 gap-2.5 justify-items-center">
             {indices.map((index, i) => (
               <div
                 key={i}

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
   return (
-    <div className="bg-[#F5F5F5] ~pt-8/[9.69rem] ~pb-[3.22rem]/[9.69rem]">
+    <div className="bg-[#F5F5F5] pt-8 ~pb-[3.22rem]/16">
       <div className="px-5">
         <h2 className="heading ~text-lg/[2rem] ~mb-4/10">Have any Question?</h2>
         <Link to="/contact-us">

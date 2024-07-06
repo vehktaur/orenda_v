@@ -13,10 +13,10 @@ const TeamInAbout = () => {
   const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
   return (
-    <div className='mb-[5rem] text-center px-5'>
+    <div className='mb-[5rem] text-center px-5 sm:~px-8/12'>
       <div className='max-w-[67.75rem] mx-auto '>
           <h2 className='heading ~mb-6/8'>Meet The Team</h2>
-          <div className='grid grid-cols-5 md:grid-cols-10 gap-3'>
+          <div className='grid grid-cols-5 md:grid-cols-10 gap-3 justify-items-center'>
             {images.map((src, index) => (
                 <div key={src} className='rounded-lg overflow-hidden ~xs/xl:~size-[3.2rem]/[5.625rem] bg-[#F1F1F1]'>
                     <img className='w-full h-full object-cover' src={src} alt={`Team member ${index}`} />

@@ -320,13 +320,14 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: [`Teenagers`, `Young adults`, `Adults`],
+    agesSeen: ['Children', `Teens`, `Adults`],
     languagesSpoken: ['English', 'Bengali'],
     specialties: [
-      'Anxiety',
-      `Sleep Disorders`,
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Depression'
+      'Medication Assisted Treatment (MAT)',
+      'Weight Management',
+      'Genomic Testing',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
     ],
     focusAreas: [
       'Anxiety',
@@ -665,13 +666,19 @@ const providersData = [
     name: 'Bethany Malugin',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Adults'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
-      'Obsessive Compulsive Disorder (OCD)',
+      'Medication Assisted Treatment (MAT)',
       'ADHD',
       'Depression',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+      'Anxiety',
+      'PTSD',
+      'Mood disorders',
+      'Bipolar',
+      'Oppositional Defiant Disorder',
+      'Premenstrual Dysphoric Disorder',
+      'Anger Management'
     ],
     focusAreas: [
       'Alcoholism',
@@ -706,13 +713,18 @@ const providersData = [
     name: 'Brian Yudhistira',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Teenagers', 'Young adults', 'Adults', 'Seniors'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
       ' Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Autism Spectrum Disorders (ASD)',
       'Obsessive Compulsive Disorder (OCD)',
+      'Substance Use Disorder',
       'Sleep Disorders',
-      'Anxiety and Depression'
+      'Anxiety and Depression',
+      'Major Depressive Disorders',
+      'Weight Management',
+      'Tics/Tourette Syndrome'
     ],
     focusAreas: [
       'Academic Stress',
@@ -944,14 +956,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
-    agesSeen: ['Teenagers', 'Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English', 'Spanish'],
     specialties: [
-      'Addiction / Substance Abuse',
-      'Depression',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Genomic Testing',
+      'Medication-Assisted Treatment',
+      'Substance Use Disorder (SUD)',
+      'Weight Management',
       'Bipolar Disorder',
-      'Eating disorders'
+      'Personality Disorder(s)',
+      'Group therapy'
     ],
     focusAreas: [
       'Addiction / Substance Abuse',
@@ -1112,7 +1126,7 @@ const providersData = [
     name: 'Catherine Colson',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitione',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
       'Anxiety',
@@ -1966,18 +1980,17 @@ const providersData = [
   },
   {
     image: providersImages.Celeste_Johnson,
-    name: 'Celeste_Johnson',
+    name: 'Celeste Johnson',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP',
-    agesSeen: ['Young adults', 'Adults', 'Seniors'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
-      'Alcoholism',
+      'Anxiety',
       'Depression',
       'Post-Traumatic Stress Disorder (PTSD)',
       'Domestic violence',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      ''
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
     ],
     focusAreas: [
       'Alcoholism',
@@ -2017,16 +2030,17 @@ const providersData = [
     name: 'Chelsea Chaffee',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN',
-    agesSeen: ['Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
       `Women's Mental Health Issues`,
-      `Attention-Deficit / Hyperactivity Disorder (ADHD)`,
+      'Development Disorders',
       `Anxiety`,
-      `Depression`
+      `Depression`,
+      `Attention-Deficit / Hyperactivity Disorder (ADHD)`
     ],
     focusAreas: [
-      'Anxiety',
+      'Anxiety and Panic Disorders',
       'Medication Management',
       'Prescription / Refill',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -2061,14 +2075,15 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Young adults', 'Adults'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
-      `Attention-Deficit / Hyperactivity Disorder (ADHD)`,
-      `Post-Traumatic Stress Disorder (PTSD)`,
-      `Academic Stress`,
-      `Depression`,
-      `Anxiety`
+      `Geripsych`,
+      `Eating Disorder(s)`,
+      `Tics/Tourette Syndrome`,
+      `Maternity / Postpartum`,
+      `Bipolar Disorder`,
+      `Personality Disorder(s)`
     ],
     focusAreas: [
       'Academic Stress',

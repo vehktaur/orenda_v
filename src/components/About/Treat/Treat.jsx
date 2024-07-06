@@ -25,7 +25,7 @@ const Treat = () => {
     { image: trauma, text: 'Work-related Stress and Burnout' }
   ];
   return (
-    <div className="treat-container ~/sm:~px-1/5">
+    <div className="treat-container ~/sm:~px-1/5 sm:~px-8/12">
       <div className="treat-wrapper max-w-7xl mx-auto py-16">
         <div>
           <h1 className="heading mb-4">What we Treat</h1>
