@@ -16,6 +16,16 @@ const ProviderInfo = () => {
 
   const provider = providersData[index];
 
+  const offersTalkTherapy = [
+    'Maria Lourdes Bunque',
+    'Cassandra Williams',
+    'Nwamaka Onyeogo',
+    'Victoria Lanzara',
+    'Olga Kosichenko',
+    'Mamadou Barry',
+    'Sarah Sakirsky'
+  ];
+
   const showStatesLicensed = (states) => {
     if (states) {
       return states.map((state, index) => {
@@ -78,9 +88,9 @@ const ProviderInfo = () => {
                   <span>{provider?.credentials}</span>
                   <span>{provider?.professionalTitle}</span>
                 </p>
-                {false && (
+                {offersTalkTherapy.includes(provider?.name) && (
                   <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-left ~mt-2/[1.38rem] ~text-xs/sm text-nowrap">
-                    Specialising in geriatric care
+                    Offers Talk Therapy Sessions
                   </p>
                 )}
                 <p className="whitespace-pre-line ~text-sm/base ~mt-5/6 ">

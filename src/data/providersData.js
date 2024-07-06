@@ -7,9 +7,17 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults'],
-    languagesSpoken: ['English'],
-    specialties: null,
+    agesSeen: ['Children', 'Teens', 'Adults'],
+    languagesSpoken: ['English', 'Bengali'],
+    specialties: [
+      'Weight Management',
+      'Eating Disorder(s)',
+      'Gender Affirming Care',
+      'Chronic Pain',
+      'Maternity / Postpartum',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Academic Stress',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -47,25 +55,23 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
-    agesSeen: [
-      'Teenagers',
-      'Adults',
-      'Individuals',
-      'Young adults',
-      'Seniors',
-      'Families'
-    ],
+    agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
-      'Hyperactivity disorders (ADD / ADHD)',
-      'Bipolar disorder',
-      'Post-traumatic stress disorder (PTSD)',
-      'Obsessive-compulsive disorder (OCD)',
-      'Anxiety'
+      'Substance Use Disorder (SUD)',
+      'Medication Assisted Treatment (MAT)',
+      'Geripsych',
+      'Autism Spectrum Disorder (ASD)',
+      'Eating Disorder(s)',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Addiction / Substance Abuse',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Hyperactivity disorders (ADD / ADHD)',
+      'Bipolar disorder',
+      'Post-traumatic stress disorder (PTSD)',
+      'Obsessive-compulsive disorder (OCD)',
       'Medication Management',
       'Alcoholism',
       'Anxiety',
@@ -101,14 +107,7 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: [
-      'Teenagers',
-      'Adults',
-      'Individuals',
-      'Young adults',
-      'Seniors',
-      'Families'
-    ],
+    agesSeen: ['Teens', 'Adults'],
     languagesSpoken: ['English'],
     specialties: [
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -496,20 +495,27 @@ const providersData = [
   {
     image: providersImages.Phillip_McDonald,
     name: 'Phillip McDonald',
-    professionalTitle: `Pediatric Gastroenterologist
-     Modesto, CA`,
+    professionalTitle: `Adult Psychiatric & Mental Health Nurse Practitioner, NY`,
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Major Depressive Disorder',
+      'Generalized Anxiety Disorders',
+      'Social Anxiety',
+      'Obsessive Compulsive Disorder (OCD)',
+      'Post-Traumatic Stress Disorders (PTSD)',
+      'Attention Deficit/Hyperactivity Disorder (ADHD)'
+    ],
     focusAreas: [
-      'Sleep Disorder',
+      'Anxiety',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Medication Management',
       'Eating Disorder',
-      'Anxiety',
+      'Prescription / Refill',
+      'Sleep Disorder',
       'Depression',
-      'Obsessive Compulsive Disorder (OCD)',
-      'Prescription / Refill'
+      'Obsessive Compulsive Disorder (OCD)'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
     education: [
@@ -854,13 +860,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
-      'Alcoholism',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Insomnia',
-      'Post-Traumatic Stress Disorder (PTSD'
+      'Depression',
+      'Anxiety',
+      'Attention Deficit/Hyperactivity Disorders (ADHD/ADD)',
+      'Bipolar Disorder(s)',
+      'Post Traumatic Stress Disorder (PTSD)',
+      'Obsessive Compulsive Disorder (OCD)',
+      'Eating Disorder(s)'
     ],
     focusAreas: [
       'Alcoholism',
@@ -939,13 +948,17 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Adults', 'Individuals'],
+    agesSeen: ['Teens', 'Adults'],
     languagesSpoken: ['English'],
     specialties: [
-      'Alcoholism',
-      'Post-Traumatic Stress Disorder (PTSD)',
-      `Women's Mental Health Issues`,
-      `Attention-Deficit / Hyperactivity Disorder (ADHD)`
+      'Substance Use Disorder (SUD)',
+      'Medication Assisted Treatment (MAT)',
+      'Suboxone Management (X Waiver)',
+      'Eating Disorder(s)',
+      'Gender Affirming Care',
+      'Tics/Tourette Syndrome',
+      'Maternity / Postpartum',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Alcoholism',
@@ -972,13 +985,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English', 'Spanish'],
     specialties: [
-      'Alcoholism',
-      'Post-Traumatic Stress Disorder (PTSD)',
-      `Women's Mental Health Issues`,
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+      'Geripsych',
+      'Weight Management',
+      'Eating Disorder(s)',
+      'Chronic Pain',
+      'Genomic Testing',
+      'Maternity / Postpartum',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       `Academic Stress`,
@@ -1099,16 +1115,9 @@ const providersData = [
     name: 'Sarah Otto',
     professionalTitle: 'Nurse Practitioner, NY',
     credentials: 'PMHNP | NP | FNP-BC',
-    agesSeen: [
-      'Children',
-      'Teenagers',
-      'Young adults',
-      'Individuals',
-      'Adults',
-      'Seniors'
-    ],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    specialties: null,
+    specialties: ['Anxiety', 'Bipolar Disorder', 'Depression'],
     focusAreas: [
       'Adolescent Addiction / Substance Abuse',
       'Pediatric Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1143,16 +1152,9 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP ',
-    agesSeen: [
-      'Children',
-      'Teenagers',
-      'Young adults',
-      'Individuals',
-      'Adults',
-      'Seniors'
-    ],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    specialties: null,
+    specialties: ['Anxiety Disorders'],
     focusAreas: [
       'Anxiety',
       'Depression',
@@ -1240,14 +1242,19 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English'],
+    agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Portuguese', 'Spanish'],
     specialties: [
-      'Anxiety',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Obsessive Compulsive Disorder (OCD)',
-      'Insomnia',
-      'Panic attacks'
+      'Substance Use Disorder (SUD)',
+      'Medication Assisted Treatment (MAT)',
+      'Eating Disorder(s)',
+      'Tics/Tourette Syndrome',
+      'Bipolar Disorder',
+      'Personality Disorder(s)',
+      'Schizophrenia',
+      'Post Traumatic Stress Disorder',
+      'Major Depressive Disorder',
+      'Generalized Anxiety Disorder'
     ],
     focusAreas: [
       'Anxiety',
@@ -1259,12 +1266,7 @@ const providersData = [
       'Depression',
       'Insomnia'
     ],
-    treatmentApproaches: [
-      'Psychodynamic',
-      'Strength-Based',
-      'Humanistic',
-      'Interpersonal'
-    ],
+    treatmentApproaches: ['Psychodynamic'],
     education: [
       `New York University, Master's in Psychiatric Mental Health Nursing`,
       `Mercy University (Bachelor's)`,
@@ -1291,9 +1293,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English', 'CHinese(Cantonese)'],
-    specialties: null,
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Chinese (Cantonese)'],
+    specialties: [
+      'Generalized Anxiety',
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      `Men's Sexual Health`,
+      'Social Anxiety',
+      'Panic Disorder(s)'
+    ],
     focusAreas: [
       'Anxiety',
       'Academic Stress',
@@ -1314,11 +1323,9 @@ const providersData = [
 
     During follow-ups, Mr. Luong conducts treatment progress evaluations and makes the necessary changes. Patients trust his expertise because his high-quality consultations lead to positive and lasting outcomes`,
     reviews: [
-      `‘Very nice and compassionate doctor. Heard exactly what was my problem and found the solutions. Highly recommended” - Anouar C.
-      `,
-      `“William was very easy to talk to and immediately assessed my needs. I felt heard and validated.” - Elizabeth F.`,
-      `“Dr. Da Silva is a breath of fresh air. I look forward to working with him on my mental health.” - Delilah C.
-`
+      `“Very thorough and easy to talk to! Made me feel comfortable and made a point to address all of my concerns. Highly recommend!” - Keiry C.`,
+      `“Had a lovely consultation with Dr. Loung and am looking forward to continuing a therapeutic relationship.” - GB`,
+      `“Very patient and indepth questions asked. Takes the time to see best way to help.” - Kim H`
     ]
   },
   {
@@ -1798,8 +1805,17 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | MS',
-    agesSeen: ['Young adults', 'Adults', 'Individuals'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Eating Disorder(s)',
+      'Bipolar Disorder',
+      'Personality Disorder(s)',
+      'ADHD',
+      'Anxiety',
+      'Depression',
+      'Burnout'
+    ],
     focusAreas: [
       'Pain Management Consultation',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1837,12 +1853,19 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | MS',
-    agesSeen: ['Young adults', 'Adults', 'Individuals'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
-      'Anorexia',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Post-Traumatic Stress Disorder (PTSD)',
+      'Autism Spectrum Disorder (ASD)',
+      'Eating Disorder(s)',
+      'Chronic Pain',
+      'Genomic Testing',
+      'Bipolar Disorder',
+      'Panic Disorders',
+      'Post Traumatic Stress Disorder',
+      'Attention Deficit/Hyperactivity Disorders (ADHD/ADD)',
+      'Obsessive Compulsive Disorder (OCD)',
+      'Depression',
       'Anxiety'
     ],
     focusAreas: [
@@ -1881,7 +1904,18 @@ const providersData = [
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
     agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English', 'Bengali'],
+    languagesSpoken: ['English'],
+    specialities: [
+      'Anxiety Disorders',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Substance Use Disorder (SUD)',
+      'Medication Assisted Treatment (MAT)',
+      'Autism Spectrum Disorder (ASD)',
+      'Gender Affirming Care',
+      'Genomic Testing',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Obsessive Compulsive Disorder (OCD)',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1917,17 +1951,10 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: [
-      'Children',
-      'Young adults',
-      'Seniors',
-      'Teenagers',
-      'Adults',
-      'Individuals'
-    ],
-    languagesSpoken: ['English', 'Bengali'],
+    agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
+    languagesSpoken: ['English'],
     specialties: [
-      'Alcoholism',
+      'Anxiety Disorders',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Bipolar Disorder',
       'Sleep Problems'
@@ -1963,13 +1990,14 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | APRN',
-    agesSeen: ['Young adults', 'Adults', 'Individuals'],
-    languagesSpoken: ['English'],
+    agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Russian', 'Uzbek'],
     specialties: [
-      'Alcoholism',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Bipolar Disorder',
-      'Sleep Problems'
+      'Substance Use Disorder (SUD)',
+      'Medication Assisted Treatment (MAT)',
+      'Suboxone Management (X Waiver)',
+      'Autism Spectrum Disorder (ASD)',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Academic Stress',
@@ -2003,12 +2031,11 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Adults', 'Young adults', 'Individuals'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English', 'Bengali'],
     specialties: [
-      'Academic Stress',
+      'Bipolar Disorder',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Eating Disorder',
       'Anxiety',
       'Depression'
     ],
@@ -2043,19 +2070,20 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'NP | PMHNP-BC',
-    agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Obsessive-compulsive disorder (OCD)',
+      'Bipolar Disorder',
       'Anxiety',
-      'Post-Traumatic Stress Disorder (PTSD)'
+      'Depression',
+      'Attention Deficit/Hyperactivity Disorders (ADHD/ADD)'
     ],
     focusAreas: [
       'Alcoholism',
       'Eating Disorder',
       'Medication Management',
       'Post-Traumatic Stress Disorder (PTSD)',
+      'Obsessive Compulsive Disorder (OCD)',
       'Anxiety',
       'Depression',
       'Panic Attack',
