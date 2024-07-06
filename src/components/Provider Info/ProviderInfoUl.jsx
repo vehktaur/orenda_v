@@ -8,7 +8,7 @@ const ProviderInfoUl = ({ h2, listArray, classes }) => {
       <ul className="list-image-dot ps-4 ~space-y-2/[1.06rem]">
         {effectiveListArray.map((item) => (
           <li
-            className={`~mb-4/[${classes?.mb}rem] leading-${classes.lineHeight} ~ps-1/2 ~text-sm/lg text-left`}
+            className={`~mb-4/[${classes?.mb}rem] leading-${classes.lineHeight} ~ps-1.5/3 ~text-sm/lg text-left`}
             key={item}
           >
             {item}
