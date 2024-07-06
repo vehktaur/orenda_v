@@ -59,6 +59,8 @@ const ProviderInfo = () => {
           return `${category}${divider}`;
         }
       });
+    }else {
+      return 'Nil'
     }
   };
 

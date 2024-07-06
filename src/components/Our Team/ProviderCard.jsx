@@ -30,6 +30,8 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
           return `${category}${divider}`;
         }
       });
+    } else {
+      return 'Nil';
     }
   };
 
@@ -113,7 +115,7 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
               numberOfColumns === 5 ? 'text-[0.625rem]' : 'text-xs'
             } font-open-sans`}
           >
-            {provider.agesSeen && showAgesSeen(provider?.agesSeen)}
+            {showAgesSeen(provider?.agesSeen)}
           </p>
         </div>
         <div className="pt-[0.62rem]">
@@ -144,7 +146,9 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
           <Link
             to={`/provider/${index}`}
             className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans ${
-              numberOfColumns === 5 ? 'py-2 min-w-[7.5rem] ~px-2/3' : ' py-[0.62rem] min-w-[9rem] ~px-2/4'
+              numberOfColumns === 5
+                ? 'py-2 min-w-[7.5rem] ~px-2/3'
+                : ' py-[0.62rem] min-w-[9rem] ~px-2/4'
             }`}
           >
             Book online
