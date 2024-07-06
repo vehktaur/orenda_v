@@ -144,8 +144,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
+    agesSeen: ['Children', 'Teens', 'Adults'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety',
+      'Depression',
+      'Adjustment Disorder',
+      'Insomnia',
+      'Major Depressive Disorder (MDD)',
+      'Social Anxiety'
+    ],
     focusAreas: [
       'Abandonment issues',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -175,8 +183,15 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | APRN',
-    agesSeen: ['Individuals', 'Young adults', 'Adults'],
+    agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Geripsych',
+      'Autism Spectrum Disorder (ASD)',
+      'Eating Disorder(s)',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Academic Stress',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -207,17 +222,28 @@ const providersData = [
     name: 'Nwamaka Onyeogo',
     professionalTitle: 'Nurse Practitioner (Psychiatry), NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Individuals', 'Young adults', 'Adults'],
-    languagesSpoken: ['English'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Yoruba'],
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'Suboxone Management (X Waiver)',
+      'Geripsych',
+      'Weight Management',
+      'Autism Spectrum Disorder (ASD)',
+      'Eating Disorder(s)',
+      'Tics/Tourette Syndrome',
+      'Bipolar Disorder',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Academic Stress',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management',
+      'Depression',
       'Post-Traumatic Stress Disorder (PTSD)',
       'Anxiety',
-      'Depression',
       'Insomnia',
-      'Prescription / Refill'
+      'Prescription / Refill',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [
@@ -253,9 +279,19 @@ const providersData = [
     name: 'Nerlande Celestin',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP',
-    agesSeen: ['Individuals', 'Young adults', 'Adults', 'Seniors'],
-    languagesSpoken: ['English'],
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Creole'],
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'Eating Disorder(s)',
+      'Bipolar Disorder',
+      'Depression',
+      'Anxiety',
+      'ADHD'
+    ],
     focusAreas: [
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Sleeping Disorders',
       'Medication Management',
       'Panic Attack',
       'Anxiety',
@@ -282,12 +318,12 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Individuals', 'Young adults', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English', 'Russian'],
     specialties: [
-      'Anxiety and depression',
-      'Insomnia',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+      'Genomic Testing',
+      'Maternity / Postpartum',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -310,7 +346,11 @@ const providersData = [
 
     Natasha is a patient-focused provider who emphasizes building relationships with her patients and works towards creating a personalized treatment plan. These connections have made her a sensitive, respectful provider that enjoys collaboration. She became interested in drug treatment because of the way it dominates our current approach to managing the suffering and disturbance we call mental disorders. Using psychotherapy and medication management she can help yougain the tools needed to move past the hard times.`,
     reviews: [
-      `“She’s extremely talented at what she does! She really cares about my wellbeing and has been instrumental in getting me healthy again. I love Dr. Dillon and have zero interest ever leaving.”`,
+      `“My experience with Natasha was wonderful. She listens and talks with you. She doesn’t rush you,and truly cares what you maybe going through. I can’t wait for our next visit” - Valentino V.`,
+      `“She’s extremely talented at what she does! She really cares about my wellbeing and has been instrumental in getting me healthy again. I love Dr. Dillon and have zero interest ever leaving.” - I. H.`,
+      `“Nathasha is very kind and listened to my concerns. She created a medicine plan for me. I really recommend her . I'm very thankful for her.” - Maria C.`,
+      `“She listened to my concerns and did not gaslight me. Even though she did not like one of my medications she agreed to prescribe it until we felt comfortable switching,” - Danielle C.`,
+      `“Natasha was wonderful and warm. She fit me into her schedule extremely quick and came up with a plan to help me right away. I would recommend her to anyone looking to get some professional help managing anxiety, depression, or ADHD.” - Kathryn K.`,
       `“Natasha is amazing! I felt so much heard and supported”.`
     ]
   },
@@ -570,13 +610,14 @@ const providersData = [
     name: 'Ketie Saintelus',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Children', 'Teenagers', 'Young adults', 'Adults'],
+    agesSeen: ['Children', 'Teenagers', 'Adults'],
     languagesSpoken: ['English'],
     specialties: [
-      'Anxiety',
-      'Eating Disorder',
-      'Care for minors',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+      'Suboxone Management (X Waiver)',
+      'Weight Management',
+      'Eating Disorder(s)',
+      'Maternity / Postpartum',
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Anxiety',
@@ -584,14 +625,12 @@ const providersData = [
       'Panic Attack',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Insomnia',
+      'Prescription / Refill',
       'Depression',
-      'Medication Management',
-      'Prescription / Refill'
+      'Medication Management'
     ],
     treatmentApproaches: ['Psychoanalytic', 'Psychodynamic'],
-    education: [
-      `Long Island University, Master's in Family Nursing`
-    ],
+    education: [`Long Island University, Master's in Family Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
@@ -854,15 +893,27 @@ const providersData = [
     name: 'Kimberly Levitt',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP | PMHNP',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English', 'Bengali'],
-    focusAreas: null,
-    treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
-    education: [
-      'Case Western Reserve University, Master’s in Psychiatric Mental Health Nursing',
-      'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
-      'State University of New York, Binghamton (Bachelor’s)'
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Depression',
+      'Chronic Pain',
+      'Maternity / Postpartum'
     ],
+    focusAreas: [
+      'Anxiety',
+      'Eating Disorder',
+      'Panic Attack',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management'
+    ],
+    treatmentApproaches: null,
+    education: [`New York University, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
@@ -1275,13 +1326,13 @@ const providersData = [
     name: 'Kerry Callender',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'MSN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Adults', 'Senior'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
     specialties: [
-      'Eating Disorders',
-      'Post-Traumatic Stress Disorder (PTSD)',
+      'Anxiety',
+      'Depression',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Obsessive Compulsive Disorder (OCD)'
+      'Bipolar Disorder'
     ],
     focusAreas: [
       'Anxiety',
@@ -1328,8 +1379,15 @@ const providersData = [
     name: 'Kristina Manich',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety',
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Eating Disorder (s)',
+      'Geripsych'
+    ],
     focusAreas: [
       'Anxiety',
       'Eating Disorder',
@@ -1350,7 +1408,7 @@ const providersData = [
     education: [
       `State University of New York, Binghamton, Master's in Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertification: null,
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -1358,8 +1416,7 @@ const providersData = [
     reviews: [
       `“Very thorough and professional. She really listened and did not rush me. She allowed me to discuss my concerns and gave me real, helpful guidance” - Carly A.`,
       `“Dr. Manich was so kind and welcoming. I felt immediately at ease during my first appointment. She has a patient first bedside manner. I highly recommend!” - Elizabeth G.`,
-      `“She was very kind, knowledgeable, patient and easy to talk too. I would recommend her to anyone I know who requires someone to talk too.” - Corey O.
-`
+      `“She was very kind, knowledgeable, patient and easy to talk too. I would recommend her to anyone I know who requires someone to talk too.” - Corey O.`
     ]
   },
   {
@@ -1367,8 +1424,15 @@ const providersData = [
     name: 'Kristofer Generales',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Young adults', 'Adults', 'Individuals'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety',
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Trauma',
+      'Bipolar Disorder'
+    ],
     focusAreas: [
       'Academic Stress',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1381,9 +1445,7 @@ const providersData = [
       'Eating Disorder'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    education: [
-      'Fairfield University, Doctor of Nursing Practice'
-    ],
+    education: ['Fairfield University, Doctor of Nursing Practice'],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1406,8 +1468,18 @@ const providersData = [
     name: 'Latiema Merilus',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Teens', 'Adults'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Anxiety',
+      'Eating Disorder',
+      'Postpartum Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management'
+    ],
     focusAreas: [
       'Anxiety',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1440,17 +1512,25 @@ const providersData = [
     name: 'Lenny Gets',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'PMHNP-BC | NP',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English', 'Russian', 'Ukrainian'],
-    focusAreas: [
-      'Academic Stress',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management',
-      `Men's Mental Health Issues`,
+    specialties: [
       'Anxiety',
       'Depression',
-      'Performance Anxiety',
-      'Sleep Disorder'
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      `Men's Mental Health Issues`,
+      'Sleep Disorder',
+      'Performance Anxiety'
+    ],
+    focusAreas: [
+      'Anxiety',
+      'Medication Management',
+      'Prescription / Refill',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      `Men's Mental Health Issues`,
+      'Sleep Disorder',
+      'Depression',
+      'Performance Anxiety'
     ],
     treatmentApproaches: ['Integrative', 'Psychoanalytic'],
     education: [`Monmouth University, Master's in Nursing`],
@@ -1472,17 +1552,23 @@ const providersData = [
     name: 'Lindon Richards',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'NP | PMHNP',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    focusAreas: [
-      'Insomnia',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management',
-      'Eating Disorder',
+    specialties: [
       'Anxiety',
       'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Bipolar Disorder'
+    ],
+    focusAreas: [
+      'Anxiety',
+      'Eating Disorder',
       'Postpartum Obsessive-Compulsive Disorder (OCD)',
-      'Prescription / Refill'
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management'
     ],
     treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
     education: [`New York University, Master's in Nursing`],
@@ -1508,20 +1594,43 @@ const providersData = [
     name: 'Marcia Jarvis',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'DNP | PMHNP-BC | MS ',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    focusAreas: [
-      'Insomnia',
-      'Alcoholism',
-      'Medication Management',
-      'Eating Disorder',
-      'Anxiety',
+    specialties: [
+      'Substance Use Disorder (SUD)',
+      'Geripsych',
+      'Eating Disorder(s)',
+      'Maternity / Postpartum',
+      'Bipolar Disorder',
+      'Anxiety disorders',
       'Depression',
+      'Sleep disorders',
+      'PTSD',
+      'OCD',
+      'Sexual dysfunction',
+      'Stress-Related Issues',
+      'Mood disorders'
+    ],
+    focusAreas: [
+      'Alcoholism',
+      'Eating Disorder',
+      'Chronic Pain',
       'Post-Traumatic Stress Disorder (PTSD)',
-      'Prescription / Refill'
+      'Anxiety',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management'
     ],
     treatmentApproaches: ['Cognitive Behavioral (CBT)', 'Psychodynamic'],
-    education: null,
+    education: [
+      `Capella University, Doctor of Nursing Practice`,
+      `State University of New York, Stony Brook, Post-Master's Certificate in Psychiatric-Mental Health Nursing`,
+      `Grand Canyon University, Master's in Psychology`,
+      `Grand Canyon University, Master's in Nursing`,
+      `Grand Canyon University (Bachelor's)`,
+      `Grand Canyon University (Associate's)`
+    ],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1534,17 +1643,24 @@ const providersData = [
     name: 'Lori Hume',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Medication-Assisted Treatment',
+      'Anxiety and Depression',
+      'Bipolar Disorder',
+      'Eating Disorder(s)',
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
-      'Insomnia',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management',
-      'Eating Disorder',
       'Anxiety',
-      'Depression',
+      'Eating Disorder',
       'Postpartum Depression',
-      'Prescription / Refill'
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management'
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`New York University, Master's in Nursing`],
@@ -1567,8 +1683,16 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults', 'Senior'],
+    agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
+    specialties: [
+      'Geripsych',
+      'Bipolar Disorder',
+      'Anxiety',
+      'Depression',
+      'Attention-Deficit Disorders (ADHD/ADD)',
+      'Mood Disorders'
+    ],
     focusAreas: [
       'Addiction / Substance Abuse',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1599,8 +1723,15 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
-    languagesSpoken: ['English'],
+    agesSeen: ['Adults', 'Seniors'],
+    languagesSpoken: ['English', 'Creole'],
+    specialties: [
+      'Medication Assisted Treatment (MAT)',
+      'Anxiety',
+      'Depression',
+      'Maternity / Postpartum',
+      'Bipolar Disorder'
+    ],
     focusAreas: [
       'Alcoholism',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -1631,19 +1762,25 @@ const providersData = [
     professionalTitle:
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Teens', 'Adults'],
     languagesSpoken: ['English'],
-    focusAreas: [
-      'Insomnia',
-      'Post-Traumatic Stress Disorder (PTSD)',
-      'Medication Management',
-      'Eating Disorder',
+    specialties: [
       'Anxiety',
       'Depression',
-      'Prescription / Refill'
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Sleep Disorders(s)'
+    ],
+    focusAreas: [
+      'Anxiety',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression',
+      'Medication Management',
+      'Eating Disorder',
+      'Post-Traumatic Stress Disorder (PTSD)'
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
-    education: [`New York University, Master's in Nursing`],
+    education: [`Chamberlain University, Doctor of Nursing Practice`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1761,9 +1898,7 @@ const providersData = [
       'Dialectical (DBT)',
       'Person-Centered'
     ],
-    education: [
-      `University of Alabama, Birmingham, Master's in Nursing`
-    ],
+    education: [`University of Alabama, Birmingham, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -1970,9 +2105,7 @@ const providersData = [
       'Postpartum Depression'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    education: [
-      `State University of New York, Master's in Nursing`
-    ],
+    education: [`State University of New York, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
@@ -2422,9 +2555,7 @@ const providersData = [
       'Panic Attack'
     ],
     treatmentApproaches: ['Psychodynamic'],
-    education: [
-      `State University of New York, Buffalo, Master's in Nursing`
-    ],
+    education: [`State University of New York, Buffalo, Master's in Nursing`],
     boardCertification: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
