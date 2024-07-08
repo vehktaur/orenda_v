@@ -208,7 +208,7 @@ const ProviderInfo = () => {
                 <h2 className="font-bold ~text-sm/xl ~mb-2/4 md:text-center">
                   Reviews from Clients
                 </h2>
-                <Swiper spaceBetween={50}>
+                <Swiper spaceBetween={50} autoHeight={true}>
                   {provider?.reviews.map((review) => (
                     <SwiperSlide className="swiper-no-swiping">
                       <div>
