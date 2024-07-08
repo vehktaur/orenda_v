@@ -40,7 +40,6 @@ const ProvidersInAbout = () => {
     }
     return shuffledIndicesRef.current[currentIndexRef.current++];
   };
-  const randomIndex = getNextIndex();
 
   const { contextSafe } = useGSAP();
   const animateOpacity = contextSafe((index) => {
@@ -63,6 +62,7 @@ const ProvidersInAbout = () => {
   useGSAP(
     () => {
       const imageShuffle = () => {
+        const randomIndex = getNextIndex();
         let newIndex = Math.floor(Math.random() * providersData.length);
         setIndices((prevIndices) => {
           if (providersData.length >= numImages) {
@@ -71,7 +71,7 @@ const ProvidersInAbout = () => {
             }
           }
           const newIndices = [...prevIndices];
-          newIndices[getNextIndex()] = newIndex;
+          newIndices[randomIndex] = newIndex;
           return newIndices;
         });
       };
@@ -106,9 +106,9 @@ const ProvidersInAbout = () => {
                   src={providersData[index].image}
                   alt={`Provider ${index}`}
                   className={`size-full object-contain`}
-                  // onLoad={() => {
-                  //   animateOpacity(i);
-                  // }}
+                  onLoad={() => {
+                    animateOpacity(i);
+                  }}
                 />
               </div>
             ))}
