@@ -38,13 +38,6 @@ const ProvidersInAbout = () => {
     }
 
     let newIndex = shuffledIndices[currentIndex];
-    while (newIndex >= numImages) {
-      // Ensure newIndex is always within valid range
-      shuffleArray(shuffledIndices);
-      currentIndex = 0;
-      newIndex = shuffledIndices[currentIndex];
-    }
-
     currentIndex++;
     return newIndex;
   };
@@ -69,7 +62,7 @@ const ProvidersInAbout = () => {
 
   useEffect(() => {
     const imageShuffle = () => {
-      const randomIndex = Math.floor(Math.random() * numImages);
+      const randomIndex = getNextIndex();
       let newIndex = Math.floor(Math.random() * providersData.length);
       setIndices((prevIndices) => {
         if (providersData.length >= numImages) {
@@ -85,7 +78,7 @@ const ProvidersInAbout = () => {
     const interval = setInterval(imageShuffle, 3000);
 
     return () => clearInterval(interval);
-  }, [numImages, providersData.length]);
+  }, [providersData.length]);
 
   return (
     <div className="px-5 sm:~px-8/12">
