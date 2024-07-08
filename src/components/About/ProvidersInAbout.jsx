@@ -28,7 +28,6 @@ const ProvidersInAbout = () => {
       [array[i], array[j]] = [array[j], array[i]];
     }
   };
-
   const getNextIndex = () => {
     if (currentIndexRef.current >= shuffledIndicesRef.current.length) {
       // Refill and shuffle the array if we've exhausted all indices
@@ -41,8 +40,10 @@ const ProvidersInAbout = () => {
     }
     return shuffledIndicesRef.current[currentIndexRef.current++];
   };
+  const randomIndex = getNextIndex();
 
-  const myAnimateOpacity = (index) => {
+  const { contextSafe } = useGSAP();
+  const animateOpacity = contextSafe((index) => {
     const element = itemsRef.current[index]?.current;
     if (element) {
       gsap.fromTo(
@@ -57,29 +58,10 @@ const ProvidersInAbout = () => {
         }
       );
     }
-  };
-
-  const randomIndex = getNextIndex();
+  });
 
   useGSAP(
     () => {
-      const animateOpacity = (index) => {
-        const element = itemsRef.current[index]?.current;
-        if (element) {
-          gsap.fromTo(
-            element,
-            {
-              opacity: 0
-            },
-            {
-              opacity: 1,
-              duration: 2,
-              ease: 'slow(0.7,0.7,false)'
-            }
-          );
-        }
-      };
-
       const imageShuffle = () => {
         let newIndex = Math.floor(Math.random() * providersData.length);
         setIndices((prevIndices) => {
@@ -89,10 +71,9 @@ const ProvidersInAbout = () => {
             }
           }
           const newIndices = [...prevIndices];
-          newIndices[randomIndex] = newIndex;
+          newIndices[getNextIndex()] = newIndex;
           return newIndices;
         });
-        // animateOpacity(randomIndex);
       };
       const interval = setInterval(imageShuffle, 3000);
 
@@ -125,7 +106,9 @@ const ProvidersInAbout = () => {
                   src={providersData[index].image}
                   alt={`Provider ${index}`}
                   className={`size-full object-contain`}
-                  onLoad={() => {myAnimateOpacity(i)}}
+                  // onLoad={() => {
+                  //   animateOpacity(i);
+                  // }}
                 />
               </div>
             ))}
