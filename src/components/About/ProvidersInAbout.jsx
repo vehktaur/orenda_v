@@ -111,9 +111,9 @@ const ProvidersInAbout = () => {
                   src={providersData[index].image}
                   alt={`Provider ${index}`}
                   className={`size-full object-contain`}
-                  onLoad={() => {
-                    animateOpacity(i);
-                  }}
+                  // onLoad={() => {
+                  //   animateOpacity(i);
+                  // }}
                 />
               </div>
             ))}
