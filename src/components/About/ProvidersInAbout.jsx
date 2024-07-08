@@ -69,7 +69,7 @@ const ProvidersInAbout = () => {
 
   useEffect(() => {
     const imageShuffle = () => {
-      const randomIndex = getNextIndex();
+      const randomIndex = Math.floor(Math.random() * numImages);
       let newIndex = Math.floor(Math.random() * providersData.length);
       setIndices((prevIndices) => {
         if (providersData.length >= numImages) {
@@ -111,9 +111,9 @@ const ProvidersInAbout = () => {
                   src={providersData[index].image}
                   alt={`Provider ${index}`}
                   className={`size-full object-contain`}
-                  // onLoad={() => {
-                  //   animateOpacity(i);
-                  // }}
+                  onLoad={() => {
+                    animateOpacity(i);
+                  }}
                 />
               </div>
             ))}
