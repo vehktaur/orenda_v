@@ -18,7 +18,7 @@ const TeamInAbout = () => {
           <h2 className='heading ~mb-6/8'>Meet The Team</h2>
           <div className='grid grid-cols-5 md:grid-cols-10 gap-3 justify-items-center'>
             {images.map((src, index) => (
-                <div key={src} className='rounded-lg overflow-hidden ~xs/xl:~size-[3.2rem]/[5.625rem] bg-[#F1F1F1]'>
+                <div key={src} className='rounded-lg overflow-hidden ~xs/xl:~size-[4rem]/[5.625rem] bg-[#F1F1F1]'>
                     <img className='w-full h-full object-cover' src={src} alt={`Team member ${index}`} />
                 </div>
             ))}

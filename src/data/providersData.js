@@ -468,11 +468,13 @@ const providersData = [
       'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
     credentials: 'PMHNP-BC | APRN',
     agesSeen: ['Teens', 'Adults', 'Seniors'],
-    languagesSpoken: ['English',],
-    specialties: ['Gender-affirming care',
-'Anxiety',
-'Depression', 
-'Attention-Deficit / Hyperactivity Disorder (ADHD)'],
+    languagesSpoken: ['English'],
+    specialties: [
+      'Gender-affirming care',
+      'Anxiety',
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+    ],
     focusAreas: [
       'Eating Disorder',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -549,11 +551,12 @@ const providersData = [
     credentials: 'APRN, PMHNP-BC',
     agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English', 'Russian'],
-    specialities: ['Bipolar Disorder',
+    specialities: [
+      'Bipolar Disorder',
       'Anxiety',
-      'Depression', 
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      ],
+      'Depression',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)'
+    ],
     focusAreas: [
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Eating Disorder',
@@ -573,7 +576,10 @@ const providersData = [
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
     about: `Sarah Sakirsky is a Board Certified Psychiatric Nurse Practitioner with experience in inpatient and private practice settings. She graduated with her Masters from Decker School of Nursing at Binghamton University. Sarah utilizes a combination of medication management and therapy in helping her patients achieve favorable outcomes. She is a compassionate and attentive provider. Her mission is to deliver a precise diagnosis and individually tailored treatment plan for each patient.`,
-    reviews: ['“Wonderful! So nice and friendly! Felt very comfortable talking with her. Very understanding and caring! Great listener!” - Sara V', '“Sarah was great. She was a great listener and really understood my needs and struggles. She is also very calming and gave me hope.” - Christina V.', ]
+    reviews: [
+      '“Wonderful! So nice and friendly! Felt very comfortable talking with her. Very understanding and caring! Great listener!” - Sara V',
+      '“Sarah was great. She was a great listener and really understood my needs and struggles. She is also very calming and gave me hope.” - Christina V.'
+    ]
   },
   {
     image: providersImages.Anne_Mongiello,
@@ -2331,12 +2337,13 @@ const providersData = [
     credentials: 'PMHNP-BC | NP',
     agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    specialties: ['Weight Management',
+    specialties: [
+      'Weight Management',
       'Gender Affirming Care',
       'Maternity / Postpartum',
       'Bipolar Disorder',
-      'Personality Disorder(s)',
-      ],
+      'Personality Disorder(s)'
+    ],
     focusAreas: [
       'Anxiety',
       'Eating Disorder',
@@ -2357,7 +2364,9 @@ const providersData = [
     bookingLink: 'https://booking.url',
     about: `As a mental health care provider, I bring compassion resilience, and personal experience to my practice. I believe in the healing power of connection, empathy, and both physical and emotional well-being. My own challenges have fueled my commitment to helping others navigate tough times. My goal is to provide support and guidance, offering a safe space for exploration and resilience-building. With a deep understanding of the human mind, I aim to empower individuals to lead fulfilling lives through therapy, medication management, and lifestyle interventions.
     `,
-    reviews: [`“Very effective, to the point and very knowledgeable on the situation”`]
+    reviews: [
+      `“Very effective, to the point and very knowledgeable on the situation”`
+    ]
   },
   {
     image: providersImages.Mamadou_Barry,
@@ -2367,24 +2376,26 @@ const providersData = [
     credentials: 'PMHNP',
     agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English', 'French', 'Creole', 'Fulani'],
-    specialties: ['Substance Use Disorder (SUD)',
+    specialties: [
+      'Substance Use Disorder (SUD)',
       'Autism Spectrum Disorder (ASD)',
       'Eating Disorder(s)',
       'Tics/Tourette Syndrome',
       'Maternity / Postpartum',
       'Bipolar Disorder',
       'Personality Disorder(s)'
-      ],
-    focusAreas: ['Anxiety',
+    ],
+    focusAreas: [
+      'Anxiety',
       'Eating Disorder',
       'Couples Therapy',
       'Medication Management',
       'LGBTQ+ Counseling',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Insomnia',
-'Prescription / Refill',
-'Depression'
-      ],
+      'Prescription / Refill',
+      'Depression'
+    ],
     treatmentApproaches: ['Psychodynamic'],
     education: [
       'Hunter College, Certificate in Psychiatric Mental Health Nursing'
@@ -2398,7 +2409,11 @@ const providersData = [
     
     When not at work, I enjoy the great outdoors, trying out new recipes in the kitchen, or catching up on the latest Netflix series. I believe in the power of therapy, medication, and self-care to help individuals lead fulfilling and balanced lives.
     `,
-    reviews: [`“Dr Barry as well as the lady who answers the calls/makes appointments saved my life and gave me hope this morning. Thank you”`, `“Mr. Barry was very patient and had an extremely laid-back attitude. He listened to what I had to say and worked with me right away to get me back on the beds I needed. I loved how visual learning was present in some of his lessons. Can't wait for the next lesson!” - Esther L.`, `“I believe that the appointment was thorough and covered all of my concerns. This provider is a good listener and explained things further when needed.” - Julia H.`]
+    reviews: [
+      `“Dr Barry as well as the lady who answers the calls/makes appointments saved my life and gave me hope this morning. Thank you”`,
+      `“Mr. Barry was very patient and had an extremely laid-back attitude. He listened to what I had to say and worked with me right away to get me back on the beds I needed. I loved how visual learning was present in some of his lessons. Can't wait for the next lesson!” - Esther L.`,
+      `“I believe that the appointment was thorough and covered all of my concerns. This provider is a good listener and explained things further when needed.” - Julia H.`
+    ]
   },
   {
     image: providersImages.Leah_Molina,
@@ -2407,24 +2422,25 @@ const providersData = [
     credentials: 'APRN | RN | PMHNP-BC',
     agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    specialties: ['Substance Use Disorder (SUD)',
+    specialties: [
+      'Substance Use Disorder (SUD)',
       'Autism Spectrum Disorder (ASD)',
       'Eating Disorder(s)',
       'Tics/Tourette Syndrome',
       'Maternity / Postpartum',
       'Bipolar Disorder',
       'Personality Disorder(s)'
-      ],
+    ],
     focusAreas: [
       'Anxiety',
       'Eating Disorder',
       'LGBTQ+ Counseling',
-'Medication Management',
-'LGBTQ+ Counseling',
-'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-'Insomnia',
-'Prescription / Refill',
-      'Depression',
+      'Medication Management',
+      'LGBTQ+ Counseling',
+      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+      'Insomnia',
+      'Prescription / Refill',
+      'Depression'
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [
@@ -2446,12 +2462,13 @@ const providersData = [
     credentials: 'NP',
     agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    specialties: ['Anxiety',
+    specialties: [
+      'Anxiety',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Depression',
       'Addiction',
       'Post Traumatic Stress Disorder (PTSD)'
-      ],
+    ],
     focusAreas: [
       'Addiction / Substance Abuse',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
@@ -2472,7 +2489,10 @@ const providersData = [
     bookingLink: 'https://booking.url',
     about: `Ms. Cheryl Kelly is a psychiatric mental health nurse practitioner offering virtual consultations through Orenda Psychiatry in New York. She has over 20 years of nursing experience and specializes in treating anxiety, depression, ADHD, addiction, and PTSD. Cheryl believes in building therapeutic relationships based on kindness, compassion and respect. She is dedicated to offer psychiatric evaluations, medication management and psychotherapy in a safe and non-judgemental space to enhance mental well-being. Cheryl works in collaboration with the patient to tailor treatment plans to meet their unique needs and lifestyle to facilitate healing.
     `,
-    reviews: ['“It was very smooth and Cheryl was absolutely fabulous. There was clear communication and all of the correspondence took place in a timely manner. Very happy with the service” - Kerri L.', '“Helpful and thorough - would recommend!”']
+    reviews: [
+      '“It was very smooth and Cheryl was absolutely fabulous. There was clear communication and all of the correspondence took place in a timely manner. Very happy with the service” - Kerri L.',
+      '“Helpful and thorough - would recommend!”'
+    ]
   },
   {
     image: providersImages.Barbara_Borgella,
@@ -2482,11 +2502,12 @@ const providersData = [
     credentials: 'APRN | MSN | PMHNP-BC',
     agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English', 'Creole'],
-    specialties: ['Anxiety',
+    specialties: [
+      'Anxiety',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
       'Bipolar Disorder',
       'Personality Disorder(s)'
-      ],
+    ],
     focusAreas: [
       'Alcoholism',
       'Depression',
@@ -2507,42 +2528,10 @@ const providersData = [
     bookingLink: 'https://booking.url',
     about: `Barbara Borgella is a board-certified psychiatric mental-health nurse practitioner who focuses on long-term patient recovery with the use of evidence-based clinical practice. Patients can expect Barbara to be a knowledgeable, well-rounded and culturally competent provider. Her experience includes treating patients with ADHD, anxiety, depression obsessive-compulsive (OCD), insomnia, trauma, PTSD and mood disorders.
     `,
-    reviews: ['“Very easy to speak to listened well and was clear with responses” - Matthew W.', '“Great experience, my doctor was nice, the appointment went smoothly, and I would certainly book again :)” - Daniel M.']
-  },
-  {
-    image: providersImages.Kerryann_Penny,
-    name: 'Kerryann Penny',
-    professionalTitle:
-      'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
-    credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English'],
-    specialties: null,
-    focusAreas: [
-      'Alcoholism',
-      'Depression',
-      'Panic Attack',
-      'Anxiety',
-      'Eating Disorder',
-      'Prescription / Refill',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Medication Management'
-    ],
-    treatmentApproaches: ['Psychodynamic'],
-    education: [
-      `Adelphi University, Master's in Psychiatric and Mental Health Nursing`
-    ],
-    boardCertification: ['ANCC'],
-    statesLicensed: ['New York'],
-    availability: null,
-    bookingLink: 'https://booking.url',
-    about: `Mrs. Penny is a DNP prepared Board-Certified Psychiatric Mental Health Nurse Practitioner who obtained her MS degree from Adelphi University and doctorate degree from Chatham University. She is passionate about helping her clients achieve their mental health goals and live their best lives. Kerry Ann has a strong understanding of mental health disorders and is able to effectively diagnose and treat them. She assists her patients in pursuing healing by conducting comprehensive psychiatric assessment and focusing on her client's interpretation of optimal health.
-
-    She has worked in the field of nursing for over 11 years and is skilled in the perioperative, intensive care unit, and behavioral health field. She has worked in a variety of settings, such as residential treatment, inpatient hospitals, and outpatient community mental health centers, where she has worked with children, adolescents, and adult patients. She treats a wide range of mental health conditions, including anxiety and depressive disorders, bipolar disorder, schizophrenia and psychosis, sleep disorders, and PTSD.
-
-    Ms. Penny believes the patient-provider relationship is one that develops with trust and understanding. She comes into each new patient session without background influence and will meet you exactly where you are, in order to help you learn and grow in your mental health journey.
-`,
-    reviews: null
+    reviews: [
+      '“Very easy to speak to listened well and was clear with responses” - Matthew W.',
+      '“Great experience, my doctor was nice, the appointment went smoothly, and I would certainly book again :)” - Daniel M.'
+    ]
   },
   {
     image: providersImages.Nicole_Raczy,
@@ -2552,13 +2541,14 @@ const providersData = [
     credentials: 'APRN | RN | PMHNP-BC',
     agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English', 'Cantonese'],
-    specialties: ['Tics/Tourette Syndrome',
+    specialties: [
+      'Tics/Tourette Syndrome',
       'Maternity / Postpartum',
       'PTSD',
       'Anxiety',
       'Depression',
       'Sleep disorders'
-      ],
+    ],
     focusAreas: [
       'Academic Stress',
       'Insomnia',
@@ -2591,10 +2581,11 @@ const providersData = [
     credentials: 'APRN | RN',
     agesSeen: ['Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    specialties: ['Anxiety',
+    specialties: [
+      'Anxiety',
       'Depression',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)'
-      ],
+    ],
     focusAreas: [
       'Addiction / Substance Abuse',
       'Anger Management',
@@ -2649,36 +2640,188 @@ const providersData = [
     `,
     reviews: null
   },
-  {
-    image: providersImages.Danielle_Cora,
-    name: 'Danielle Cora',
-    professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
-    credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Young adults', 'Individuals', 'Adults', 'Seniors'],
-    languagesSpoken: ['English'],
-    specialties: null,
-    focusAreas: [
-      'Addiction / Substance Abuse',
-      'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Prescription / Refill',
-      'Alcoholism',
-      'Bipolar Disorder',
-      'Sleep Disorder',
-      'Anxiety',
-      'Depression'
-    ],
-    treatmentApproaches: null,
-    education: [
-      `Walden University, Master's in Psychiatric and Mental Health Nursing`
-    ],
-    boardCertification: ['ANCC'],
-    statesLicensed: ['New York', 'Connecticut', 'North Carolina'],
-    availability: null,
-    bookingLink: 'https://booking.url',
-    about: `Danielle is a Board-Certified Psychiatric Nurse Practitioner in Brooklyn, New York who has over 15 + years of nursing experience. She earned her Post-Masters PMHNP from Hunter college. Danielle’s service to others is what drives her passion for psychiatry. Her approach to care is simple, and that is, to listen with empathy and hold everyone in a space of love, good intention, and grace. She believes that everyone is unique, and their story must be heard. Danielle specializes in treating adults with depression, anxiety, bipolar, PTSD, ADHD, and interpersonal relationship issues.
-    `,
-    reviews: null
-  }
+  // {
+  //   image: providersImages.Amanda_Wareham,
+  //   name: 'Amanda Wareham',
+  //   professionalTitle:
+  //     'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
+  //   credentials: 'PMHNP-BC | NP',
+  //   agesSeen: ['Teens', 'Adults', 'Seniors'],
+  //   languagesSpoken: ['English'],
+  //   specialties: [
+  //     'Autism Spectrum Disorder (ASD)',
+  //     'Eating Disorder(s)',
+  //     'Tics/Tourette Syndrome',
+  //     'Bipolar Disorder',
+  //     'Depression',
+  //     'Anxiety',
+  //     'Obsessive Compulsive Disorder (OCD)',
+  //     'Social Anxiety Disorder'
+  //   ],
+  //   focusAreas: [
+  //     'Addiction / Substance Abuse',
+  //     'Bipolar Disorder',
+  //     'Anxiety Disorders',
+  //     'Depression',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     'Prescription / Refill',
+  //     'Medication Management',
+  //     'Autism Spectrum Disorder (ASD)',
+  //     'Eating Disorder(s)',
+  //     'Tics/Tourette Syndrome',
+  //     'Obsessive Compulsive Disorder (OCD)'
+  //   ],
+  //   treatmentApproaches: ['Psychodynamic'],
+  //   education: [
+  //     `Pace University, Master's in Psychiatric and Mental Health Nursing`
+  //   ],
+  //   boardCertification: ['ANCC'],
+  //   statesLicensed: ['New York'],
+  //   availability: null,
+  //   bookingLink: 'https://booking.url',
+  //   about: `Amanda is a skilled and compassionate psychiatric and mental health nurse practitioner. She offers virtual consultations to clients within New York State through Orenda Psychiatry. Amanda is skilled in the treatment of anxiety disorders, eating disorders, OCD, ADHD, PTSD, depression, and bipolar spectrum disorders. Her treatment plans include a combination of medication management and therapy to support your journey toward emotional well-being.`
+  // },
+  // {
+  //   image: providersImages.Dionne_Joseph,
+  //   name: 'Dionne Joseph',
+  //   professionalTitle:
+  //     'Family Nurse Practitioner, Adult Psychiatric & Mental Health Nurse Practitioner, NY',
+  //   credentials: 'APRN | RN | PMHNP-BC',
+  //   agesSeen: ['Adults', 'Seniors'],
+  //   languagesSpoken: ['English', 'Creole'],
+  //   specialties: [
+  //     'Anxiety',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     'Bipolar Disorder',
+  //     'Personality Disorder(s)',
+  //     'Women’s Mental Health'
+  //   ],
+  //   focusAreas: [
+  //     'Addiction Consultation',
+  //     'Anxiety Disorder',
+  //     'Personality Disorder',
+  //     'Adolescent / Teen Issues',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     `Women's Issues Therapy`,
+  //     'Anxiety',
+  //     'Bipolar Disorder'
+  //   ],
+  //   treatmentApproaches: ['Psychodynamic'],
+  //   education: [
+  //     `Molloy University, Master's in Psychiatric and Mental Health Nursing`
+  //   ],
+  //   boardCertification: ['ANCC'],
+  //   statesLicensed: ['New York'],
+  //   availability: null,
+  //   bookingLink: 'https://booking.url',
+  //   about: `I practiced as a Family Nurse Practitioner for over a decade before choosing to continue my education and earn additional certification as a Psychiatric Nurse Practitioner in 2021. I feel psychiatry is interwoven into all aspects of health and has a great impact on the overall wellbeing of an individual. I thoroughly enjoy working together with my clients to help them meet their wellness goals. In the future I see myself continuing to work in mental health and learning more about integrative psychiatry and novel treatment options. During my free time I enjoy traveling and reading.`
+  // },
+  // {
+  //   image: providersImages.Joan_Mahoney,
+  //   name: 'Joan Mahoney',
+  //   professionalTitle:
+  //     'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
+  //   credentials: 'APRN | PMHNP-BC',
+  //   agesSeen: ['Children', 'Teens', 'Adults', 'Seniors'],
+  //   languagesSpoken: ['English'],
+  //   specialties: [
+  //     'Substance Use Disorder (SUD)',
+  //     'Medication Assisted Treatment (MAT)',
+  //     'Suboxone Management (X Waiver)',
+  //     'Geripsych',
+  //     'Weight Management',
+  //     'Autism Spectrum Disorder (ASD)',
+  //     'Chronic Pain',
+  //     'Tics/Tourette Syndrome',
+  //     'Maternity / Postpartum',
+  //     'Bipolar Disorder'
+  //   ],
+  //   focusAreas: [
+  //     'Anxiety',
+  //     'Eating Disorder',
+  //     'Sleep Disorder',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     'Medication Management',
+  //     'Stress Management',
+  //     'Depression',
+  //     'Personality Disorder'
+  //   ],
+  //   treatmentApproaches: ['Psychodynamic'],
+  //   education: [
+  //     `Donald and Barbara Zucker School of Medicine at Hofstra/Northwell, Master's in Adult Gerontology Acute Care Nursing`
+  //   ],
+  //   boardCertification: ['ANCC'],
+  //   statesLicensed: ['New York'],
+  //   availability: null,
+  //   bookingLink: 'https://booking.url',
+  //   about: `Joan, a registered nurse since 1995, has dedicated 24 years of her career to the emergency department, serving both as a staff nurse and in leadership roles at Huntington Hospital. In May of 2020, she graduated from the Hofstra Northwell School of Graduate Nursing, specializing in Adult-Gerontology Acute Care Nurse Practitioner. Her journey continued at Northwell Health Long Island Jewish Medical Center where she contributed her expertise on a Behavioral Health Medical Floor. Pursuing further education, Joan underwent post-master's studies to attain dual board certification as both a Psychiatric Mental Health Nurse Practitioner and an Adult Gerontology Acute Care Nurse Practitioner. 
+    
+  //   Joan firmly believes in fostering trusting and collaborative relationships with her patients, empowering them to actively engage in their treatment journey. With a keen ear and compassionate approach, she listens attentively to their concerns and experiences, tailoring personalized treatment plans to address their unique needs and aspirations.`
+  // },
+  // {
+  //   image: providersImages.Maria_Lourdes_Bunque,
+  //   name: 'Maria Lourdes Bunque',
+  //   professionalTitle:
+  //     'Adult Psychiatric & Mental Health Nurse Practitioner, Family Psychiatric & Mental Health Nurse Practitioner, NY',
+  //   credentials: 'APRN | RN | PMHNP-BC',
+  //   agesSeen: ['Teens', 'Adults', 'Seniors'],
+  //   languagesSpoken: ['English', 'Tagalog'],
+  //   specialties: ['Geripsych', 'Bipolar Disorder', 'Anxiety', 'Depression'],
+  //   focusAreas: [
+  //     'Addiction Consultation',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     'Medication Management',
+  //     'Alcoholism',
+  //     'Depression',
+  //     'Prescription / Refill',
+  //     'Anxiety Disorder',
+  //     'Eating Disorder'
+  //   ],
+  //   treatmentApproaches: ['Psychodynamic'],
+  //   education: [
+  //     `State University of New York Buffalo, Master's in Psychiatric and Mental Health Nursing`
+  //   ],
+  //   boardCertification: ['ANCC'],
+  //   statesLicensed: ['New York'],
+  //   availability: null,
+  //   bookingLink: 'https://booking.url',
+  //   about: `I'm an experienced Psychiatric Nurse Practitioner who aims to promote mental wellness for individuals and their families facing challenges. Please think of me as your mental health co-pilot navigating alongside you with compassion, evidence-based strategies, and a whole lot of care. I specialize in working with adolescents, adults, and geriatric populations, bringing a wealth of experience. I will partner with you to develop a personalized roadmap to optimal mental health. We'll work together to understand your unique needs and goals, and then build a customized treatment plan that gets you there. I'm a big believer in collaboration. We'll work hand-in-hand to develop your care. I am committed to staying current on the latest psychiatric research and treatment developments, so you can be sure we're using the latest tools for your journey.`
+  // },
+  // {
+  //   image: providersImages.Moises_Liriano_Fernandez,
+  //   name: 'Moises Liriano Fernandez',
+  //   professionalTitle:
+  //     'Adult Psychiatric & Mental Health Nurse Practitioner, NY',
+  //   credentials: 'APRN | RN',
+  //   agesSeen: ['Adults', 'Seniors'],
+  //   languagesSpoken: ['English', 'Spanish'],
+  //   specialties: [
+  //     'Depression',
+  //     'Anxiety',
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     "Men's Mental Health Issues"
+  //   ],
+  //   focusAreas: [
+  //     'Anger Management',
+  //     'Bipolar Disorder',
+  //     'Medication Management',
+  //     'Anxiety Disorder',
+  //     'Depression',
+  //     "Men's Mental Health Issues",
+  //     'Attention-Deficit / Hyperactivity Disorder (ADHD)',
+  //     'Eating Disorder'
+  //   ],
+  //   treatmentApproaches: ['Psychodynamic'],
+  //   education: [
+  //     `Fairleigh Dickinson University, Master's in Psychiatric and Mental Health Nursing`,
+  //     `New Jersey City University (Bachelor's)`
+  //   ],
+  //   boardCertification: ['ANCC'],
+  //   statesLicensed: ['New York'],
+  //   availability: null,
+  //   bookingLink: 'https://booking.url',
+  //   about: `Moises, is a bilingual Board-Certified Psychiatric Nurse Practitioner who is fluent in Spanish. With over eight years of experience in mental health, he excels in medication management for various diagnoses such as Depression, PTSD, Anxiety, OCD,ADHD and sleep disorders. Moises obtained his Bachelor of Science in Nursing from New Jersey City University and his Master of Science in Nursing as a Psychiatric Mental Health Nurse Practitioner from Fairleigh Dickinson University. He is dedicated to providing quality psychiatric services through a telemedicine platform, ensuring convenient access to care from the comfort of your home or work.`
+  // }
 ];
 
 export default providersData;
