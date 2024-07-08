@@ -32,13 +32,34 @@ const ProvidersInAbout = () => {
   const getNextIndex = () => {
     if (currentIndexRef.current >= shuffledIndicesRef.current.length) {
       // Refill and shuffle the array if we've exhausted all indices
-      shuffledIndicesRef.current = Array.from({ length: numImages }, (_, i) => i);
+      shuffledIndicesRef.current = Array.from(
+        { length: numImages },
+        (_, i) => i
+      );
       shuffleArray(shuffledIndicesRef.current);
       currentIndexRef.current = 0;
     }
     return shuffledIndicesRef.current[currentIndexRef.current++];
   };
 
+  const myAnimateOpacity = (index) => {
+    const element = itemsRef.current[index]?.current;
+    if (element) {
+      gsap.fromTo(
+        element,
+        {
+          opacity: 0
+        },
+        {
+          opacity: 1,
+          duration: 2,
+          ease: 'slow(0.7,0.7,false)'
+        }
+      );
+    }
+  };
+
+  const randomIndex = getNextIndex();
 
   useGSAP(
     () => {
@@ -60,7 +81,6 @@ const ProvidersInAbout = () => {
       };
 
       const imageShuffle = () => {
-        const randomIndex = getNextIndex();
         let newIndex = Math.floor(Math.random() * providersData.length);
         setIndices((prevIndices) => {
           if (providersData.length >= numImages) {
@@ -72,8 +92,7 @@ const ProvidersInAbout = () => {
           newIndices[randomIndex] = newIndex;
           return newIndices;
         });
-        animateOpacity(randomIndex);
-        console.log(itemsRef.current[randomIndex]?.current);
+        // animateOpacity(randomIndex);
       };
       const interval = setInterval(imageShuffle, 3000);
 
@@ -106,6 +125,7 @@ const ProvidersInAbout = () => {
                   src={providersData[index].image}
                   alt={`Provider ${index}`}
                   className={`size-full object-contain`}
+                  onLoad={() => {myAnimateOpacity(i)}}
                 />
               </div>
             ))}
