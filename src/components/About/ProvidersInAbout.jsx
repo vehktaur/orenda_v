@@ -1,5 +1,5 @@
 import providersData from '../../data/providersData';
-import { useState, useRef, createRef } from 'react';
+import { useState, useRef, createRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -7,39 +7,13 @@ gsap.registerPlugin(useGSAP);
 
 const ProvidersInAbout = () => {
   const numImages = 20;
-
-  const [indices, setIndices] = useState(
-    Array.from({ length: numImages }, (_, i) => i)
-  );
-
   const itemsRef = useRef([]);
-  if (itemsRef.current.length !== numImages) {
-    itemsRef.current = Array(numImages)
-      .fill()
-      .map(() => createRef());
-  }
-
   const shuffledIndicesRef = useRef([]);
   const currentIndexRef = useRef(0);
 
-  const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  };
-  const getNextIndex = () => {
-    if (currentIndexRef.current >= shuffledIndicesRef.current.length) {
-      // Refill and shuffle the array if we've exhausted all indices
-      shuffledIndicesRef.current = Array.from(
-        { length: numImages },
-        (_, i) => i
-      );
-      shuffleArray(shuffledIndicesRef.current);
-      currentIndexRef.current = 0;
-    }
-    return shuffledIndicesRef.current[currentIndexRef.current++];
-  };
+  const [indices, setIndices] = useState(Array.from({ length: numImages }, (_, i) => i));
+  const [inView, setInView] = useState(false);
+  const providersSectionRef = useRef(null);
 
   const { contextSafe } = useGSAP();
   const animateOpacity = contextSafe((index) => {
@@ -47,9 +21,7 @@ const ProvidersInAbout = () => {
     if (element) {
       gsap.fromTo(
         element,
-        {
-          opacity: 0
-        },
+        { opacity: 0 },
         {
           opacity: 1,
           duration: 2,
@@ -59,31 +31,74 @@ const ProvidersInAbout = () => {
     }
   });
 
-  useGSAP(
-    () => {
-      const imageShuffle = () => {
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  };
+
+  const getNextIndex = () => {
+    if (currentIndexRef.current >= shuffledIndicesRef.current.length) {
+      // Refill and shuffle the array if we've exhausted all indices
+      shuffledIndicesRef.current = Array.from({ length: numImages }, (_, i) => i);
+      shuffleArray(shuffledIndicesRef.current);
+      currentIndexRef.current = 0;
+    }
+    return shuffledIndicesRef.current[currentIndexRef.current++];
+  };
+
+  useEffect(() => {
+    itemsRef.current = Array(numImages).fill().map(() => createRef());
+  }, [numImages]);
+
+  // Intersection Observer setup
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+        } else {
+          setInView(false);
+        }
+      },
+      { threshold: 0.5 } // Adjust threshold as needed
+    );
+
+    if (providersSectionRef.current) {
+      observer.observe(providersSectionRef.current);
+    }
+
+    return () => {
+      if (providersSectionRef.current) {
+        observer.unobserve(providersSectionRef.current);
+      }
+    };
+  }, []);
+
+  // Interval for image shuffle
+  useEffect(() => {
+    let interval;
+    if (inView) {
+      interval = setInterval(() => {
         const randomIndex = getNextIndex();
         let newIndex = Math.floor(Math.random() * providersData.length);
         setIndices((prevIndices) => {
-          if (providersData.length >= numImages) {
-            while (prevIndices.includes(newIndex)) {
-              newIndex = (newIndex + 1) % providersData.length;
-            }
+          while (prevIndices.includes(newIndex)) {
+            newIndex = (newIndex + 1) % providersData.length;
           }
           const newIndices = [...prevIndices];
           newIndices[randomIndex] = newIndex;
           return newIndices;
         });
-      };
-      const interval = setInterval(imageShuffle, 3000);
+      }, 3000);
+    }
 
-      return () => clearInterval(interval);
-    },
-    { dependencies: [numImages, providersData.length] }
-  );
+    return () => clearInterval(interval);
+  }, [inView, providersData.length]);
 
   return (
-    <div className="px-5 sm:~px-8/12">
+    <div ref={providersSectionRef} className="px-5 sm:~px-8/12">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="heading mb-4">Meet Our Providers</h2>
         <p className="~mt-4/6 ~mb-6/[3.25rem] max-w-[65.75rem] mx-auto text-center">

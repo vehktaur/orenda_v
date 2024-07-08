@@ -28,7 +28,7 @@ const Treat = () => {
     <div className="treat-container ~/sm:~px-1/5 sm:~px-8/12">
       <div className="treat-wrapper max-w-7xl mx-auto py-16">
         <div>
-          <h1 className="heading mb-4">What we Treat</h1>
+          <h1 className="heading mb-4">What We Treat</h1>
           <p className="px-2 font-body text-center">
             We offer therapy and medication management for a wide range of
             mental health concerns, including:
