@@ -19,8 +19,8 @@ const ProvidersInAbout = () => {
       .map(() => createRef());
   }
 
-  const shuffledIndicesRef = useRef([]);
-  const currentIndexRef = useRef(0);
+  let shuffledIndices = [];
+  let currentIndex = 0;
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -29,16 +29,16 @@ const ProvidersInAbout = () => {
     }
   };
   const getNextIndex = () => {
-    if (currentIndexRef.current >= shuffledIndicesRef.current.length) {
+    if (currentIndex >= shuffledIndices.length) {
       // Refill and shuffle the array if we've exhausted all indices
-      shuffledIndicesRef.current = Array.from(
+      shuffledIndices = Array.from(
         { length: numImages },
         (_, i) => i
       );
-      shuffleArray(shuffledIndicesRef.current);
-      currentIndexRef.current = 0;
+      shuffleArray(shuffledIndices);
+      currentIndex = 0;
     }
-    return shuffledIndicesRef.current[currentIndexRef.current++];
+    return shuffledIndices[currentIndex++];
   };
 
   const { contextSafe } = useGSAP();
