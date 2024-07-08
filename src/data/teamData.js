@@ -4,156 +4,170 @@ const teamData = [
   {
     image: teamImages.gretchel,
     name: 'Gretchel',
-    position: 'Admin'
+    position: 'Admin Manager'
   },
   {
     image: teamImages.memsy,
     name: 'Memsy',
-    position: 'Admin'
+    position: ' Overseas Admin Manager'
   },
   {
-    image: teamImages.keisha,
-    name: 'Keisha',
-    position: 'Admin'
+    image: teamImages.keishla,
+    name: 'Keishla',
+    position: 'RN, Director of Clinical Support'
   },
   {
     image: teamImages.mmeno,
     name: 'Mmeno',
-    position: 'Admin'
+    position: 'Intake Manager'
   },
   {
     image: teamImages.cess,
     name: 'Cess',
-    position: 'Admin'
+    position: 'Billing Manager'
   },
   {
     image: teamImages.darianny,
     name: 'Darianny',
-    position: 'Admin'
+    position: 'Credentialing Manager'
   },
   {
     image: teamImages.righteous,
     name: 'Righteous',
-    position: 'Admin'
+    position: 'Comms Coordinator'
   },
   {
     image: teamImages.sylvia,
     name: 'Sylvia',
-    position: 'Admin'
+    position: 'Intake Coordinator'
   },
   {
     image: teamImages.rhei,
     name: 'Rhei',
-    position: 'Admin'
+    position: 'Admin Member'
   },
   {
     image: teamImages.valerie,
     name: 'Valerie',
-    position: 'Email Marketing Specialist'
+    position: 'Admin Member'
   },
 
   {
     image: teamImages.progress,
     name: 'Progress',
-    position: 'Hiring Manager'
+    position: 'Admin Member'
   },
   {
     image: teamImages.precious,
     name: 'Precious',
-    position: 'Asst. Hiring Manager'
+    position: 'Admin Member'
   },
   {
     image: teamImages.patty,
     name: 'Patty',
-    position: 'Manager'
+    position: 'Admin Member'
   },
   {
     image: teamImages.nora,
     name: 'Nora',
-    position: 'Executive Officer'
+    position: 'Admin Member'
   },
   {
     image: teamImages.nikko,
     name: 'Nikko',
-    position: 'Sales Manager'
+    position: 'Admin Member'
   },
   {
     image: teamImages.neil,
     name: 'Neil',
-    position: 'Asst. Sales Manager'
+    position: 'Admin Member'
   },
 
   {
     image: teamImages.kevin,
     name: 'Kevin',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
 
   {
     image: teamImages.justine,
     name: 'Justine',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.john_patrick,
     name: 'John Patrick',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.jo,
     name: 'Jo',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.jerricoh,
     name: 'Jerricoh',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.jerimine,
     name: 'Jerimine',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.jeremie,
     name: 'Jeremie',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.jaylo,
     name: 'Jaylo',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.itoro,
     name: 'Itoro',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
-
   {
     image: teamImages.gene,
     name: 'Gene',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.emmeline,
     name: 'Emmeline',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.ella,
     name: 'Ella',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.carlos,
     name: 'Carlos',
-    position: 'Customer Support'
+    position: 'Admin Member'
   },
   {
     image: teamImages.angel,
     name: 'Angel',
-    position: 'Customer Support'
+    position: 'Admin Member'
+  },
+  {
+    image: teamImages.angel,
+    name: 'Ime',
+    position: 'Admin Member'
+  },
+  {
+    image: teamImages.angel,
+    name: 'Oly',
+    position: 'Admin Member'
+  },
+  {
+    image: teamImages.angel,
+    name: 'Shaina',
+    position: 'Admin Member'
   }
 ];
 

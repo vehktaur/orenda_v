@@ -15,7 +15,7 @@ import jerricoh from './jerricoh.png';
 import jo from './jo.png';
 import john_patrick from './john patrick.png';
 import justine from './justine.png';
-import keisha from './keisha.png';
+import keishla from './keishla.png';
 import kevin from './kevin.png';
 import memsy from './memsy.png';
 import mmeno from './mmeno.png';
@@ -48,7 +48,7 @@ const teamImages = {
   jo,
   john_patrick,
   justine,
-  keisha,
+  keishla,
   kevin,
   memsy,
   mmeno,

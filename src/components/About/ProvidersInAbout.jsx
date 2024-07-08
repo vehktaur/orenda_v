@@ -38,7 +38,7 @@ const ProvidersInAbout = () => {
     }
 
     let newIndex = shuffledIndices[currentIndex];
-    while (newIndex >= providersData.length) {
+    while (newIndex >= numImages) {
       // Ensure newIndex is always within valid range
       shuffleArray(shuffledIndices);
       currentIndex = 0;
