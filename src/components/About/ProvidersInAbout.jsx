@@ -28,17 +28,25 @@ const ProvidersInAbout = () => {
       [array[i], array[j]] = [array[j], array[i]];
     }
   };
+
   const getNextIndex = () => {
     if (currentIndex >= shuffledIndices.length) {
       // Refill and shuffle the array if we've exhausted all indices
-      shuffledIndices = Array.from(
-        { length: numImages },
-        (_, i) => i
-      );
+      shuffledIndices = Array.from({ length: numImages }, (_, i) => i);
       shuffleArray(shuffledIndices);
       currentIndex = 0;
     }
-    return shuffledIndices[currentIndex++];
+
+    let newIndex = shuffledIndices[currentIndex];
+    while (newIndex >= providersData.length) {
+      // Ensure newIndex is always within valid range
+      shuffleArray(shuffledIndices);
+      currentIndex = 0;
+      newIndex = shuffledIndices[currentIndex];
+    }
+
+    currentIndex++;
+    return newIndex;
   };
 
   const { contextSafe } = useGSAP();
