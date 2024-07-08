@@ -52,7 +52,7 @@ const ProvidersInAbout = () => {
         },
         {
           opacity: 1,
-          duration: 2,
+          duration: 1.5,
           ease: 'slow(0.7,0.7,false)'
         }
       );
