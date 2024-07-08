@@ -1,5 +1,5 @@
 import providersData from '../../data/providersData';
-import { useState, useRef, createRef } from 'react';
+import { useState, useRef, createRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
