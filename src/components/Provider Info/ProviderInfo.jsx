@@ -152,7 +152,7 @@ const ProviderInfo = () => {
                   />
                   <ProviderInfoUl
                     h2="Board Certification"
-                    listArray={provider?.boardCertification}
+                    listArray={provider?.boardCertifications}
                     classes={{ mb: 1.06 }}
                   />
                   <ProviderInfoUl
@@ -191,7 +191,7 @@ const ProviderInfo = () => {
                 />
                 <ProviderInfoUl
                   h2="Board Certification"
-                  listArray={provider?.boardCertification}
+                  listArray={provider?.boardCertifications}
                   classes={{ mb: 1.06 }}
                 />
                 <ProviderInfoUl
@@ -239,9 +239,12 @@ const ProviderInfo = () => {
               <button className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors">
                 Write a Review
               </button>
-              <button className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors">
+              <a
+                href={provider?.bookingLink}
+                className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors text-center"
+              >
                 Book
-              </button>
+              </a>
             </div>
           </div>
         </div>

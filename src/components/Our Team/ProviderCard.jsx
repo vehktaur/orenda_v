@@ -44,7 +44,7 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
       } w-full rounded-md shadow relative overflow-hidden`}
     >
       <div
-        className={`hidden absolute inset-0 bg-black opacity-0 hover:opacity-100 transition-opacity duration-1000 text-white sm:flex flex-col ${
+        className={`absolute inset-0 bg-black opacity-0 hover:opacity-100 transition-opacity duration-1000 text-white flex flex-col ${
           numberOfColumns === 5 ? 'gap-1 px-3 py-4' : '~p-4/6'
         } justify-between rounded-md cursor-pointer`}
       >
@@ -61,12 +61,12 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
           </p>
         </div>
         <div className={`grid ${numberOfColumns === 5 ? 'gap-2' : 'gap-4'}`}>
-          <Link
+          <a
+            href={provider?.bookingLink}
             className="border block rounded-3xl px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6 font-medium text-center"
-            to={`/provider/${index}`}
           >
             Book now
-          </Link>
+          </a>
           <div className="flex justify-center">
             <Link
               className="text-[0.875rem] font-semibold hover:underline"
@@ -143,8 +143,8 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
             </span>
           )}
 
-          <Link
-            to={`/provider/${index}`}
+          <a
+            href={provider?.bookingLink}
             className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans ${
               numberOfColumns === 5
                 ? 'py-2 min-w-[7.5rem] ~px-2/3'
@@ -152,7 +152,7 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
             }`}
           >
             Book online
-          </Link>
+          </a>
         </div>
       </div>
     </div>

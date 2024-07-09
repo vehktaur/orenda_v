@@ -34,10 +34,11 @@ const providersData = [
       'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
       'State University of New York, Binghamton (Bachelor’s)'
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/rakin-rahman-pmhnp-bc-432505?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/rakin-rahman-pmhnp-bc-432505?isNewPatient=false',
     about: `Mr. Rakin Rahman is an experienced adult psychiatric and mental health nurse practitioner currently practising at Orenda Psychiatry. Patients in Smyrna and Brooklyn, NY, can consult him for various concerns, including anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks.
 
     After graduating with bachelor’s degrees from the State University of New York, Binghamton, and Massachusetts College of Pharmacy and Health Sciences, Mr. Rahman attended Case Western Reserve University, where he earned his master’s degree in psychiatric mental health nursing.
@@ -84,10 +85,11 @@ const providersData = [
       'Walden University, Master’s in Psychiatric Mental Health Nursing',
       'William Paterson University (Bachelor’s)'
     ],
-    boardCertification: ['ANCC'],
-    statesLicensed: ['New York', 'New Jersey'],
+    boardCertifications: ['ANCC'],
+    statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/tanya-monroe-pmhnp-bc-432494?isNewPatient=false',
     about: `Ms. Tanya Monroe is an adult psychiatric & mental health nurse practitioner. Working at Orenda Psychiatry in Brooklyn and Smyrna, NY, she accepts patients suffering from hyperactivity disorders (ADD / ADHD), anxiety, bipolar disorder, post-traumatic stress disorder (PTSD), and obsessive-compulsive disorder (OCD).
 
     Ms. Monroe is sensitive to the uniqueness of each patient's situation and accordingly adapts her consultations. Her treatment modalities include medications, therapy, and lifestyle changes. She educates caregivers on how to care for the patient to help them heal and recover. She alsoconducts psychiatry follow-ups to evaluate progress and change the care plan if necessary.
@@ -127,10 +129,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`Wilkes University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
-    statesLicensed: ['New York', 'New Jersey'],
+    boardCertifications: ['ANCC'],
+    statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/theresa-levy-aprn-pmhnp-bc-476146?isNewPatient=false',
     about: `I am an experienced psychiatric nurse Practitioner helping people from all lifespans, with areas of expertise in treating anxiety, depression, OCD, ADHD, Bipolar Disorder, and personality disorders. I am a compassionate person who provides a warm and down to earth approach in meeting the person who is on their journey to mental wellness. Together we can come up with a plan that works for you and with your concerns in mind. `,
     reviews: [
       `“I felt like Ms. Levy really listened to me and genuinely cares that I get better. She is kind, empathetic and trusting.” - Katelin F.`,
@@ -165,10 +168,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychoanalytic'],
     education: [`Russell Sage College, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 1-2 days',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/michelle-krill-pmhnp-bc-np-457306?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/michelle-krill-pmhnp-bc-np-457306?isNewPatient=false',
     about: `Serving the residents of New York City and Brooklyn, NY, Ms. Michelle Krill is an experienced adult psychiatric and mental health nurse practitioner. She provides virtual consultations via Orenda Psychiatry.
 
     Ms. Krill graduated from Russell Sage College with her master's degree in nursing. Her patients value her expertise because she consistently provides efficient and attentive care, resulting in positive health outcomes.
@@ -205,10 +209,11 @@ const providersData = [
     education: [
       `State University of New York, Stony Brook, Master's in Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 1-2 days',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/myea-meighan-aprn-pmhnp-bc-461547?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/myea-meighan-aprn-pmhnp-bc-461547?isNewPatient=false',
     about: `Ms. Myea Meighan, an accomplished adult psychiatric and mental health nurse practitioner at Orenda Psychiatry, offers virtual consultations to the New York and Brooklyn, NY communities.
     
     Ms. Meighan holds a master's degree in nursing from the State University of New York, Stony Brook. Providing her services to individuals dealing with anxiety, bipolar disorder, post-traumatic stress disorder, and various other mental health problems, she employs a holistic approach to foster emotional well-being.
@@ -251,17 +256,11 @@ const providersData = [
       `Drexel University (Bachelor's)`,
       `Kean University (Bachelor's)`
     ],
-    boardCertification: ['ANCC'],
-    statesLicensed: [
-      'New York',
-      'New Jersey',
-      'Maine',
-      'Oregon',
-      'Maryland',
-      'Delaware'
-    ],
+    boardCertifications: ['ANCC'],
+    statesLicensed: ['New York', 'New Jersey'],
     availability: 'Available in 1-2 days',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/nwamaka-onyeogo-pmhnp-bc-np-457310?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/nwamaka-onyeogo-pmhnp-bc-np-457310?isNewPatient=false',
     about: `Ms. Nwamaka Onyeogo is an accomplished adult psychiatric & mental health nurse practitioner offering virtual consultations through Orenda Psychiatry in New York, NY. With experience in treating conditions like bipolar disorder, anxiety, obsessive-compulsive disorder (OCD), and various mental health issues, she provides compassionate and personalized care.
 
     She obtained her master's degree in nursing from Northern Kentucky University. Ms. Onyeogo is dedicated to supporting her patients in their mental health journeys, promoting well-being, and fostering positive mental states, reflecting her commitment to comprehensive mental healthcare. 
@@ -300,10 +299,11 @@ const providersData = [
     education: [
       `Molloy University, Post-Master's Certificate in Psychiatric Nursing`
     ],
-    boardCertification: null,
+    boardCertifications: null,
     statesLicensed: ['New York'],
     availability: 'Available in 1-2 days',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/nerlande-celestin-np-pmhnp-bc-439719?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/nerlande-celestin-np-pmhnp-bc-439719?isNewPatient=false',
     about: `Ms. Nerlande Celestin is an NY-based adult psychiatric and mental health nurse practitioner. Practicing at Orenda Psychiatry, she serves the residents of New York and Brooklyn, NY. She is dedicated to providing comprehensive and compassionate care to people facing mental health challenges.
 
     Patients see Ms. Celestin for conditions like anxiety, panic attacks, hyperactivity, bipolar obsessive-compulsive, and post-traumatic stress disorders. She also helps individuals with psychiatry follow-ups, prescriptions, and medication management.
@@ -337,10 +337,11 @@ const providersData = [
     education: [
       `Fairleigh Dickinson University, Master’s in Psychiatric Mental Health Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York', 'New Jersey'],
     availability: 'Available in 1-2 days',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/natasha-dillon-pmhnp-bc-np-377979?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/natasha-dillon-pmhnp-bc-np-377979?isNewPatient=false',
     about: `Natasha Dillon graduated from Fairleigh Dickinson University as a psychiatric nurse practitioner for all ages and she is Board Certified by ANCC. She graduated with a Master in Nursing Science in 2017 from Ternopil State Medical University. She is in the medical field for 20 years; she has years of experience as a registered nurse in the hospital and she connected with thousands of patients in her career and participated in many meaningful moments in their lives.
 
     Natasha is a patient-focused provider who emphasizes building relationships with her patients and works towards creating a personalized treatment plan. These connections have made her a sensitive, respectful provider that enjoys collaboration. She became interested in drug treatment because of the way it dominates our current approach to managing the suffering and disturbance we call mental disorders. Using psychotherapy and medication management she can help yougain the tools needed to move past the hard times.`,
@@ -384,10 +385,11 @@ const providersData = [
       `Daemen University (Bachelor's)`,
       `Trocaire College (Associate's)`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/danielle-overton-miller-pmhnp-bc-np-457321?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/danielle-overton-miller-pmhnp-bc-np-457321?isNewPatient=false',
     about: `Danielle is a board certified psychiatric mental health nurse practitioner. She is passionate about providing quality, compassionate and comprehensive mental health services to adolescents and adults. Danielle possesses strong clinical skills enhanced by natural ability to build rapport with patients. She follows evidence-based guidelines blended with clinical experience, personal observation and intuition. As a PMHNP, Danielle's role is multifaceted, including educator, metal health advocate and therapist.
 
     Serving New York and Brooklyn, NY residents, she offers virtual consultations at Orenda Psychiatry, ensuring accessible support for all. Ms. Overton-Miller obtained a master's degree in psychiatric mental health nursing from D'Youville University.`,
@@ -434,17 +436,11 @@ const providersData = [
       `Columbia University, Master's in Family and Oncology Nursing
       `
     ],
-    boardCertification: ['ANCC'],
-    statesLicensed: [
-      'New York',
-      'Oregon',
-      'Maryland',
-      'Massachusetts',
-      'Virginia',
-      'Washington'
-    ],
+    boardCertifications: ['ANCC', 'FNP'],
+    statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/jena-simon-pmhnp-bc-np-417765?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/jena-simon-pmhnp-bc-np-417765?isNewPatient=false',
     about: `Jena M. Simon, DNP, is a Double Board-Certified nurse practitioner specializing in psychiatric mental health and family health. After graduating from Columbia University in 2010 as a Family and Oncology Nurse Practitioner, Dr. Simon worked in New York City at a large tertiary medical center caring for adults with sickle cell disease. In this role, she became attuned to the needs of people living with chronic illness and chronic pain.
 
     Dr. Simon takes an integrative and holistic approach to mental health. As a family nurse practitioner, she considers how physical health impacts mood and relationships. She is passionate about partnering with clients to find practical and creative ways to feel better. She is skilled in medication management and several therapy techniques, including motivational interviewing, psychodynamic therapy, cognitive behavioral therapy, and solution-focused brief therapy.`,
@@ -488,10 +484,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`New York University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/jeremy-walsh-aprn-pmhnp-bc-482176?isNewPatient=false',
     about: `Mr. Jeremy Walsh is a skilled adult psychiatric and mental health nurse practitioner. He extends his services at Hurley Dermatology, delivering holistic care with empathy and expertise via virtual consultations.
 
     Mr. Walsh specializes in the assessment, diagnosis, and treatment of mental health disorders in the adult population. He prioritizes individualized care tailored to each patient's unique needs and circumstances.
@@ -528,10 +525,11 @@ const providersData = [
     education: [
       `State University of New York, Stony Brook, Master's in Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/phillip-mcdonald-pmhnp-bc-np-457281?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/phillip-mcdonald-pmhnp-bc-np-457281?isNewPatient=false',
     about: `Being an adult psychiatric and mental health nurse practitioner, Mr. Phillip Mcdonald merges clinical expertise with compassionate care to support individuals on their mental health journey. He extends his services at Orenda Psychiatry, Brooklyn, NY, via virtual consultations.
 
     Mr. Mcdonald earned a master’s degree in nursing from the State University of New York, Stony Brook. His advanced training and experience enable him to navigate the complexities of mental health, offering comprehensive assessments and personalized interventions.
@@ -571,10 +569,11 @@ const providersData = [
     education: [
       `State University of New York, Binghamton, Master's in Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/sarah-sakirsky-aprn-pmhnp-bc-482183?isNewPatient=false',
     about: `Sarah Sakirsky is a Board Certified Psychiatric Nurse Practitioner with experience in inpatient and private practice settings. She graduated with her Masters from Decker School of Nursing at Binghamton University. Sarah utilizes a combination of medication management and therapy in helping her patients achieve favorable outcomes. She is a compassionate and attentive provider. Her mission is to deliver a precise diagnosis and individually tailored treatment plan for each patient.`,
     reviews: [
       '“Wonderful! So nice and friendly! Felt very comfortable talking with her. Very understanding and caring! Great listener!” - Sara V',
@@ -606,10 +605,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`New York University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/anne-mongiello-aprn-pmhnp-bc-461538?isNewPatient=false ',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/anne-mongiello-aprn-pmhnp-bc-461538?isNewPatient=false ',
     about: `Anne Mongiello uses her empathetic and evidence-based approach as the guide through the complexities of various psychiatric challenges, including panic attacks, obsessive-compulsive disorder (OCD), attention-deficit/hyperactivity disorder (ADD/ADHD), and bipolar disorder.
      
     She extends her expertise through virtual consultations, welcoming patients from New York and Brooklyn, NY.
@@ -653,10 +653,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychoanalytic', 'Psychodynamic'],
     education: [`Long Island University, Master's in Family Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC', 'FNP'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/ketie-saintelus-pmhnp-bc-377977?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/ketie-saintelus-pmhnp-bc-377977?isNewPatient=false',
     about: `Ketie Saintelus is a board-certified Family Nurse Practitioner and Psychiatry Nurse Practitioner, licensed by the state of New York to provide family-centered healthcare to patients of all ages. 
     Her scope of practice encompasses health promotion, disease prevention, diagnosis and management of common and complex health medical and psychiatry problems.
     
@@ -701,10 +702,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic', 'Person-Centered', 'Strenght-Based'],
     education: [`New York University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York', 'Connecticut'],
     availability: 'Available Today',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/kelli-hamilton-pmhnp-bc-msn-353614?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/kelli-hamilton-pmhnp-bc-msn-353614?isNewPatient=false',
     about: `I have comprehensive approach to care and relationships. I emphasize holistic care of the body and mind. As a provider who is dual board certified in psychiatric mental health and primary care, I am equipped to partner with my clients to meet their psychological and medical needs with an open mind.
 
     I recognize the profound connection between mental health and physical health, and I use an integrative process to help my clients on their journey to well-being. I partner with clients using psychodynamic therapy and evidence-based pharmacology. I have experience treating depression, anxiety, ADHD, OCD, and sleep issues.
@@ -761,10 +763,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`Drexel University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
-    statesLicensed: ['New York', 'Alaska'],
+    boardCertifications: ['ANCC'],
+    statesLicensed: ['New York'],
     availability: 'Available in 3 days',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/bethany-malugin-aprn-pmhnp-bc-461540?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/bethany-malugin-aprn-pmhnp-bc-461540?isNewPatient=false',
     about: `Bethany Malugin is a distinguished adult psychiatric and mental health nurse practitioner who follows a patient-centered approach during her sessions, addressing anxiety, bipolar disorder, obsessive-compulsive disorder (OCD), panic attacks, and hyperactive disorder.
 
     With a master’s degree in nursing from Drexel University, Ms. Malugin strives to provide evidence-based treatments tailored to each patient’s unique needs and utilizes a holistic perspective to support patients in achieving their highest mental and emotional well-being.`,
@@ -809,10 +812,11 @@ const providersData = [
     education: [
       `D'Youville University, Master's in Psychiatric Mental Health Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 3 days',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/brian-yudhistira-pmhnp-bc-409837?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/brian-yudhistira-pmhnp-bc-409837?isNewPatient=false',
     about: `Brian Yudhistira is a board-certified psychiatric mental health nurse practitioner specializing inADHD and co-occurring diagnoses, including generalized anxiety disorder, insomnia, and major depressive disorders. Brian has a unique focus on working with clients in underserved populations, addressing challenges such as bipolar disorder and substance use disorder.
 
     Brian’s approach includes developing a customized medication management regimen while incorporating holistic care that centers on the individual. He places great importance on fostering a collaborative relationship, built on respect and trust, during each encounter. Brian takes pride in his profession, drawing on personal and familial experiences with mental health to establish deeper connections with his clients. 
@@ -853,7 +857,7 @@ const providersData = [
       `Pace University, Master's in Psychiatric Nursing`,
       `Lehman College (Bachelor's)`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 3 days',
     bookingLink: 'https://booking.url',
@@ -901,10 +905,11 @@ const providersData = [
     education: [
       'City University of New York, Hunter College, Master’s in Nursing'
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 2 days',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/perpetual-gyimah-pmhnp-bc-461548?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/perpetual-gyimah-pmhnp-bc-461548?isNewPatient=false',
     about: `Serving the residents of Brooklyn, NY, Ms. Perpetual Gyimah is a diligent adult psychiatric and mental health nurse practitioner at Orenda Psychiatry. As a part of her higher education, Ms. Gyimah acquired her master's degree in nursing from the City University of New York, Hunter College.
 
     Ms. Gyimah provides virtual mental health consultations and psychiatric follow-ups for various reasons, such as anxiety, bipolar disorder, depression, and attention-deficit/hyperactivity disorders. She also offers medication reviews and post-traumatic stress disorder (PTSD) counseling. Patients trust Ms. Gyimah's expertise because she consistently offers efficient care and focused attention, leading to positive health outcomes. She aims to help the wider community improve their well-being through her practice.`,
@@ -939,10 +944,11 @@ const providersData = [
     ],
     treatmentApproaches: null,
     education: [`New York University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/kimberly-levitt-np-pmhnp-340910?LocIdent=222839&reason_visit=493&insuranceCarrier=-1&insurancePlan=-1&dr_specialty=405&isNewPatient=true',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/kimberly-levitt-np-pmhnp-340910?LocIdent=222839&reason_visit=493&insuranceCarrier=-1&insurancePlan=-1&dr_specialty=405&isNewPatient=true',
     about: `I am a board certified psychiatric NP with AgniPsych & Wellness. My wholistic approach to treatment involves combining evidence-based psychopharmacology with a therapeutic process that prioritizes the individual and their goals over their symptoms. I have experience helping people overcome depression, anxiety and ADHD. While there is currently no cure for addiction, I have helped those afflicted by this condition to lead a healthy and happy life. I rely on my clinical experience for diagnosis and pharmacology, however what sets me apart is my expertise in talk-therapy and ability to relate to others.
 
     I myself have been through the challenges of divorce, single parenthood and the daunting task going back to school to qualify myself for my dream job. I am happily remarried and am a proud mother of three, the most recent of which we welcomed to our family earlier this year. I know what it’s like to be down and how difficult it can be to rediscover your stride. I am a firm believer that if you surround yourself with a loving and supportive team that this is a realistic goal for anyone. A productive relationship with an understanding practitioner who can help you navigate your challenges and provide the skillset to conquer them is among the first steps. I find that those who are able to share this philosophy, have the willingness to own their journey in life, and are supported by the appropriate pharmacology, will find all that they are looking for.
@@ -988,10 +994,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`Pace University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/robin-blaize-aprn-pmhnp-bc-476148?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/robin-blaize-aprn-pmhnp-bc-476148?isNewPatient=false',
     about: `New York State board certified Psychiatric Mental Health Nurse Practitioner through the life-span. Compassionate clinician experienced in working with individuals with generalized anxiety disorder, major depression, PTSD, ADHD, bipolar disorder schizophrenia and substance use disorder. Dedicated to collaborating with clients to reach their treatment goals.`,
     reviews: null
   },
@@ -1026,10 +1033,11 @@ const providersData = [
     education: [
       `City University of New York, Hunter College, Master's in Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 2 days',
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/trisha-mayorga-aprn-pmhnp-bc-461568?isNewPatient=false',
     about: `Ms. Trisha Mayorga is an adult psychiatric & mental health nurse practitioner based in New York and Brooklyn, NY. She offers virtual consultations at Orenda Psychiatry.
     
     Ms. Mayorga can help with a range of mental illnesses, including anxiety, hyperactivity disorder, bipolar disorder, obsessive-compulsive disorder, and post-traumatic stress disorder. During consultations, she understands patient concerns and prepares personalized treatment plans, combining prescription medications, talk therapy, and other relevant interventions. She also helps caregivers understand how to support the patient during recovery.
@@ -1075,10 +1083,11 @@ const providersData = [
       'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
       'State University of New York, Binghamton (Bachelor’s)'
     ],
-    boardCertification: ['ANCC'],
-    statesLicensed: ['New York', 'Connecticut', 'Massachusetts'],
+    boardCertifications: ['ANCC'],
+    statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://.https//www.zocdoc.com/wl/orendapsych/doctor/cassandra-williams-pmhnp-432502?isNewPatient=false',
+    bookingLink:
+      'https://.https//www.zocdoc.com/wl/orendapsych/doctor/cassandra-williams-pmhnp-432502?isNewPatient=false',
     about: `Cassandra Williams offers comprehensive treatment to patients with various mental health concerns. While treating anxiety, hyperactive disorders, bipolar disorder, or other mental health conditions, Ms. Williams utilizes her knowledge of psychotherapy modalities to develop personalized treatment plans to meet each patient's needs.
 
     She takes an empathetic approach towards empowering her patients to overcome challenges,fostering resilience and promoting their holistic well-being.`,
@@ -1114,7 +1123,7 @@ const providersData = [
     education: [
       `State University of New York, Stony Brook, Master's in Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink: 'https://booking.url',
@@ -1147,10 +1156,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
     education: [`Pace University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
-    statesLicensed: ['New York', 'South Carolina'],
+    boardCertifications: ['ANCC', 'FNP'],
+    statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/sarah-otto-np-fnp-bc-pmhnp-439721?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/sarah-otto-np-fnp-bc-pmhnp-439721?isNewPatient=false',
     about: `Ms. Sarah Otto is a skilled and compassionate nurse practitioner specializing in psychiatry. At Orenda Psychiatry, she assists physicians in offering comprehensive mental healthcare services to patients in New York and Brooklyn, NY.
     
     Ms. Otto is adept at evaluating patients with anxiety, hyperactive disorders, and obsessive-compulsive disorder. She also manages medications and offers prescription refills. As part of her higher formal education, Ms. Otto attended Pace University, where she obtained a master’s degree in nursing.
@@ -1184,10 +1194,11 @@ const providersData = [
     education: [
       `State University of New York, Stony Brook, Master's in Psychiatric Mental Health Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/victoria-lanzara-pmhnp-bc-np-376079?LocIdent=222841&reason_visit=493&insuranceCarrier=-1&insurancePlan=-1&dr_specialty=405&isNewPatient=true',
     about: `Victoria is a board certified psychiatric mental health nurse practitioner. She brings nine years of experience, which includes working inpatient intensive care treatment and more recently outpatient care in private practice. She is a warm and compassionate practitioner who incorporates medication management in conjunction with psychotherapy.
 
     Mental health is an integral, yet often overlooked, part of our wellness. In our modern, fast-paced lives self-care is typically the first thing that we choose not to prioritize. In recognition of the commitment needed to begin treatment, I strive to work with my clients on an individualized level to move towards their wellness goals. I believe in people's resiliency and ability to heal and like to work in a holistic manner for treatment. This may include psychotherapy, lifestyle changes, medication or a combination of each. Areas of focus include depression and other mood disorders, anxiety, stress and trauma-related disorders, sleep issues, among others.
@@ -1231,10 +1242,11 @@ const providersData = [
     education: [
       `D'Youville University, Master's in Psychiatric and Mental Health Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/catherine-colson-pmhnp-bc-409836?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/catherine-colson-pmhnp-bc-409836?isNewPatient=false',
     about: `Catherine Colson is a board-certified mental health nurse practitioner. Catherine prioritizes listening, compassion, and cultivating a collaborative relationship with her patients. She is interested in anything and everything her patients want to tell her. Her ultimate goal is to foster growth so her patients can become their best selves.
 
     Catherine’s treatment approach is trauma-based. She treats ADHD, anxiety, depression, grief, medication management, obsessive compulsive disorder, self esteem problems, sleep disorders, insomnia, stress, dual diagnosis, trauma, PTSD, and mood disorders. When she’s not working, Catherine loves spending time with her two big dogs and being outside in her vegetable garden.
@@ -1288,10 +1300,11 @@ const providersData = [
       `Mercy University (Bachelor's)`,
       `State University of New York, Westchester Community College (Associate's)`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/william-da-silva-pmhnp-bc-np-457316?isNewPatient=false',
     about: `Mr. William Da silva is a skilled adult psychiatric and mental health nurse practitioner from New York and Brooklyn, NY. He practices at Orenda Psychiatry and offers virtual consultations. His educational qualifications include a master's degree in nursing from New York University.
     
     Mr. Da silva addresses and treats concerns like anxiety, hyperactive disorder (ADD/ADHD), bipolar disorder, panic attacks, and obsessive-compulsive disorder (OCD). With a deep-rooted commitment to holistic wellness, he provides patients with personalized, evidence-based treatments.
@@ -1331,10 +1344,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
     education: [`Pace University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available Today',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/ricky-luong-pmhnp-432490?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/ricky-luong-pmhnp-432490?isNewPatient=false',
     about: `Mr. Ricky Luong is an adult psychiatric & mental health nurse practitioner at Orenda Psychiatry in Brooklyn, Smyrna, and New York, NY. He is a qualified professional with a master’s degree in nursing from Pace University.
 
     During follow-ups, Mr. Luong conducts treatment progress evaluations and makes the necessary changes. Patients trust his expertise because his high-quality consultations lead to positive and lasting outcomes`,
@@ -1373,10 +1387,11 @@ const providersData = [
       'Massachusetts College of Pharmacy and Health Sciences (Bachelor’s)',
       'State University of New York, Binghamton (Bachelor’s)'
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/kerry-callender-msn-pmhnp-bc-409832?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/kerry-callender-msn-pmhnp-bc-409832?isNewPatient=false',
     about: `Kerry truly believes that being present and forming a team approach with patients is one of the most important aspects of patient care. Realizing that each patient is unique, working together with patients towards their goals, while being passionate about individual empowerment allows my skills to become another instrument they can use to navigate their lives. My focus is primarily on mood disorders, anxiety, depression and ADHD. assessment and safety planning.
     
     Kerry's approach to treatment is multifaceted. She puts an equal emphasis on medication management as she does talk therapy. Medication is prescribed to address the symptoms and talk therapy provides a better understanding of the issues at hand and methods in which we can overcome them to help achieve your best life possible.
@@ -1431,10 +1446,11 @@ const providersData = [
     education: [
       `State University of New York, Binghamton, Master's in Nursing`
     ],
-    boardCertification: null,
+    boardCertifications: null,
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/kristina-manich-np-350486?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/kristina-manich-np-350486?isNewPatient=false',
     about: `I am a board-certified psychiatric nurse practitioner. With over 20 years of nursing, I have experience helping people of all ages cope with addiction, eating disorders, women's mental health issues, ADHD, mood disorder and anxiety. I believe in partnering with my clients utilizing a holistic approach including diet , exercise, psychopharmacology, aromatherapy, relaxation, and mindfulness. My mission is to provide an environment that is educational, supportive, and free from judgement.`,
     reviews: [
       `“Very thorough and professional. She really listened and did not rush me. She allowed me to discuss my concerns and gave me real, helpful guidance” - Carly A.`,
@@ -1469,10 +1485,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
     education: ['Fairfield University, Doctor of Nursing Practice'],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/kristofer-generales-np-pmhnp-bc-439718?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/kristofer-generales-np-pmhnp-bc-439718?isNewPatient=false',
     about: `Mr. Kristofer Generales is an expert adult psychiatric & mental health nurse practitioner. He obtained his doctoral degree in nursing practice from Fairfield University and understands that mental well-being is integral to transformative growth.
 
     Mr. Generales offers a safe and supportive environment at Orenda Psychiatry in New York and Brooklyn, NY. This approach helps his patients to discuss their mental and emotional challenges openly. He builds a collaborative relationship and guides his patients to attain self-awareness and healing.
@@ -1515,10 +1532,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`Wilkes University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/latiema-merilus-aprn-pmhnp-bc-461572?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/latiema-merilus-aprn-pmhnp-bc-461572?isNewPatient=false',
     about: `Ms. Latiema Merilus is an adult psychiatric & mental health nurse practitioner serving the New York and Brooklyn, NY communities. She has experience in helping patients facing hyperactivity disorder, anxiety, panic attacks, bipolar disorder, obsessive-compulsive disorder, and more.
 
     At present, Ms. Merilus offers virtual consultations at Orenda Psychiatry. She ensures a comfortable and non-judgmental environment to help her patients express themselves freely. Ms. Merilus understands everyone’s unique situation and prepares individualized treatment plans. She also conducts psychiatry follow-ups to monitor progress and modify or change the care plan if needed.
@@ -1557,10 +1575,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Integrative', 'Psychoanalytic'],
     education: [`Monmouth University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/lenny-gets-pmhnp-bc-np-385589?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/lenny-gets-pmhnp-bc-np-385589?isNewPatient=false',
     about: `Lenny listens to patients’ needs while getting to know them on a personal level. Although the nursing profession can be challenging, Lenny finds it incredibly fulfilling to be able to guide and support people through what is often the most difficult time of their lives.`,
     reviews: [
       `“Very kind, comforting and easy to talk to. He made a psychiatry appointment much more enjoyable than my past experiences” - Tatum W.`,
@@ -1595,10 +1614,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Humanistic', 'Psychodynamic', 'Person-Centered'],
     education: [`New York University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/lindon-richards-np-pmhnp-439720?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/lindon-richards-np-pmhnp-439720?isNewPatient=false',
     about: `A dedicated adult psychiatric and mental health nurse practitioner, Mr. Lindon Richards, is highly skilled in assisting physicians in treating and managing various mental health disorders. As part of his formal education, Mr. Richards graduated from New York University with a master’s degree in nursing.
 
     Patients from Brooklyn, NY, can consult Mr. Richards at Orenda Psychiatry for hyperactive disorders, anxiety, bipolar disorder, panic attacks, and post-traumatic stress disorder counseling.
@@ -1654,10 +1674,11 @@ const providersData = [
       `Grand Canyon University (Bachelor's)`,
       `Grand Canyon University (Associate's)`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/marcia-jarvis-dnp-ms-pmhnp-bc-359707?isNewPatient=false0',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/marcia-jarvis-dnp-ms-pmhnp-bc-359707?isNewPatient=false0',
     about: `Jarvis is passionate about caring for the mind, body, and spirit and combines all three elements of care with her clients. She believes the patient is an equal partner in the therapeutic alliance and works to empower them to take charge of their health care. NP Jarvis will provide psychiatric evaluation, supportive psychotherapy, medications, and medication education to assist herpatients in living the best version of themselves. Patients will feel cared for, listened to, and empowered.`,
     reviews: null
   },
@@ -1687,10 +1708,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`New York University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/lori-hume-pmhnp-bc-aprn-461573?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/lori-hume-pmhnp-bc-aprn-461573?isNewPatient=false',
     about: `Ms. Lori Hume is a dedicated adult psychiatric & mental health nurse practitioner, extending her expertise through virtual consultations at Orenda Psychiatry in Brooklyn, NY.
 
     Holding a master's degree in nursing from New York University, Ms. Hume specializes in various mental health concerns such as hyperactive disorder (ADD/ADHD), bipolar disorder, obsessive-compulsive disorder (OCD), and panic attacks.
@@ -1731,10 +1753,11 @@ const providersData = [
       `Regis College, Post-Master's Certificate in Psychiatric Nursing`,
       `South University, Savannah, Master's in Adult Gerontology Nursing`
     ],
-    boardCertification: ['ANCC'],
-    statesLicensed: ['New York', 'Georgia'],
+    boardCertifications: ['ANCC'],
+    statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/michael-hawthorne-pmhnp-bc-409839?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/michael-hawthorne-pmhnp-bc-409839?isNewPatient=false',
     about: `Michael is a psychiatric mental health practitioner with over 20 years of experience in medicine.His approach is one that utilizes medication management in conjunction with talk-therapy. In his treatment style he views himself more of a partner who considers the "whole person" rather than strictly a medical clinician.
 
     Michael's multifaceted approach allows for treatment that is aimed at relieving the symptom. His ultimate end goal is one of discovering your most rewarding life where you function at your fullest potential. He is a dedicated and compassionate practitioner who devotes his work to helping adults embrace and overcome life's challenges, which we all face, some are just better at hiding it than others.`,
@@ -1770,10 +1793,11 @@ const providersData = [
       `City University of New York, Hunter College, Master's in Nursing`,
       `State University of New York, Albany (Bachelor's)`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/melissa-docteur-aprn-pmhnp-bc-476147?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/melissa-docteur-aprn-pmhnp-bc-476147?isNewPatient=false',
     about: `Hello my name is Melissa Docteur and I am a board certified psychiatric mental health nurse practitioner. I received my masters from Hunter college, and I also have a bachelor’s degree from SUNY Albany where I double majored in human biology and communications. My approach is to provide therapeutic and holistic care with medication management when necessary. As a PMHNP my goal is to provide a welcoming and safe space for patients to freely express themselves so that effective treatment can be provided.
 
     Melissa Docteur frequently sees patients for Depression, New Patient Visit, Pain Management Consultation, Psychiatry Consultation, and Sleep Problems.`,
@@ -1804,10 +1828,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic', 'Strength-Based'],
     education: [`Chamberlain University, Doctor of Nursing Practice`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.orendapsych.com/https://www.zocdoc.com/wl/orendapsych/doctor/mary-asiedu-pmhnp-401171?isNewPatient=false',
+    bookingLink:
+      'https://www.orendapsych.com/https://www.zocdoc.com/wl/orendapsych/doctor/mary-asiedu-pmhnp-401171?isNewPatient=false',
     about: `Dr. Asiedu has a DNP and is board certified in psychiatry. She was trained at New York University and specializes in mental health across the lifespan. Her focus in treatment is to explore avenues to help overcome mental health impairments while striving to help each patient live their life to their fullest. Her approach is one that implements therapy in conjunction with medication management.
 
     While Dr. Asiedu is qualified to treat all mental health issues across the life span, she has developed a niche in treating adolescents, young adults, university students and caregivers. A key component to the care she provides is holistic intervention and life change. Medication management often is an integral part of my treatment approach as biological, psychological and social factors must all be taken into account.
@@ -1846,10 +1871,11 @@ const providersData = [
     education: [
       `Pace University, Master's in Psychiatric Mental Health Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 1 week',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/sevindzh-izrailova-pmhnp-bc-ms-432501?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/sevindzh-izrailova-pmhnp-bc-ms-432501?isNewPatient=false',
     about: `Ms. Sevindzh Izrailova is an adult psychiatric & mental health nurse practitioner at Orenda Psychiatry in New York, Brooklyn, and Smyrna, NY. She earned her master’s degree inpsychiatric mental health nursing from Pace University.
 
     Ms. Izrailova can diagnose and treat various mental health conditions, including hyperactivity disorders (ADD / ADHD), anxiety, panic attack, bipolar disorder, and post-traumatic stress disorder. She understands every patient’s unique situation and creates individualized treatment plans, including medications, psychotherapy, and other interventions.
@@ -1898,10 +1924,11 @@ const providersData = [
     education: [
       `Pace University, Master's in Psychiatric Mental Health Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: 'Available in 1 week',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/sharon-ostiguy-pmhnp-bc-ms-432499?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/sharon-ostiguy-pmhnp-bc-ms-432499?isNewPatient=false',
     about: `Ms. Sharon Ostiguy is a dedicated adult psychiatric and mental health nurse practitioner. She offers her services at Orenda Psychiatry, welcoming patients from all communities in the Brooklyn, New York, and Smyrna, NY, areas.
 
     As part of her formal education, Ms. Ostiguy attended Pace University, receiving her master's degree in psychiatric mental health nursing. She is passionate about her field and strives to keep herself updated on its latest advancements.
@@ -1949,10 +1976,11 @@ const providersData = [
       'Person-Centered'
     ],
     education: [`University of Alabama, Birmingham, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/shelley-padgett-pmhnp-bc-347932?isNewPatient=false',
     about: `Shelley Padgett is a warm and compassionate psychiatric provider. Her approach to treatment follows a holistic model that combines talk therapy and medication as needed. She enjoys getting to know her patients on a personal level. She creates a space that is safe and free of judgement. Shelley is down to earth and through empathy, she forms meaningful connections with her patients. Shelly has over 20 years of nursing experience. She is highly skilled in psychopharmacology. She specializes in the treatment of mood and anxiety disorders, bipolar disorder, PTSD, sleep disorders, and ADHD.`,
     reviews: [
       `“Shelly is probably the kindest psychiatrist I’ve ever talked with. Definitely will be following up.” -Cierra M.`,
@@ -1987,10 +2015,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: ['Pace University, Master’s in Nursing'],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/sheri-watson-pmhnp-bc-np-457314?isNewPatient=false',
     about: `Dedicated to enhancing mental well-being, Ms. Sheri Watson is a highly skilled adult psychiatric & mental health nurse practitioner in New York and Brooklyn, NY. She provides virtual consultations through Orenda Psychiatry.
 
 
@@ -2027,10 +2056,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: ['New York University, Master’s in Nursing'],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York', 'New Jersey'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/sitora-mirsoatova-aprn-461550?isNewPatient=false',
     about: `Ms. Sitora Mirsoatova is a caring, non-judgmental, and friendly adult psychiatric & mental health nurse practitioner. She helps patients facing mental health issues such as anxiety, hyperactivity disorder, bipolar disorder, post-traumatic stress disorder, and obsessive-compulsive disorder.
 
     Ms. Mirsoatova is based in Brooklyn, NY, and offers virtual consultations at Orenda Psychiatry. During consultations, she understands patient concerns and prepares appropriate treatment plans, combining medications, talk therapy, and other interventions. She also addresses caregiver queries and educates them on ways to care for the patient during recovery.
@@ -2067,10 +2097,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Interpersonal', 'Psychodynamic', 'Strength-Based'],
     education: ['New York University, Master’s in Nursing'],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/tahara-miah-pmhnp-bc-np-377975?LocIdent=222841&reason_visit=493&insuranceCarrier=-1&insurancePlan=-1&dr_specialty=405&isNewPatient=true',
     about: `I am a board certified and experienced adult psychiatric and mental health nurse practitioner currently practicing at Orenda Psychiatry. I specialize in helping patients with anxiety, obsessive-compulsive disorder, hyperactive disorders, and panic attacks. I open for consultations to patients in Smyrna and Brooklyn.
 
     I provide a holistic outlook in my practice. I believe that there should be a partnership between provider and patient and I strive to create a welcoming, compassionate, and open environment feel heard and understood. I am focused on helping my patients improve wellbeing and functioning by improving confidence and developing a patient centered strategy.`,
@@ -2109,10 +2140,11 @@ const providersData = [
     education: [
       `State University of New York, Binghamton, Master's in Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/trisha-joseph-pmhnp-bc-np-457284?isNewPatient=false',
     about: `Based out of New York and Brooklyn, NY, Ms. Trisha Joseph is an adult psychiatric and mental health nurse practitioner who provides virtual consultations at Orenda Psychiatry. She holds a master's degree in nursing from the State University of New York, Binghamton.
 
     Ms. Joseph specializes in addressing various mental health concerns, including anxiety, attention-deficit/hyperactivity disorder, panic attacks, obsessive-compulsive disorder, and post-traumatic stress disorder.
@@ -2150,10 +2182,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`State University of New York, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC', 'FNP'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/jessica-chichester-pmhnp-bc-np-457297?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/jessica-chichester-pmhnp-bc-np-457297?isNewPatient=false',
     about: `Being an experienced adult psychiatric and mental health nurse practitioner, Ms. Jessica Chichester delivers expert care through virtual consultations at Orenda Psychiatry in New York, NY.
 
     Ms. Chichester offers personalized support to patients with post-traumatic stress disorder (PTSD), hyperactive disorder (ADD / ADHD), and bipolar disorder. Holding a master's degree in nursing from the State University of New York, Ms. Chichester is committed to empowering individuals on their distinct mental health journeys. Her comprehensive approach ensures that her clients receive the tailored guidance they need to thrive.`,
@@ -2195,10 +2228,11 @@ const providersData = [
       `New Jersey City University (Bachelor's)`,
       `City University of New York, York College (Bachelor's)`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC', 'FNP, Clinical Laboratory Technologist'],
     statesLicensed: ['New York'],
     availability: 'Available in 1 week',
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/celeste-johnson-pmhnp-432498?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/celeste-johnson-pmhnp-432498?isNewPatient=false',
     about: `Celeste Johnson is a qualified adult psychiatric & mental health nurse practitioner who provides dedicated help to her patients by diagnosing and treating various mental health conditions, including hyperactivity disorder (ADD / ADHD), anxiety, panic attack, bipolar disorder, post-traumatic stress disorder (PTSD), and obsessive-compulsive disorder (OCD).
     
     Ms. Johnson currently practices at Orenda Psychiatry in Brooklyn, New York, and Smyrna, NY. She carefully understands every patient's condition during consultations and prepares individualized treatment plans. It often involves a combination of medications, talk therapy, and at-home care. She also tracks their progress during psychiatry follow-ups.
@@ -2238,10 +2272,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`Columbia University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/chelsea-chaffee-aprn-469149?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/chelsea-chaffee-aprn-469149?isNewPatient=false',
     about: `Chelsea Chaffee is a board-certified adult psychiatric & mental health nurse practitioner based in New York. She received her Doctorate in Nursing Practice from Columbia University and has experience in both in-patient and out-patient psychiatry. Her areas of focus include perinatal mental health, premenstrual dysphoric disorder, menopause, fertility challenges including fetal loss, anxiety, depression, life transitions, sleep disorders, spirituality, and more. She enjoys offering psychotherapy in addition to medication management.
 
     Chelsea believes in a holistic approach and collaborating with clients to develop a treatment plan that best meets their individual needs.
@@ -2282,10 +2317,11 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`Molloy University, Master's in Nursing`],
-    boardCertification: ['ANCC'],
-    statesLicensed: ['New York', 'Georgia'],
+    boardCertifications: ['ANCC', 'FNP'],
+    statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/daferti-afflick-pmhnp-bc-np-457286?isNewPatient=false',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/daferti-afflick-pmhnp-bc-np-457286?isNewPatient=false',
     about: `Based in Brooklyn, NY, Ms. Daferti Afflick is a dedicated adult psychiatric and mental health nurse practitioner offering virtual consultations at Orenda Psychiatry.
 
     With a master's degree in nursing from Molloy University, Ms. Afflick is skilled at managing various mental health concerns. She helps patients deal with issues like anxiety, bipolar disorder, panic attacks, and post-traumatic stress disorder. She also offers prescription refills 
@@ -2314,7 +2350,7 @@ const providersData = [
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`New York University, Master's in Nursing`],
-    boardCertification: null,
+    boardCertifications: null,
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -2358,10 +2394,11 @@ const providersData = [
     education: [
       'Hunter College, Certificate in Psychiatric Mental Health Nursing'
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/olga-kosichenko-pmhnp-bc-np-498551?isNewPatient=false',
     about: `As a mental health care provider, I bring compassion resilience, and personal experience to my practice. I believe in the healing power of connection, empathy, and both physical and emotional well-being. My own challenges have fueled my commitment to helping others navigate tough times. My goal is to provide support and guidance, offering a safe space for exploration and resilience-building. With a deep understanding of the human mind, I aim to empower individuals to lead fulfilling lives through therapy, medication management, and lifestyle interventions.
     `,
     reviews: [
@@ -2400,10 +2437,11 @@ const providersData = [
     education: [
       'Hunter College, Certificate in Psychiatric Mental Health Nursing'
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/mamadou-barry-pmhnp-500723?isNewPatient=false',
     about: `I am a psychiatric nurse practitioner with 5 years of experience in the field of mental health, including forensic psychiatry. I have experience working with a variety of psychiatric conditions and helping patients navigate their mental health journey. I’m passionate about providing compassionate care and support to those struggling with mental health issues. 
     I have witnessed first-hand the inadequacies in the system, from lack of resources and funding to stigma and discrimination against those struggling with mental illness. With a passion for helping individuals overcome their struggles and achieve optimal well-being, I bring a compassionate and empathetic approach to my practice. I am committed to staying current on the latest advancements in mental health treatment and I strive to create a safe and supportive environment for my patients. Trust me to provide you with the expert care and guidance you deserve on your journey to mental wellness.
     
@@ -2446,10 +2484,11 @@ const providersData = [
     education: [
       `D'Youville University, Master's in Psychiatric and Mental Health Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/jeremy-walsh-aprn-pmhnp-bc-482176?isNewPatient=false',
     about: `As an Outpatient Psychiatric Nurse Practitioner, I offer comprehensive care to individuals and families facing mental health challenges. With a Master's in Psychiatric Mental Health Nursing and over 14 years of nursing experience, including extensive work at the U.S. Department of Veterans Affairs, I'm committed to advancing mental health practice. I prioritize creating positive cognitive and behavioral changes for my clients and their families. My expertise includes ACLS, BLS, and PRI certifications, enabling me to deliver high-quality care across diverse settings.
     `,
     reviews: null
@@ -2483,10 +2522,11 @@ const providersData = [
     education: [
       `Pace University, Master's in Psychiatric and Mental Health Nursing`
     ],
-    boardCertification: null,
+    boardCertifications: null,
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/cheryl-kelly-np-495253?isNewPatient=false',
     about: `Ms. Cheryl Kelly is a psychiatric mental health nurse practitioner offering virtual consultations through Orenda Psychiatry in New York. She has over 20 years of nursing experience and specializes in treating anxiety, depression, ADHD, addiction, and PTSD. Cheryl believes in building therapeutic relationships based on kindness, compassion and respect. She is dedicated to offer psychiatric evaluations, medication management and psychotherapy in a safe and non-judgemental space to enhance mental well-being. Cheryl works in collaboration with the patient to tailor treatment plans to meet their unique needs and lifestyle to facilitate healing.
     `,
     reviews: [
@@ -2522,10 +2562,11 @@ const providersData = [
     education: [
       `Molloy University, Master's in Psychiatric and Mental Health Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/barbara-borgella-msn-pmhnp-bc-489992?isNewPatient=false',
     about: `Barbara Borgella is a board-certified psychiatric mental-health nurse practitioner who focuses on long-term patient recovery with the use of evidence-based clinical practice. Patients can expect Barbara to be a knowledgeable, well-rounded and culturally competent provider. Her experience includes treating patients with ADHD, anxiety, depression obsessive-compulsive (OCD), insomnia, trauma, PTSD and mood disorders.
     `,
     reviews: [
@@ -2561,7 +2602,7 @@ const providersData = [
     education: [
       `Pace University, Master's in Psychiatric and Mental Health Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
     bookingLink: 'https://booking.url',
@@ -2599,10 +2640,11 @@ const providersData = [
     education: [
       `Walden University, Certificate in Psychiatric and Mental Health Nursing`
     ],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/derrick-adusei-aprn-rn-490064?isNewPatient=false',
     about: `Derrick Adusei is a compassionate and dedicated mental health specialist with a profound understanding of the challenges faced by individuals dealing with mental health issues. With a passion for making a difference in people's lives, Derrick specializes in treating patients across the lifespan, from children to older adults.
 
     Through Derrick's unwavering commitment to compassionate care and clinical excellence, he has become a trusted ally for individuals seeking support and guidance in navigating their mental health challenges. Whether it's managing ADHD, anxiety, depression, trauma, or other mental health concerns. 
@@ -2615,33 +2657,48 @@ const providersData = [
     name: 'Miok Im',
     professionalTitle: 'Adult Psychiatric & Mental Health Nurse Practitioner',
     credentials: 'APRN | PMHNP-BC',
-    agesSeen: ['Teenagers', 'Young adults', 'Individuals', 'Adults'],
+    agesSeen: ['Teens', 'Adults', 'Seniors'],
     languagesSpoken: ['English'],
-    specialties: null,
+    specialties: [
+      'Depression',
+      'Bipolar Disorder (I and II)',
+      'Anxiety',
+      'Insomnia',
+      'Post Traumatic Stress Disorder (PTSD)'
+    ],
     focusAreas: [
       'Academic Stress',
       'Depression',
+      'Alcoholism',
       'Pre-College Fears',
       'Anorexia',
       'Medication Management',
       'Prescription / Refill',
       'Attention-Deficit / Hyperactivity Disorder (ADHD)',
-      'Panic Attack'
+      'Panic Attacks',
+      'Anxiety Disorders',
+      'Eating Disorders'
     ],
     treatmentApproaches: ['Psychodynamic'],
     education: [`State University of New York, Buffalo, Master's in Nursing`],
-    boardCertification: ['ANCC'],
+    boardCertifications: ['ANCC', 'FNP'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/maria-lourdes-bunque-aprn-rn-pmhnp-bc-491332',
     about: `Miok is a dual board-certified professional in both psychiatry and family practice, boasting an extensive career that spans both inpatient and outpatient care settings. With nearly two decades of experience in healthcare, she initially embarked on her journey as a registered nurse, and a decade ago, she successfully completed her family nurse practitioner program. For the past decade, Miok has been dedicated to serving in skilled nursing homes, where she collaborates with a team of professionals to conduct thorough psychiatric assessments, addressing conditions such as depression, anxiety, insomnia, PTSD, and bipolar I and II. Her expertise also encompasses a wealth of experience in pain management.
 
-    Throughout her career, Miok has encountered numerous situations where an acute understanding and recognition of a patient’s mental health proved to be paramount. It was in these critical care scenarios that her fervent dedication to mental health was ignited, driving her to pursue a Post-master’s degree in nursing at SUNY Buffalo, culminating in her attainment of the title of Psychiatric Mental Health Nurse Practitioner in 2023.
-
-    Miok's overarching objective is to provide personalized treatment, integrating evidence-based psychotherapy and medication management, tailored to individuals grappling with challenging mood symptoms, navigating life transitions, addressing relationship issues, and enhancing self-esteem, all while honing essential coping skills to effectively manage stress.
+    Miok's objective is to provide personalized treatment, integrating evidence-based psychotherapy and medication management, tailored to individuals grappling with challenging mood symptoms, navigating life transitions, addressing relationship issues, and enhancing self-esteem, all while honing essential coping skills to effectively manage stress.
     `,
-    reviews: null
-  },
+    reviews: [
+      `“She was very sweet, knowledgeable and great bedside manner. Asked me a lot of questions to appropriately give me a diagnose me and provide me with the correct course do treatment.” - Valentina H.`,
+      `“I recently had a virtual appointment with Miok, and it was a great experience. Despite the online format, she made me feel comfortable and understood. The video call was smooth, and she was very attentive and professional. She listened carefully to my concerns and provided clear and helpful advice. The treatment plan we discussed was easy to follow. I highly recommend Miok for psychiatric consultations.” - Jane L.`,
+      `“Miok was easy to talk to and very knowledgeable. She listened closely to to my answers and i feel that I can trust her. A very positive experience” - Michael H.`,
+      `“Im was great! All of my concerns were given time and I was able to finally get medication for my needs and I really trust her guidance.” - Savannah S.`,
+      `“Very nice provider. Recommended” - Robin S.`,
+      `“Great session !” - Kustrim H.`
+    ]
+  }
   // {
   //   image: providersImages.Amanda_Wareham,
   //   name: 'Amanda Wareham',
@@ -2677,11 +2734,12 @@ const providersData = [
   //   education: [
   //     `Pace University, Master's in Psychiatric and Mental Health Nursing`
   //   ],
-  //   boardCertification: ['ANCC'],
+  //   boardCertifications: ['ANCC'],
   //   statesLicensed: ['New York'],
   //   availability: null,
-  //   bookingLink: 'https://booking.url',
-  //   about: `Amanda is a skilled and compassionate psychiatric and mental health nurse practitioner. She offers virtual consultations to clients within New York State through Orenda Psychiatry. Amanda is skilled in the treatment of anxiety disorders, eating disorders, OCD, ADHD, PTSD, depression, and bipolar spectrum disorders. Her treatment plans include a combination of medication management and therapy to support your journey toward emotional well-being.`
+  //   bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/amanda-wareham-pmhnp-bc-np-507150?isNewPatient=false',
+  //   about: `Amanda is a skilled and compassionate psychiatric and mental health nurse practitioner. She offers virtual consultations to clients within New York State through Orenda Psychiatry. Amanda is skilled in the treatment of anxiety disorders, eating disorders, OCD, ADHD, PTSD, depression, and bipolar spectrum disorders. Her treatment plans include a combination of medication management and therapy to support your journey toward emotional well-being.`,
+  // reviews: null
   // },
   // {
   //   image: providersImages.Dionne_Joseph,
@@ -2712,11 +2770,12 @@ const providersData = [
   //   education: [
   //     `Molloy University, Master's in Psychiatric and Mental Health Nursing`
   //   ],
-  //   boardCertification: ['ANCC'],
+  //   boardCertifications: ['ANCC'],
   //   statesLicensed: ['New York'],
   //   availability: null,
-  //   bookingLink: 'https://booking.url',
-  //   about: `I practiced as a Family Nurse Practitioner for over a decade before choosing to continue my education and earn additional certification as a Psychiatric Nurse Practitioner in 2021. I feel psychiatry is interwoven into all aspects of health and has a great impact on the overall wellbeing of an individual. I thoroughly enjoy working together with my clients to help them meet their wellness goals. In the future I see myself continuing to work in mental health and learning more about integrative psychiatry and novel treatment options. During my free time I enjoy traveling and reading.`
+  //   bookingLink: 'https://www.zocdoc.com/doctor/dionne-joseph-aprn-rn-pmhnp-bc-490436',
+  //   about: `I practiced as a Family Nurse Practitioner for over a decade before choosing to continue my education and earn additional certification as a Psychiatric Nurse Practitioner in 2021. I feel psychiatry is interwoven into all aspects of health and has a great impact on the overall wellbeing of an individual. I thoroughly enjoy working together with my clients to help them meet their wellness goals. In the future I see myself continuing to work in mental health and learning more about integrative psychiatry and novel treatment options. During my free time I enjoy traveling and reading.`,
+  // reviews: null
   // },
   // {
   //   image: providersImages.Joan_Mahoney,
@@ -2752,13 +2811,14 @@ const providersData = [
   //   education: [
   //     `Donald and Barbara Zucker School of Medicine at Hofstra/Northwell, Master's in Adult Gerontology Acute Care Nursing`
   //   ],
-  //   boardCertification: ['ANCC'],
+  //   boardCertifications: ['ANCC'],
   //   statesLicensed: ['New York'],
   //   availability: null,
-  //   bookingLink: 'https://booking.url',
-  //   about: `Joan, a registered nurse since 1995, has dedicated 24 years of her career to the emergency department, serving both as a staff nurse and in leadership roles at Huntington Hospital. In May of 2020, she graduated from the Hofstra Northwell School of Graduate Nursing, specializing in Adult-Gerontology Acute Care Nurse Practitioner. Her journey continued at Northwell Health Long Island Jewish Medical Center where she contributed her expertise on a Behavioral Health Medical Floor. Pursuing further education, Joan underwent post-master's studies to attain dual board certification as both a Psychiatric Mental Health Nurse Practitioner and an Adult Gerontology Acute Care Nurse Practitioner. 
-    
-  //   Joan firmly believes in fostering trusting and collaborative relationships with her patients, empowering them to actively engage in their treatment journey. With a keen ear and compassionate approach, she listens attentively to their concerns and experiences, tailoring personalized treatment plans to address their unique needs and aspirations.`
+  //   bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/joan-mahoney-aprn-pmhnp-bc-504373?isNewPatient=false',
+  //   about: `Joan, a registered nurse since 1995, has dedicated 24 years of her career to the emergency department, serving both as a staff nurse and in leadership roles at Huntington Hospital. In May of 2020, she graduated from the Hofstra Northwell School of Graduate Nursing, specializing in Adult-Gerontology Acute Care Nurse Practitioner. Her journey continued at Northwell Health Long Island Jewish Medical Center where she contributed her expertise on a Behavioral Health Medical Floor. Pursuing further education, Joan underwent post-master's studies to attain dual board certification as both a Psychiatric Mental Health Nurse Practitioner and an Adult Gerontology Acute Care Nurse Practitioner.
+
+  //   Joan firmly believes in fostering trusting and collaborative relationships with her patients, empowering them to actively engage in their treatment journey. With a keen ear and compassionate approach, she listens attentively to their concerns and experiences, tailoring personalized treatment plans to address their unique needs and aspirations.`,
+  // reviews: null
   // },
   // {
   //   image: providersImages.Maria_Lourdes_Bunque,
@@ -2783,11 +2843,12 @@ const providersData = [
   //   education: [
   //     `State University of New York Buffalo, Master's in Psychiatric and Mental Health Nursing`
   //   ],
-  //   boardCertification: ['ANCC'],
+  //   boardCertifications: ['ANCC'],
   //   statesLicensed: ['New York'],
   //   availability: null,
-  //   bookingLink: 'https://booking.url',
-  //   about: `I'm an experienced Psychiatric Nurse Practitioner who aims to promote mental wellness for individuals and their families facing challenges. Please think of me as your mental health co-pilot navigating alongside you with compassion, evidence-based strategies, and a whole lot of care. I specialize in working with adolescents, adults, and geriatric populations, bringing a wealth of experience. I will partner with you to develop a personalized roadmap to optimal mental health. We'll work together to understand your unique needs and goals, and then build a customized treatment plan that gets you there. I'm a big believer in collaboration. We'll work hand-in-hand to develop your care. I am committed to staying current on the latest psychiatric research and treatment developments, so you can be sure we're using the latest tools for your journey.`
+  //   bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/maria-lourdes-bunque-aprn-rn-pmhnp-bc-491332',
+  //   about: `I'm an experienced Psychiatric Nurse Practitioner who aims to promote mental wellness for individuals and their families facing challenges. Please think of me as your mental health co-pilot navigating alongside you with compassion, evidence-based strategies, and a whole lot of care. I specialize in working with adolescents, adults, and geriatric populations, bringing a wealth of experience. I will partner with you to develop a personalized roadmap to optimal mental health. We'll work together to understand your unique needs and goals, and then build a customized treatment plan that gets you there. I'm a big believer in collaboration. We'll work hand-in-hand to develop your care. I am committed to staying current on the latest psychiatric research and treatment developments, so you can be sure we're using the latest tools for your journey.`,
+  // reviews: null
   // },
   // {
   //   image: providersImages.Moises_Liriano_Fernandez,
@@ -2818,11 +2879,12 @@ const providersData = [
   //     `Fairleigh Dickinson University, Master's in Psychiatric and Mental Health Nursing`,
   //     `New Jersey City University (Bachelor's)`
   //   ],
-  //   boardCertification: ['ANCC'],
+  //   boardCertifications: ['ANCC'],
   //   statesLicensed: ['New York'],
   //   availability: null,
-  //   bookingLink: 'https://booking.url',
-  //   about: `Moises, is a bilingual Board-Certified Psychiatric Nurse Practitioner who is fluent in Spanish. With over eight years of experience in mental health, he excels in medication management for various diagnoses such as Depression, PTSD, Anxiety, OCD,ADHD and sleep disorders. Moises obtained his Bachelor of Science in Nursing from New Jersey City University and his Master of Science in Nursing as a Psychiatric Mental Health Nurse Practitioner from Fairleigh Dickinson University. He is dedicated to providing quality psychiatric services through a telemedicine platform, ensuring convenient access to care from the comfort of your home or work.`
+  //   bookingLink: 'https://www.zocdoc.com/wl/orendapsych/doctor/moises-liriano-fernandez-aprn-rn-504735?isNewPatient=false',
+  //   about: `Moises, is a bilingual Board-Certified Psychiatric Nurse Practitioner who is fluent in Spanish. With over eight years of experience in mental health, he excels in medication management for various diagnoses such as Depression, PTSD, Anxiety, OCD,ADHD and sleep disorders. Moises obtained his Bachelor of Science in Nursing from New Jersey City University and his Master of Science in Nursing as a Psychiatric Mental Health Nurse Practitioner from Fairleigh Dickinson University. He is dedicated to providing quality psychiatric services through a telemedicine platform, ensuring convenient access to care from the comfort of your home or work.`,
+  //reviews: [`“Very nice appointment. Not stressful. On time. Very pleased”`]
   // }
 ];
 
