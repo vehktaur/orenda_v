@@ -30,12 +30,12 @@ import righteous from './righteous.png';
 import sylvia from './sylvia.png';
 import valerie from './valerie.png';
 import fretzie from './Fretzie.png';
-import ime from './Ime.png';
-import jessabeth from './Jessabeth.png';
+import ime from './ime.png';
+import jessabeth from './jessabeth.png';
 import jirah from './jirah.png';
-import liza from './Liza.png';
+import liza from './liza.png';
 import oly from './Oly.png';
-import phoebe from './Phoebe.png';
+import phoebe from './phoebe.png';
 import shaina from './shaina.png';
 
 const teamImages = {

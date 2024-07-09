@@ -168,6 +168,36 @@ const teamData = [
     image: teamImages.shaina,
     name: 'Shaina',
     position: 'Admin Member'
+  },
+  {
+    image: teamImages.liza,
+    name: 'Liza',
+    position: 'Admin Member'
+  },
+  {
+    image: teamImages.phoebe,
+    name: 'Phoebe',
+    position: 'Admin Member'
+  },
+  {
+    image: teamImages.jirah,
+    name: 'Jirah',
+    position: 'Admin Member'
+  },
+  {
+    image: teamImages.cj,
+    name: 'CJ',
+    position: 'Admin Member'
+  },
+  {
+    image: teamImages.fretzie,
+    name: 'Fretzie',
+    position: 'Admin Member'
+  },
+  {
+    image: teamImages.jessabeth,
+    name: 'Jessabeth',
+    position: 'Admin Member'
   }
 ];
 

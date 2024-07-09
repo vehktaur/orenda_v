@@ -8,10 +8,10 @@ const TeamMemberCard = ({ member }) => {
           alt={member.name}
         />
       </div>
-      <h3 className="font-semibold ~text-sm/lg font-open-sans mt-3 text-center md:text-justify">
+      <h3 className="font-semibold ~text-sm/lg font-open-sans mt-3 text-center md:text-justify sm:~ps-2/3">
         {member.name}
       </h3>
-      <div className="flex gap-2 items-center text-center">
+      <div className="flex gap-2 items-center text-center sm:~ps-2/3">
         <span className="size-2 hidden md:block">
           <svg
             width="8"

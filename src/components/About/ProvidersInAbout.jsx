@@ -138,6 +138,7 @@ const ProvidersInAbout = () => {
                   onLoad={() => {
                     animateOpacity(i);
                   }}
+                  onError={() => alert(`Didn't load`)}
                 />
               </div>
             ))}
