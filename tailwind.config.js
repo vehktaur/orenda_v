@@ -13,7 +13,8 @@ export default {
           "url('/src/assets/footer_bg_tl.png'),url('/src/assets/footer_bg_br.png'),url('/src/assets/footer_bg_r.png')",
         'md-footer':
           "url('/src/assets/md_footer_bg_bl.png'),url('/src/assets/md_footer_bg_tr.png'),url('/src/assets/md_footer_bg_r.png')",
-        arrow: 'url(/src/assets/select.svg)'
+        arrow: 'url(/src/assets/select.svg)',
+        logo: 'url(/src/assets/logo-circle.png)'
       },
       backgroundPosition: {
         'footer-positions': 'top left, bottom right, bottom right',

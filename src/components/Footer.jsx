@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center mt-10 font-normal ~text-sm/base">
-        <small>Copyright @ 2023 Orendapsych.com</small>
+        <small>Copyright @ 2024 Orendapsych.com</small>
       </div>
     </footer>
   );

@@ -47,7 +47,7 @@ const ContactUsPage = () => {
                   Providing Mental Healthcare with Convenience
                 </h2>
                 <p className="~leading-6/8 max-w-[32.13rem] mx-auto md:mx-0 text-center md:text-justify">
-                  We have a team of over 25 Customer support specialists and
+                  We have a team of over 30 Customer support specialists and
                   registered nurses, contact them over your preferred choice of
                   communication
                 </p>

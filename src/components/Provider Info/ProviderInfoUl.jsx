@@ -1,6 +1,7 @@
 const ProviderInfoUl = ({ h2, listArray, classes }) => {
-
-  const effectiveListArray = listArray || ['Nil'];
+  const effectiveListArray = listArray || [
+    h2 === 'Treatment Approaches' ? 'Psychodynamic' : 'Nil'
+  ];
 
   return (
     <div>

@@ -77,7 +77,7 @@ const ProviderInfo = () => {
                   </div>
                 )}
                 <img
-                  className="mx-auto ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto ~/md:~max-w-[80%]/[22rem] block"
+                  className={`mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block`}
                   src={provider?.image}
                   alt={provider?.name}
                 />
@@ -144,7 +144,7 @@ const ProviderInfo = () => {
                     {showStatesLicensed(provider?.statesLicensed)}
                   </p>
                 </div>
-                <div className="hidden space-y-4 sm:block sm:~px-2/4 sm:~py-3/6">
+                <div className="hidden ~space-y-6/10 sm:block sm:~px-2/4 sm:~py-3/6">
                   <ProviderInfoUl
                     h2="Education"
                     listArray={provider?.education}
@@ -183,7 +183,7 @@ const ProviderInfo = () => {
                   />
                 </div>
               </div>
-              <div className="sm:hidden space-y-4">
+              <div className="sm:hidden ~space-y-4/8">
                 <ProviderInfoUl
                   h2="Education & Background"
                   listArray={provider?.education}

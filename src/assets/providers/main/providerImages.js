@@ -61,6 +61,11 @@ import Trisha_Mayorga from './Trisha Mayorga.png';
 import Vanessa_Hernandez from './Vanessa Hernandez.png';
 import Victoria_Lanzara from './Victoria Lanzara.png';
 import William_Da_Silva from './William Da Silva.png';
+import Amanda_Wareham from './Amanda Wareham.png';
+import Dionne_Joseph from './Dionne Joseph.png';
+import Joan_Mahoney from './Joan Mahoney.png';
+import Maria_Lourdes_Bunque from './Maria Lourdes Bunque.png';
+import Moises_Liriano_Fernandez from './Moises Liriano Fernandez.png';
 
 const providersImages = {
   Anne_Mongiello,
@@ -125,7 +130,12 @@ const providersImages = {
   Trisha_Mayorga,
   Vanessa_Hernandez,
   Victoria_Lanzara,
-  William_Da_Silva
+  William_Da_Silva,
+  Amanda_Wareham,
+  Dionne_Joseph,
+  Joan_Mahoney,
+  Maria_Lourdes_Bunque,
+  Moises_Liriano_Fernandez
 };
 
 export default providersImages;

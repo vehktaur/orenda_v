@@ -38,8 +38,8 @@ const FormSteps = ({ register, watch, errors }) => {
 
   if (pageNumber === 1) {
     const pageOneFields = [
-      { label: 'Your Name', type: 'text', id: 'yourName' },
-      { label: 'Second Name', type: 'text', id: 'secondName' },
+      { label: 'Legal First Name', type: 'text', id: 'firstName' },
+      { label: 'Legal Last Name', type: 'text', id: 'lastName' },
       { label: 'Date of Birth', type: 'date', id: 'DOB' }
     ];
     return (
