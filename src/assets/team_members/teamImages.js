@@ -1,7 +1,7 @@
 import angel from './angel.png';
 import carlos from './carlos.png';
 import cess from './cess.png';
-import cj from './cj.png';
+import cj from './CJ.png';
 import darianny from './darianny.png';
 import ella from './ella.png';
 import emmeline from './emmeline.png';
@@ -29,6 +29,14 @@ import rhei from './rhei.png';
 import righteous from './righteous.png';
 import sylvia from './sylvia.png';
 import valerie from './valerie.png';
+import fretzie from './Fretzie.png';
+import ime from './Ime.png';
+import jessabeth from './Jessabeth.png';
+import jirah from './jirah.png';
+import liza from './Liza.png';
+import oly from './Oly.png';
+import phoebe from './Phoebe.png';
+import shaina1 from './Shaina 1.png';
 
 const teamImages = {
   angel,
@@ -61,7 +69,15 @@ const teamImages = {
   rhei,
   righteous,
   sylvia,
-  valerie
+  valerie,
+  fretzie,
+  ime,
+  jessabeth,
+  jirah,
+  liza,
+  oly,
+  phoebe,
+  shaina1
 };
 
 export default teamImages;

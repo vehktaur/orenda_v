@@ -21,6 +21,7 @@ const ProvidersInAbout = () => {
 
   const shuffledIndicesRef = useRef([]);
   const currentIndexRef = useRef(0);
+  const intervalRef = useRef(null);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -31,7 +32,10 @@ const ProvidersInAbout = () => {
 
   const getNextIndex = () => {
     if (currentIndexRef.current >= shuffledIndicesRef.current.length) {
-      shuffledIndicesRef.current = Array.from({ length: numImages }, (_, i) => i);
+      shuffledIndicesRef.current = Array.from(
+        { length: numImages },
+        (_, i) => i
+      );
       shuffleArray(shuffledIndicesRef.current);
       currentIndexRef.current = 0;
     }
@@ -59,24 +63,52 @@ const ProvidersInAbout = () => {
     }
   });
 
-  useEffect(() => {
-    const imageShuffle = () => {
-      const randomIndex = getNextIndex();
-      let newIndex = Math.floor(Math.random() * providersData.length);
-      setIndices((prevIndices) => {
-        if (providersData.length >= numImages) {
-          while (prevIndices.includes(newIndex)) {
-            newIndex = (newIndex + 1) % providersData.length;
-          }
+  const imageShuffle = () => {
+    const randomIndex = getNextIndex();
+    let newIndex = Math.floor(Math.random() * providersData.length);
+    setIndices((prevIndices) => {
+      if (providersData.length >= numImages) {
+        while (prevIndices.includes(newIndex)) {
+          newIndex = (newIndex + 1) % providersData.length;
         }
-        const newIndices = [...prevIndices];
-        newIndices[randomIndex] = newIndex;
-        return newIndices;
-      });
-    };
-    const interval = setInterval(imageShuffle, 3000);
+      }
+      const newIndices = [...prevIndices];
+      newIndices[randomIndex] = newIndex;
+      return newIndices;
+    });
+  };
 
-    return () => clearInterval(interval);
+  const startInterval = () => {
+    if (!intervalRef.current) {
+      intervalRef.current = setInterval(imageShuffle, 3000);
+    }
+  };
+
+  const clearIntervalFunc = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  const handleOnlineStatus = () => {
+    if (navigator.onLine) {
+      startInterval();
+    } else {
+      clearIntervalFunc();
+    }
+  };
+
+  useEffect(() => {
+    handleOnlineStatus();
+    window.addEventListener('online', handleOnlineStatus);
+    window.addEventListener('offline', handleOnlineStatus);
+
+    return () => {
+      clearIntervalFunc();
+      window.removeEventListener('online', handleOnlineStatus);
+      window.removeEventListener('offline', handleOnlineStatus);
+    };
   }, [providersData.length]);
 
   return (

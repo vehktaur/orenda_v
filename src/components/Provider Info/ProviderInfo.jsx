@@ -59,8 +59,8 @@ const ProviderInfo = () => {
           return `${category}${divider}`;
         }
       });
-    }else {
-      return 'Nil'
+    } else {
+      return 'Nil';
     }
   };
 
@@ -208,7 +208,14 @@ const ProviderInfo = () => {
                 <h2 className="font-bold ~text-sm/xl ~mb-2/4 md:text-center">
                   Reviews from Clients
                 </h2>
-                <Swiper spaceBetween={50} autoHeight={true}>
+                <Swiper
+                  spaceBetween={50}
+                  breakpoints={{
+                    768: {
+                      autoHeight: true
+                    }
+                  }}
+                >
                   {provider?.reviews.map((review) => (
                     <SwiperSlide className="swiper-no-swiping">
                       <div>

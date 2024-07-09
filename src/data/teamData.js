@@ -155,17 +155,17 @@ const teamData = [
     position: 'Admin Member'
   },
   {
-    image: teamImages.angel,
+    image: teamImages.ime,
     name: 'Ime',
     position: 'Admin Member'
   },
   {
-    image: teamImages.angel,
+    image: teamImages.oly,
     name: 'Oly',
     position: 'Admin Member'
   },
   {
-    image: teamImages.angel,
+    image: teamImages.shaina1,
     name: 'Shaina',
     position: 'Admin Member'
   }
