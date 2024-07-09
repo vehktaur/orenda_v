@@ -34,7 +34,7 @@ import ime from './ime.png';
 import jessabeth from './jessabeth.png';
 import jirah from './jirah.png';
 import liza from './liza.png';
-import oly from './Oly.png';
+import oly from './oly.png';
 import phoebe from './phoebe.png';
 import shaina from './shaina.png';
 
