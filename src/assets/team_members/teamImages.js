@@ -29,7 +29,7 @@ import rhei from './rhei.png';
 import righteous from './righteous.png';
 import sylvia from './sylvia.png';
 import valerie from './valerie.png';
-import fretzie from './Fretzie.png';
+import fretzie from './fretzie.png';
 import ime from './ime.png';
 import jessabeth from './jessabeth.png';
 import jirah from './jirah.png';
