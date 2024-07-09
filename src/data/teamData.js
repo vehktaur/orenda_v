@@ -165,7 +165,7 @@ const teamData = [
     position: 'Admin Member'
   },
   {
-    image: teamImages.shaina1,
+    image: teamImages.shaina,
     name: 'Shaina',
     position: 'Admin Member'
   }

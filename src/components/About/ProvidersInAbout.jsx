@@ -85,7 +85,7 @@ const ProvidersInAbout = () => {
   };
 
   const clearIntervalFunc = () => {
-    if (intervalRef.current) {
+    if (!intervalRef.current && navigator.onLine) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
