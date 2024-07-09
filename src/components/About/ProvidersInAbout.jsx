@@ -66,16 +66,17 @@ const ProvidersInAbout = () => {
   const imageShuffle = () => {
     const randomIndex = getNextIndex();
     let newIndex = Math.floor(Math.random() * providersData.length);
-    setIndices((prevIndices) => {
-      if (providersData.length >= numImages) {
-        while (prevIndices.includes(newIndex)) {
-          newIndex = (newIndex + 1) % providersData.length;
+    if (navigator.onLine)
+      setIndices((prevIndices) => {
+        if (providersData.length >= numImages) {
+          while (prevIndices.includes(newIndex)) {
+            newIndex = (newIndex + 1) % providersData.length;
+          }
         }
-      }
-      const newIndices = [...prevIndices];
-      newIndices[randomIndex] = newIndex;
-      return newIndices;
-    });
+        const newIndices = [...prevIndices];
+        newIndices[randomIndex] = newIndex;
+        return newIndices;
+      });
   };
 
   const startInterval = () => {
@@ -138,7 +139,9 @@ const ProvidersInAbout = () => {
                   onLoad={() => {
                     animateOpacity(i);
                   }}
-                  onError={() => console.log(`Provider image ${index} Didn't load`)}
+                  onError={() =>
+                    console.log(`Provider image ${index} Didn't load`)
+                  }
                 />
               </div>
             ))}

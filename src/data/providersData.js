@@ -703,7 +703,7 @@ const providersData = [
     treatmentApproaches: ['Psychodynamic', 'Person-Centered', 'Strenght-Based'],
     education: [`New York University, Master's in Nursing`],
     boardCertifications: ['ANCC'],
-    statesLicensed: ['New York', 'Connecticut'],
+    statesLicensed: ['New York'],
     availability: 'Available Today',
     bookingLink:
       'https://www.zocdoc.com/wl/orendapsych/doctor/kelli-hamilton-pmhnp-bc-msn-353614?isNewPatient=false',
@@ -2605,14 +2605,19 @@ const providersData = [
     boardCertifications: ['ANCC'],
     statesLicensed: ['New York'],
     availability: null,
-    bookingLink: 'https://booking.url',
+    bookingLink:
+      'https://www.zocdoc.com/wl/orendapsych/doctor/nicole-raczy-aprn-rn-pmhnp-bc-491337?isNewPatient=false',
     about: `Ms. Nicole Raczy is a nurse practitioner specializing in psychiatry who offers virtual care through Orenda Psychiatry. She obtained her master’s degree in psychiatric and mental health nursing from Pace University. 
     
     Ms. Raczy provides personalized and evidence-based psychiatric care to individuals seeking support on their mental health journey. She aims to empower her clients to overcome challenges gain insights, and achieve personal growth.
     
     Ms. Raczy fosters a supportive and inclusive environment where clients feel heard, respected, and valued. She believes in collaborative decision-making and works closely with her patients to help them attain their goals.
     `,
-    reviews: null
+    reviews: [
+      `“Absolutely amazing and helped me during a really hard time” - Amanda Z.`,
+      `“Great, very understanding of my situation and helped me” - Valerie W.`,
+      `“Great experience. I felt listened and validated.” - Jasmine R.`
+    ]
   },
   {
     image: providersImages.Derrick_Adusei,
@@ -2685,7 +2690,7 @@ const providersData = [
     statesLicensed: ['New York'],
     availability: null,
     bookingLink:
-      'https://www.zocdoc.com/wl/orendapsych/doctor/maria-lourdes-bunque-aprn-rn-pmhnp-bc-491332',
+      'https://www.zocdoc.com/wl/orendapsych/doctor/miok-im-aprn-pmhnp-bc-482180?isNewPatient=false',
     about: `Miok is a dual board-certified professional in both psychiatry and family practice, boasting an extensive career that spans both inpatient and outpatient care settings. With nearly two decades of experience in healthcare, she initially embarked on her journey as a registered nurse, and a decade ago, she successfully completed her family nurse practitioner program. For the past decade, Miok has been dedicated to serving in skilled nursing homes, where she collaborates with a team of professionals to conduct thorough psychiatric assessments, addressing conditions such as depression, anxiety, insomnia, PTSD, and bipolar I and II. Her expertise also encompasses a wealth of experience in pain management.
 
     Miok's objective is to provide personalized treatment, integrating evidence-based psychotherapy and medication management, tailored to individuals grappling with challenging mood symptoms, navigating life transitions, addressing relationship issues, and enhancing self-esteem, all while honing essential coping skills to effectively manage stress.
