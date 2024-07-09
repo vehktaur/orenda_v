@@ -23,7 +23,7 @@ const Header = () => {
       {
         x: '110vw'
       },
-      { x: 0, duration: 0.5, stagger: 0.14 }
+      { x: 0, duration: 1, stagger: 0.1, ease: "power1.inOut", }
     );
   });
 

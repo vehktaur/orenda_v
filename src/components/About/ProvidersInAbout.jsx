@@ -52,7 +52,7 @@ const ProvidersInAbout = () => {
       gsap.fromTo(
         element,
         {
-          opacity: 0
+          opacity: 0.3
         },
         {
           opacity: 1,

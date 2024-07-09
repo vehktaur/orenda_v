@@ -167,7 +167,7 @@ const ProviderInfo = () => {
 
               <HR />
 
-              <div className="sm:border-l space-y-4 sm:space-y-0 mb-4 sm:mb-0 sm:border-[#EFEBDF] sm:basis-1/2">
+              <div className="sm:border-l space-y-6 sm:space-y-0 mb-6 sm:mb-0 sm:border-[#EFEBDF] sm:basis-1/2">
                 <div className="sm:border-b  sm:border-[#EFEBDF] sm:~px-4/8 sm:~py-5/10">
                   <ProviderInfoUl
                     h2="Specialties"
@@ -183,14 +183,14 @@ const ProviderInfo = () => {
                   />
                 </div>
               </div>
-              <div className="sm:hidden ~space-y-4/8">
+              <div className="sm:hidden ~space-y-6/8">
                 <ProviderInfoUl
-                  h2="Education & Background"
+                  h2="Education"
                   listArray={provider?.education}
                   classes={{ mb: 1.31 }}
                 />
                 <ProviderInfoUl
-                  h2="Board Certification"
+                  h2="Board Certifications"
                   listArray={provider?.boardCertifications}
                   classes={{ mb: 1.06 }}
                 />

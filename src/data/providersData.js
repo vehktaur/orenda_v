@@ -1,4 +1,4 @@
-import providersImages from '../assets/providers/main/providerImages';
+import providersImages from '../assets/providers/providerImages';
 
 const providersData = [
   {
