@@ -2,6 +2,7 @@ import providersData from '../../data/providersData';
 import { useState, useRef, createRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import imgUnavailable from '../../assets/unavailable-image-icon.png';
 
 gsap.registerPlugin(useGSAP);
 
@@ -141,9 +142,11 @@ const ProvidersInAbout = () => {
                     onLoad={() => {
                       animateOpacity(i);
                     }}
-                    onError={() =>
-                      console.log(`${provider.name} image Didn't load`)
-                    }
+                    onError={(event) => {
+                      event.target.src = imgUnavailable;
+                      event.onerror = null;
+                      console.log(`${provider.name} image Didn't load`);
+                    }}
                   />
                 </div>
               );

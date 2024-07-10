@@ -2,6 +2,7 @@ import teamData from '../../data/teamData';
 import { useState, useRef, createRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import imgUnavailable from '../../assets/unavailable-image-icon.png';
 
 gsap.registerPlugin(useGSAP);
 
@@ -132,9 +133,11 @@ const TeamInAbout = () => {
                   onLoad={() => {
                     animateOpacity(i);
                   }}
-                  onError={() =>
-                    console.log(`Provider image ${index} Didn't load`)
-                  }
+                  onError={(event) => {
+                    event.target.src = imgUnavailable;
+                    event.onerror = null;
+                    console.log(`${member.name} image didn't load`);
+                  }}
                 />
               </div>
             );
