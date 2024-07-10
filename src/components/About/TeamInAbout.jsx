@@ -121,14 +121,14 @@ const TeamInAbout = () => {
             const member = teamData[index];
             return (
               <div
-                key={member.name}
+                key={i}
                 className="rounded-lg overflow-hidden ~xs/xl:~size-[4rem]/[5.625rem] bg-[#F1F1F1]"
               >
                 <img
                   ref={itemsRef.current[i]}
                   className="w-full h-full object-cover"
                   src={member.image}
-                  alt={`Team member ${index}`}
+                  alt={member.name}
                   onLoad={() => {
                     animateOpacity(i);
                   }}
