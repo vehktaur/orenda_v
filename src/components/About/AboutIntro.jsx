@@ -15,6 +15,8 @@ const AboutIntro = () => {
             className="w-full"
             src={about_skyscraper}
             placeholderSrc={about_skyscraper_small}
+            width={100}
+            height={100}
             wrapperProps={{
               style: {transitionDelay: "0.1s"},
           }}
