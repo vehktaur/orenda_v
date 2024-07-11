@@ -14,15 +14,15 @@ const Mission = () => {
               className="w-full object-cover max-w-[32.25rem] mx-auto sm:mx-0"
               src={streets_mission}
               placeholderSrc={streets_mission_small}
-              width={1032}
-              height={687}
+              width={100}
+              height={100}
               wrapperProps={{
                 style: { transitionDelay: '0.1s' }
               }}
               alt="Our Mission Img"
             />
           </div>
-          <div className=' flex-shrink-[1.1]'>
+          <div className=" flex-shrink-[1.1]">
             <h2 className="heading mb-4 sm:text-justify hidden sm:block">
               Our Mission
             </h2>
