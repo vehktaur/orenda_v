@@ -25,7 +25,12 @@ const Newsletter = () => {
     <div className="~py-10/14 px-5 mb-8">
       <div className="max-w-7xl mx-auto bg-[#f5f5f5] flex flex-col sm:flex-row ~px-5/28 pb-14 pt-8 items-center gap-6 sm:gap-10">
         <div className="sm:order-last flex-shrink-0">
-          <img className="~size-[8.1875rem]/[25.525rem]" src={newsletter}></img>
+          <img
+            className="~size-[8.1875rem]/[25.525rem]"
+            width={100}
+            height={100}
+            src={newsletter}
+          ></img>
         </div>
         <div className="text-center sm:text-justify">
           <h2 className="heading sm:py-1 mb-3 ~text-xl/[2.625rem] sm:text-left">

@@ -4,6 +4,8 @@ const TeamMemberCard = ({ member }) => {
       <div className="~h-[6.875rem]/[15.625rem] w-full bg-[#f1f1f1] rounded-2xl overflow-hidden ~pt-2/4">
         <img
           className="size-full object-contain"
+          width={100}
+          height={100}
           src={member.image}
           alt={member.name}
         />

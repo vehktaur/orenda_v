@@ -88,6 +88,8 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
           className="size-[90%] block object-contain"
           src={provider?.image}
           alt={provider?.name}
+          width={100}
+          height={100}
           loading="lazy"
         />
       </div>
