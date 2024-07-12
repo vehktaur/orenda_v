@@ -128,6 +128,8 @@ const TeamInAbout = () => {
                 <img
                   ref={itemsRef.current[i]}
                   className="w-full h-full object-cover"
+                  width={64}
+                  height={64}
                   src={member.image}
                   alt={member.name}
                   onLoad={() => {

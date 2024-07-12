@@ -136,6 +136,8 @@ const ProvidersInAbout = () => {
                 >
                   <img
                     ref={itemsRef.current[i]}
+                    width={64}
+                    height={64}
                     src={provider.image}
                     alt={provider.name}
                     className={`size-full object-contain`}

@@ -9,13 +9,13 @@ const AboutIntro = () => {
         <h1 className="md:max-w-[35.875rem] heading ~mb-5/7 md:hidden">
           Medication Management and Therapy at Your Convenience
         </h1>
-        <div className="mx-auto max-w-[30rem] md:max-w-[43.125rem] md:order-last flex-shrink-[1.1]">
+        <div className="mx-auto max-w-[30rem] md:max-w-[40rem] md:content-center md:order-last flex-shrink-[1.1]">
           <LazyLoadImage
             effect="blur"
             className="w-full"
             src={about_skyscraper}
             placeholderSrc={about_skyscraper_small}
-            width={100}
+            width={120}
             height={100}
             wrapperProps={{
               style: {transitionDelay: "0.1s"},
