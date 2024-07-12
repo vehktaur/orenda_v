@@ -21,7 +21,7 @@ const Footer = () => {
               80 Fifth Avenue office #903 - 10, New York, NY 10011.
             </address>
           </div>
-          <div>
+          <div className='forLabel:min-w-[10.75rem]'>
             <h2 className="footer__heading">Contact</h2>
             <div>
               <p className="mb-1.5">
