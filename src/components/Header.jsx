@@ -23,7 +23,7 @@ const Header = () => {
       {
         x: '110vw'
       },
-      { x: 0, duration: 0.6, stagger: 0.1, ease: "power1.inOut", }
+      { x: 0, duration: 0.6, stagger: 0.1, ease: 'power1.inOut' }
     );
   });
 
@@ -48,26 +48,35 @@ const Header = () => {
         ></div>
       )}
       <header className="p-5 text-center ~text-sm/[1.1rem] font-dm-sans sticky bg-white top-0 z-10">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="max-w-[90rem] mx-auto flex justify-between items-center">
           <Logo />
-          <div className=" hidden lg:block">
+          <div className=" hidden xl:block">
             <nav>
-              <ul className="flex items-center justify-between ~lg/xl:~gap-6/12 transition duration-1000">
+              <ul className="flex items-center justify-between ~xl/2xl:~gap-6/12 transition duration-1000">
                 {[
                   ['Home', '/'],
-                  ['Our Team', '/our-team'],
+                  ['Meet Our Team', '/our-team'],
                   ['Insurance', '/insurance'],
                   ['About', '/about'],
                   ['Blog', '/'],
                   ['Privacy Policy', '/privacy-policy'],
-                  ['Contact Us', '/contact-us']
+                  ['Contact Us', '/contact-us'],
+                  ['Join Our Team', '/']
                 ].map(([title, url]) => (
                   <li key={title}>
                     <NavLink
                       className={({ isActive }) =>
                         isActive
-                          ? 'text-orenda-purple font-bold'
-                          : 'hover:text-orenda-purple hover:font-bold'
+                          ? `font-bold ${
+                              title === 'Join Our Team'
+                                ? 'text-green-600'
+                                : 'text-orenda-purple '
+                            }`
+                          : `hover:font-bold ${
+                              title === 'Join Our Team'
+                                ? 'text-green-800 font-medium'
+                                : 'hover:text-orenda-purple '
+                            }`
                       }
                       to={url}
                     >
@@ -78,16 +87,17 @@ const Header = () => {
               </ul>
             </nav>
           </div>
-          <Link
-            to="/our-team"
-            className="text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors px-4 py-2 border border-orenda-purple rounded-3xl font-semibold hidden lg:block"
+          <a
+            target="_blank"
+            href="https://www.zocdoc.com/wl/orendapsych/search?address=10016&after_5pm=false&before_10am=false&day_filter=AnyDay&dr_specialty=405&filters=%7B%7D&gender=-1&insurance_carrier=-1&insurance_plan=-1&language=-1&offset=0&parentSearchRequestId=5ad6e11b-e197-4dc6-8576-3101647da281&ppsSelectionId=f697582c-2de0-4006-ab39-53b075bb2ef4&reason_visit=493&searchOriginator=SearchBar&searchQueryGuid=8d62bd4a-fe91-43fa-bbec-391fc97eecdb&searchType=specialty&search_query=Adult+Psychiatric+%26+Mental+Health+Nurse+Practitioner&sees_children=false&sort_type=Default&visitType=inPersonAndVirtualVisits"
+            className="text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors px-4 py-2 border border-orenda-purple rounded-3xl font-semibold hidden xl:block"
           >
             Book Now
-          </Link>
-          <div className="~xs/lg:~size-6/8 relative lg:hidden">
+          </a>
+          <div className="~xs/xl:~size-6/8 relative xl:hidden">
             <button
               onClick={() => displayMenu()}
-              className="absolute inset-0 grid items-center lg:hidden z-[5]"
+              className="absolute inset-0 grid items-center xl:hidden z-[5]"
             >
               <span
                 className={`w-full block h-1 rounded-full transition-all duration-1000 ${
@@ -113,7 +123,7 @@ const Header = () => {
           </div>
           <div
             ref={(el) => (navMenuLayer = el)}
-            className="fixed right-0 w-[75%] max-w-[25rem] bg-purple-300 top-0 bottom-0 lg:hidden rounded-s-sm z-[3]"
+            className="fixed right-0 w-[75%] max-w-[25rem] bg-purple-300 top-0 bottom-0 xl:hidden rounded-s-sm z-[3]"
           >
             <div
               ref={(el) => (navMenu = el)}
@@ -123,7 +133,7 @@ const Header = () => {
                 <ul className="grid gap-1 justify-items-start">
                   {[
                     ['Home', '/', 'fa-solid fa-house'],
-                    ['Our Team', '/our-team', 'fa-solid fa-people-group'],
+                    ['Meet Our Team', '/our-team', 'fa-solid fa-people-group'],
                     ['Insurance', '/insurance', 'fa-solid fa-hands-bound'],
                     ['About', '/about', 'fa-solid fa-address-card'],
                     ['Blog', '/', 'fa-solid fa-blog'],
@@ -132,7 +142,8 @@ const Header = () => {
                       '/privacy-policy',
                       'fa-solid fa-file-shield'
                     ],
-                    ['Contact Us', '/contact-us', 'fa-solid fa-comment-dots']
+                    ['Contact Us', '/contact-us', 'fa-solid fa-comment-dots'],
+                    ['Join Our Team', '/', 'fa-solid fa-people-group']
                   ].map(([title, url, icon]) => (
                     <li
                       onClick={() => displayMenu()}
@@ -142,8 +153,8 @@ const Header = () => {
                       <NavLink
                         className={({ isActive }) =>
                           isActive
-                            ? 'block ~px-5/12 ~py-2/3 w-full ~text-base/lg bg-[#eee] text-[#333] font-medium transition-colors duration-300'
-                            : 'block ~px-5/12 ~py-2/3 w-full ~text-base/lg text-white hover:bg-[#eee] hover:text-[#333] font-medium transition-colors duration-300'
+                            ? 'block ~px-5/12 ~py-2/3 w-full ~text-base/xl bg-[#eee] text-[#333] font-medium transition-colors duration-300'
+                            : 'block ~px-5/12 ~py-2/3 w-full ~text-base/xl text-white hover:bg-[#eee] hover:text-[#333] font-medium transition-colors duration-300'
                         }
                         to={url}
                       >

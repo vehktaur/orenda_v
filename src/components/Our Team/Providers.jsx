@@ -35,7 +35,7 @@ const Providers = ({ itemsPerPage, numberOfColumns }) => {
   return (
     <>
       <div
-        className={`max-w-7xl mx-auto ~mt-12/[4.94rem] px-5 relative ${
+        className={`max-w-7xl mx-auto mt-12 px-5 relative ${
           numberOfColumns === 5 ? 'hidden md:block' : ''
         }`}
       >

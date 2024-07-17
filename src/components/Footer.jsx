@@ -11,40 +11,53 @@ const Footer = () => {
           <div className="min-w-fit">
             <h2 className="footer__heading">Hours</h2>
             <div className="grid gap-2">
-              <p>Mon - Fri: 8am - 7pm</p>
-              <p>Sat: 9am - 12pm</p>
-            </div>
-          </div>
-          <div className=" min-w-[6.8rem]">
-            <h2 className="footer__heading">Office Location</h2>
-            <address className="max-w-[14.5rem] not-italic font-dm-sans">
-              80 Fifth Avenue office #903 - 10, New York, NY 10011.
-            </address>
-          </div>
-          <div className='forLabel:min-w-[10.75rem]'>
-            <h2 className="footer__heading">Contact</h2>
-            <div>
-              <p className="mb-1.5">
-                Email:
-                <br />
-                <a href="mailto:admin@orendapsych.com">
-                  admin@orenda&shy;psych.&shy;com
-                </a>
-              </p>
               <p>
-                Call or text:
+                <strong className="font-medium">Mondays - Sundays:</strong>
                 <br />
-                <a href="tel:+13477077735">(347) 707 - 7735</a>
-                <br />
-                Fax: (347) 707 - 7735
+                8am - 10:30pm
               </p>
             </div>
           </div>
           <div>
             <h2 className="footer__heading">Mailing Address</h2>
             <address className="max-w-[14.5rem] not-italic font-dm-sans">
-              347 fifth Ave Suite 1402 - 235, New York, NY 10016
+              347 Fifth Ave, Suite 1402-235, New York, NY 10016
             </address>
+          </div>
+          <div className="forLabel:min-w-[10.75rem]">
+            <h2 className="footer__heading">Contact</h2>
+            <div className="grid gap-1.5">
+              <p>
+                <strong className="font-medium">Call or text:</strong>
+                <br />
+                <a href="tel:+13477077735">(347) 707-7735</a>
+              </p>
+              <p>
+                <strong className="font-medium">Fax:</strong>
+                <br />
+                (347) 745-0992
+              </p>
+              <p>
+                <strong className="font-medium">Email:</strong>
+                <br />
+                <a href="mailto:admin@orendapsych.com">
+                  admin@orenda&shy;psych.&shy;com
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className=" min-w-[6.8rem]">
+            <h2 className="footer__heading">Office Location</h2>
+            <div className="grid ~gap-2/4">
+              <address className="max-w-[14.5rem] not-italic font-dm-sans">
+                <strong className="font-medium">New York Office:</strong> <br />
+                80 Fifth Avenue, Office #903-10, New York, NY 10011.
+              </address>
+              <address className="max-w-[14.5rem] not-italic font-dm-sans">
+                <strong className="font-medium">Boston Office:</strong> <br />
+                75 Arlington Street, Ste 500 Boston, MA 02116.
+              </address>
+            </div>
           </div>
         </div>
       </div>

@@ -78,20 +78,39 @@ const ContactUsPage = () => {
                     Operating Hours
                   </h2>
                   <div>
-                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                    <p>Saturday: 9:00 AM - 1:00 PM</p>
-                    <p>Sunday: Closed</p>
+                    <p>
+                      <strong className="font-medium">
+                        Mondays - Sundays:
+                      </strong>{' '}
+                      <br />
+                      8:00 AM - 6:00 PM
+                    </p>
                   </div>
                 </div>
                 <div>
                   <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
                     Emergency Contact Information{' '}
                   </h2>
-                  <p className="max-w-[22.44rem]">
+                  <p className="max-w-[32rem] ~text-sm/lg">
+                    If you are experiencing a psychiatric emergency, please
+                    call:
+                    <br />{' '}
+                    <span className="text-red-900 font-semibold">911</span>,
+                    <span className="text-red-900 font-semibold">
+                      {' '}
+                      1-800-LIFE-NET
+                    </span>{' '}
+                    (within the 5 boroughs of NYC), <br />{' '}
+                    <span className="text-red-900 font-semibold">
+                      1-800-273-TALK
+                    </span>{' '}
+                    (nationwide), or go directly to your nearest emergency room.
+                  </p>
+                  {/* <p className="max-w-[22.44rem]">
                     If you are in immediate danger, call{' '}
                     <span className="text-red-900 font-semibold">911</span> or
                     visit your nearest emergency room
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -161,19 +180,32 @@ const ContactUsPage = () => {
                   Operating Hours
                 </h2>
                 <div className="~leading-6/8">
-                  <p className='text-center md:text-left'>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                  <p className='text-center md:text-left'>Saturday: 9:00 AM - 1:00 PM</p>
-                  <p className='text-center md:text-left'>Sunday: Closed</p>
+                  <p className="text-center md:text-left">
+                    Monday - Friday: 8:00 AM - 6:00 PM
+                  </p>
+                  <p className="text-center md:text-left">
+                    Saturday: 9:00 AM - 1:00 PM
+                  </p>
+                  <p className="text-center md:text-left">Sunday: Closed</p>
                 </div>
               </div>
               <div className="mt-10 sm:mt-0">
                 <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
                   Emergency Contact Information{' '}
                 </h2>
-                <p className='text-center md:text-left'>
-                  If you are in immediate danger, call{' '}
-                  <span className="text-red-900 font-semibold">911</span> or
-                  visit your nearest emergency room
+                <p className="text-center md:text-left">
+                  If you are experiencing a psychiatric emergency, please call:
+                  <br /> <span className="text-red-900 font-semibold">911</span>
+                  ,
+                  <span className="text-red-900 font-semibold">
+                    {' '}
+                    1-800-LIFE-NET
+                  </span>{' '}
+                  (within the 5 boroughs of NYC), <br />{' '}
+                  <span className="text-red-900 font-semibold">
+                    1-800-273-TALK
+                  </span>{' '}
+                  (nationwide), or go directly to your nearest emergency room.
                 </p>
               </div>
             </div>
@@ -183,11 +215,14 @@ const ContactUsPage = () => {
                   Main Contact Information
                 </h2>
                 <div>
-                  <p className='text-center md:text-left'>Address: 80 5th Avenue</p>
-                  <p className='text-center md:text-left'>Phone: (347) 707-7735</p>
-                  <p className='text-center md:text-left'>Fax: (347) 745-0992</p>
-                  <p className='text-center md:text-left'>
-                    Email:
+                  <p className="text-center md:text-left ~text-sm/lg">
+                    Phone: <a href="tel:+13477077735">(347) 707-7735</a>
+                  </p>
+                  <p className="text-center md:text-left ~text-sm/lg">
+                    Fax: (347) 745-0992
+                  </p>
+                  <p className="text-center md:text-left ~text-sm/lg">
+                    Email:{' '}
                     <a
                       className="underline"
                       href="mailto:admin@orendapsych.com"
@@ -195,11 +230,23 @@ const ContactUsPage = () => {
                       admin@orendapsych.com
                     </a>
                   </p>
+                  <p className="grid ~gap-2/4 text-center md:text-left mt-4 ~text-sm/lg">
+                    <address className="not-italic font-dm-sans">
+                      <strong className="font-medium">New York Office:</strong>{' '}
+                      <br />
+                      80 Fifth Avenue, Office #903-10, New York, NY 10011.
+                    </address>
+                    <address className="not-italic font-dm-sans">
+                      <strong className="font-medium">Boston Office:</strong>{' '}
+                      <br />
+                      75 Arlington Street, Ste 500 Boston, MA 02116.
+                    </address>
+                  </p>
                 </div>
               </div>
               <div>
                 <p className="my-8 flex flex-col text-center md:text-left">
-                  <strong>For new appointments, please email: </strong>
+                  <strong>For NEW patients, please email: </strong>
                   <a className="underline" href="mailto:intake@orendapsych.com">
                     intake@orendapsych.com
                   </a>
@@ -216,14 +263,14 @@ const ContactUsPage = () => {
               </div>
             </div>
             <div>
-              <div className='~mb-6/10'>
+              <div className="~mb-6/10">
                 <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
                   Appointment Scheduling
                 </h2>
-                <p className='text-center md:text-left'>
+                <p className="text-center md:text-left">
                   <a
                     className="text-orenda-purple font-semibold underline"
-                    href="/"
+                    href="tel:+13477077735"
                   >
                     Call us
                   </a>{' '}
@@ -231,8 +278,12 @@ const ContactUsPage = () => {
                 </p>
               </div>
               <div>
-                <h2 className='font-heading ~text-lg/[1.375rem] ~mb-2/4'>Insurance and Payment Information</h2>
-                <p className='text-center md:text-left'>We accept the following insurance providers:</p>
+                <h2 className="font-heading ~text-lg/[1.375rem] ~mb-2/4">
+                  Insurance and Payment Information
+                </h2>
+                <p className="text-center md:text-left">
+                  We accept the following insurance providers:
+                </p>
                 <div className="flex flex-wrap gap-6 items-center justify-center md:justify-start mt-8">
                   <span className="max-w-[8.54rem]">
                     <img
@@ -271,7 +322,6 @@ const ContactUsPage = () => {
         </div>
       </main>
       <Team itemsPerPage={12} />
-      <ContactUs />
       <FAQ />
       <Newsletter />
     </>

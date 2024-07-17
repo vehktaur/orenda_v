@@ -86,9 +86,8 @@ const ProviderInfo = () => {
                 <h1 className="~text-base/[2rem] font-bold ~mt-[0.63rem]/[2.56rem] mb-2">
                   {provider?.name}
                 </h1>
-                <p className="flex flex-col gap-1 text-[#7C7C7C] ~text-xs/sm font-bold text-left ">
+                <p className="text-[#7C7C7C] ~text-xs/sm font-bold text-left ">
                   <span>{provider?.credentials}</span>
-                  <span>{provider?.professionalTitle}</span>
                 </p>
                 {offersTalkTherapy.includes(provider?.name) && (
                   <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-left ~mt-2/[1.38rem] ~text-xs/sm text-nowrap">
@@ -234,11 +233,8 @@ const ProviderInfo = () => {
             )}
           </div>
 
-          <div className="mt-12 ~mb-[6.13rem]/[11.44rem]">
-            <div className="flex gap-6 flex-col items-center sm:flex-row sm:justify-end">
-              <button className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors">
-                Write a Review
-              </button>
+          <div className="mt-12 ~mb-[6.13rem]/[11.44rem] sm:~mr-0/[3rem]">
+            <div className="flex flex-col items-center sm:flex-row sm:justify-end">
               <a
                 href={provider?.bookingLink}
                 className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors text-center"

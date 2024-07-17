@@ -12,14 +12,14 @@ const BPStepTwo = ({ register, errors }) => {
 
   return (
     <div className="space-y-6">
-      <SelectCheckboxes
+      {/* <SelectCheckboxes
         number="6"
         label="Are you comfortable with any of these condition?"
         options={['Anxiety', 'Depression', 'Maternal/Postpartum care', 'ADHD']}
         register={register}
         errors={errors}
         name="comfortableConditions"
-      />
+      /> */}
 
       <SelectCheckboxes
         number="7"
@@ -38,7 +38,7 @@ const BPStepTwo = ({ register, errors }) => {
       <fieldset className="fieldset space-y-14">
         <Radios
           number="8"
-          label="Do you have any previous experience in mental health?"
+          label="Do you have any previous experience in providing mental health care?"
           register={register}
           errors={errors}
           name="hasExperienceInMentalHealth"

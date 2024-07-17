@@ -12,8 +12,58 @@ const SelectCheckboxes = ({
   const [selectOpen, setSelectOpen] = useState(false);
   const [selected, setSelected] = useState(['Other (select)']);
 
-  const otherCheckboxes = ['Georgia', 'South Carolina', 'Alaska', 'Maryland'];
-
+  const otherCheckboxes = [
+    'Alabama',
+    'Alaska',
+    'Arizona',
+    'Arkansas',
+    'California',
+    'Colorado',
+    'Connecticut',
+    'Delaware',
+    'Florida',
+    'Georgia',
+    'Hawaii',
+    'Idaho',
+    'Illinois',
+    'Indiana',
+    'Iowa',
+    'Kansas',
+    'Kentucky',
+    'Louisiana',
+    'Maine',
+    'Maryland',
+    'Massachusetts',
+    'Michigan',
+    'Minnesota',
+    'Mississippi',
+    'Missouri',
+    'Montana',
+    'Nebraska',
+    'Nevada',
+    'New Hampshire',
+    'New Jersey',
+    'New Mexico',
+    'New York',
+    'North Carolina',
+    'North Dakota',
+    'Ohio',
+    'Oklahoma',
+    'Oregon',
+    'Pennsylvania',
+    'Rhode Island',
+    'South Carolina',
+    'South Dakota',
+    'Tennessee',
+    'Texas',
+    'Utah',
+    'Vermont',
+    'Virginia',
+    'Washington',
+    'West Virginia',
+    'Wisconsin',
+    'Wyoming'
+  ];
   const handleSelect = (checkbox) => {
     setSelected((prevSelected) => {
       // Remove 'Other (select)' from the previous selection
@@ -83,7 +133,7 @@ const SelectCheckboxes = ({
                 >
                   {showSelected(selected)}
                   <div
-                    className={`absolute bg-white border border-[#C9C9C9] rounded-lg top-[120%] left-0 right-0 transition-all duration-300 ease-in-out grid justify-items-start overflow-hidden p-2${
+                    className={`absolute bg-white border border-[#C9C9C9] rounded-lg top-[120%] left-0 right-0 transition-all duration-300 ease-in-out grid justify-items-start overflow-hidden max-h-[13rem] overflow-y-scroll p-2${
                       selectOpen
                         ? 'visible opacity-100'
                         : 'hidden invisible opacity-0'

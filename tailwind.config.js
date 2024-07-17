@@ -14,7 +14,7 @@ export default {
         'md-footer':
           "url('/src/assets/md_footer_bg_bl.png'),url('/src/assets/md_footer_bg_tr.png'),url('/src/assets/md_footer_bg_r.png')",
         arrow: 'url(/src/assets/select.svg)',
-        logo: 'url(/src/assets/logo-circle.png)'
+        logo: 'url(/src/assets/logo-circle-0.15.png)'
       },
       backgroundPosition: {
         'footer-positions': 'top left, bottom right, bottom right',

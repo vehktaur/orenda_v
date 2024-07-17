@@ -3,12 +3,7 @@ import Radios from './Radios';
 
 import SelectCheckboxes from './SelectCheckboxes';
 
-const BPStepOne = ({
-  register,
-  watch,
-  errors,
-  resetField,
-}) => {
+const BPStepOne = ({ register, watch, errors, resetField }) => {
   return (
     <div className="space-y-6">
       <fieldset className="fieldset">
@@ -52,7 +47,13 @@ const BPStepOne = ({
       <SelectCheckboxes
         number="3"
         label="Do you have DEA in any of the following states?"
-        options={['New York', 'New Jersey', 'Connecticut', 'Massachusetts']}
+        options={[
+          'New York',
+          'New Jersey',
+          'Connecticut',
+          'Massachusetts',
+          'Others'
+        ]}
         register={register}
         errors={errors}
         name="States with DEA"
@@ -61,14 +62,21 @@ const BPStepOne = ({
       <fieldset className="fieldset space-y-14">
         <Radios
           number="4"
-          label="Do you have any board certifications?"
+          label="Are you PMHNP Board-Certified?"
           register={register}
           errors={errors}
-          name="boardCertifications"
-          moreInfo={true}
+          name="PMHNPCertified"
         />
         <Radios
           number="5"
+          label="Are you certified as an FNP, or do you hold any other board certifications?"
+          register={register}
+          errors={errors}
+          name="FNPCertifiedOrOthers"
+          moreInfo={true}
+        />
+        <Radios
+          number="6"
           label="Are you comfortable with providing Talk therapy with Medication Management?"
           register={register}
           errors={errors}
