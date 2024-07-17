@@ -69,12 +69,12 @@ const Header = () => {
                         isActive
                           ? `font-bold ${
                               title === 'Join Our Team'
-                                ? 'text-green-600'
+                                ? 'text-green-700'
                                 : 'text-orenda-purple '
                             }`
                           : `hover:font-bold ${
                               title === 'Join Our Team'
-                                ? 'text-green-800 font-medium'
+                                ? 'text-green-700 font-medium'
                                 : 'hover:text-orenda-purple '
                             }`
                       }
