@@ -36,7 +36,7 @@ const Radios = ({ number, label, register, errors, name, moreInfo }) => {
           <input
             className="~pb-4/[1.12rem] border-b border-[#D1D1D1] block ~text-sm/xl placeholder:text-[#737373] ~mt-6/8 w-full outline-none"
             placeholder="If Yes, Please state"
-            {...register(`${name} Info`)}
+            {...register(`${name} info`)}
             type="text"
           />
         )}

@@ -50,10 +50,16 @@ export default {
       screens: {
         xs: '20rem',
         forLabel: '23.75rem',
-forNav: '',
+        forNav: '',
         forProviders: '70rem'
       }
     }
   },
-  plugins: [fluid]
+  plugins: [
+    fluid,
+    require('tailwind-scrollbar')({
+      nocompatible: true,
+      preferredStrategy: 'pseudoelements'
+    })
+  ]
 };

@@ -13,7 +13,7 @@ const Accordion = ({ question, answer, isOpen, setIsOpen }) => {
           onClick={() => setIsOpen(question)}
           className="flex justify-between items-center gap-2 w-full"
         >
-          <span className="font-bold ~text-[0.78rem]/lg">{question}</span>
+          <span className="font-bold ~text-[0.78rem]/lg text-left">{question}</span>
           <svg
             className="fill-[#606060] shrink-0"
             width="16"
