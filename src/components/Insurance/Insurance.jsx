@@ -167,7 +167,7 @@ const Insurance = () => {
                     {showSubHeading(pageNumber)}
                   </p>
                 </div>
-                <p className="~text-xs/base text-nowrap">
+                <p className="~text-xs/base text-nowrap text-left">
                   Step {pageNumber} of 3
                 </p>
               </div>
