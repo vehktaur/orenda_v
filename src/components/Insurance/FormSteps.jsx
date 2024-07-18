@@ -7,7 +7,7 @@ const FormSteps = ({ register, watch, errors }) => {
 
   const [isFocus, setIsFocus] = useState(false);
 
-  console.log(watch('Insurance Carrier'));
+  if (pageNumber === 3) console.log(watch('Insurance Carrier'));
 
   const handleFocus = () => setIsFocus(true);
 
@@ -17,7 +17,7 @@ const FormSteps = ({ register, watch, errors }) => {
     if (
       fieldType === 'file' &&
       (watch('Insurance Carrier') === '' ||
-        watch('Insurance Carrier').length === 0)
+        watch('Insurance Carrier')?.length === 0)
     )
       setFieldType('text');
   };
@@ -116,7 +116,7 @@ const FormSteps = ({ register, watch, errors }) => {
                 }
               }
             })}
-            // accept="image/jpeg, image/png, application/pdf"
+            accept="image/jpeg, image/png, application/pdf"
           />
           <label
             onClick={() => setTypeText()}
@@ -133,7 +133,7 @@ const FormSteps = ({ register, watch, errors }) => {
               <span className="text-orenda-purple underline cursor-pointer bg-inherit">
                 {watch('Insurance Carrier') === '' ||
                 fieldType === 'text' ||
-                watch('Insurance Carrier').length === 0
+                watch('Insurance Carrier')?.length === 0
                   ? 'Upload Your card'
                   : 'Card Uploaded!✅'}
               </span>

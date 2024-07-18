@@ -48,8 +48,9 @@ export default {
         dot: 'url("/src/assets/disc.svg")'
       },
       screens: {
-        forLabel: '23.75rem',
         xs: '20rem',
+        forLabel: '23.75rem',
+forNav: '',
         forProviders: '70rem'
       }
     }
