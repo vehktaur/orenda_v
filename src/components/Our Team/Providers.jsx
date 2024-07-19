@@ -65,7 +65,7 @@ const Providers = ({ itemsPerPage, numberOfColumns }) => {
           autoplay={{
             delay: 2000
           }}
-          slidesPerView="auto"
+          slidesPerView="3"
           spaceBetween={24}
           loop={true}
           modules={[Autoplay]}

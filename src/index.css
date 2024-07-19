@@ -7,7 +7,24 @@
 @font-face {
   font-family: 'Ogg Text TRIAL';
   src: url('./assets/fonts/Ogg Text TRIAL.ttf') format('truetype');
-  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogg Text TRIAL medium';
+  src: url('./assets/fonts/Ogg Text TRIAL medium.otf');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogg Text TRIAL medium-bold';
+  src: url('./assets/fonts/Ogg Text TRIAL medium-bold.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogg Text TRIAL regular';
+  src: url('./assets/fonts/Ogg Text TRIAL regular.ttf') format('truetype');
   font-style: normal;
   font-display: swap;
 }

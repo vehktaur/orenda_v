@@ -14,7 +14,8 @@ export default {
         'md-footer':
           "url('/src/assets/md_footer_bg_bl.png'),url('/src/assets/md_footer_bg_tr.png'),url('/src/assets/md_footer_bg_r.png')",
         arrow: 'url(/src/assets/select.svg)',
-        logo: 'url(/src/assets/logo-circle-0.15.png)'
+        logo: 'url(/src/assets/logo-circle-0.15.png)',
+        dotted: 'url(/src/assets/dotted.png)'
       },
       backgroundPosition: {
         'footer-positions': 'top left, bottom right, bottom right',
@@ -39,6 +40,9 @@ export default {
       fontFamily: {
         'open-sans': ['"Open Sans"', 'sans-serif'],
         heading: ["'Ogg Text TRIAL'", 'serif'],
+        'heading-medium': ["'Ogg Text TRIAL medium'", 'sans-serif'],
+        'heading--bold': ["'Ogg Text TRIAL -bold'", 'sans-serif'],
+        'heading-regular': ["'Ogg Text TRIAL regular'", 'serif'],
         'dm-sans': ['"DM Sans"', 'sans-serif']
       },
       gridTemplateColumns: {

@@ -61,7 +61,7 @@ const Header = () => {
                   ['Blog', '/'],
                   ['Privacy Policy', '/privacy-policy'],
                   ['Contact Us', '/contact-us'],
-                  ['Join Our Team', '/']
+                  ['Join Our Team', '/become-a-provider']
                 ].map(([title, url]) => (
                   <li key={title}>
                     <NavLink
@@ -143,7 +143,7 @@ const Header = () => {
                       'fa-solid fa-file-shield'
                     ],
                     ['Contact Us', '/contact-us', 'fa-solid fa-comment-dots'],
-                    ['Join Our Team', '/', 'fa-solid fa-people-group']
+                    ['Join Our Team', '/become-a-provider', 'fa-solid fa-person-circle-plus']
                   ].map(([title, url, icon]) => (
                     <li
                       onClick={() => displayMenu()}

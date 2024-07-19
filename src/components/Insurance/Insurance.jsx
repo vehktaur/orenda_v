@@ -4,6 +4,8 @@ import { useRef, useState, createContext, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useForm } from 'react-hook-form';
+import Network from '../Network/Network';
+import Network2 from '../Network/Network2';
 
 gsap.registerPlugin(useGSAP);
 
@@ -111,8 +113,8 @@ const Insurance = () => {
 
   //Insurance Component return:
   return (
-    <PageNumberContext.Provider value={pageNumber}>
-      <div className="font-dm-sans">
+    <PageNumberContext.Provider  value={pageNumber}>
+      <div className="font-dm-sans bg-dotted">
         {showModal && (
           <div className="fixed px-5 inset-0 max-h-screen bg-[#070707B3] z-50 grid place-items-center">
             <div className="w-full bg-[#FAFAFA] rounded-3xl max-w-[41.44rem] ~px-4/10 ~pt-6/[2.38rem] ~pb-[2.69rem]/[3.38rem]">
@@ -144,7 +146,10 @@ const Insurance = () => {
             </div>
           </div>
         )}
-        <main className="px-5 ~mt-8/[7.5rem] ~mb-[3.31rem]/[10rem]">
+        <div className="mt-0">
+          <Network2 />
+        </div>
+        <main className="px-5 ~pb-[3.31rem]/[10rem] ~mt-10/20">
           <h1 className="heading ~mb-2/4">Let's check your plan!</h1>
           <p className="max-w-[38.32rem] mx-auto text-center">
             Please complete this form to verify if your insurance is in network
