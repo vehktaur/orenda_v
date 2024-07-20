@@ -46,7 +46,8 @@ export default {
         'dm-sans': ['"DM Sans"', 'sans-serif']
       },
       gridTemplateColumns: {
-        team: 'repeat(4, minmax(0, 15.625rem))'
+        team: 'repeat(4, minmax(0, 15.625rem))',
+        network: 'minmax(150px, 17rem), minmax(57.5%, 1fr)'
       },
       listStyleImage: {
         dot: 'url("/src/assets/disc.svg")'

@@ -15,18 +15,12 @@ import fidelis from '../../assets/fidelis-care-logo-vector.png';
 
 const Network2 = () => {
   return (
-    <div className="pt-12 bg-dotted pb-6 relative border-t-[0rem] border-orenda-purple">
-      {/* <div className="absolute top-0 bottom-0 left-0 w-[19.8rem] bg-white border-r border-b z-[9] content-center">
-        {' '}
-        <hr className="relative z-[11] mt-5" />{' '}
-      </div> */}
+    <div className="pt-10 bg-dotted pb-6 relative border-t-[0rem] border-orenda-purple">
       <div className="px-3 sm:px-5">
-        <div className="relative">
-          <div className=" absolute left-0 h-full content-center z-10">
-            <h1 className="font-heading text-center ~text-lg/[2rem] bg-white py-1.5 ~pr-2/4 sm:ps-4 text-[#36454F] rounded-sm">
-              In network with
-            </h1>
-          </div>
+        <div className="grid grid-cols-network ~gap-y-4/6">
+          <h1 className="font-heading text-center ~text-[1.1rem]/[2rem] bg-white content-center text-[#36454F] rounded-sm">
+            In network with
+          </h1>
 
           <div>
             <Marquee speed={150}>
@@ -64,10 +58,8 @@ const Network2 = () => {
               </div>
             </Marquee>
           </div>
-        </div>
 
-        <div className="relative mt-4">
-          <h2 className="font-heading ~text-base/[1.8rem] text-[#AEAEAE] font-medium ~ps-2/9 ~pr-4/9 ~mb-4/8 absolute flex items-center bg-white h-full z-10 sm:py-2 text-center rounded-sm">
+          <h2 className="font-heading ~text-[0.9rem]/[1.8rem] text-[#AEAEAE] font-medium bg-white text-center content-center rounded-sm">
             Out of network
           </h2>
 
