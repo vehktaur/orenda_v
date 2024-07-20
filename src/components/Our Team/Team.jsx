@@ -65,7 +65,7 @@ const Team = ({ itemsPerPage }) => {
               delay: 2000
             }}
             slidesPerView="auto"
-            spaceBetween={40}
+            spaceBetween={25}
             loop={true}
             modules={[Autoplay]}
           >
