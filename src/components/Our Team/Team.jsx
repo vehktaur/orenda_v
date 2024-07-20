@@ -31,7 +31,7 @@ const Team = ({ itemsPerPage }) => {
   };
 
   return (
-    <div className="px-5 md:~px-6/12 py-8 bg-[#F5F5F5]">
+    <div className="px-5 md:~px-6/12 pb-8 pt-12 bg-[#f6f7fc] bg-dotted bg-cover">
       <div className="max-w-7xl mx-auto">
         <h2 className="heading ~mb-12/[4.81rem]">Meet Our Team</h2>
         <div className="md:block hidden relative">
@@ -65,12 +65,12 @@ const Team = ({ itemsPerPage }) => {
               delay: 2000
             }}
             slidesPerView="auto"
-            spaceBetween={50}
+            spaceBetween={40}
             loop={true}
             modules={[Autoplay]}
           >
             {teamData.map((member, index) => (
-              <SwiperSlide style={{ width: 'auto' }} key={index + 50}>
+              <SwiperSlide style={{ width: '160px' }} key={index + 50}>
                 <TeamMemberCard member={member} />
               </SwiperSlide>
             ))}

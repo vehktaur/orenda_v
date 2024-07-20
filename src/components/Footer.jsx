@@ -1,4 +1,4 @@
-import Logo from './Logo';
+import logo from '../assets/logo1.png';
 
 const Footer = () => {
   return (
@@ -6,7 +6,14 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto ~text-sm/base ">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ~gap-y-6/8 ~gap-x-6/8 md:gap-12">
           <div className="col-span-2 md:col-span-1">
-            <Logo />
+            <div className={`~w-24/[8.8125rem] flex-shrink-0 sm:mt-6`}>
+              <img
+                width={150}
+                height={100}
+                src={logo}
+                alt="Orenda Psychiatry"
+              />
+            </div>
           </div>
           <div className="min-w-fit">
             <h2 className="footer__heading">Hours</h2>

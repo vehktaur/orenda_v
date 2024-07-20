@@ -1,7 +1,7 @@
 const TeamMemberCard = ({ member }) => {
   return (
     <div>
-      <div className="~h-[6.875rem]/[15.625rem] w-full bg-[#f1f1f1] rounded-2xl overflow-hidden ~pt-2/4">
+      <div className="~h-[6.875rem]/[15.625rem] w-full bg-purple-950 bg-opacity-5 rounded-2xl overflow-hidden ~pt-2/4">
         <img
           className="size-full object-contain"
           width={100}

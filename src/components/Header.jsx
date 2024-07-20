@@ -1,5 +1,5 @@
 import { NavLink, Link } from 'react-router-dom';
-import Logo from './Logo';
+import logo from '../assets/logo1.png';
 import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useGSAP } from '@gsap/react';
@@ -49,7 +49,9 @@ const Header = () => {
       )}
       <header className="p-5 text-center ~text-sm/[1.1rem] font-dm-sans sticky bg-white top-0 z-10">
         <div className="max-w-[90rem] mx-auto flex justify-between items-center">
-          <Logo />
+          <div className={`~w-20/[6.8125rem] flex-shrink-0`}>
+            <img width={150} height={100} src={logo} alt="Orenda Psychiatry" />
+          </div>
           <div className=" hidden forProviders:block">
             <nav>
               <ul className="flex items-center justify-between ~forProviders/2xl:~gap-6/12 transition duration-1000 ">
@@ -143,7 +145,11 @@ const Header = () => {
                       'fa-solid fa-file-shield'
                     ],
                     ['Contact Us', '/contact-us', 'fa-solid fa-comment-dots'],
-                    ['Join Our Team', '/become-a-provider', 'fa-solid fa-person-circle-plus']
+                    [
+                      'Join Our Team',
+                      '/become-a-provider',
+                      'fa-solid fa-person-circle-plus'
+                    ]
                   ].map(([title, url, icon]) => (
                     <li
                       onClick={() => displayMenu()}

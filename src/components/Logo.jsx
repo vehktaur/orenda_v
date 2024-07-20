@@ -1,14 +1,9 @@
 import logo from '../assets/logo1.png';
 
-const Logo = () => {
+const Logo = (size) => {
   return (
-    <div className="~w-20/[6.8125rem] flex-shrink-0">
-      <img
-        width={150}
-        height={100}
-        src={logo}
-        alt="Orenda Psychiatry"
-      />
+    <div className={`${size} flex-shrink-0`}>
+      <img width={150} height={100} src={logo} alt="Orenda Psychiatry" />
     </div>
   );
 };

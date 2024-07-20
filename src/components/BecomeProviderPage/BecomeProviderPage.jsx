@@ -44,7 +44,7 @@ const BecomeProviderPage = () => {
           Please fill out this form below correctly and we will get back to you.
         </p>
 
-        <div className="~mt-4/6">
+        <div className="~mt-6/8">
           {formStep < 3 && (
             <p className="~text-xs/xl text-center">
               <strong>Step {formStep} of 2</strong>

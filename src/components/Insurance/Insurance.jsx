@@ -113,7 +113,7 @@ const Insurance = () => {
 
   //Insurance Component return:
   return (
-    <PageNumberContext.Provider  value={pageNumber}>
+    <PageNumberContext.Provider value={pageNumber}>
       <div className="font-dm-sans bg-dotted">
         {showModal && (
           <div className="fixed px-5 inset-0 max-h-screen bg-[#070707B3] z-50 grid place-items-center">
@@ -163,7 +163,7 @@ const Insurance = () => {
               onSubmit={handleSubmit(onSubmit)}
               className="overflow-y-hidden bg-[#FAFAFA] max-w-[41.44rem] mx-auto rounded-3xl ~xs/xl:~px-3/10 ~pt-6/10 ~pb-[2.13rem]/[4.44rem] border border-[#D9D9D9]"
             >
-              <div className="flex justify-between gap-4 items-center ~mb-10/[4.13rem]">
+              <div className="grid grid-flow-col justify-between gap-4 items-center ~mb-10/[4.13rem]">
                 <div>
                   <h2 className="font-dm-sans font-bold ~text-lg/[1.75rem] mb-1">
                     {showHeading(pageNumber)}
@@ -172,9 +172,9 @@ const Insurance = () => {
                     {showSubHeading(pageNumber)}
                   </p>
                 </div>
-                <p className="~text-xs/base text-nowrap text-left">
+                <span className="~text-xs/base text-nowrap text-right">
                   Step {pageNumber} of 3
-                </p>
+                </span>
               </div>
 
               <div className="stuff grid ~gap-y-10/20 bg-inherit transition-all duration-300 ease-in-out pe-8 sm:pe-0">

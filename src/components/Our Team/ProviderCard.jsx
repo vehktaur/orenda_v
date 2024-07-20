@@ -113,19 +113,19 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
           {provider?.name}
         </h3>
         <div className="pt-1 px-1 pb-2 bg-[#f5f5f5] rounded-[0.25rem]">
-          <p className="text-xs font-medium font-dm-sans text-[#6A6A6A] pb-1">
+          <p className="text-[0.8rem] font-medium font-dm-sans text-[#6A6A6A] pb-1">
             Ages seen
           </p>
           <p
             className={`${
-              numberOfColumns === 5 ? 'text-[0.625rem]' : 'text-xs'
+              numberOfColumns === 5 ? 'text-[0.7rem]' : 'text-xs'
             } font-open-sans`}
           >
             {showAgesSeen(provider?.agesSeen)}
           </p>
         </div>
         <div className="pt-[0.62rem] mt-auto">
-          <h3 className="font-medium font-dm-sans text-[#6A6A6A] text-[0.875rem]">
+          <h3 className="font-medium font-dm-sans text-[#6A6A6A] text-[0.8rem]">
             States Licensed
           </h3>
           <p
@@ -141,7 +141,7 @@ const ProviderCard = ({ numberOfColumns, provider, index }) => {
             <span
               className={`rounded-lg grid place-items-center border border-[#E1EEE4] bg-[#F0FDF3] text-nowrap ${
                 numberOfColumns === 5
-                  ? 'p-1 px-1.5 text-[0.625rem]'
+                  ? 'p-1 px-1.5 text-[0.7rem]'
                   : '~xl/2xl:~px-1.5/3 py-2 ~text-[0.625rem]/xs'
               } font-dm-sans`}
             >
