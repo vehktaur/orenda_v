@@ -70,7 +70,7 @@ const Team = ({ itemsPerPage }) => {
             modules={[Autoplay]}
           >
             {teamData.map((member, index) => (
-              <SwiperSlide style={{ width: '160px' }} key={index + 50}>
+              <SwiperSlide style={{ width: '150px' }} key={index + 50}>
                 <TeamMemberCard member={member} />
               </SwiperSlide>
             ))}
