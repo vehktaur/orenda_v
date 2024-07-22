@@ -18,7 +18,7 @@ const Network2 = () => {
     <div className="pt-10 bg-dotted pb-6 relative border-t-[0rem] border-orenda-purple">
       <div className="px-3 sm:px-5">
         <div className="grid grid-cols-network ~gap-y-4/6">
-          <h1 className="font-heading text-center ~text-[1.1rem]/[2rem] bg-white content-center text-[#36454F] rounded-sm">
+          <h1 className="font-heading font-bold text-center ~text-[1.1rem]/[2rem] bg-white content-center text-[#36454F] rounded-sm">
             In network with
           </h1>
 
@@ -59,7 +59,7 @@ const Network2 = () => {
             </Marquee>
           </div>
 
-          <h2 className="font-heading ~text-[0.9rem]/[1.8rem] text-[#AEAEAE] font-medium bg-white text-center content-center rounded-sm">
+          <h2 className="font-heading ~text-[0.9rem]/[1.8rem] text-[#AEAEAE] bg-white text-center content-center rounded-sm font-bold">
             Out of network
           </h2>
 

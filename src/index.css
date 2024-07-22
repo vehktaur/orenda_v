@@ -6,26 +6,32 @@
 
 @font-face {
   font-family: 'Ogg Text TRIAL';
-  src: url('./assets/fonts/Ogg Text TRIAL.ttf') format('truetype');
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ogg Text TRIAL medium';
-  src: url('./assets/fonts/Ogg Text TRIAL medium.otf');
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ogg Text TRIAL medium-bold';
-  src: url('./assets/fonts/Ogg Text TRIAL medium-bold.ttf');
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Ogg Text TRIAL regular';
   src: url('./assets/fonts/Ogg Text TRIAL regular.ttf') format('truetype');
   font-style: normal;
+  font-weight: 400; /* Regular */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ogg Text TRIAL';
+  src: url('./assets/fonts/Ogg Text TRIAL medium.otf');
+  font-style: normal;
+  font-weight: 500; /* Medium */
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Ogg Text TRIAL';
+  src: url('./assets/fonts/Ogg Text TRIAL medium-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600; /* Semi-bold or Medium-Bold */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ogg Text TRIAL';
+  src: url('./assets/fonts/Ogg Text TRIAL.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700; /* Default Bold */
   font-display: swap;
 }
 

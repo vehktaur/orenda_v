@@ -40,9 +40,6 @@ export default {
       fontFamily: {
         'open-sans': ['"Open Sans"', 'sans-serif'],
         heading: ["'Ogg Text TRIAL'", 'serif'],
-        'heading-medium': ["'Ogg Text TRIAL medium'", 'sans-serif'],
-        'heading--bold': ["'Ogg Text TRIAL -bold'", 'sans-serif'],
-        'heading-regular': ["'Ogg Text TRIAL regular'", 'serif'],
         'dm-sans': ['"DM Sans"', 'sans-serif']
       },
       gridTemplateColumns: {
