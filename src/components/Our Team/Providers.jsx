@@ -6,6 +6,7 @@ import { useRef, useState } from 'react';
 import providersData from '../../data/providersData';
 import ProviderCard from './ProviderCard';
 import { Link } from 'react-router-dom';
+import ProviderCardTest from './ProviderCardTest';
 
 const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
   const [itemOffset, setItemOffset] = useState(0);
@@ -64,7 +65,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
       </div>
       <div className={`py-8 ${forHome ? 'md:hidden' : 'hidden'}`}>
         <Swiper
-          autoplay={(true, { delay: 2000 })}
+          autoplay={(true, { delay: 3000 })}
           slidesPerView="auto"
           spaceBetween={40}
           modules={[Autoplay, Navigation, Pagination]}
