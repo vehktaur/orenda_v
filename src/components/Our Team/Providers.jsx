@@ -4,9 +4,8 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import NavButtons from './NavButtons';
 import { useRef, useState } from 'react';
 import providersData from '../../data/providersData';
-import ProviderCard from './ProviderCard';
+import ProviderCardSmall from './ProviderCardSmall';
 import { Link } from 'react-router-dom';
-import ProviderCardTest from './ProviderCardTest';
 
 const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
   const [itemOffset, setItemOffset] = useState(0);
@@ -33,9 +32,17 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
   };
 
   const numberOfSlides = Math.ceil(providersData.length / itemsPerPage);
+
+  const [newProviders, setNewProviders] = useState(
+    providersData.map((provider) => ({
+      ...provider,
+      mobileOverlay: false
+    }))
+  );
+
   return (
     <>
-      <div className="px-5 md:~px-5/8">
+      <div id="providers" className="px-5 md:~px-5/8">
         <div
           className={`max-w-7xl mx-auto mt-12 relative ${
             forHome ? 'hidden md:block' : ''
@@ -47,7 +54,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
           ></div>
           <Swiper
             onSlideChange={handleSlideChange}
-            spaceBetween={50}
+            spaceBetween={20}
             slidesPerView={1}
           >
             {[...Array(numberOfSlides)].map((_, index) => (
@@ -72,7 +79,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
           loop={true}
           centeredSlides={true}
         >
-          {providersData.map((provider, i) => {
+          {newProviders.map((provider, i) => {
             const index = providersData.findIndex(
               (obj) => obj.name === provider?.name
             );
@@ -84,10 +91,10 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                 }}
                 key={i + 50}
               >
-                <ProviderCard
-                  numberOfColumns={numberOfColumns}
+                <ProviderCardSmall
                   provider={provider}
                   index={index}
+                  setNewProviders={setNewProviders}
                 />
               </SwiperSlide>
             );

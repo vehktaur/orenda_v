@@ -1,5 +1,5 @@
 import providersData from '../../data/providersData';
-import ProviderCard from './ProviderCard';
+import ProviderCardSmall from './ProviderCardSmall';
 
 const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
   const sectionProvidersData = providersData.slice(itemOffset, endOffset);
@@ -17,8 +17,7 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
           (obj) => obj.name === provider?.name
         );
         return (
-          <ProviderCard
-            numberOfColumns={numberOfColumns}
+          <ProviderCardSmall
             provider={provider}
             index={index}
           />

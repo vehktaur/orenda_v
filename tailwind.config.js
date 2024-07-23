@@ -8,6 +8,10 @@ export default {
     screens,
     fontSize,
     extend: {
+      animation: {
+        fadeIn: 'fadeIn 0.5s ease-in forwards',
+        fadeOut: 'fadeOut 0.5s ease-out forwards'
+      },
       backgroundImage: {
         'm-footer':
           "url('/src/assets/footer_bg_tl.png'),url('/src/assets/footer_bg_br.png'),url('/src/assets/footer_bg_r.png')",
@@ -45,6 +49,17 @@ export default {
       gridTemplateColumns: {
         team: 'repeat(4, minmax(0, 15.625rem))',
         network: 'minmax(150px, 17rem), minmax(57.5%, 1fr)'
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', visibility: 'hidden' },
+          '100%': { opacity: '1', visibility: 'visible' }
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '90%': { opacity: '0' },
+          '100%': { visibility: 'hidden' }
+        }
       },
       listStyleImage: {
         dot: 'url("/src/assets/disc.svg")'
