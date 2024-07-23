@@ -60,9 +60,11 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
             {[...Array(numberOfSlides)].map((_, index) => (
               <SwiperSlide key={index}>
                 <ProvidersSection
+                  newProviders={newProviders}
                   itemOffset={itemOffset}
                   endOffset={endOffset}
                   numberOfColumns={numberOfColumns}
+                  setNewProviders={setNewProviders}
                 />
               </SwiperSlide>
             ))}

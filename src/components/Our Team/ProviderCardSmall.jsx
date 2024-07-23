@@ -47,7 +47,7 @@ const ProviderCard = ({ provider, index, setNewProviders }) => {
           )
         );
       }}
-      onMouseOut={() =>
+      onMouseLeave={() =>
         setNewProviders((prevProviders) =>
           prevProviders.map((oldProvider) => ({
             ...oldProvider,
@@ -55,13 +55,13 @@ const ProviderCard = ({ provider, index, setNewProviders }) => {
           }))
         )
       }
-      className={`max-w-[18rem] pb-[0.94rem] min-w-[18.625rem] h-[23.5rem] md:min-w-[unset] md:h-[unset] w-full rounded-md relative card__shadow flex flex-col`}
+      className={`max-w-[18rem] pb-[0.94rem] min-w-[18.625rem] h-[23.5rem] md:min-w-[unset] md:h-[unset] w-full rounded-md relative card__shadow flex flex-col cursor-pointer`}
     >
       <div
-        className={`absolute inset-0 bg-black opacity-0 md:hover:opacity-100 transition-opacity duration-1000 text-white flex flex-col gap-1 px-3 py-4 md:animate-none ${
+        className={`absolute inset-0 bg-black opacity-0 md:hover:opacity-100 transition-opacity duration-1000 text-white flex flex-col gap-1 px-3 py-4 md:visible md:animate-none ${
           provider.mobileOverlay
             ? 'flex animate-fadeIn md:opacity-0'
-            : 'md:flex'
+            : 'md:flex invisible'
         } justify-between rounded-md cursor-pointer`}
       >
         <div className={`grid gap-2`}>

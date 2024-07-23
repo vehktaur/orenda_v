@@ -1,8 +1,13 @@
-import providersData from '../../data/providersData';
 import ProviderCardSmall from './ProviderCardSmall';
 
-const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
-  const sectionProvidersData = providersData.slice(itemOffset, endOffset);
+const ProvidersSection = ({
+  newProviders,
+  itemOffset,
+  endOffset,
+  numberOfColumns,
+  setNewProviders
+}) => {
+  const sectionProvidersData = newProviders.slice(itemOffset, endOffset);
 
   let gridClasses = `grid auto-cols-fr grid-cols-1 ${
     numberOfColumns === 5
@@ -13,13 +18,14 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
   return (
     <div className={gridClasses}>
       {sectionProvidersData.map((provider) => {
-        const index = providersData.findIndex(
+        const index = newProviders.findIndex(
           (obj) => obj.name === provider?.name
         );
         return (
           <ProviderCardSmall
             provider={provider}
             index={index}
+            setNewProviders={setNewProviders}
           />
         );
       })}
