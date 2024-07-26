@@ -3,11 +3,15 @@ import ProvidersSection from './ProvidersSection';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import NavButtons from './NavButtons';
 import { useRef, useState } from 'react';
-import providersData from '../../data/providersData';
+// import providersData from '../../data/providersData';
+import fetchProviders from '../../data/fetchProviders';
 import ProviderCardSmall from './ProviderCardSmall';
 import { Link } from 'react-router-dom';
+import Loading from './Loading';
 
 const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
+  const { providersData, setProvidersData, isLoading } = fetchProviders();
+
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffSet] = useState(itemOffset + itemsPerPage);
 
@@ -33,14 +37,11 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
 
   const numberOfSlides = Math.ceil(providersData.length / itemsPerPage);
 
-  const [newProviders, setNewProviders] = useState(
-    providersData.map((provider) => ({
-      ...provider,
-      mobileOverlay: false
-    }))
-  );
-
-  return (
+  return isLoading ? (
+    <>
+      <Loading data={'Providers'} />
+    </>
+  ) : (
     <>
       <div id="providers" className="px-5 md:~px-5/8">
         <div
@@ -60,11 +61,9 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
             {[...Array(numberOfSlides)].map((_, index) => (
               <SwiperSlide key={index}>
                 <ProvidersSection
-                  newProviders={newProviders}
                   itemOffset={itemOffset}
                   endOffset={endOffset}
                   numberOfColumns={numberOfColumns}
-                  setNewProviders={setNewProviders}
                 />
               </SwiperSlide>
             ))}
@@ -81,7 +80,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
           loop={true}
           centeredSlides={true}
         >
-          {newProviders.map((provider, i) => {
+          {providersData.map((provider, i) => {
             const index = providersData.findIndex(
               (obj) => obj.name === provider?.name
             );
@@ -96,7 +95,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                 <ProviderCardSmall
                   provider={provider}
                   index={index}
-                  setNewProviders={setNewProviders}
+                  setProvidersData={setProvidersData}
                 />
               </SwiperSlide>
             );

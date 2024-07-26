@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ProviderCard = ({ provider, index, setNewProviders }) => {
+const ProviderCard = ({ provider, index, setProvidersData }) => {
   const showStatesLicensed = (states) => {
     if (states && states.length === 1) {
       return `${states[0]}`;
@@ -39,16 +39,16 @@ const ProviderCard = ({ provider, index, setNewProviders }) => {
     <div
       onClick={(event) => {
         event.stopPropagation();
-        setNewProviders((prevProviders) =>
+        setProvidersData((prevProviders) =>
           prevProviders.map((oldProvider) =>
-            oldProvider.name === provider.name
+            oldProvider.provider_name === provider.provider_name
               ? { ...oldProvider, mobileOverlay: true }
               : { ...oldProvider, mobileOverlay: false }
           )
         );
       }}
       onMouseLeave={() =>
-        setNewProviders((prevProviders) =>
+        setProvidersData((prevProviders) =>
           prevProviders.map((oldProvider) => ({
             ...oldProvider,
             mobileOverlay: false
@@ -59,7 +59,7 @@ const ProviderCard = ({ provider, index, setNewProviders }) => {
     >
       <div
         className={`absolute inset-0 bg-black opacity-0 md:hover:opacity-100 transition-opacity duration-1000 text-white flex flex-col gap-1 px-3 py-4 md:visible md:animate-none ${
-          provider.mobileOverlay
+          provider?.mobileOverlay
             ? 'flex animate-fadeIn md:opacity-0'
             : 'md:flex invisible'
         } justify-between rounded-md cursor-pointer`}
@@ -67,12 +67,12 @@ const ProviderCard = ({ provider, index, setNewProviders }) => {
         <div className={`grid gap-2`}>
           <h3 className="font-semibold">About Provider</h3>
           <p className={`line-clamp-[9] overflow-hidden text-[0.85rem]`}>
-            {provider?.about}
+            {provider?.provider_description}
           </p>
         </div>
         <div className={`grid gap-2`}>
           <a
-            href={provider?.bookingLink}
+            href={provider?.booking_link}
             className="border block rounded-3xl px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6 font-medium text-center"
           >
             Book now
@@ -92,25 +92,25 @@ const ProviderCard = ({ provider, index, setNewProviders }) => {
       >
         <img
           className="size-[90%] block object-contain"
-          src={provider?.image}
-          alt={provider?.name}
+          src={provider?.provider_image_url}
+          alt={provider?.provider_name}
           width={100}
           height={100}
         />
       </div>
       <div className={`flex flex-col flex-1 px-3`}>
         <p className={`text-xs mt-2 font-medium font-dm-sans`}>
-          {provider?.credentials}
+          {provider?.provider_code}
         </p>
         <h3 className={`~text-base/lg font-bold font-open-sans py-1`}>
-          {provider?.name}
+          {provider?.provider_name}
         </h3>
         <div className="pt-1 px-1 pb-2 bg-[#f5f5f5] rounded-[0.25rem]">
           <p className="text-[0.8rem] font-medium font-dm-sans text-[#6A6A6A] pb-1">
             Ages seen
           </p>
           <p className={`text-[0.7rem] font-open-sans`}>
-            {showAgesSeen(provider?.agesSeen)}
+            {showAgesSeen(provider?.age_group)}
           </p>
         </div>
         <div className="pt-[0.62rem] mt-auto">
@@ -118,19 +118,19 @@ const ProviderCard = ({ provider, index, setNewProviders }) => {
             States Licensed
           </h3>
           <p className={`text-xs font-medium font-dm-sans`}>
-            {showStatesLicensed(provider?.statesLicensed)}
+            {showStatesLicensed(provider?.licensed_states)}
           </p>
         </div>
         <div className="flex justify-between pt-4 gap-3">
-          {provider?.availability && (
+          {provider.status && (
             <span
               className={`rounded-lg grid place-items-center border border-[#E1EEE4] bg-[#F0FDF3] text-nowrap p-1 px-1.5 text-[0.7rem] font-dm-sans`}
             >
-              {provider?.availability}
+              Available Today
             </span>
           )}
           <a
-            href={provider?.bookingLink}
+            href={provider?.booking_link}
             className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans py-2 min-w-[7.5rem] ~px-2/3`}
           >
             Book online

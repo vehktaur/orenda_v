@@ -1,9 +1,10 @@
-import providersData from '../../data/providersData';
 import ProviderInfoUl from './ProviderInfoUl';
 import { useParams } from 'react-router-dom';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ReviewsNavigation from './ReviewsNavigation';
+import fetchProviders from '../../data/fetchProviders';
+import Loading from '../Our Team/Loading';
 
 const HR = () => (
   <div className="sm:hidden bg-[rgb(239,235,223)] max-w-[63.75rem] mx-auto mt-6 mb-4">
@@ -14,17 +15,8 @@ const HR = () => (
 const ProviderInfo = () => {
   const { index } = useParams();
 
+  const { providersData, isLoading } = fetchProviders();
   const provider = providersData[index];
-
-  const offersTalkTherapy = [
-    'Maria Lourdes Bunque',
-    'Cassandra Williams',
-    'Nwamaka Onyeogo',
-    'Victoria Lanzara',
-    'Olga Kosichenko',
-    'Mamadou Barry',
-    'Sarah Sakirsky'
-  ];
 
   const showStatesLicensed = (states) => {
     if (states) {
@@ -64,38 +56,43 @@ const ProviderInfo = () => {
     }
   };
 
-  return (
+  return isLoading ? (
+    <>
+      {' '}
+      <Loading data={'Provider'} />
+    </>
+  ) : (
     <>
       <main className="px-4 sm:~px-6/10 font-dm-sans ~mt-7/[5.5rem]">
         <div className="max-w-7xl mx-auto">
           <div className="rounded-lg sm:border sm:border-[#EFEBDF]">
             <div className="flex flex-col md:rounded-t-lg md:flex-row md:~gap-0/[3.5rem] sm:border md:border-[#EFEBDF]">
               <div className="md:order-last bg-[#f1f1f1] rounded-t-lg w-full md:flex sm:flex-col md:justify-end md:max-w-[39.25rem] relative pt-8">
-                {provider?.availability && (
+                {provider?.status === 'ACTIVE' && (
                   <div className="rounded-lg border w-fit border-[#E1EEE4] bg-[#F0FDF3] py-2 ~px-0.5/[0.62rem] ~text-[0.7rem]/xs text-[#0C3318] font-dm-sans font-medium absolute ~top-2/[1.37rem] ~left-2/6">
-                    {provider?.availability}
+                    Available Today
                   </div>
                 )}
                 <img
                   className={`mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block`}
-                  src={provider?.image}
-                  alt={provider?.name}
+                  src={provider?.provider_image_url}
+                  alt={provider?.provider_name}
                 />
               </div>
               <div className="md:max-w-[50%] sm:~px-2/8 sm:py-6">
                 <h1 className="~text-base/[2rem] font-bold ~mt-[0.63rem]/[2.56rem] mb-2">
-                  {provider?.name}
+                  {provider?.provider_name}
                 </h1>
                 <p className="text-[#7C7C7C] ~text-xs/sm font-bold text-left ">
                   <span>{provider?.credentials}</span>
                 </p>
-                {offersTalkTherapy.includes(provider?.name) && (
+                {provider?.do_therapy && (
                   <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-left ~mt-2/[1.38rem] ~text-xs/sm text-nowrap">
                     Offers Talk Therapy Sessions
                   </p>
                 )}
                 <p className="whitespace-pre-line ~text-sm/base ~mt-5/6 ">
-                  {provider?.about}
+                  {provider?.provider_description}
                 </p>
               </div>
             </div>
@@ -107,7 +104,7 @@ const ProviderInfo = () => {
                 <div className="sm:border-b sm:border-[#EFEBDF] sm:~px-2/4 sm:~py-3/6">
                   <h2 className="font-bold ~text-sm/xl ~mb-2/4">Ages Seen</h2>
                   <p className="~text-sm/lg">
-                    {showAgesSeen(provider?.agesSeen)}
+                    {showAgesSeen(provider?.age_group)}
                   </p>
                 </div>
                 <div className="flex flex-col sm:items-center gap-6 sm:gap-0 sm:~px-2/4 sm:~py-3/6 sm:flex-row sm:border-y sm:border-[#EFEBDF]">
@@ -123,15 +120,13 @@ const ProviderInfo = () => {
                       Languages Spoken
                     </h2>
                     <p className="~text-sm/lg">
-                      {provider?.languagesSpoken.map(
-                        (language, index, languages) => {
-                          if (index === languages.length - 1) {
-                            return language;
-                          } else {
-                            return `${language}, `;
-                          }
+                      {provider?.languages.map((language, index, languages) => {
+                        if (index === languages.length - 1) {
+                          return language;
+                        } else {
+                          return `${language}, `;
                         }
-                      )}
+                      })}
                     </p>
                   </div>
                 </div>
@@ -140,7 +135,7 @@ const ProviderInfo = () => {
                     States Licensed
                   </h2>
                   <p className="~text-sm/lg">
-                    {showStatesLicensed(provider?.statesLicensed)}
+                    {showStatesLicensed(provider?.states_licensed)}
                   </p>
                 </div>
                 <div className="hidden ~space-y-6/10 sm:block sm:~px-2/4 sm:~py-3/6">
@@ -151,12 +146,12 @@ const ProviderInfo = () => {
                   />
                   <ProviderInfoUl
                     h2="Board Certification"
-                    listArray={provider?.boardCertifications}
+                    listArray={provider?.certifications}
                     classes={{ mb: 1.06 }}
                   />
                   <ProviderInfoUl
                     h2="Treatment Approaches"
-                    listArray={provider?.treatmentApproaches}
+                    listArray={provider?.treatment_approaches}
                     classes={{ mb: 1.06 }}
                   />
 
@@ -170,14 +165,14 @@ const ProviderInfo = () => {
                 <div className="sm:border-b  sm:border-[#EFEBDF] sm:~px-4/8 sm:~py-5/10">
                   <ProviderInfoUl
                     h2="Specialties"
-                    listArray={provider?.specialties}
+                    listArray={provider?.specialisation}
                     classes={{ mb: 1.06 }}
                   />
                 </div>
                 <div className="sm:~px-4/8 sm:~py-5/10">
                   <ProviderInfoUl
                     h2="Focus Areas"
-                    listArray={provider?.focusAreas}
+                    listArray={provider?.focus_areas}
                     classes={{ mb: 1.06 }}
                   />
                 </div>
@@ -190,19 +185,19 @@ const ProviderInfo = () => {
                 />
                 <ProviderInfoUl
                   h2="Board Certifications"
-                  listArray={provider?.boardCertifications}
+                  listArray={provider?.certifications}
                   classes={{ mb: 1.06 }}
                 />
                 <ProviderInfoUl
                   h2="Treatment Approaches"
-                  listArray={provider?.treatmentApproaches}
+                  listArray={provider?.treatment_approaches}
                   classes={{ mb: 1.06 }}
                 />
                 <HR />
               </div>
             </div>
 
-            {provider?.reviews && (
+            {provider?.reviews && provider?.reviews.length > 0 && (
               <div className="sm:~px-3/6 ~py-4/8 max-w-[80ch] mx-auto">
                 <h2 className="font-bold ~text-sm/xl ~mb-2/4 md:text-center">
                   Reviews from Clients
@@ -219,7 +214,7 @@ const ProviderInfo = () => {
                     <SwiperSlide className="swiper-no-swiping">
                       <div>
                         <blockquote className=" ~text-sm/base leading-7 text-justify">
-                          {review}
+                          {review.review}
                         </blockquote>
                       </div>
                     </SwiperSlide>
