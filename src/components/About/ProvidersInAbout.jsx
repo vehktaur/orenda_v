@@ -1,13 +1,12 @@
+import providersData from '../../data/providersData';
 import { useState, useRef, createRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import imgUnavailable from '../../assets/unavailable-image-icon.png';
-import fetchProviders from '../../data/fetchProviders';
 
 gsap.registerPlugin(useGSAP);
 
 const ProvidersInAbout = () => {
-  const { providersData } = fetchProviders();
   const numImages = 20;
 
   const [indices, setIndices] = useState(
@@ -139,8 +138,8 @@ const ProvidersInAbout = () => {
                     ref={itemsRef.current[i]}
                     width={64}
                     height={64}
-                    src={provider?.provider_image_url}
-                    alt={provider?.provider_name}
+                    src={provider.image}
+                    alt={provider.name}
                     className={`size-full object-contain`}
                     onLoad={() => {
                       animateOpacity(i);
@@ -148,7 +147,7 @@ const ProvidersInAbout = () => {
                     onError={(event) => {
                       event.target.src = imgUnavailable;
                       event.onerror = null;
-                      console.log(`${provider.provider_name} image Didn't load`);
+                      console.log(`${provider.name} image Didn't load`);
                     }}
                   />
                 </div>

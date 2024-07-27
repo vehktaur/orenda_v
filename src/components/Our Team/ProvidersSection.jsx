@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import fetchProviders from '../../data/fetchProviders';
+import { useProviders } from '../../services/queries';
 import ProviderCardSmall from './ProviderCardSmall';
 
 const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
-  const { providersData, setProvidersData } = fetchProviders();
+  const providers = useProviders();
+
+  const [providersData, setProvidersData] = useState(providers.data);
 
   const sectionProvidersData = providersData.slice(itemOffset, endOffset);
 
@@ -15,13 +19,9 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
   return (
     <div className={gridClasses}>
       {sectionProvidersData.map((provider) => {
-        const index = providersData.findIndex(
-          (obj) => obj.provider_name === provider?.provider_name
-        );
         return (
           <ProviderCardSmall
             provider={provider}
-            index={index}
             setProvidersData={setProvidersData}
           />
         );

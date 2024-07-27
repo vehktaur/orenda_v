@@ -3,10 +3,6 @@
     {
       "source": "/(.*)",
       "destination": "/"
-    },
-    {
-      "source": "/api/:path*",
-      "destination": "http://18.224.110.152/api/v1/provider/get_providers"
     }
   ]
 }

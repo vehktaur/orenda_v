@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ProviderCard = ({ provider, index, setProvidersData }) => {
+const ProviderCard = ({ provider, setProvidersData }) => {
   const showStatesLicensed = (states) => {
     if (states && states.length === 1) {
       return `${states[0]}`;
@@ -80,7 +80,7 @@ const ProviderCard = ({ provider, index, setProvidersData }) => {
           <div className="flex justify-center">
             <Link
               className="text-[0.875rem] font-semibold hover:underline"
-              to={`/provider/${index}`}
+              to={`/provider/${provider.provider_name}`}
             >
               See Profile
             </Link>

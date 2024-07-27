@@ -24,7 +24,7 @@ function App() {
           <Route path="contact-us" element={<ContactUsPage />} />
           <Route path="insurance" element={<Insurance />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="provider/:index" element={<ProviderInfo />} />
+          <Route path="provider/:name" element={<ProviderInfo />} />
           <Route path="become-a-provider" element={<BecomeProviderPage />} />
         </Route>
       </Routes>

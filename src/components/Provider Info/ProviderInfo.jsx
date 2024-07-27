@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import ReviewsNavigation from './ReviewsNavigation';
 import fetchProviders from '../../data/fetchProviders';
 import Loading from '../Our Team/Loading';
+import { useProviders } from '../../services/queries';
 
 const HR = () => (
   <div className="sm:hidden bg-[rgb(239,235,223)] max-w-[63.75rem] mx-auto mt-6 mb-4">
@@ -13,10 +14,10 @@ const HR = () => (
 );
 
 const ProviderInfo = () => {
-  const { index } = useParams();
+  const { name } = useParams();
 
-  const { providersData, isLoading } = fetchProviders();
-  const provider = providersData[index];
+  const providers = useProviders();
+  const provider = providers?.data?.find((obj) => obj.provider_name === name);
 
   const showStatesLicensed = (states) => {
     if (states) {
@@ -56,7 +57,7 @@ const ProviderInfo = () => {
     }
   };
 
-  return isLoading ? (
+  return providers.isPending || providers.isLoading ? (
     <>
       {' '}
       <Loading data={'Provider'} />
@@ -92,7 +93,7 @@ const ProviderInfo = () => {
                   </p>
                 )}
                 <p className="whitespace-pre-line ~text-sm/base ~mt-5/6 ">
-                  {provider?.provider_description}
+                  {provider?.provider_description.replace(/(?<!\.)\n/g, ' ')}
                 </p>
               </div>
             </div>

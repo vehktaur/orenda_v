@@ -8,9 +8,12 @@ import fetchProviders from '../../data/fetchProviders';
 import ProviderCardSmall from './ProviderCardSmall';
 import { Link } from 'react-router-dom';
 import Loading from './Loading';
+import { useProviders } from '../../services/queries';
 
 const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
-  const { providersData, setProvidersData, isLoading } = fetchProviders();
+  const providers = useProviders();
+  const [providersData, setProvidersData] = useState(providers.data);
+  console.log(providers.data, providersData);
 
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffSet] = useState(itemOffset + itemsPerPage);
@@ -35,9 +38,9 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
     }
   };
 
-  const numberOfSlides = Math.ceil(providersData.length / itemsPerPage);
+  const numberOfSlides = Math.ceil(providers?.data?.length / itemsPerPage);
 
-  return isLoading ? (
+  return providers.isPending ? (
     <>
       <Loading data={'Providers'} />
     </>
@@ -80,10 +83,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
           loop={true}
           centeredSlides={true}
         >
-          {providersData.map((provider, i) => {
-            const index = providersData.findIndex(
-              (obj) => obj.name === provider?.name
-            );
+          {providersData?.map((provider, i) => {
             return (
               <SwiperSlide
                 style={{
@@ -94,7 +94,6 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
               >
                 <ProviderCardSmall
                   provider={provider}
-                  index={index}
                   setProvidersData={setProvidersData}
                 />
               </SwiperSlide>
