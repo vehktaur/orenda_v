@@ -135,7 +135,7 @@ const ProviderInfo = () => {
                     States Licensed
                   </h2>
                   <p className="~text-sm/lg">
-                    {showStatesLicensed(provider?.states_licensed)}
+                    {showStatesLicensed(provider?.licensed_states)}
                   </p>
                 </div>
                 <div className="hidden ~space-y-6/10 sm:block sm:~px-2/4 sm:~py-3/6">
@@ -146,7 +146,7 @@ const ProviderInfo = () => {
                   />
                   <ProviderInfoUl
                     h2="Board Certification"
-                    listArray={provider?.certifications}
+                    listArray={provider?.certification}
                     classes={{ mb: 1.06 }}
                   />
                   <ProviderInfoUl
@@ -184,8 +184,8 @@ const ProviderInfo = () => {
                   classes={{ mb: 1.31 }}
                 />
                 <ProviderInfoUl
-                  h2="Board Certifications"
-                  listArray={provider?.certifications}
+                  h2="Board Certification"
+                  listArray={provider?.certification}
                   classes={{ mb: 1.06 }}
                 />
                 <ProviderInfoUl
