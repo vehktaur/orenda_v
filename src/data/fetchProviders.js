@@ -9,7 +9,7 @@ const fetchProviders = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetch(url);
+        const data = await fetch(url, { referrerPolicy: 'unsafe-url' });
         const response = await data.json();
         setProvidersData(
           response?.providers.map((provider) => ({
