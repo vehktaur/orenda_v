@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const fetchProviders = () => {
-  const url = '/api';
+  const url = '/api/';
   const [providersData, setProvidersData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
