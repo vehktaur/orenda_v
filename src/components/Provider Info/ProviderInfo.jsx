@@ -220,6 +220,7 @@ const ProviderInfo = () => {
                           <blockquote className=" ~text-sm/base leading-7 text-justify">
                             {review.review}
                           </blockquote>
+                         {review.name && <p className="flex justify-end font-medium ~text-sm/base italic">&#8212; {review.name}</p>}
                         </div>
                       </SwiperSlide>
                     ))}
