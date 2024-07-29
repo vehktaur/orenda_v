@@ -76,11 +76,9 @@ const ProviderInfo = () => {
                     </div>
                   )}
                   <img
-                    className={`w-[85%] mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block object-contain`}
+                    className={`mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block object-contain`}
                     src={provider?.provider_image_url}
                     alt={provider?.provider_name}
-                    width={280}
-                    height={320}
                   />
                 </div>
                 <div className="md:max-w-[50%] sm:~px-2/8 sm:py-6">
@@ -88,7 +86,7 @@ const ProviderInfo = () => {
                     {provider?.provider_name}
                   </h1>
                   <p className="text-[#7C7C7C] ~text-xs/sm font-bold text-left ">
-                    <span>{provider?.credentials}</span>
+                    <span>{provider?.provider_code}</span>
                   </p>
                   {provider?.do_therapy && (
                     <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-left ~mt-2/[1.38rem] ~text-xs/sm text-nowrap">
