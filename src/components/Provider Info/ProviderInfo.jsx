@@ -79,6 +79,8 @@ const ProviderInfo = () => {
                     className={`mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block`}
                     src={provider?.provider_image_url}
                     alt={provider?.provider_name}
+                    width={300}
+                    height={300}
                   />
                 </div>
                 <div className="md:max-w-[50%] sm:~px-2/8 sm:py-6">
@@ -236,7 +238,7 @@ const ProviderInfo = () => {
             <div className="mt-12 ~mb-[6.13rem]/[11.44rem] sm:~mr-0/[3rem]">
               <div className="flex flex-col items-center sm:flex-row sm:justify-end">
                 <a
-                  href={provider?.bookingLink}
+                  href={provider?.booking_link}
                   className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors text-center"
                 >
                   Book
