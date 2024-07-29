@@ -76,7 +76,7 @@ const ProviderInfo = () => {
                     </div>
                   )}
                   <img
-                    className={`w-full mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block object-contain`}
+                    className={`w-[85%] mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block object-contain`}
                     src={provider?.provider_image_url}
                     alt={provider?.provider_name}
                     width={280}
@@ -96,7 +96,12 @@ const ProviderInfo = () => {
                     </p>
                   )}
                   <p className="whitespace-pre-line ~text-sm/base ~mt-5/6 ">
-                    {provider?.provider_description.replace(/(?<!\.)\n/g, ' ')}
+                    {provider?.provider_description.replace(
+                      /(\.\n|\n)/g,
+                      (match) => {
+                        return match === '.\n' ? '.\n\n' : ' ';
+                      }
+                    )}
                   </p>
                 </div>
               </div>
@@ -222,7 +227,11 @@ const ProviderInfo = () => {
                           <blockquote className=" ~text-sm/base leading-7 text-justify">
                             {review.review}
                           </blockquote>
-                         {review.name && <p className="flex justify-end font-medium ~text-sm/base italic">&#8212; {review.name}</p>}
+                          {review.name && (
+                            <p className="flex justify-end font-medium ~text-sm/base italic">
+                              &#8212; {review.name}
+                            </p>
+                          )}
                         </div>
                       </SwiperSlide>
                     ))}
