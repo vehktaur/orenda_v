@@ -76,11 +76,11 @@ const ProviderInfo = () => {
                     </div>
                   )}
                   <img
-                    className={`mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block`}
+                    className={`w-full mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block object-contain`}
                     src={provider?.provider_image_url}
                     alt={provider?.provider_name}
-                    width={300}
-                    height={300}
+                    width={280}
+                    height={320}
                   />
                 </div>
                 <div className="md:max-w-[50%] sm:~px-2/8 sm:py-6">
