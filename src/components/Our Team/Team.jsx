@@ -3,15 +3,18 @@ import teamData from '../../data/teamData';
 import NavButtons from './NavButtons';
 import TeamMemberCard from './TeamMemberCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import TeamMembersSection from './TeamMembersSection';
 
 const Team = ({ itemsPerPage }) => {
   const numberOfSlides = Math.ceil(teamData.length / itemsPerPage);
   const teamSwiperHanger = useRef();
 
-  const handleSlideChange = () => {
+
+  const [activeIndex, setActiveIndex] = useState(1);
+  const handleSlideChange = (swiper) => {
     teamSwiperHanger?.current.scrollIntoView(true);
+    setActiveIndex(swiper.activeIndex + 1)
   };
 
   return (
@@ -48,7 +51,7 @@ const Team = ({ itemsPerPage }) => {
               ))}
 
             <div className="max-w-[13.7rem] ms-auto flex justify-end mt-8">
-              <NavButtons numberOfSlides={numberOfSlides} />
+              <NavButtons activeIndex={activeIndex} numberOfSlides={numberOfSlides} />
             </div>
           </Swiper>
         </div>

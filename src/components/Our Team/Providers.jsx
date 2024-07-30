@@ -15,9 +15,11 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
   const [providersData, setProvidersData] = useState(providers.data);
 
   const providerSwiperHanger = useRef();
+  const [activeIndex, setActiveIndex] = useState(1);
 
-  const handleSlideChange = () => {
+  const handleSlideChange = (swiper) => {
     providerSwiperHanger?.current.scrollIntoView(true);
+    setActiveIndex(swiper.activeIndex + 1);
   };
 
   const numberOfSlides = Math.ceil(providers?.data?.length / itemsPerPage);
@@ -72,7 +74,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                     />
                   </SwiperSlide>
                 ))}
-              <NavButtons numberOfSlides={numberOfSlides} />
+              <NavButtons activeIndex={activeIndex} numberOfSlides={numberOfSlides} />
             </Swiper>
           </div>
         </div>
