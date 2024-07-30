@@ -2,9 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import ProvidersSection from './ProvidersSection';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import NavButtons from './NavButtons';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 // import providersData from '../../data/providersData';
-import fetchProviders from '../../data/fetchProviders';
 import ProviderCardSmall from './ProviderCardSmall';
 import { Link } from 'react-router-dom';
 import Loading from './Loading';
@@ -13,32 +12,22 @@ import Error from './Error';
 
 const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
   const providers = useProviders();
-  const [providersData, setProvidersData] = useState(() => providers.data);
-
-  const [itemOffset, setItemOffset] = useState(0);
-  const [endOffset, setEndOffSet] = useState(itemOffset + itemsPerPage);
+  const [providersData, setProvidersData] = useState(providers.data);
 
   const providerSwiperHanger = useRef();
 
-  const nextSlide = () => {
-    setItemOffset((prevOffset) => prevOffset + itemsPerPage);
-    setEndOffSet((prevOffset) => prevOffset + itemsPerPage);
-  };
-  const prevSlide = () => {
-    setItemOffset((prevOffset) => prevOffset - itemsPerPage);
-    setEndOffSet((prevOffset) => prevOffset - itemsPerPage);
-  };
-
-  const handleSlideChange = (swiper) => {
+  const handleSlideChange = () => {
     providerSwiperHanger?.current.scrollIntoView(true);
-    if (swiper.activeIndex > swiper.previousIndex) {
-      nextSlide();
-    } else {
-      prevSlide();
-    }
   };
 
   const numberOfSlides = Math.ceil(providers?.data?.length / itemsPerPage);
+
+  useEffect(() => {
+    if (!providersData) {
+      setProvidersData(providers.data);
+      console.log('Set Providers data');
+    }
+  }, [providers.data]);
 
   if (providers.isLoading) {
     return <Loading data={'Providers'} />;
@@ -59,18 +48,30 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
             ></div>
             <Swiper
               onSlideChange={handleSlideChange}
-              spaceBetween={20}
+              spaceBetween={80}
               slidesPerView={1}
+              autoHeight={true}
             >
-              {[...Array(numberOfSlides)].map((_, index) => (
-                <SwiperSlide key={index}>
-                  <ProvidersSection
-                    itemOffset={itemOffset}
-                    endOffset={endOffset}
-                    numberOfColumns={numberOfColumns}
-                  />
-                </SwiperSlide>
-              ))}
+              {providersData
+                ?.reduce((slidesArray, provider, index) => {
+                  const slideIndex = Math.floor(index / itemsPerPage);
+
+                  if (!slidesArray[slideIndex]) {
+                    slidesArray[slideIndex] = [];
+                  }
+
+                  slidesArray[slideIndex].push(provider);
+                  return slidesArray;
+                }, [])
+                .map((slide, index) => (
+                  <SwiperSlide key={index}>
+                    <ProvidersSection
+                      slide={slide}
+                      numberOfColumns={numberOfColumns}
+                      setProvidersData={setProvidersData}
+                    />
+                  </SwiperSlide>
+                ))}
               <NavButtons numberOfSlides={numberOfSlides} />
             </Swiper>
           </div>

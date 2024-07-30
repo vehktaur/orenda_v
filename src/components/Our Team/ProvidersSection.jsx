@@ -1,14 +1,6 @@
-import { useState } from 'react';
-import fetchProviders from '../../data/fetchProviders';
-import { useProviders } from '../../services/queries';
 import ProviderCardSmall from './ProviderCardSmall';
 
-const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
-  const providers = useProviders();
-
-  const [providersData, setProvidersData] = useState(providers.data);
-
-  const sectionProvidersData = providersData.slice(itemOffset, endOffset);
+const ProvidersSection = ({ slide, numberOfColumns, setProvidersData }) => {
 
   let gridClasses = `grid auto-cols-fr grid-cols-1 ${
     numberOfColumns === 5
@@ -18,7 +10,7 @@ const ProvidersSection = ({ itemOffset, endOffset, numberOfColumns }) => {
 
   return (
     <div className={gridClasses}>
-      {sectionProvidersData.map((provider) => {
+      {slide.map((provider) => {
         return (
           <ProviderCardSmall
             provider={provider}
