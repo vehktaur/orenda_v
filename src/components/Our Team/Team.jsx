@@ -1,4 +1,4 @@
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Keyboard } from 'swiper/modules';
 import teamData from '../../data/teamData';
 import NavButtons from './NavButtons';
 import TeamMemberCard from './TeamMemberCard';
@@ -10,11 +10,10 @@ const Team = ({ itemsPerPage }) => {
   const numberOfSlides = Math.ceil(teamData.length / itemsPerPage);
   const teamSwiperHanger = useRef();
 
-
   const [activeIndex, setActiveIndex] = useState(1);
   const handleSlideChange = (swiper) => {
     teamSwiperHanger?.current.scrollIntoView(true);
-    setActiveIndex(swiper.activeIndex + 1)
+    setActiveIndex(swiper.activeIndex + 1);
   };
 
   return (
@@ -31,6 +30,10 @@ const Team = ({ itemsPerPage }) => {
             spaceBetween={50}
             slidesPerView={1}
             autoHeight={true}
+            keyboard={{
+              enabled: true
+            }}
+            modules={[Keyboard]}
           >
             {teamData
               .reduce((slidesArray, member, index) => {
@@ -51,7 +54,10 @@ const Team = ({ itemsPerPage }) => {
               ))}
 
             <div className="max-w-[13.7rem] ms-auto flex justify-end mt-8">
-              <NavButtons activeIndex={activeIndex} numberOfSlides={numberOfSlides} />
+              <NavButtons
+                activeIndex={activeIndex}
+                numberOfSlides={numberOfSlides}
+              />
             </div>
           </Swiper>
         </div>
