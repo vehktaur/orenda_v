@@ -1,4 +1,8 @@
+import { useSwiper } from 'swiper/react';
+
 const NavButtons = ({ activeIndex, numberOfSlides }) => {
+  const swiper = useSwiper();
+
   return (
     <div className="max-w-7xl mx-auto">
       <div className="p-4 flex items-center justify-center lg:justify-end gap-6">
