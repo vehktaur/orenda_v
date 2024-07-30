@@ -63,6 +63,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                   }
 
                   slidesArray[slideIndex].push(provider);
+
                   return slidesArray;
                 }, [])
                 .map((slide, index) => (
@@ -74,7 +75,10 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                     />
                   </SwiperSlide>
                 ))}
-              <NavButtons activeIndex={activeIndex} numberOfSlides={numberOfSlides} />
+              <NavButtons
+                activeIndex={activeIndex}
+                numberOfSlides={numberOfSlides}
+              />
             </Swiper>
           </div>
         </div>
