@@ -10,7 +10,7 @@ const ProvidersInAbout = () => {
   const numImages = 20;
 
   const [indices, setIndices] = useState(
-    Array.from({ length: numImages }, (_, i) => i)
+    () => Array.from({ length: numImages }, (_, i) => i)
   );
 
   const itemsRef = useRef([]);

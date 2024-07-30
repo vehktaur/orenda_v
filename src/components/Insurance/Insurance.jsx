@@ -146,12 +146,11 @@ const Insurance = () => {
             </div>
           </div>
         )}
-        <div className="mt-0">
+        <div className="mt-0"></div>
+        <main className="px-5 ~pb-[3.31rem]/[10rem] ~mt-12/28">
+          <h1 className="heading">Let's check your plan!</h1>
           <Network2 />
-        </div>
-        <main className="px-5 ~pb-[3.31rem]/[10rem] ~mt-10/20">
-          <h1 className="heading ~mb-2/4">Let's check your plan!</h1>
-          <p className="max-w-[38.32rem] mx-auto text-center">
+          <p className="w-4/5 max-w-[38.32rem] mx-auto text-center">
             Please complete this form to verify if your insurance is in network
             and what your Co-pay will be.
           </p>

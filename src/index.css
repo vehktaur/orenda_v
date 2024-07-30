@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: 'Ogg Text TRIAL';
-  src: url('./assets/fonts/Ogg Text TRIAL medium.otf');
+  src: url('./assets/fonts/Ogg Text TRIAL medium.ttf') format('truetype');
   font-style: normal;
   font-weight: 500; /* Medium */
   font-display: swap;

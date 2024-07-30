@@ -13,7 +13,7 @@ import Error from './Error';
 
 const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
   const providers = useProviders();
-  const [providersData, setProvidersData] = useState(providers.data);
+  const [providersData, setProvidersData] = useState(() => providers.data);
 
   const [itemOffset, setItemOffset] = useState(0);
   const [endOffset, setEndOffSet] = useState(itemOffset + itemsPerPage);
