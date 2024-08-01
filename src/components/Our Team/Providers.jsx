@@ -21,7 +21,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
   const [providersData, setProvidersData] = useState(providers.data);
   const [activeIndex, setActiveIndex] = useState(1);
   const [filterMenu, setFilterMenu] = useState(false);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState({ name: '' });
   const { register, watch, reset, handleSubmit } = useForm({
     defaultValues: {
       'Ages Seen': [],
@@ -31,22 +31,15 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
   });
 
   const filters = watch();
-  const agesSeenLength = filters['Ages Seen']?.length ?? 0;
-  const statesLength = filters.States?.length ?? 0;
-  const specialtiesLength = filters.Specialties?.length ?? 0;
-  let numberOfFilters = agesSeenLength + statesLength + specialtiesLength;
+  const filterKeys = ['Ages Seen', 'States', 'Specialties'];
+  const numberOfFilters = filterKeys.reduce(
+    (total, key) => total + (filters[key]?.length ?? 0),
+    0
+  );
 
   const filterMenuRef = useRef();
   const timeline = useRef();
   const providerSwiperHanger = useRef();
-
-  const [filteredProviders, setFilteredProviders] = useState(() =>
-    providersData?.filter((provider) =>
-      provider.provider_name.toLowerCase().includes(query)
-    )
-  );
-
-  const numberOfSlides = Math.ceil(filteredProviders?.length / itemsPerPage);
 
   const handleSlideChange = (swiper) => {
     providerSwiperHanger?.current.scrollIntoView(true);
@@ -58,63 +51,10 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
     setFilterMenu((prev) => !prev);
   };
 
-  const filterItems = (items, criteria) => {
-    return items.filter((item) => {
-      let matchAgeGroup = true,
-        matchSpecialties = true,
-        matchStates = true;
-      if (criteria['Ages Seen'].length > 0) {
-        matchAgeGroup = criteria['Ages Seen'].some((age) => {
-          // Normalize the criteria age string by removing ' years' and spaces
-          const normalizedCriteriaAge = age
-            .toLowerCase()
-            .replace(' years', '')
-            .replace(/\s+/g, '') // Remove all spaces
-            .trim();
-
-          // Normalize each item age_group string
-          const normalizedItemAges = item.age_group.map((ageGroup) =>
-            ageGroup
-              .toLowerCase()
-              .replace(/\d+/g, '') // Remove numbers (if necessary)
-              .replace(/\s+/g, '') // Remove all spaces
-              .replace('years', '') // Remove 'years' string
-              .trim()
-          );
-
-          // Check if the normalized criteria age is included in the normalized item ages
-          return normalizedItemAges.includes('Adult');
-        });
-      }
-
-      if (criteria.Specialties.length > 0)
-        matchSpecialties = criteria.Specialties.every((specialty) => {
-          const specials = item.specialisation.map((spec) =>
-            spec.toLowerCase()
-          );
-          const focus = item.focus_areas.map((spec) =>
-            spec.toLowerCase()
-          );
-          return focus.includes(specialty.toLowerCase()) || specials.includes(specialty.toLowerCase());
-        });
-      if (criteria.States.length > 0)
-        matchStates = criteria.States.every((state) => {
-          const places = item.licensed_states.map((place) =>
-            place.toLowerCase()
-          );
-          return places.includes(state.toLowerCase());
-        });
-      if (matchAgeGroup)
-        console.log(matchAgeGroup, matchSpecialties, matchSpecialties);
-      return matchAgeGroup && matchSpecialties && matchStates;
-    });
-  };
-
   const onSubmit = (data) => {
-    console.log(data);
     toggleFilterMenu();
     providerSwiperHanger?.current.scrollIntoView(true);
-    setFilteredProviders(filterItems(providersData, filters));
+    setQuery((prev) => ({ name: prev.name, ...data }));
   };
 
   useGSAP(() => {
@@ -136,23 +76,37 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
     }
   }, [providers.data]);
 
+  const filterProviders = () => {
+    let filteredProviders = providersData?.filter((provider) =>
+      provider.provider_name.toLowerCase().includes(query.name)
+    );
+
+    if (query.States && query.States.length > 0) {
+      const states = query.States.map((state) => state.toLowerCase());
+      filteredProviders = filteredProviders.filter((provider) => {
+        const places = provider.licensed_states.map((item) => item.toLowerCase());
+  
+        // Check if all of the states are in the places
+        return places.every(place => states.includes(place));
+      });
+    }
+
+    return filteredProviders;
+  };
+
+  const filteredProviders = filterProviders();
+  const numberOfSlides = Math.ceil(filteredProviders?.length / itemsPerPage);
+
   useEffect(() => {
     if (!providersData) {
       setProvidersData(providers.data);
     }
   }, [providers.data]);
 
-  useEffect(() => {
-    setFilteredProviders(
-      providersData?.filter((provider) =>
-        provider.provider_name.toLowerCase().includes(query)
-      )
-    );
-  }, [query]);
-
   return (
     <>
       <div>
+        {/* Search input which only ever shows on the Our Team Page (Not for homepage) */}
         {!forHome && (
           <div className="flex gap-4 justify-center items-center ~my-6/10 px-5">
             <label
@@ -185,8 +139,13 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                 className="block w-full bg-[#FCFCFC] border border-[#E7E7E7] rounded-lg px-4 py-3 font-dm-sans ~text-sm/lg placeholder:~text-sm/base placeholder:font-medium placeholder:text-[#878787] outline-none ps-12"
                 type="search"
                 name="search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value.toLowerCase())}
+                value={query.name}
+                onChange={(event) =>
+                  setQuery((prev) => ({
+                    ...prev,
+                    name: event.target.value.toLowerCase()
+                  }))
+                }
                 id="search"
                 placeholder="Search"
               />
@@ -223,14 +182,18 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
           </div>
         )}
       </div>
+
+      {/* Side Filter Menu, also just for the Our Team Page (Not for homepage) */}
       <div className={`${forHome ? '' : 'border-t border-[#E9E9E9] flex'}`}>
         {filterMenu && (
+          // dark overlay to be shown in mobile screens when filterMenu is open
           <div
             onClick={() => toggleFilterMenu()}
             className="fixed z-[2] inset-0 bg-[rgba(7,_7,_7,_0.50)] md:hidden"
           />
         )}
         {!forHome && (
+          //The actual aside menu
           <aside
             ref={filterMenuRef}
             className={`absolute z-[3] left-0 top-20 md:static border-r bg-white border-[#E7E7E7] rounded-r-lg md:rounded-none pt-10 md:py-5 w-0 min-w-0 overflow-hidden flex flex-col ${
@@ -270,7 +233,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
               </div>
 
               <div className=" border-y border-[#E7E7E7] px-5">
-                <div className="w-full flex justify-between items-center py-[1.94rem] max-w-[16.75rem] mx-auto ">
+                <div className="w-full px-5 flex justify-between items-center py-[1.94rem] max-w-[16.75rem] mx-auto ">
                   <button
                     onClick={() => reset()}
                     className="font-dm-sans font-bold text-[#070707] text-sm"
@@ -279,7 +242,9 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                     Clear all
                   </button>
                   <button
-                    className="text-sm font-bold text-white p-2 bg-[#A1A1A1] rounded-3xl w-[9.375rem]"
+                    className={`text-sm font-bold text-white p-2 rounded-3xl w-[7.375rem] ${
+                      numberOfFilters > 0 ? 'bg-orenda-purple' : 'bg-[#A1A1A1]'
+                    }`}
                     type="submit"
                   >
                     Show results
@@ -290,8 +255,11 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
           </aside>
         )}
 
+        {/* Handle Loading and Error states when fetching providers */}
         {providers.isLoading && <Loading data={'Providers'} />}
         {providers.isError && <Error />}
+
+        {/* Providers component after data has been fetched */}
         {!providers.isLoading && !providers.isError && (
           <div className="px-5 md:~px-5/8 ~pt-8/20 min-w-0 w-full">
             <div
