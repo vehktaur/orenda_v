@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-const Filters = ({ h2, search }) => {
+const Filters = ({ register, h2, search }) => {
+  const [query, setQuery] = useState('');
   let listArray;
-
   if (h2 === 'Ages Seen') {
     listArray = [
       '5 - 13 years',
@@ -69,13 +69,13 @@ const Filters = ({ h2, search }) => {
       'Adjustment Disorder',
       'Anger Management',
       'Anxiety',
-      'Autism'
+      'Autism',
+      'Depression'
     ];
   }
 
-  const [query, setQuery] = useState('');
   const filteredArray = listArray.filter((item) =>
-    item.toLocaleLowerCase().includes(query)
+    item.toLowerCase().includes(query)
   );
   return (
     <div className="space-y-[1.88rem] py-8">
@@ -87,7 +87,7 @@ const Filters = ({ h2, search }) => {
           type="text"
           placeholder="Search"
           value={query}
-          onChange={(event) => setQuery(event.target.value.toLocaleLowerCase())}
+          onChange={(event) => setQuery(event.target.value.toLowerCase())}
         />
       )}
 
@@ -95,12 +95,12 @@ const Filters = ({ h2, search }) => {
         {filteredArray.length > 0 ? (
           filteredArray.map((item) => (
             <li key={item}>
-              <label htmlFor={item} className="flex items-center gap-3">
+              <label className="flex items-center gap-3">
                 <input
+                  {...register(h2)}
                   className="block size-[1.125rem] accent-orenda-purple"
                   type="checkbox"
-                  name={h2}
-                  id={item}
+                  value={item}
                 />{' '}
                 <span className="text-sm font-dm-sans font-medium">{item}</span>
               </label>

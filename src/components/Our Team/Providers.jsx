@@ -12,21 +12,41 @@ import Error from './Error';
 import Filters from './Filters';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { useForm } from 'react-hook-form';
 
 gsap.registerPlugin(useGSAP);
 
 const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
   const providers = useProviders();
   const [providersData, setProvidersData] = useState(providers.data);
+  const [activeIndex, setActiveIndex] = useState(1);
   const [filterMenu, setFilterMenu] = useState(false);
   const [query, setQuery] = useState('');
-  const [filterData, setFilterData] = useState({});
+  const { register, watch, reset, handleSubmit } = useForm({
+    defaultValues: {
+      'Ages Seen': [],
+      States: [],
+      Specialties: []
+    }
+  });
+
+  const filters = watch();
+  const agesSeenLength = filters['Ages Seen']?.length ?? 0;
+  const statesLength = filters.States?.length ?? 0;
+  const specialtiesLength = filters.Specialties?.length ?? 0;
+  let numberOfFilters = agesSeenLength + statesLength + specialtiesLength;
 
   const filterMenuRef = useRef();
   const timeline = useRef();
-
   const providerSwiperHanger = useRef();
-  const [activeIndex, setActiveIndex] = useState(1);
+
+  const [filteredProviders, setFilteredProviders] = useState(() =>
+    providersData?.filter((provider) =>
+      provider.provider_name.toLowerCase().includes(query)
+    )
+  );
+
+  const numberOfSlides = Math.ceil(filteredProviders?.length / itemsPerPage);
 
   const handleSlideChange = (swiper) => {
     providerSwiperHanger?.current.scrollIntoView(true);
@@ -38,18 +58,64 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
     setFilterMenu((prev) => !prev);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    toggleFilterMenu();
-    providerSwiperHanger?.current.scrollIntoView(true);
+  const filterItems = (items, criteria) => {
+    return items.filter((item) => {
+      let matchAgeGroup = true,
+        matchSpecialties = true,
+        matchStates = true;
+      if (criteria['Ages Seen'].length > 0) {
+        matchAgeGroup = criteria['Ages Seen'].some((age) => {
+          // Normalize the criteria age string by removing ' years' and spaces
+          const normalizedCriteriaAge = age
+            .toLowerCase()
+            .replace(' years', '')
+            .replace(/\s+/g, '') // Remove all spaces
+            .trim();
+
+          // Normalize each item age_group string
+          const normalizedItemAges = item.age_group.map((ageGroup) =>
+            ageGroup
+              .toLowerCase()
+              .replace(/\d+/g, '') // Remove numbers (if necessary)
+              .replace(/\s+/g, '') // Remove all spaces
+              .replace('years', '') // Remove 'years' string
+              .trim()
+          );
+
+          // Check if the normalized criteria age is included in the normalized item ages
+          return normalizedItemAges.includes('Adult');
+        });
+      }
+
+      if (criteria.Specialties.length > 0)
+        matchSpecialties = criteria.Specialties.every((specialty) => {
+          const specials = item.specialisation.map((spec) =>
+            spec.toLowerCase()
+          );
+          const focus = item.focus_areas.map((spec) =>
+            spec.toLowerCase()
+          );
+          return focus.includes(specialty.toLowerCase()) || specials.includes(specialty.toLowerCase());
+        });
+      if (criteria.States.length > 0)
+        matchStates = criteria.States.every((state) => {
+          const places = item.licensed_states.map((place) =>
+            place.toLowerCase()
+          );
+          return places.includes(state.toLowerCase());
+        });
+      if (matchAgeGroup)
+        console.log(matchAgeGroup, matchSpecialties, matchSpecialties);
+      return matchAgeGroup && matchSpecialties && matchStates;
+    });
   };
 
-  useEffect(() => {
-    if (!providersData) {
-      setProvidersData(providers.data);
-      console.log('Set Providers data');
-    }
-  }, [providers.data]);
+  const onSubmit = (data) => {
+    console.log(data);
+    toggleFilterMenu();
+    providerSwiperHanger?.current.scrollIntoView(true);
+    setFilteredProviders(filterItems(providersData, filters));
+  };
 
   useGSAP(() => {
     if (!providers.isLoading) {
@@ -70,77 +136,92 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
     }
   }, [providers.data]);
 
-  const providersByName = providersData?.filter((provider) =>
-    provider.provider_name.toLocaleLowerCase().includes(query)
-  );
+  useEffect(() => {
+    if (!providersData) {
+      setProvidersData(providers.data);
+    }
+  }, [providers.data]);
 
-  const numberOfSlides = Math.ceil(providersByName?.length / itemsPerPage);
+  useEffect(() => {
+    setFilteredProviders(
+      providersData?.filter((provider) =>
+        provider.provider_name.toLowerCase().includes(query)
+      )
+    );
+  }, [query]);
 
   return (
     <>
       <div>
-        <div className="flex gap-4 justify-center items-center ~my-6/10 px-5">
-          <label
-            className="w-full ~max-w-[15.93rem]/[32.56rem] relative"
-            htmlFor="search"
-          >
-            <span className="absolute top-0 bottom-0 w-12 grid place-items-center">
+        {!forHome && (
+          <div className="flex gap-4 justify-center items-center ~my-6/10 px-5">
+            <label
+              className="w-full ~max-w-[15.93rem]/[32.56rem] relative"
+              htmlFor="search"
+            >
+              <span className="absolute top-0 bottom-0 w-12 grid place-items-center">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Search" clip-path="url(#clip0_2563_10424)">
+                    <path
+                      id="Icon"
+                      d="M13.803 14.8633C14.0959 15.1562 14.5708 15.1562 14.8637 14.8633C15.1566 14.5704 15.1566 14.0956 14.8637 13.8027L13.803 14.8633ZM12.6618 7.37222C12.6618 10.2934 10.2937 12.6614 7.37256 12.6614V14.1614C11.1221 14.1614 14.1618 11.1218 14.1618 7.37222H12.6618ZM7.37256 12.6614C4.45141 12.6614 2.08334 10.2934 2.08334 7.37222H0.583344C0.583344 11.1218 3.62298 14.1614 7.37256 14.1614V12.6614ZM2.08334 7.37222C2.08334 4.45107 4.45141 2.08301 7.37256 2.08301V0.583008C3.62298 0.583008 0.583344 3.62264 0.583344 7.37222H2.08334ZM7.37256 2.08301C10.2937 2.08301 12.6618 4.45107 12.6618 7.37222H14.1618C14.1618 3.62264 11.1221 0.583008 7.37256 0.583008V2.08301ZM11.156 12.2163L13.803 14.8633L14.8637 13.8027L12.2166 11.1556L11.156 12.2163Z"
+                      fill="#B0B0B0"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2563_10424">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <input
+                className="block w-full bg-[#FCFCFC] border border-[#E7E7E7] rounded-lg px-4 py-3 font-dm-sans ~text-sm/lg placeholder:~text-sm/base placeholder:font-medium placeholder:text-[#878787] outline-none ps-12"
+                type="search"
+                name="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value.toLowerCase())}
+                id="search"
+                placeholder="Search"
+              />
+            </label>
+            <button
+              onClick={() => toggleFilterMenu()}
+              className={`flex items-center border border-[#E7E7E7] px-4 py-[0.85rem] gap-2 font-bold font-dm-sans rounded-lg active:border-orenda-purple relative ${
+                numberOfFilters > 0 ? 'border-orenda-purple' : ''
+              }`}
+            >
+              {numberOfFilters > 0 && (
+                <span className="absolute text-[0.625rem] text-white font-dm-sans rounded-full bg-orenda-purple size-[1.0625rem] -top-[0.44rem] right-[0.44rem] grid place-items-center">
+                  {numberOfFilters}
+                </span>
+              )}
               <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <g id="Search" clip-path="url(#clip0_2563_10424)">
-                  <path
-                    id="Icon"
-                    d="M13.803 14.8633C14.0959 15.1562 14.5708 15.1562 14.8637 14.8633C15.1566 14.5704 15.1566 14.0956 14.8637 13.8027L13.803 14.8633ZM12.6618 7.37222C12.6618 10.2934 10.2937 12.6614 7.37256 12.6614V14.1614C11.1221 14.1614 14.1618 11.1218 14.1618 7.37222H12.6618ZM7.37256 12.6614C4.45141 12.6614 2.08334 10.2934 2.08334 7.37222H0.583344C0.583344 11.1218 3.62298 14.1614 7.37256 14.1614V12.6614ZM2.08334 7.37222C2.08334 4.45107 4.45141 2.08301 7.37256 2.08301V0.583008C3.62298 0.583008 0.583344 3.62264 0.583344 7.37222H2.08334ZM7.37256 2.08301C10.2937 2.08301 12.6618 4.45107 12.6618 7.37222H14.1618C14.1618 3.62264 11.1221 0.583008 7.37256 0.583008V2.08301ZM11.156 12.2163L13.803 14.8633L14.8637 13.8027L12.2166 11.1556L11.156 12.2163Z"
-                    fill="#B0B0B0"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_2563_10424">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
+                <path
+                  d="M12.3905 3.33301H3.60947C3.01553 3.33301 2.71809 4.0511 3.13807 4.47108L6.4714 7.80441C6.59642 7.92944 6.66666 8.09901 6.66666 8.27582V10.9997C6.66666 11.2095 6.76546 11.4071 6.93333 11.533L8.79999 12.933C9.01974 13.0978 9.33333 12.941 9.33333 12.6663V8.27582C9.33333 8.09901 9.40357 7.92944 9.52859 7.80441L12.8619 4.47108C13.2819 4.0511 12.9845 3.33301 12.3905 3.33301Z"
+                  stroke="#615D5D"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
               </svg>
-            </span>
-            <input
-              className="block w-full bg-[#FCFCFC] border border-[#E7E7E7] rounded-lg px-4 py-3 font-dm-sans ~text-sm/lg placeholder:~text-sm/base placeholder:font-medium placeholder:text-[#878787] outline-none ps-12"
-              type="search"
-              name="search"
-              value={query}
-              onChange={(event) =>
-                setQuery(event.target.value.toLocaleLowerCase())
-              }
-              id="search"
-              placeholder="Search"
-            />
-          </label>
-          <button
-            onClick={() => toggleFilterMenu()}
-            className="flex items-center border border-[#E7E7E7] px-4 py-[0.85rem] gap-2 font-bold font-dm-sans rounded-lg active:border-orenda-purple"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="M12.3905 3.33301H3.60947C3.01553 3.33301 2.71809 4.0511 3.13807 4.47108L6.4714 7.80441C6.59642 7.92944 6.66666 8.09901 6.66666 8.27582V10.9997C6.66666 11.2095 6.76546 11.4071 6.93333 11.533L8.79999 12.933C9.01974 13.0978 9.33333 12.941 9.33333 12.6663V8.27582C9.33333 8.09901 9.40357 7.92944 9.52859 7.80441L12.8619 4.47108C13.2819 4.0511 12.9845 3.33301 12.3905 3.33301Z"
-                stroke="#615D5D"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
-            </svg>
-            <span className="hidden sm:inline-block ~text-sm/base ">
-              Filter
-            </span>
-          </button>
-        </div>
+              <span className="hidden sm:inline-block ~text-sm/base ">
+                Filter
+              </span>
+            </button>
+          </div>
+        )}
       </div>
       <div className={`${forHome ? '' : 'border-t border-[#E9E9E9] flex'}`}>
         {filterMenu && (
@@ -155,7 +236,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
             className={`absolute z-[3] left-0 top-20 md:static border-r bg-white border-[#E7E7E7] rounded-r-lg md:rounded-none pt-10 md:py-5 w-0 min-w-0 overflow-hidden flex flex-col ${
               filterMenu
                 ? 'max-h-[74.65rem]'
-                : 'max-h-[74.65rem] sm:max-h-[30rem]'
+                : 'max-h-[74.65rem] sm:max-h-[20rem]'
             }`}
           >
             <div className="w-full px-5 max-w-[16.75rem] mx-auto flex justify-between flex-nowrap items-center">
@@ -181,16 +262,17 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="w-full mt-4 ">
+            <form onSubmit={handleSubmit(onSubmit)} className="w-full mt-4 ">
               <div className="divide-y-2 divide-[#E7E7E7] max-w-[16.75rem] mx-auto px-5">
-                <Filters h2="Ages Seen" search={false} />
-                <Filters h2="States" search={true} />
-                <Filters h2="Specialties" search={true} />
+                <Filters register={register} h2="Ages Seen" search={false} />
+                <Filters register={register} h2="States" search={true} />
+                <Filters register={register} h2="Specialties" search={true} />
               </div>
 
               <div className=" border-y border-[#E7E7E7] px-5">
                 <div className="w-full flex justify-between items-center py-[1.94rem] max-w-[16.75rem] mx-auto ">
                   <button
+                    onClick={() => reset()}
                     className="font-dm-sans font-bold text-[#070707] text-sm"
                     type="reset"
                   >
@@ -231,8 +313,8 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                 autoHeight={true}
                 modules={[Keyboard]}
               >
-                {providersByName?.length > 0 ? (
-                  providersByName
+                {filteredProviders?.length > 0 ? (
+                  filteredProviders
                     ?.reduce((slidesArray, provider, index) => {
                       const slideIndex = Math.floor(index / itemsPerPage);
                       if (!slidesArray[slideIndex]) {
@@ -258,7 +340,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                     <p className="text-center italic">Provider Not Found</p>
                   </SwiperSlide>
                 )}
-                {providersByName?.length > 10 && (
+                {filteredProviders?.length > 10 && (
                   <NavButtons
                     activeIndex={activeIndex}
                     numberOfSlides={numberOfSlides}

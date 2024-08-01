@@ -12,6 +12,7 @@ const ProvidersSection = ({ slide, numberOfColumns, setProvidersData }) => {
       {slide.map((provider) => {
         return (
           <ProviderCardSmall
+            key={provider.id}
             provider={provider}
             setProvidersData={setProvidersData}
           />
