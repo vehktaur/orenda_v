@@ -36,7 +36,7 @@ const Header = () => {
       document.body.classList.toggle('no-scroll');
     }
 
-    setNavOpen(!navOpen);
+    setNavOpen((prev) => !prev);
   };
 
   return (

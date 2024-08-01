@@ -23,7 +23,7 @@ const Network2 = () => {
           </h1>
 
           <div className="~mt-3/5">
-            <Marquee speed={150}>
+            <Marquee speed={90}>
               <div className="~mx-8/16">
                 <img className="~w-[7.17rem]/[15.62rem]" src={united} alt="" />
               </div>
@@ -86,7 +86,7 @@ const Network2 = () => {
           </div>
 
           <div className="sm:hidden">
-            <Marquee play={true} speed={150}>
+            <Marquee play={true} speed={90}>
               <div className="~mx-8/28">
                 <img src={emblem} alt="" className="~w-[8.47rem]/[10.25rem]" />
               </div>

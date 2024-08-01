@@ -55,7 +55,7 @@ const ProviderCard = ({ provider, setProvidersData }) => {
           }))
         )
       }
-      className={`max-w-[18rem] pb-[0.94rem] min-w-[18.625rem] h-[23.5rem] md:min-w-[unset] md:h-[unset] w-full rounded-md relative card__shadow flex flex-col cursor-pointer`}
+      className={`max-w-[18rem] pb-[0.94rem] min-w-[18.625rem] h-[23.5rem] [@media(min-width:32rem)]:min-w-[unset] md:h-[unset] w-full rounded-md relative card__shadow flex flex-col cursor-pointer`}
     >
       <div
         className={`absolute inset-0 bg-black opacity-0 md:hover:opacity-100 transition-opacity duration-1000 text-white flex flex-col gap-1 px-3 py-4 md:visible md:animate-none ${

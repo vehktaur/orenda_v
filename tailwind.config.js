@@ -19,7 +19,8 @@ export default {
           "url('/src/assets/md_footer_bg_bl.png'),url('/src/assets/md_footer_bg_tr.png'),url('/src/assets/md_footer_bg_r.png')",
         arrow: 'url(/src/assets/select.svg)',
         logo: 'url(/src/assets/logo-circle-0.15.png)',
-        dotted: 'url(/src/assets/dotted.png)'
+        dotted: 'url(/src/assets/dotted.png)',
+        search: 'url(/src/assets/search.svg)'
       },
       backgroundPosition: {
         'footer-positions': 'top left, bottom right, bottom right',
@@ -48,7 +49,8 @@ export default {
       },
       gridTemplateColumns: {
         team: 'repeat(4, minmax(0, 15.625rem))',
-        network: 'minmax(150px, 17rem), minmax(57.5%, 1fr)'
+        network: 'minmax(150px, 17rem), minmax(57.5%, 1fr)',
+        autofill: 'repeat(auto-fill, minmax(15.2rem, 1fr))'
       },
       keyframes: {
         fadeIn: {
