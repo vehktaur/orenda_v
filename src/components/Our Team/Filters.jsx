@@ -156,7 +156,7 @@ const Filters = ({ register, h2, search }) => {
         />
       )}
 
-      <ul className="space-y-[1.88rem] ps-1 max-h-[12rem] overflow-y-auto scrollbar-none">
+      <ul className="space-y-[1.88rem] ps-1 max-h-[12rem] overflow-y-auto scrollbar-thin scrollbar-thumb-[#888] scrollbar-thumb-rounded-lg">
         {filteredArray.length > 0 ? (
           filteredArray.map((item) => (
             <li key={item}>
