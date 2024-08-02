@@ -5,10 +5,10 @@ const Filters = ({ register, h2, search }) => {
   let listArray;
   if (h2 === 'Ages Seen') {
     listArray = [
-      '5 - 13 years',
-      '14 - 17 years',
+      '5 - 12 years',
+      '13 - 17 years',
       '18 - 64 years',
-      '64 + years'
+      '65 + years'
     ];
   } else if (h2 === 'States') {
     listArray = [
@@ -65,12 +65,77 @@ const Filters = ({ register, h2, search }) => {
     ];
   } else if (h2 === 'Specialties') {
     listArray = [
+      'Abandonment issues',
+      'Academic Stress',
+      'Addiction',
+      'Addiction Consultation',
+      'Addiction / Substance Abuse',
       'ADHD',
       'Adjustment Disorder',
+      'Adolescent / Teen Issues',
+      'Alcoholism',
       'Anger Management',
+      'Anorexia',
       'Anxiety',
-      'Autism',
-      'Depression'
+      'Anxiety and Depression',
+      'Anxiety and Panic Disorders',
+      'Anxiety Disorder',
+      'Attention Deficit/Hyperactivity Disorder (ADHD)',
+      'Autism Spectrum Disorder (ASD)',
+      'Binge Eating Disorder',
+      'Bipolar',
+      'Bipolar Disorder',
+      'Bipolar Disorder (I and II)',
+      'Body Dysmorphic Disorder',
+      'Bulimia Nervosa',
+      'Burnout',
+      'Chronic Pain',
+      'Couple Therapy',
+      'Couples Therapy',
+      'Depression',
+      'Development Disorders',
+      'Disordered Eating',
+      'Domestic Violence',
+      'Eating Disorder',
+      'Family Trauma',
+      'Gender Affirming Care',
+      'Generalized Anxiety',
+      'Generalized Anxiety Disorder',
+      'Genomic Testing',
+      'Geripsych',
+      'Group therapy',
+      'Hyperactivity disorders (ADD / ADHD)',
+      'Insomnia',
+      'LGBTQ+ Counseling',
+      'Life transitions',
+      'Life transitions into Adulthood',
+      'Major Depressive Disorder',
+      'Major Depressive Disorder (MDD)',
+      'Maternity / Postpartum',
+      'Medication Assisted Treatment (MAT)',
+      'Medication Management',
+      'Medication-Assisted Treatment',
+      "Men's Mental Health Issues",
+      "Men's Sexual Health",
+      'Mood disorders',
+      'Mood Swings',
+      'Obsessive Compulsive Disorder (OCD)',
+      'Oppositional Defiant Disorder',
+      'Pain Management Consultation',
+      'Panic Attack',
+      'Panic Attacks',
+      'Panic Disorders',
+      'Performance Anxiety',
+      'Personality Disorder',
+      'Post Traumatic Stress Disorder (PTSD)',
+      'Postpartum Anxiety',
+      'Postpartum Depression',
+      'Pre-College Fears',
+      'Premenstrual Dysphoric Disorder',
+      'Prescription / Refill',
+      'Psychiatry Consultation',
+      'PTSD',
+      'Schizophrenia'
     ];
   }
 

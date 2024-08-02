@@ -77,18 +77,52 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
   }, [providers.data]);
 
   const filterProviders = () => {
-    let filteredProviders = providersData?.filter((provider) =>
-      provider.provider_name.toLowerCase().includes(query.name)
-    );
+    const normalize = (str, term) => {
+      return str.replace(new RegExp(`\\s+|${term}`, 'g'), '').toLowerCase();
+    };
 
-    if (query.States && query.States.length > 0) {
-      const states = query.States.map((state) => state.toLowerCase());
-      filteredProviders = filteredProviders.filter((provider) => {
-        const places = provider.licensed_states.map((item) => item.toLowerCase());
-  
-        // Check if all of the states are in the places
-        return places.every(place => states.includes(place));
-      });
+    let filteredProviders = providersData;
+
+    for (const key in query) {
+      if (query[key] && query[key].length > 0) {
+        const normalizedQueryValues =
+          key !== 'name'
+            ? query[key].map((value) =>
+                normalize(value, key === 'Ages Seen' ? 'years' : '')
+              )
+            : normalize(query[key], '');
+
+        filteredProviders = filteredProviders.filter((provider) => {
+          let providerValues = [];
+          if (key === 'States') {
+            providerValues =
+              provider.licensed_states?.map((state) => normalize(state, '')) ||
+              [];
+          } else if (key === 'Specialties') {
+            providerValues = [
+              ...(provider.specialization?.map((item) => normalize(item, '')) ||
+                []),
+              ...(provider.focus_areas?.map((item) => normalize(item, '')) ||
+                [])
+            ];
+          } else if (key === 'Ages Seen') {
+            providerValues =
+              provider.age_group?.map((age) => normalize(age, 'yrs')) || [];
+          } else if (key === 'name') {
+            return provider.provider_name
+              ?.toLowerCase()
+              .includes(query.name.toLowerCase());
+          }
+
+          return normalizedQueryValues.every((value) => {
+            if (key === 'Ages Seen')
+              return providerValues.some((providerAge) =>
+                providerAge.includes(value)
+              );
+            return providerValues.includes(value);
+          });
+        });
+      }
     }
 
     return filteredProviders;
@@ -256,11 +290,13 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
         )}
 
         {/* Handle Loading and Error states when fetching providers */}
-        {providers.isLoading && <Loading data={'Providers'} />}
+        {!providers.isError && (providers.isLoading || !filteredProviders) && (
+          <Loading data={'Providers'} />
+        )}
         {providers.isError && <Error />}
 
         {/* Providers component after data has been fetched */}
-        {!providers.isLoading && !providers.isError && (
+        {!providers.isLoading && !providers.isError && filteredProviders && (
           <div className="px-5 md:~px-5/8 ~pt-8/20 min-w-0 w-full">
             <div
               className={`max-w-7xl mx-auto relative ${
@@ -305,7 +341,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                     ))
                 ) : (
                   <SwiperSlide>
-                    <p className="text-center italic">Provider Not Found</p>
+                    <p className="text-center italic">No Providers Found</p>
                   </SwiperSlide>
                 )}
                 {filteredProviders?.length > 10 && (

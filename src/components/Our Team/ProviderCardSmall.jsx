@@ -67,7 +67,9 @@ const ProviderCard = ({ provider, setProvidersData }) => {
         <div className={`grid gap-2`}>
           <h3 className="font-semibold">About Provider</h3>
           <p className={`line-clamp-[9] overflow-hidden text-[0.85rem]`}>
-            {provider?.provider_description}
+            {provider?.provider_description.replace(/(\.\n|\n)/g, (match) => {
+              return match === '.\n' ? '.\n\n' : ' ';
+            })}
           </p>
         </div>
         <div className={`grid gap-2`}>
