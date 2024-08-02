@@ -163,7 +163,7 @@ const Filters = ({ register, h2, search }) => {
               <label className="flex items-center gap-3">
                 <input
                   {...register(h2)}
-                  className="block size-[1.125rem] accent-orenda-purple"
+                  className="block size-[1.125rem] accent-orenda-purple flex-shrink-0"
                   type="checkbox"
                   value={item}
                 />{' '}
