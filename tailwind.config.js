@@ -50,7 +50,8 @@ export default {
       gridTemplateColumns: {
         team: 'repeat(4, minmax(0, 15.625rem))',
         network: 'minmax(150px, 17rem), minmax(57.5%, 1fr)',
-        autofill: 'repeat(auto-fill, minmax(15.2rem, 1fr))'
+        autofill: 'repeat(auto-fill, minmax(15.2rem, 1fr))',
+        maxfill: 'repeat(auto-fill, minmax(14.2rem, 1fr))'
       },
       keyframes: {
         fadeIn: {

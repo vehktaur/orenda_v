@@ -62,7 +62,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
       timeline.current = gsap.timeline({ paused: true });
 
       timeline.current.fromTo(
-        filterMenuRef.current,
+        filterMenuRef?.current,
         {
           width: 0,
           minWidth: 0
@@ -233,7 +233,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
             className={`absolute z-[3] left-0 top-20 md:static border-r bg-white border-[#E7E7E7] rounded-r-lg md:rounded-none pt-10 md:py-5 w-0 min-w-0 overflow-hidden flex flex-col ${
               filterMenu
                 ? 'max-h-[74.65rem]'
-                : 'max-h-[74.65rem] sm:max-h-[20rem]'
+                : 'max-h-[74.65rem] sm:max-h-[30rem]'
             }`}
           >
             <div className="w-full px-5 max-w-[16.75rem] mx-auto flex justify-between flex-nowrap items-center">
