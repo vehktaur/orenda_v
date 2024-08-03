@@ -21,7 +21,7 @@ const Header = () => {
     timeline.current.fromTo(
       [navMenuLayer, navMenu],
       {
-        x: '110vw'
+        x: '40rem'
       },
       { x: 0, duration: 0.6, stagger: 0.1, ease: 'power1.inOut' }
     );
