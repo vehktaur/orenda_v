@@ -128,15 +128,14 @@ const ProvidersInAbout = () => {
           to emotional well-being.
         </p>
         <div className="container mx-auto ~p-0/4 max-w-[67.75rem]">
-          {(!providers.isLoading && !providers.isError) && (
+          {!providers.isLoading && !providers.isError && (
             <div className="grid grid-cols-5 md:grid-cols-10 gap-2.5 justify-items-center">
               {indices.map((index, i) => {
-                const provider = (providerImages ?? [
-                  {
-                    image: imgUnavailable,
-                    name: 'unavailable'
-                  }
-                ])[index];
+                const provider = providerImages?.[index] ?? {
+                  image: imgUnavailable,
+                  name: 'unavailable'
+                };
+
                 return (
                   <div
                     key={i}
