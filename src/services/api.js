@@ -109,3 +109,13 @@ export const getProviders = async () => {
   }));
   return orderProviders(newOrder, fetchedData);
 };
+
+export const getProviderImages = async () => {
+  const providerImages = (await axios.get(url)).data.providers.map(
+    (provider) => ({
+      name: provider.provider_name,
+      image: provider.provider_image_url
+    })
+  );
+  return providerImages;
+};

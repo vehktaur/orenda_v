@@ -1,16 +1,18 @@
-import providersData from '../../data/providersData';
 import { useState, useRef, createRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import imgUnavailable from '../../assets/unavailable-image-icon.png';
+import { useProviderImages } from '../../services/queries';
 
 gsap.registerPlugin(useGSAP);
 
 const ProvidersInAbout = () => {
+  const providers = useProviderImages();
+  const providerImages = providers.data;
   const numImages = 20;
 
-  const [indices, setIndices] = useState(
-    () => Array.from({ length: numImages }, (_, i) => i)
+  const [indices, setIndices] = useState(() =>
+    Array.from({ length: numImages }, (_, i) => i)
   );
 
   const itemsRef = useRef([]);
@@ -66,12 +68,12 @@ const ProvidersInAbout = () => {
 
   const imageShuffle = () => {
     const randomIndex = getNextIndex();
-    let newIndex = Math.floor(Math.random() * providersData.length);
+    let newIndex = Math.floor(Math.random() * providerImages?.length);
     if (navigator.onLine)
       setIndices((prevIndices) => {
-        if (providersData.length >= numImages) {
+        if (providerImages?.length >= numImages) {
           while (prevIndices.includes(newIndex)) {
-            newIndex = (newIndex + 1) % providersData.length;
+            newIndex = (newIndex + 1) % providerImages?.length;
           }
         }
         const newIndices = [...prevIndices];
@@ -111,7 +113,7 @@ const ProvidersInAbout = () => {
       window.removeEventListener('online', handleOnlineStatus);
       window.removeEventListener('offline', handleOnlineStatus);
     };
-  }, [providersData.length]);
+  }, [providerImages?.length]);
 
   return (
     <div className="px-5 sm:~px-8/12">
@@ -126,34 +128,41 @@ const ProvidersInAbout = () => {
           to emotional well-being.
         </p>
         <div className="container mx-auto ~p-0/4 max-w-[67.75rem]">
-          <div className="grid grid-cols-5 md:grid-cols-10 gap-2.5 justify-items-center">
-            {indices.map((index, i) => {
-              const provider = providersData[index];
-              return (
-                <div
-                  key={i}
-                  className="bg-[#F1F1F1] ~xs/xl:~size-[4rem]/[5.625rem] rounded-lg overflow-hidden flex flex-col justify-end"
-                >
-                  <img
-                    ref={itemsRef.current[i]}
-                    width={64}
-                    height={64}
-                    src={provider.image}
-                    alt={provider.name}
-                    className={`size-full object-contain`}
-                    onLoad={() => {
-                      animateOpacity(i);
-                    }}
-                    onError={(event) => {
-                      event.target.src = imgUnavailable;
-                      event.onerror = null;
-                      console.log(`${provider.name} image Didn't load`);
-                    }}
-                  />
-                </div>
-              );
-            })}
-          </div>
+          {(!providers.isLoading && !providers.isError) && (
+            <div className="grid grid-cols-5 md:grid-cols-10 gap-2.5 justify-items-center">
+              {indices.map((index, i) => {
+                const provider = (providerImages ?? [
+                  {
+                    image: imgUnavailable,
+                    name: 'unavailable'
+                  }
+                ])[index];
+                return (
+                  <div
+                    key={i}
+                    className="bg-[#F1F1F1] ~xs/xl:~size-[4rem]/[5.625rem] rounded-lg overflow-hidden flex flex-col justify-end"
+                  >
+                    <img
+                      ref={itemsRef.current[i]}
+                      width={64}
+                      height={64}
+                      src={provider?.image}
+                      alt={provider?.name}
+                      className={`size-full object-contain`}
+                      onLoad={() => {
+                        animateOpacity(i);
+                      }}
+                      onError={(event) => {
+                        event.target.src = imgUnavailable;
+                        event.onerror = null;
+                        console.log(`${provider?.name} image Didn't load`);
+                      }}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </div>
