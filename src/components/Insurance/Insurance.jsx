@@ -4,8 +4,9 @@ import { useRef, useState, createContext, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useForm } from 'react-hook-form';
-import Network from '../Network/Network';
 import Network2 from '../Network/Network2';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 gsap.registerPlugin(useGSAP);
 
@@ -18,7 +19,7 @@ const Insurance = () => {
     handleSubmit,
     watch,
     reset,
-    formState: { errors, isDirty, isValid },
+    formState: { errors, isDirty, isValid, isSubmitting },
     clearErrors
   } = useForm();
 
@@ -64,10 +65,46 @@ const Insurance = () => {
   };
 
   //handle form submission
-  const onSubmit = (data) => {
+
+  const onSubmit = async (data) => {
     if (pageNumber === 3) {
       console.log(data);
-      openModal();
+
+      const reader = new FileReader();
+      reader.readAsDataURL(data['Insurance Carrier'][0]);
+
+      reader.onload = async () => {
+        const templateParams = {
+          from: 'Orenda',
+          section: 'Insurance',
+          firstName: data['Legal First Name'],
+          lastName: data['Legal Last Name'],
+          dob: data['Date of Birth'],
+          email: data['Email Address'],
+          number: data['Phone Number'],
+          address1: data['Street Address 1'],
+          address2: data['Street Address 2'],
+          city: data['City'],
+          state: data['State'],
+          zipCode: data['Zip Code'],
+          insurance: reader.result,
+          memberId: data['Membership ID'],
+          groupNumber: data['Group Number']
+        };
+        try {
+          await emailjs.send(
+            'service_84eiwj9',
+            'template_o5ovc1q',
+            templateParams,
+            'f_xOBciJvcABV_wmq'
+          );
+          toast.success('worked');
+          console.log(reader.result, data['Insurance Carrier'][0]);
+        } catch (error) {
+          console.log(`Email not sent. Error ${error}`);
+        }
+        openModal();
+      };
     }
   };
 
@@ -159,6 +196,7 @@ const Insurance = () => {
             <form
               id="formElement"
               ref={formElement}
+              enctype="multipart/form-data"
               onSubmit={handleSubmit(onSubmit)}
               className="overflow-y-hidden bg-[#FAFAFA] max-w-[41.44rem] mx-auto rounded-3xl ~xs/xl:~px-3/10 ~pt-6/10 ~pb-[2.13rem]/[4.44rem] border border-[#D9D9D9]"
             >
@@ -182,6 +220,7 @@ const Insurance = () => {
 
               <div className="~mt-10/16 grid gap-6 font-semibold ~text-sm/base font-open-sans">
                 <button
+                  disabled={isSubmitting}
                   type="submit"
                   onClick={() => pageNext()}
                   className="border w-full max-w-[31.5rem] border-orenda-purple rounded-3xl px-4 ~py-2/[0.62rem] block mx-auto text-orenda-purple hover:bg-orenda-purple hover:text-white transition cursor-pointer"
@@ -198,9 +237,6 @@ const Insurance = () => {
                     Back
                   </button>
                 )}
-                {/* <button onClick={() => clearErrors()} type="button">
-                  clear
-                </button> */}
               </div>
             </form>
           </div>

@@ -1,5 +1,4 @@
 import Team from '../Our Team/Team';
-import ContactUs from '../Our Team/ContactUs';
 import call from '../../assets/call.svg';
 import text from '../../assets/text.svg';
 import email from '../../assets/email.svg';
@@ -16,19 +15,38 @@ import Newsletter from './Newsletter';
 import Input from '../Input';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 const ContactUsPage = () => {
   const {
     register,
     handleSubmit,
     watch,
     reset,
-    formState: { errors, isSubmitSuccessful }
-  } = useForm({
-    reValidateMode: 'onChange'
-  });
-  const onSubmit = (data) => {
-    console.log(data);
+    formState: { errors, isSubmitting, isSubmitSuccessful }
+  } = useForm();
+  const onSubmit = async (data) => {
+    const templateParams = {
+      from: 'Orenda',
+      section: 'Contact Us',
+      name: data['Your Name'],
+      email: data['Email Address'],
+      phone: data['Phone Number'],
+      subject: data['Subject'],
+      message: data['Message']
+    };
+    try {
+      await emailjs.send(
+        'service_d7svcgq',
+        'template_h74ln0c',
+        templateParams,
+        'f_xOBciJvcABV_wmq'
+      );
+      toast.success('Your message has been sent successfully!');
+    } catch (error) {
+      console.log(`Email not sent. Error ${error}`);
+      toast.error('Failed to send your message. Please try again later.');
+    }
   };
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -106,11 +124,6 @@ const ContactUsPage = () => {
                     </span>{' '}
                     (nationwide), or go directly to your nearest emergency room.
                   </p>
-                  {/* <p className="max-w-[22.44rem]">
-                    If you are in immediate danger, call{' '}
-                    <span className="text-red-900 font-semibold">911</span> or
-                    visit your nearest emergency room
-                  </p> */}
                 </div>
               </div>
             </div>
@@ -167,7 +180,10 @@ const ContactUsPage = () => {
                   watch={watch}
                   errors={errors}
                 />
-                <button className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg">
+                <button
+                  disabled={isSubmitting}
+                  className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:bg-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg"
+                >
                   Submit
                 </button>
               </form>

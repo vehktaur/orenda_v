@@ -4,6 +4,7 @@ import BPStepOne from './BPStepOne';
 import BPStepTwo from './BPStepTwo';
 import BPApplied from './BPApplied';
 import BPNav from './BPNav';
+import emailjs from '@emailjs/browser';
 
 const BecomeProviderPage = () => {
   const [formStep, setFormStep] = useState(1);
@@ -16,9 +17,36 @@ const BecomeProviderPage = () => {
     formState: { errors, isDirty, isValid }
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (formStep === 3) {
       console.log(data);
+      const templateParams = {
+        from: 'Orenda',
+        section: 'Become A Provider',
+        fullName: data['Full Name'],
+        FNPCertified: data['FNPCertifiedOrOthers'],
+        CV: data['CV/Resume'],
+        email: data['Email Address'],
+        FNPinfo: data['FNPCertifiedOrOthers Info'],
+        PMHNPCertified: data['PMHNPCertified'],
+        licensedStated: data['States Licensed'],
+        deaStates: data['States with DEA'],
+        agesSeen: data['agesSeen'],
+        comfortableWithTalkTherapy: data['comfortableWithTalkTherapy'],
+        hasExperienceInMentalHealth: data['hasExperienceInMentalHealth'],
+        hasExperienceWithPrescriptionManagement:
+          data['hasExperienceWithPrescriptionManagement']
+      };
+      try {
+        await emailjs.send(
+          'service_d7svcgq',
+          'template_mktb9jd',
+          templateParams,
+          'f_xOBciJvcABV_wmq'
+        );
+      } catch (error) {
+        console.log(`Email not sent. Error ${error}`);
+      }
     }
   };
 
@@ -34,7 +62,6 @@ const BecomeProviderPage = () => {
       window.scrollTo(0, 100);
     }
   };
-
 
   return (
     <main className="px-5 mb-40">

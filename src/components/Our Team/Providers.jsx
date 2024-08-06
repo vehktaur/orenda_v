@@ -88,7 +88,14 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
         const normalizedQueryValues =
           key !== 'name'
             ? query[key].map((value) =>
-                normalize(value, key === 'Ages Seen' ? 'years' : '')
+                normalize(
+                  value,
+                  key === 'Ages Seen'
+                    ? 'years'
+                    : key === 'Specialties'
+                    ? 'Issues'
+                    : ''
+                )
               )
             : normalize(query[key], '');
 
@@ -100,7 +107,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
               [];
           } else if (key === 'Specialties') {
             providerValues = [
-              ...(provider.specialization?.map((item) => normalize(item, '')) ||
+              ...(provider.specialisation?.map((item) => normalize(item, '')) ||
                 []),
               ...(provider.focus_areas?.map((item) => normalize(item, '')) ||
                 [])
@@ -115,7 +122,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
           }
 
           return normalizedQueryValues.every((value) => {
-            if (key === 'Ages Seen')
+            if (key === 'Ages Seen' || key === 'Specialties')
               return providerValues.some((providerAge) =>
                 providerAge.includes(value)
               );
@@ -217,7 +224,6 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
         )}
       </div>
 
-      {/* Side Filter Menu, also just for the Our Team Page (Not for homepage) */}
       <div className={`${forHome ? '' : 'border-t border-[#E9E9E9] flex'}`}>
         {filterMenu && (
           // dark overlay to be shown in mobile screens when filterMenu is open
@@ -227,7 +233,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
           />
         )}
         {!forHome && (
-          //The actual aside menu
+          //Side Filter Menu, also just for the Our Team Page (Not for homepage)
           <aside
             ref={filterMenuRef}
             className={`absolute z-[3] left-0 top-20 md:static border-r bg-white border-[#E7E7E7] rounded-r-lg md:rounded-none pt-10 md:py-5 w-0 min-w-0 overflow-hidden flex flex-col ${
@@ -290,13 +296,11 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
         )}
 
         {/* Handle Loading and Error states when fetching providers */}
-        {!providers.isError && (providers.isLoading || !filteredProviders) && (
+        {providers.isLoading || (!filteredProviders && !providers.isError) ? (
           <Loading data={'Providers'} />
-        )}
-        {providers.isError && <Error />}
-
-        {/* Providers component after data has been fetched */}
-        {!providers.isLoading && !providers.isError && filteredProviders && (
+        ) : providers.isError ? (
+          <Error />
+        ) : (
           <div className="px-5 md:~px-5/8 ~pt-8/20 min-w-0 w-full">
             <div
               className={`max-w-7xl mx-auto relative ${
