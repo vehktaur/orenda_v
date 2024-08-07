@@ -2,17 +2,16 @@ import { useContext, useEffect, useState } from 'react';
 import Input from '../Input';
 import { PageNumberContext } from './Insurance';
 
-const FormSteps = ({ register, watch, errors }) => {
+const FormSteps = ({ register, watch, errors, setFile }) => {
+  //pageNumber context to determine current page
   const pageNumber = useContext(PageNumberContext);
 
+  //States to control input type and determine focus states
+  //of insurance carrier input
   const [isFocus, setIsFocus] = useState(false);
-
-  if (pageNumber === 3) console.log(watch('Insurance Carrier'));
-
-  const handleFocus = () => setIsFocus(true);
-
   const [fieldType, setFieldType] = useState('text');
 
+  //Functions to control input type of insurance carrier
   const setTypeText = () => {
     if (
       fieldType === 'file' &&
@@ -21,11 +20,18 @@ const FormSteps = ({ register, watch, errors }) => {
     )
       setFieldType('text');
   };
-
   const setTypeFile = () => {
     setFieldType('file');
   };
 
+  //Blur, Focus and Change Event handlers for Insurance Carrier
+  const handleUploadedFile = (event) => {
+    if (fieldType === 'file') {
+      setFile(event?.target.files[0]);
+    } else {
+      setFile(null);
+    }
+  };
   const handleBlur = () => {
     if (watch('Insurance Carrier') === '') {
       setIsFocus(false);
@@ -33,7 +39,9 @@ const FormSteps = ({ register, watch, errors }) => {
       setIsFocus(true);
     }
   };
+  const handleFocus = () => setIsFocus(true);
 
+  //Handle Blur and Focus States on Insurance Carrier Input
   useEffect(() => handleBlur(), [pageNumber]);
 
   if (pageNumber === 1) {
@@ -99,6 +107,7 @@ const FormSteps = ({ register, watch, errors }) => {
             type={fieldType}
             onFocus={handleFocus}
             {...register('Insurance Carrier', {
+              onChange: (e) => handleUploadedFile(e),
               onBlur: () => handleBlur(),
               required: {
                 value: pageNumber === 3 ? true : false,

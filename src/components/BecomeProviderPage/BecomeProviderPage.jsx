@@ -8,6 +8,7 @@ import emailjs from '@emailjs/browser';
 
 const BecomeProviderPage = () => {
   const [formStep, setFormStep] = useState(1);
+  const [file, setFile] = useState(null);
   const {
     register,
     handleSubmit,
@@ -20,33 +21,39 @@ const BecomeProviderPage = () => {
   const onSubmit = async (data) => {
     if (formStep === 3) {
       console.log(data);
-      const templateParams = {
-        from: 'Orenda',
-        section: 'Become A Provider',
-        fullName: data['Full Name'],
-        FNPCertified: data['FNPCertifiedOrOthers'],
-        CV: data['CV/Resume'],
-        email: data['Email Address'],
-        FNPinfo: data['FNPCertifiedOrOthers Info'],
-        PMHNPCertified: data['PMHNPCertified'],
-        licensedStated: data['States Licensed'],
-        deaStates: data['States with DEA'],
-        agesSeen: data['agesSeen'],
-        comfortableWithTalkTherapy: data['comfortableWithTalkTherapy'],
-        hasExperienceInMentalHealth: data['hasExperienceInMentalHealth'],
-        hasExperienceWithPrescriptionManagement:
-          data['hasExperienceWithPrescriptionManagement']
+
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+
+      reader.onload = async () => {
+        const templateParams = {
+          from: 'Orenda',
+          section: 'Become A Provider',
+          fullName: data['Full Name'],
+          FNPCertified: data['FNPCertifiedOrOthers'],
+          CV: reader.result,
+          email: data['Email Address'],
+          FNPinfo: data['FNPCertifiedOrOthers Info'],
+          PMHNPCertified: data['PMHNPCertified'],
+          licensedStated: data['States Licensed'],
+          deaStates: data['States with DEA'],
+          agesSeen: data['agesSeen'],
+          comfortableWithTalkTherapy: data['comfortableWithTalkTherapy'],
+          hasExperienceInMentalHealth: data['hasExperienceInMentalHealth'],
+          hasExperienceWithPrescriptionManagement:
+            data['hasExperienceWithPrescriptionManagement']
+        };
+        try {
+          await emailjs.send(
+            'service_d7svcgq',
+            'template_mktb9jd',
+            templateParams,
+            'f_xOBciJvcABV_wmq'
+          );
+        } catch (error) {
+          console.log(`Email not sent. Error ${error}`);
+        }
       };
-      try {
-        await emailjs.send(
-          'service_d7svcgq',
-          'template_mktb9jd',
-          templateParams,
-          'f_xOBciJvcABV_wmq'
-        );
-      } catch (error) {
-        console.log(`Email not sent. Error ${error}`);
-      }
     }
   };
 
@@ -91,7 +98,11 @@ const BecomeProviderPage = () => {
             )}
 
             {formStep === 2 && (
-              <BPStepTwo register={register} errors={errors} />
+              <BPStepTwo
+                register={register}
+                errors={errors}
+                setFile={setFile}
+              />
             )}
 
             {formStep === 3 && <BPApplied />}

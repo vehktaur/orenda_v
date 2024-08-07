@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import SelectCheckboxes from './SelectCheckboxes';
 import Radios from './Radios';
 import upload from '../../assets/upload.svg';
-const BPStepTwo = ({ register, errors }) => {
-  const [selectedFileName, setSelectedFileName] = useState('');
 
-  const handleSelectedFile = (event) => {
+const BPStepTwo = ({ register, errors, setFile }) => {
+  const [uploadedFileName, setUploadedFileName] = useState('');
+
+  const handleUploadedFile = (event) => {
     const file = event?.target.files[0];
-    setSelectedFileName(file?.name);
+    setUploadedFileName(file?.name);
+    setFile(file);
   };
 
   return (
@@ -76,9 +78,9 @@ const BPStepTwo = ({ register, errors }) => {
             >
               Choose file
             </label>
-            {selectedFileName && (
+            {uploadedFileName && (
               <p className="~text-sm/base text-[#5a9154] text-center px-6">
-                {selectedFileName}
+                {uploadedFileName}
               </p>
             )}
             <p className="text-sm text-red-500 mt-2">
@@ -90,10 +92,10 @@ const BPStepTwo = ({ register, errors }) => {
               id="uploadCV"
               {...register('CV/Resume', {
                 onChange: (event) => {
-                  handleSelectedFile(event);
+                  handleUploadedFile(event);
                 },
                 onBlur: (event) => {
-                  handleSelectedFile(event);
+                  handleUploadedFile(event);
                 },
                 required: { value: true, message: 'Please add your CV/Resume' },
                 validate: {

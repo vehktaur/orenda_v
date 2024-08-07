@@ -4,7 +4,7 @@ import { useRef, useState, createContext, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useForm } from 'react-hook-form';
-import Network2 from '../Network/Network2';
+import Network from './Network';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 
@@ -26,6 +26,7 @@ const Insurance = () => {
   //Declare page state and gsap animation Page scope
   const [pageNumber, changePageNumber] = useState(1);
   const formElement = useRef(null);
+  const [file, setFile] = useState(null);
 
   //showHeading function to dynamically heading and subheading for each page
   const showHeading = (pageNumber) => {
@@ -68,29 +69,27 @@ const Insurance = () => {
 
   const onSubmit = async (data) => {
     if (pageNumber === 3) {
-      console.log(data);
+      console.log(data, file);
 
-      const reader = new FileReader();
-      reader.readAsDataURL(data['Insurance Carrier'][0]);
+      const templateParams = {
+        from: 'Orenda',
+        section: 'Insurance',
+        firstName: data['Legal First Name'],
+        lastName: data['Legal Last Name'],
+        dob: data['Date of Birth'],
+        email: data['Email Address'],
+        number: data['Phone Number'],
+        address1: data['Street Address 1'],
+        address2: data['Street Address 2'],
+        city: data['City'],
+        state: data['State'],
+        zipCode: data['Zip Code'],
+        insurance: data['Insurance Carrier'],
+        memberId: data['Membership ID'],
+        groupNumber: data['Group Number']
+      };
 
-      reader.onload = async () => {
-        const templateParams = {
-          from: 'Orenda',
-          section: 'Insurance',
-          firstName: data['Legal First Name'],
-          lastName: data['Legal Last Name'],
-          dob: data['Date of Birth'],
-          email: data['Email Address'],
-          number: data['Phone Number'],
-          address1: data['Street Address 1'],
-          address2: data['Street Address 2'],
-          city: data['City'],
-          state: data['State'],
-          zipCode: data['Zip Code'],
-          insurance: reader.result,
-          memberId: data['Membership ID'],
-          groupNumber: data['Group Number']
-        };
+      const sendEmail = async () => {
         try {
           await emailjs.send(
             'service_84eiwj9',
@@ -98,13 +97,24 @@ const Insurance = () => {
             templateParams,
             'f_xOBciJvcABV_wmq'
           );
-          toast.success('worked');
-          console.log(reader.result, data['Insurance Carrier'][0]);
+          openModal();
         } catch (error) {
           console.log(`Email not sent. Error ${error}`);
+          toast.error('Error! Please try again');
         }
-        openModal();
       };
+
+      if (file) {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = async () => {
+          templateParams.insurance = reader.result;
+          console.log(reader.result);
+          await sendEmail();
+        };
+      } else {
+        await sendEmail();
+      }
     }
   };
 
@@ -186,7 +196,7 @@ const Insurance = () => {
         <div className="mt-0"></div>
         <main className="px-5 ~pb-[3.31rem]/[10rem] ~mt-12/28">
           <h1 className="heading">Let's check your plan!</h1>
-          <Network2 />
+          <Network />
           <p className="w-4/5 max-w-[38.32rem] mx-auto text-center">
             Please complete this form to verify if your insurance is in network
             and what your Co-pay will be.
@@ -215,7 +225,12 @@ const Insurance = () => {
               </div>
 
               <div className="stuff grid ~gap-y-10/20 bg-inherit transition-all duration-300 ease-in-out pe-8 sm:pe-0">
-                <FormSteps register={register} watch={watch} errors={errors} />
+                <FormSteps
+                  register={register}
+                  watch={watch}
+                  errors={errors}
+                  setFile={setFile}
+                />
               </div>
 
               <div className="~mt-10/16 grid gap-6 font-semibold ~text-sm/base font-open-sans">

@@ -13,7 +13,7 @@ import compsych from '../../assets/compsych_insurance.png';
 import multiplan from '../../assets/multiplan_insurance.png';
 import fidelis from '../../assets/fidelis-care-logo-vector.png';
 
-const Network2 = () => {
+const Network = () => {
   return (
     <div className="~pt-8/16 bg-dotted ~pb-10/20 relative border-t-[0rem] border-orenda-purple">
       <div className="sm:px-5">
@@ -110,4 +110,4 @@ const Network2 = () => {
   );
 };
 
-export default Network2;
+export default Network;
