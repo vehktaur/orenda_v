@@ -24,7 +24,7 @@ function orderProviders(order, providerList) {
     providerLookup[name]['ordered'] = true;
   }
 
-  // If there is by a provide not dealt with in the previous loop we then can
+  // If there is by a provider not dealt with in the previous loop we then can
   // add that one the end.
   for (const providerName in providerLookup) {
     if (!providerLookup[providerName]['ordered']) {
@@ -44,19 +44,19 @@ const newOrder = [
   'Kristofer Generales',
   'Angela Wandungu',
   'Sheri Watson',
-  'Toni Parilosi',
+  'Toni Parolisi',
   'Anne Mongiello',
   'Amanda Wareham',
   'Barbara Borgella',
   'Miok Im',
   'Perpetual Gyimah',
+  'Ricky Luong',
   'Sitora Mirsoatova',
   'William Da Silva',
   'Robin Blaize',
   'Bethany Malugin',
   'Moises Liriano Fernandez',
   'Sarah Sakirsky',
-  'Ricky Loung',
   'Sevindzh Izrailova',
   'Brian Yudhistira',
   'Trisha Mayorga',
@@ -85,7 +85,7 @@ const newOrder = [
   'Michael Hawthorne',
   'Olga Kosichenko',
   'Daferti Afflick',
-  'Danielle Overton',
+  'Danielle Overton-Miller',
   'Maria Lourdes Bunque',
   'Dionne Joseph',
   'Joan Mahoney',
@@ -95,10 +95,10 @@ const newOrder = [
   'Mamadou Barry',
   'Melissa Docteur',
   'Nicole Raczy',
-  'Myea Meighan',
+  'Myea Meighnan',
   'Natasha Dillon',
   'Nwamaka Onyeogo',
-  'Phillip McDonald',
+  'Philip McDonald',
   'Trisha Joseph'
 ];
 
