@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
-gsap.registerPlugin(useGSAP);
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -21,9 +20,9 @@ const Header = () => {
     timeline.current.fromTo(
       [navMenuLayer, navMenu],
       {
-        x: '40rem'
+        xPercent: 110
       },
-      { x: 0, duration: 0.6, stagger: 0.1, ease: 'power1.inOut' }
+      { xPercent: 0, duration: 0.6, stagger: 0.1, ease: 'power1.inOut' }
     );
   });
 

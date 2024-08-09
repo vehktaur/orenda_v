@@ -8,8 +8,6 @@ import Network from './Network';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 
-gsap.registerPlugin(useGSAP);
-
 export const PageNumberContext = createContext();
 
 const Insurance = () => {
