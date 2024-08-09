@@ -3,8 +3,9 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import imgUnavailable from '../../assets/unavailable-image-icon.png';
 import { useProviderImages } from '../../services/queries';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const ProvidersInAbout = () => {
   const providers = useProviderImages();
@@ -25,6 +26,7 @@ const ProvidersInAbout = () => {
   const shuffledIndicesRef = useRef([]);
   const currentIndexRef = useRef(0);
   const intervalRef = useRef(null);
+  const tl = useRef(null);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -115,11 +117,43 @@ const ProvidersInAbout = () => {
     };
   }, [providerImages?.length]);
 
+  useGSAP(() => {
+    gsap.defaults({ duration: 0.7 });
+
+    tl.current = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#aboutProviders',
+        start: 'top 70%'
+      }
+    });
+
+    tl.current
+      .from('.providers_title', {
+        y: -50,
+        opacity: 0,
+        ease: 'power2.out'
+      })
+      .from('.providers_text', {
+        y: 50,
+        opacity: 0,
+        ease: 'power2.out'
+      })
+      .from(
+        '.providers_images',
+        {
+          scale: 0.9,
+          ease: 'easeIn',
+          duration: 1.2
+        },
+        '-=0.6'
+      );
+  }, []);
+
   return (
-    <div className="px-5 sm:~px-8/12">
+    <div id="aboutProviders" className="px-5 sm:~px-8/12">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="heading mb-4">Meet Our Providers</h2>
-        <p className="~mt-4/6 ~mb-6/[3.25rem] max-w-[65.75rem] mx-auto text-center">
+        <h2 className="heading mb-4 providers_title">Meet Our Providers</h2>
+        <p className="~mt-4/6 ~mb-6/[3.25rem] max-w-[65.75rem] mx-auto text-center providers_text">
           We believe in providing compassionate and comprehensive mental health
           care to our clients, and we recognize that each person is unique and
           requires personalized care. We understand that seeking therapy can be
@@ -127,7 +161,7 @@ const ProvidersInAbout = () => {
           team of experienced therapists is here to support you on your journey
           to emotional well-being.
         </p>
-        <div className="container mx-auto ~p-0/4 max-w-[67.75rem]">
+        <div className="container mx-auto ~p-0/4 max-w-[67.75rem] providers_images">
           {!providers.isLoading && !providers.isError && (
             <div className="grid grid-cols-5 md:grid-cols-10 gap-2.5 justify-items-center">
               {indices.map((index, i) => {

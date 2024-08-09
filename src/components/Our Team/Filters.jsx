@@ -15,13 +15,13 @@ const Filters = ({ register, h2, search }) => {
       'New York',
       'New Jersey',
       'Massachusetts',
+      'Connecticut',
       'Alabama',
       'Alaska',
       'Arizona',
       'Arkansas',
       'California',
       'Colorado',
-      'Connecticut',
       'Delaware',
       'Florida',
       'Georgia',
@@ -124,7 +124,7 @@ const Filters = ({ register, h2, search }) => {
       'Tics/Tourette Syndrome',
       'Trauma',
       "Women's Mental Health Issues",
-      'Weight Management',
+      'Weight Management'
     ];
   }
 

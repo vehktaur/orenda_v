@@ -16,31 +16,54 @@ const AboutIntro = () => {
   const text = useRef(null);
 
   useGSAP(() => {
-    tl.current = gsap.timeline();
+    gsap.defaults({ duration: 0.7 });
 
-    tl.current.from([heading.current, mdHeading.current], {
-      ScrollTrigger: { trigger: [heading.current, mdHeading.current] },
-      xPercent: -280,
-      opacity: 0,
-      ease: 'easeOut'
+    tl.current = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#about'
+      },
+      delay: 0
     });
 
-    tl.current.from(image.current, {
-      ScrollTrigger: { trigger: image.current },
-      scale: 0.8,
-      opacity: 0,
-      ease: 'back(3)'
-    });
-
-    tl.current.from(text.current, {
-      ScrollTrigger: { trigger: text.current },
-      yPercent: -250,
-      opacity: 0
-    });
+    tl.current
+      .fromTo(
+        [heading.current, mdHeading.current],
+        {
+          clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
+          opacity: 0,
+          y: 100,
+          duration: 1
+        },
+        {
+          clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+          opacity: 1,
+          y: 0,
+          ease: 'back(0.7)',
+          duration: 1
+        }
+      )
+      .from(
+        image.current,
+        {
+          scale: 0.8,
+          opacity: 0,
+          ease: 'back(3)',
+          duration: 1
+        },
+        '-=0.5'
+      )
+      .from(
+        text.current,
+        {
+          yPercent: -100,
+          opacity: 0
+        },
+        '-=1.1'
+      );
   });
 
   return (
-    <div className="px-5 sm:~px-8/12">
+    <div id="about" className="px-5 sm:~px-8/12">
       <div className="max-w-7xl mx-auto my-12 md:flex md:justify-between md:gap-8 py-[2.5rem]/[7.22rem]">
         <div className="overflow-hidden">
           <h1
@@ -76,6 +99,7 @@ const AboutIntro = () => {
               Medication Management and Therapy at Your Convenience
             </h1>
           </div>
+
           <div className="overflow-hidden">
             <p
               ref={text}

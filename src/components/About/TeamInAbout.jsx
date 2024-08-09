@@ -3,8 +3,9 @@ import { useState, useRef, createRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import imgUnavailable from '../../assets/unavailable-image-icon.png';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const TeamInAbout = () => {
   const numImages = 10;
@@ -23,6 +24,7 @@ const TeamInAbout = () => {
   const shuffledIndicesRef = useRef([]);
   const currentIndexRef = useRef(0);
   const intervalRef = useRef(null);
+  const tl = useRef(null);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -113,11 +115,36 @@ const TeamInAbout = () => {
     };
   }, [teamData.length]);
 
+  useGSAP(() => {
+    gsap.defaults({ duration: 0.7 });
+
+    tl.current = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#aboutTeam',
+        start: 'top 80%'
+      }
+    });
+
+    tl.current
+      .from('.about_team_title', {
+        opacity: 0,
+        y: 50
+      })
+      .from(
+        '.team_images',
+        {
+          scaleX: 0.9,
+          ease: 'back'
+        },
+        '-=0.6'
+      );
+  }, []);
+
   return (
-    <div className="mb-[5rem] text-center px-5 sm:~px-8/12">
+    <div id="aboutTeam" className="mb-[5rem] text-center px-5 sm:~px-8/12">
       <div className="max-w-[67.75rem] mx-auto ">
-        <h2 className="heading ~mb-6/8">Meet The Team</h2>
-        <div className="grid grid-cols-5 md:grid-cols-10 gap-3 justify-items-center">
+        <h2 className="heading ~mb-6/8 about_team_title">Meet The Team</h2>
+        <div className="grid grid-cols-5 md:grid-cols-10 gap-3 justify-items-center team_images">
           {indices.map((index, i) => {
             const member = teamData[index];
             return (

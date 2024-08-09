@@ -1,14 +1,57 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import streets_mission from '../../assets/streets_mission.jpg';
 import streets_mission_small from '../../assets/streets_mission-small.jpg';
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Mission = () => {
+  const tl = useRef(null);
+
+  useGSAP(() => {
+    tl.current = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#mission',
+        start: 'top 80%'
+      }
+    });
+
+    tl.current.from('#mission', {
+      borderRadius: 0,
+      borderWidth: 0,
+      borderColor: 'transparent'
+    });
+
+    tl.current.from('.mission_title', {
+      opacity: 0,
+      yPercent: 90
+    });
+
+    tl.current.from('.mission_img', {
+      scale: 0.8,
+      opacity: 0,
+      ease: 'back'
+    });
+
+    tl.current.from('.mission_text', {
+      opacity: 0,
+      yPercent: -50,
+      ease: 'back'
+    });
+  });
+
   return (
-    <div className="max-w-[80rem] mx-auto ~pt-2/[5.25rem] pb-[1.37rem] border border-[#E7DAFF] rounded-b-2xl ~mt-10/16 px-5 sm:~px-6/12">
+    <div
+      id="mission"
+      className="max-w-[80rem] mx-auto ~pt-2/[5.25rem] pb-[1.37rem] border border-[#E7DAFF] rounded-b-2xl ~mt-10/16 px-5 sm:~px-6/12"
+    >
       <div className="max-w-[74rem] mx-auto">
-        <h2 className="sm:hidden heading mb-4">Our Mission</h2>
+        <h2 className="sm:hidden heading mb-4 mission_title">Our Mission</h2>
         <div className="sm:flex sm:justify-between sm:items-center ~gap-8/12">
-          <div className="sm:order-last">
+          <div className="sm:order-last mission_img">
             <LazyLoadImage
               effect="blur"
               className="w-full object-cover max-w-[32.25rem] mx-auto sm:mx-0"
@@ -23,17 +66,20 @@ const Mission = () => {
             />
           </div>
           <div className=" flex-shrink-[1.1]">
-            <h2 className="heading mb-4 sm:text-justify hidden sm:block">
+            <h2 className="heading mb-4 sm:text-justify hidden sm:block mission_title">
               Our Mission
             </h2>
-            <p className="mt-4 sm:max-w-[37.2rem]">
-              Our mission is to provide a safe and supportive environment where
-              individuals can explore their thoughts, feelings, and experiences
-              without judgment. We strive to empower our patients to develop
-              coping skills, build resilience, and enhance their overall quality
-              of life. At Orenda, we are committed to promoting mental health
-              awareness and reducing the stigma associated with seeking help.
-            </p>
+            <div className="overflow-hidden">
+              <p className="mt-4 sm:max-w-[37.2rem] mission_text">
+                Our mission is to provide a safe and supportive environment
+                where individuals can explore their thoughts, feelings, and
+                experiences without judgment. We strive to empower our patients
+                to develop coping skills, build resilience, and enhance their
+                overall quality of life. At Orenda, we are committed to
+                promoting mental health awareness and reducing the stigma
+                associated with seeking help.
+              </p>
+            </div>
           </div>
         </div>
       </div>
