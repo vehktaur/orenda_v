@@ -69,14 +69,14 @@ const ProviderInfo = () => {
           <div className="max-w-7xl mx-auto">
             <div className="rounded-lg sm:border sm:border-[#EFEBDF]">
               <div className="flex flex-col md:rounded-t-lg md:flex-row md:~gap-0/[3.5rem] sm:border md:border-[#EFEBDF]">
-                <div className="md:order-last bg-[#f1f1f1] rounded-t-lg w-full md:flex sm:flex-col md:justify-end md:max-w-[39.25rem] relative pt-8">
+                <div className="md:order-last bg-[#f1f1f1] rounded-t-lg w-full md:flex sm:flex-col md:justify-end md:max-w-[39.25rem] relative ~pt-8/12">
                   {provider?.status === 'ACTIVE' && (
                     <div className="rounded-lg border w-fit border-[#E1EEE4] bg-[#F0FDF3] py-2 ~px-0.5/[0.62rem] ~text-[0.7rem]/xs text-[#0C3318] font-dm-sans font-medium absolute ~top-2/[1.37rem] ~left-2/6">
                       Available Today
                     </div>
                   )}
                   <img
-                    className={`mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[75%] h-auto block object-contain`}
+                    className={`mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[28rem] h-auto block object-contain`}
                     src={provider?.provider_image_url}
                     alt={provider?.provider_name}
                   />

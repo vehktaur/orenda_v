@@ -97,7 +97,7 @@ const Insurance = () => {
           );
           openModal();
         } catch (error) {
-          console.log(`Email not sent. Error ${error}`);
+          console.log(`Email not sent. Error: ${JSON.stringify(error)}`);
           toast.error('Error! Please try again');
         }
       };

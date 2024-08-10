@@ -142,6 +142,8 @@ const ProvidersInAbout = () => {
         '.providers_images',
         {
           scale: 0.9,
+          y: 100,
+          opacity: 0,
           ease: 'easeIn',
           duration: 1.2
         },

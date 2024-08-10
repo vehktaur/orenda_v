@@ -5,6 +5,7 @@ import BPStepTwo from './BPStepTwo';
 import BPApplied from './BPApplied';
 import BPNav from './BPNav';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const BecomeProviderPage = () => {
   const [formStep, setFormStep] = useState(1);
@@ -51,9 +52,11 @@ const BecomeProviderPage = () => {
             'Wv61Pn9AOeH61J_Jm'
           );
           console.log('Email sent successfully');
+          setFormStep(3);
         } catch (error) {
+          setFormStep(2);
+          toast.error('Error! Please try again');
           console.log(`Email not sent. Error ${JSON.stringify(error)}`);
-          console.log(reader.result, templateParams);
         }
       };
     }
@@ -61,12 +64,12 @@ const BecomeProviderPage = () => {
 
   const handlePrev = () => {
     window.scrollTo(0, 100);
-    setFormStep((step) => step - 1);
+    setFormStep(1);
   };
 
   const handleNext = () => {
     if (isValid && isDirty) {
-      setFormStep((step) => step + 1);
+      setFormStep((step) => Math.min(step + 1, 3));
       setTimeout(() => clearErrors(), 1);
       window.scrollTo(0, 100);
     }

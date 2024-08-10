@@ -40,7 +40,7 @@ const Mission = () => {
       opacity: 0,
       yPercent: -50,
       ease: 'back'
-    });
+    }, '-=0.4');
   });
 
   return (

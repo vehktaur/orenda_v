@@ -17,6 +17,8 @@ import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+
 const ContactUsPage = () => {
   const {
     register,
@@ -25,6 +27,8 @@ const ContactUsPage = () => {
     reset,
     formState: { errors, isSubmitting, isSubmitSuccessful }
   } = useForm();
+
+  const navigate = useNavigate();
   const onSubmit = async (data) => {
     const templateParams = {
       from: 'Orenda',
@@ -42,10 +46,10 @@ const ContactUsPage = () => {
         templateParams,
         'f_xOBciJvcABV_wmq'
       );
-      toast.success('Your message has been sent successfully!');
+      navigate('/contact-us/message-sent');
     } catch (error) {
-      console.log(`Email not sent. Error ${error}`);
-      toast.error('Failed to send your message. Please try again later.');
+      console.log(`Email not sent. Error: ${JSON.stringify(error)}}`);
+      toast.error('Error!. Please try again');
     }
   };
   useEffect(() => {

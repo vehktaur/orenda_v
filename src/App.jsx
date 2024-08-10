@@ -8,14 +8,16 @@ import ScrollToTop from './components/ScrollToTop';
 import PrivacyPolicy from './components/Privacy/PrivacyPolicy';
 import ProviderInfo from './components/Provider Info/ProviderInfo';
 import BecomeProviderPage from './components/BecomeProviderPage/BecomeProviderPage';
+import Contacted from './components/Contact Us/Contacted';
+
+import { useEffect } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
+import { getProviders } from './services/api';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
-import { useEffect } from 'react';
-import { useQueryClient } from '@tanstack/react-query';
-import { getProviders } from './services/api';
 
 function App() {
   const queryClient = useQueryClient();
@@ -33,6 +35,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="our-team" element={<OurTeam />} />
           <Route path="contact-us" element={<ContactUsPage />} />
+          <Route path="contact-us/message-sent" element={<Contacted />} />
           <Route path="insurance" element={<Insurance />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="provider/:name" element={<ProviderInfo />} />
