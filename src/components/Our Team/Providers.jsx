@@ -123,8 +123,8 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
 
           return normalizedQueryValues.every((value) => {
             if (key === 'Ages Seen' || key === 'Specialties')
-              return providerValues.some((providerAge) =>
-                providerAge.includes(value)
+              return providerValues.some((providerProp) =>
+                providerProp.includes(value)
               );
             return providerValues.includes(value);
           });

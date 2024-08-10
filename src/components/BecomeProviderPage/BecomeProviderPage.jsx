@@ -33,7 +33,7 @@ const BecomeProviderPage = () => {
           FNPCertified: data['FNPCertifiedOrOthers'],
           CV: reader.result,
           email: data['Email Address'],
-          FNPinfo: data['FNPCertifiedOrOthers Info'],
+          FNPinfo: data['FNPCertifiedOrOthers Info'] || 'None',
           PMHNPCertified: data['PMHNPCertified'],
           licensedStated: data['States Licensed'],
           deaStates: data['States with DEA'],
@@ -45,13 +45,15 @@ const BecomeProviderPage = () => {
         };
         try {
           await emailjs.send(
-            'service_d7svcgq',
-            'template_mktb9jd',
+            'service_3uga78g',
+            'template_rg8wzrk',
             templateParams,
-            'f_xOBciJvcABV_wmq'
+            'Wv61Pn9AOeH61J_Jm'
           );
+          console.log('Email sent successfully');
         } catch (error) {
-          console.log(`Email not sent. Error ${error}`);
+          console.log(`Email not sent. Error ${JSON.stringify(error)}`);
+          console.log(reader.result, templateParams);
         }
       };
     }

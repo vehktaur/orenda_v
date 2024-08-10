@@ -70,7 +70,7 @@ const BPStepTwo = ({ register, errors, setFile }) => {
             </label>
             <p className="~text-sm/base">Upload your CV/Resume</p>
             <small className="~text-xs/sm text-[#626262]">
-              Pdf & Jpeg only
+              Pdf & Docx only
             </small>
             <label
               htmlFor="uploadCV"
@@ -100,12 +100,13 @@ const BPStepTwo = ({ register, errors, setFile }) => {
                 required: { value: true, message: 'Please add your CV/Resume' },
                 validate: {
                   acceptedFormats: (files) =>
-                    ['image/jpeg', 'application/pdf'].includes(
-                      files[0]?.type
-                    ) || 'Pdf & Jpeg Only!'
+                    [
+                      'application/pdf',
+                      'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                    ].includes(files[0]?.type) || 'Pdf & Docx Only!'
                 }
               })}
-              accept="image/jpeg, application/pdf"
+              accept="application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
             />
           </div>
         </div>

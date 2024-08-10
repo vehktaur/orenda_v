@@ -4,7 +4,7 @@ import Mission from './Mission';
 import GetStarted from './GetStarted';
 import ProvidersInAbout from './ProvidersInAbout';
 import TeamInAbout from './TeamInAbout';
-import Treat from './Treat/Treat';
+import Treat from './Treat';
 
 const HR = () => {
   return (

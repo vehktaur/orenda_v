@@ -1,10 +1,8 @@
-import React from 'react';
-import './Treat.css';
-import bipolar from '../../../assets/bipolar.png';
-import trauma from '../../../assets/trauma.png';
-import adhd from '../../../assets/adhd.png';
-import panic from '../../../assets/panic.png';
-import depression from '../../../assets/depression.png';
+import bipolar from '../../assets/bipolar.png';
+import trauma from '../../assets/trauma.png';
+import adhd from '../../assets/adhd.png';
+import panic from '../../assets/panic.png';
+import depression from '../../assets/depression.png';
 
 const Treat = () => {
   const ailments = [
@@ -37,9 +35,18 @@ const Treat = () => {
 
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-y-6 justify-items-center py-8 max-w-[61.25rem] mx-auto">
           {ailments.map((ailment) => (
-            <div key={ailment.text} className="ailment w-full max-h-[10rem] sm:max-h-[unset]">
-              <img src={ailment.image} alt="" />
-              <p>{ailment.text}</p>
+            <div
+              key={ailment.text}
+              className="flex flex-col border rounded justify-center items-center p-4 gap-4 w-full max-h-[10rem] sm:max-h-[unset]"
+            >
+              <img
+                className="w-full ~max-w-[3.38rem]/[5.75rem] object-scale-down"
+                src={ailment.image}
+                alt=""
+              />
+              <p className="font-bold text-center ~text-sm/base">
+                {ailment.text}
+              </p>
             </div>
           ))}
         </div>
