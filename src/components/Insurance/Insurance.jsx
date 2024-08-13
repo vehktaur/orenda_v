@@ -236,8 +236,9 @@ const Insurance = () => {
                   disabled={isSubmitting}
                   type="submit"
                   onClick={() => pageNext()}
-                  className="border w-full max-w-[31.5rem] border-orenda-purple rounded-3xl px-4 ~py-2/[0.62rem] block mx-auto text-orenda-purple hover:bg-orenda-purple hover:text-white transition cursor-pointer"
+                  className="border w-full max-w-[31.5rem] border-orenda-purple rounded-3xl px-4 ~py-2/[0.62rem] block mx-auto text-orenda-purple hover:border-none hover:text-white transition cursor-pointer overflow-hidden relative z-[1] group"
                 >
+                  <span className="block absolute top-0 left-0 bottom-0 w-0 group-hover:w-full bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
                   {pageNumber === 3 ? 'Verify' : 'Proceed'}
                 </button>
 

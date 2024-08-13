@@ -19,8 +19,9 @@ const BecomeProvider = ({ bg }) => {
 
           <Link
             to="/become-a-provider"
-            className="mt-[2.12rem] mx-auto sm:mx-0 sm:max-w-[15.125rem] border text-orenda-green border-orenda-green py-2.5 px-4 block rounded-[2.5rem] hover:bg-orenda-green hover:text-white font-semibold transition-colors ~text-sm/xl w-full text-center bp_btn"
+            className="mt-[2.12rem] mx-auto sm:mx-0 sm:max-w-[15.125rem] border text-orenda-green border-orenda-green py-2.5 px-4 block rounded-[2.5rem] hover:border-none hover:text-white font-semibold transition-colors ~text-sm/xl w-full text-center bp_btn relative group overflow-hidden z-[1]"
           >
+            <span className="block absolute top-0 left-0 bottom-0 w-0 group-hover:w-full bg-orenda-green transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-green" />
             Start Now
           </Link>
         </div>

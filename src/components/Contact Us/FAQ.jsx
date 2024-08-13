@@ -2,10 +2,13 @@ import { useRef, useState } from 'react';
 import faq from '../../data/faq';
 import Accordion from './Accordion';
 import text from '../../assets/text.svg';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const FAQ = () => {
   const [FAQs, setFAQs] = useState(faq);
   const tl = useRef(null);
+  const container = useRef(null);
 
   const setIsOpen = (question) => {
     setFAQs((prevFAQ) =>
@@ -16,11 +19,41 @@ const FAQ = () => {
     );
   };
 
+  useGSAP(
+    () => {
+      tl.current = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.faq_title',
+          start: 'top 75%'
+        }
+      });
+
+      tl.current
+        .from('.faq_title', {
+          opacity: 0,
+          y: 100
+        })
+        .from('.faqs > div', {
+          rotateX: 90,
+          stagger: 0.45,
+          ease: 'back'
+        })
+        .from('.faq_last_text > p', {
+          opacity: 0,
+          y: 100,
+          stagger: 0.2
+        });
+    },
+    { dependencies: [], scope: container }
+  );
+
   return (
-    <div className="px-5 ~pt-10/32 mb-10 text-justify">
+    <div ref={container} className="px-5 ~pt-10/32 mb-10 text-justify">
       <div className="max-w-[48.88rem] mx-auto">
-        <h1 className="heading ~mb-6/8">Frequently Asked Questions</h1>
-        <div className="~space-y-[1.12rem]/[1.25rem] font-open-sans">
+        <h1 className="heading ~mb-6/8 faq_title">
+          Frequently Asked Questions
+        </h1>
+        <div className="~space-y-[1.12rem]/[1.25rem] font-open-sans faqs">
           {FAQs.map((faq) => (
             <Accordion
               key={faq.question}
@@ -31,21 +64,9 @@ const FAQ = () => {
             />
           ))}
         </div>
-        <div className="font-bold text-center ~mt-8/10">
+        <div className="font-bold text-center ~mt-8/10 faq_last_text">
           <p className="~text-base/lg">Can't find your question?</p>
           <p className="flex justify-center items-center gap-4 mt-4 ~text-sm/lg font-medium">
-            {/* <span className="flex items-center gap-2"> */}
-            {/* 
-              <a
-                className="underline text-orenda-purple font-open-sans"
-                href="mailto:admin@orendapsych.com"
-              >
-                Send a message
-              </a>
-            </span>
-
-            <span className="font-normal">or</span> */}
-
             <span className="flex items-center gap-2 mr-4">
               <a
                 className="text-orenda-purple font-open-sans flex items-center gap-1"
