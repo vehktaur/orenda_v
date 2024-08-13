@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Mission = () => {
   const tl = useRef(null);
+  const borderTL = useRef(null);
 
   useGSAP(() => {
     tl.current = gsap.timeline({
@@ -18,30 +19,52 @@ const Mission = () => {
         start: 'top 80%'
       }
     });
-
-    tl.current.from('#mission', {
-      borderRadius: 0,
-      borderWidth: 0,
-      borderColor: 'transparent'
+    borderTL.current = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#mission',
+        start: 'top 80%'
+      },
+      delay: 0.8
     });
 
-    tl.current.from('.mission_title', {
-      opacity: 0,
-      yPercent: 90
-    });
+    borderTL.current
+      .from('#mission', {
+        borderLeftWidth: 0,
+        borderLeftColor: 'transparent'
+      })
+      .from('#mission', {
+        borderTopWidth: 0,
+        borderTopColor: 'transparent'
+      })
+      .from('#mission', {
+        borderRightWidth: 0,
+        borderRightColor: 'transparent'
+      })
+      .from('#mission', {
+        borderBottomWidth: 0,
+        borderBottomColor: 'transparent'
+      });
 
-    tl.current.from('.mission_img', {
-      scale: 0.8,
-      opacity: 0,
-      ease: 'back'
-    });
-
-    tl.current.from('.mission_text', {
-      opacity: 0,
-      yPercent: -50,
-      ease: 'back'
-    }, '-=0.4');
-  });
+    tl.current
+      .from('.mission_title', {
+        opacity: 0,
+        yPercent: 90
+      })
+      .from('.mission_img', {
+        scale: 0.8,
+        opacity: 0,
+        ease: 'back'
+      })
+      .from(
+        '.mission_text',
+        {
+          opacity: 0,
+          yPercent: -50,
+          ease: 'back'
+        },
+        '-=0.4'
+      );
+  }, []);
 
   return (
     <div

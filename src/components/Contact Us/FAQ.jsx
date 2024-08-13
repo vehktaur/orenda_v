@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import faq from '../../data/faq';
 import Accordion from './Accordion';
 import text from '../../assets/text.svg';
 
 const FAQ = () => {
   const [FAQs, setFAQs] = useState(faq);
+  const tl = useRef(null);
 
   const setIsOpen = (question) => {
     setFAQs((prevFAQ) =>

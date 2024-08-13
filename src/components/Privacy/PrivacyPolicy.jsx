@@ -1,8 +1,37 @@
-import { Link } from "react-router-dom";
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { Link } from 'react-router-dom';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useRef } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const PrivacyPolicy = () => {
+  const container = useRef(null);
+
+  useGSAP(
+    () => {
+      const subHeadings = gsap.utils.toArray('h2');
+      const paragraphs = gsap.utils.toArray('p');
+      const listItems = gsap.utils.toArray('li');
+      const elements = [...subHeadings, ...paragraphs, ...listItems];
+
+      elements.forEach((el, index) => {
+        gsap.from(el, {
+          opacity: 0,
+          y: 100,
+          scrollTrigger: {
+            trigger: el,
+            start: 'bottom bottom',
+          }
+        });
+      });
+    },
+    { dependencies: [], scope: container }
+  );
+
   return (
-    <main className="px-5">
+    <main ref={container} className="px-5">
       <div className="max-w-[69.875rem] mx-auto ~mt-8/28 ~mb-[5.56rem]/[16.88rem]">
         <h1 className="heading ~mb-2/4">Privacy Policy</h1>
         <p className="~text-sm/base text-center">
@@ -105,7 +134,13 @@ const PrivacyPolicy = () => {
             <p>
               For any privacy-related concerns or to exercise your rights
               regarding your personal data (access, correction, deletion),
-              please contact us at <a href="mailto:admin@orendapsych.com" className="font-bold underline">admin@orendapsych.com</a>
+              please contact us at{' '}
+              <a
+                href="mailto:admin@orendapsych.com"
+                className="font-bold underline"
+              >
+                admin@orendapsych.com
+              </a>
             </p>
           </div>
           <div>
@@ -130,8 +165,11 @@ const PrivacyPolicy = () => {
               non-clinical purposes. This includes appointment reminders,
               notifications about required intake documents, and other
               service-related information. Patients are able to also opt out of
-              text/sms communication here: {' '} 
-              <Link to='/contact-us' className="underline font-bold">https://www.orendapsych.com/contact</Link>.
+              text/sms communication here:{' '}
+              <Link to="/contact-us" className="underline font-bold">
+                https://www.orendapsych.com/contact
+              </Link>
+              .
             </p>
           </div>
           <div>
@@ -160,8 +198,14 @@ const PrivacyPolicy = () => {
                 details, we will respond accordingly. However, we recommend that
                 such requests be followed up with a direct communication to our
                 office for verification and documentation purposes via our HIPPA
-                compliant email: <a href="mailto:admin@orendapsych.com" className="font-bold underline">admin@orendapsych.com</a> or speaking
-                directly with your provider.
+                compliant email:{' '}
+                <a
+                  href="mailto:admin@orendapsych.com"
+                  className="font-bold underline"
+                >
+                  admin@orendapsych.com
+                </a>{' '}
+                or speaking directly with your provider.
               </li>
             </ul>
           </div>

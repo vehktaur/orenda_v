@@ -1,7 +1,4 @@
-import { useState } from 'react';
-
 const Accordion = ({ question, answer, isOpen, setIsOpen }) => {
-
   return (
     <div
       className={`py-4 ~px-3/6 border hover:bg-[#f8f8ff] border-${
@@ -13,7 +10,9 @@ const Accordion = ({ question, answer, isOpen, setIsOpen }) => {
           onClick={() => setIsOpen(question)}
           className="flex justify-between items-center gap-2 w-full"
         >
-          <span className="font-bold ~text-[0.78rem]/lg text-left">{question}</span>
+          <span className="font-bold ~text-[0.78rem]/lg text-left">
+            {question}
+          </span>
           <svg
             className="fill-[#606060] shrink-0"
             width="16"
@@ -44,9 +43,7 @@ const Accordion = ({ question, answer, isOpen, setIsOpen }) => {
           className={`grid overflow-hidden ${
             isOpen ? 'py-2' : ''
           } transition-all duration-300 ease-in-out text-slate-600 ~text-sm/base ${
-            isOpen
-              ? 'grid-rows-[1fr] opacity-100'
-              : 'grid-rows-[0fr] opacity-0'
+            isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
           }`}
         >
           <div className="overflow-hidden">{answer}</div>

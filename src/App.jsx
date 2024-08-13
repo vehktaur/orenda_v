@@ -8,7 +8,7 @@ import ScrollToTop from './components/ScrollToTop';
 import PrivacyPolicy from './components/Privacy/PrivacyPolicy';
 import ProviderInfo from './components/Provider Info/ProviderInfo';
 import BecomeProviderPage from './components/BecomeProviderPage/BecomeProviderPage';
-import Contacted from './components/Contact Us/Contacted';
+import Contacted from './components/Contact Us/Successful';
 
 import { useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
@@ -29,7 +29,8 @@ function App() {
     });
   }, []);
   return (
-    <ScrollToTop>
+    <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="about" element={<About />} />
@@ -42,7 +43,7 @@ function App() {
           <Route path="become-a-provider" element={<BecomeProviderPage />} />
         </Route>
       </Routes>
-    </ScrollToTop>
+    </>
   );
 }
 

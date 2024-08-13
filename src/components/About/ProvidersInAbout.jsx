@@ -131,13 +131,13 @@ const ProvidersInAbout = () => {
       .from('.providers_title', {
         y: -50,
         opacity: 0,
-        ease: 'power2.out'
+        ease: 'easeIn'
       })
       .from('.providers_text', {
         y: 50,
         opacity: 0,
-        ease: 'power2.out'
-      })
+        ease: 'easeIn'
+      }, '-=0.3')
       .from(
         '.providers_images',
         {
@@ -145,9 +145,8 @@ const ProvidersInAbout = () => {
           y: 100,
           opacity: 0,
           ease: 'easeIn',
-          duration: 1.2
+          duration: 1
         },
-        '-=0.6'
       );
   }, []);
 

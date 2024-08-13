@@ -120,7 +120,7 @@ const TeamInAbout = () => {
 
     tl.current = gsap.timeline({
       scrollTrigger: {
-        trigger: '#aboutTeam',
+        trigger: '.about_team_title',
         start: 'top 80%'
       }
     });
@@ -131,26 +131,31 @@ const TeamInAbout = () => {
         y: 50
       })
       .from(
-        '.team_images',
+        '.team_image',
         {
-          scaleX: 0.9,
-          ease: 'back'
+          opacity: 0,
+          x: 500,
+          duration: 1.5,
+          stagger: {
+            amount: 1,
+            grid: 'auto'
+          }
         },
         '-=0.6'
       );
   }, []);
 
   return (
-    <div id="aboutTeam" className="mb-[5rem] text-center px-5 sm:~px-8/12">
+    <div className="mb-[5rem] text-center px-5 sm:~px-8/12">
       <div className="max-w-[67.75rem] mx-auto ">
         <h2 className="heading ~mb-6/8 about_team_title">Meet The Team</h2>
-        <div className="grid grid-cols-5 md:grid-cols-10 gap-3 justify-items-center team_images">
+        <div className="grid grid-cols-5 md:grid-cols-10 gap-3 justify-items-center overflow-x-hidden">
           {indices.map((index, i) => {
             const member = teamData[index];
             return (
               <div
                 key={i}
-                className="rounded-lg overflow-hidden ~xs/xl:~size-[4rem]/[5.625rem] bg-[#F1F1F1]"
+                className="rounded-lg overflow-hidden ~xs/xl:~size-[4rem]/[5.625rem] bg-[#F1F1F1] team_image"
               >
                 <img
                   ref={itemsRef.current[i]}

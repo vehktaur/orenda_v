@@ -39,7 +39,6 @@
   html {
     color: #070707;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     accent-color: #333;
   }
 
@@ -84,7 +83,6 @@
     pointer-events: all;
   }
 }
-
 
 @layer components {
   main p,

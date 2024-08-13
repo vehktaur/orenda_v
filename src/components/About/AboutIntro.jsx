@@ -60,7 +60,7 @@ const AboutIntro = () => {
         },
         '-=1.1'
       );
-  });
+  }, []);
 
   return (
     <div id="about" className="px-5 sm:~px-8/12">

@@ -6,7 +6,7 @@ import ProvidersInAbout from './ProvidersInAbout';
 import TeamInAbout from './TeamInAbout';
 import Treat from './Treat';
 
-const HR = () => {
+export const HR = () => {
   return (
     <div className="bg-[#E3E3E3] max-w-[63.75rem] mx-auto my-[3.5rem]">
       <hr />
