@@ -34,7 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="about" element={<About />} />
-          <Route path="our-team" element={<OurTeam />} />
+          <Route path="our-team/:slide" element={<OurTeam />} />
           <Route path="contact-us" element={<ContactUsPage />} />
           <Route path="contact-us/message-sent" element={<Contacted />} />
           <Route path="insurance" element={<Insurance />} />

@@ -55,7 +55,7 @@ const Header = () => {
               <ul className="flex items-center justify-between ~forProviders/2xl:~gap-6/12 transition duration-1000 ">
                 {[
                   ['Home', '/'],
-                  ['Meet Our Team', '/our-team'],
+                  ['Meet Our Team', '/our-team/1'],
                   ['Insurance', '/insurance'],
                   ['About', '/about'],
                   ['Blog', '/'],
@@ -134,7 +134,7 @@ const Header = () => {
                 <ul className="grid gap-1 justify-items-start">
                   {[
                     ['Home', '/', 'fa-solid fa-house'],
-                    ['Meet Our Team', '/our-team', 'fa-solid fa-people-group'],
+                    ['Meet Our Team', '/our-team/1', 'fa-solid fa-people-group'],
                     ['Insurance', '/insurance', 'fa-solid fa-hands-bound'],
                     ['About', '/about', 'fa-solid fa-address-card'],
                     ['Blog', '/', 'fa-solid fa-blog'],

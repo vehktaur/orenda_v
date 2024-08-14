@@ -1,6 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ProvidersSection from './ProvidersSection';
-import { Autoplay, Keyboard, Navigation, Pagination } from 'swiper/modules';
+import {
+  Autoplay,
+  Keyboard,
+  Navigation,
+  Pagination,
+  History
+} from 'swiper/modules';
 import NavButtons from './NavButtons';
 import { useEffect, useRef, useState } from 'react';
 // import providersData from '../../data/providersData';
@@ -318,8 +324,11 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                 keyboard={{
                   enabled: true
                 }}
+                history={{
+                  key: 'our-team'
+                }}
                 autoHeight={true}
-                modules={[Keyboard]}
+                modules={[Keyboard, History]}
               >
                 {filteredProviders?.length > 0 ? (
                   filteredProviders
@@ -332,10 +341,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                       return slidesArray;
                     }, [])
                     .map((slide, index) => (
-                      <SwiperSlide
-                        data-history={`slide${index + 1}`}
-                        key={index}
-                      >
+                      <SwiperSlide data-history={`${index + 1}`} key={index}>
                         <ProvidersSection
                           slide={slide}
                           numberOfColumns={numberOfColumns}

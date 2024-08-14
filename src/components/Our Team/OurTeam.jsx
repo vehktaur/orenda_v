@@ -8,7 +8,7 @@ const OurTeam = () => {
   return (
     <>
       <OurTeamIntro />
-      <Providers itemsPerPage={10} numberOfColumns={5} forHome={false} />
+      <Providers itemsPerPage={10} numberOfColumns={5} forHome={true} />
       <BecomeProvider bg="white" />
       <Team itemsPerPage={8} />
       <ContactUs />
