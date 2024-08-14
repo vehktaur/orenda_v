@@ -71,12 +71,13 @@ const ContactUsPage = () => {
     () => {
       const subHeadings = gsap.utils.toArray('h2');
       const paragraphs = gsap.utils.toArray('p');
+      const links = gsap.utils.toArray('a');
       const buttons = gsap.utils.toArray('button');
       const inputs = gsap.utils.toArray(
         'form .relative.text-justify.bg-inherit'
       );
 
-      const elements = [...subHeadings, ...paragraphs, ...buttons];
+      const elements = [...subHeadings, ...paragraphs, ...buttons, ...links];
 
       elements.forEach((el) => {
         gsap.from(el, {

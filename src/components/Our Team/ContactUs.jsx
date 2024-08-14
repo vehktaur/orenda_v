@@ -14,7 +14,7 @@ const ContactUs = () => {
     () => {
       tl.current = gsap.timeline({
         scrollTrigger: {
-          trigger: container.current,
+          trigger: '.group',
           start: 'top 75%'
         }
       });

@@ -34,8 +34,8 @@ const Treat = () => {
   useGSAP(() => {
     tl.current = gsap.timeline({
       scrollTrigger: {
-        trigger: '.treat_title',
-        start: 'top 80%'
+        trigger: '.treat_text',
+        start: 'top 70%'
       }
     });
 
@@ -55,7 +55,7 @@ const Treat = () => {
       });
   }, []);
   return (
-    <div className="treat-container ~/sm:~px-1/5 sm:~px-8/12">
+    <div className="~/sm:~px-1/5 sm:~px-8/12">
       <div className="treat-wrapper max-w-7xl mx-auto py-16">
         <div>
           <h1 className="heading mb-4 treat_title">What We Treat</h1>

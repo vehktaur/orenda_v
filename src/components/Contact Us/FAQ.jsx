@@ -24,7 +24,7 @@ const FAQ = () => {
       tl.current = gsap.timeline({
         scrollTrigger: {
           trigger: '.faq_title',
-          start: 'top 75%'
+          start: 'top 70%'
         }
       });
 

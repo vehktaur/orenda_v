@@ -15,13 +15,13 @@ const Mission = () => {
   useGSAP(() => {
     tl.current = gsap.timeline({
       scrollTrigger: {
-        trigger: '#mission',
+        trigger: '.mission_title',
         start: 'top 80%'
       }
     });
     borderTL.current = gsap.timeline({
       scrollTrigger: {
-        trigger: '#mission',
+        trigger: '.mission_title',
         start: 'top 80%'
       },
       delay: 0.8

@@ -120,8 +120,8 @@ const TeamInAbout = () => {
 
     tl.current = gsap.timeline({
       scrollTrigger: {
-        trigger: '.about_team_title',
-        start: 'top 80%'
+        trigger: '.team_image',
+        start: 'top 70%'
       }
     });
 

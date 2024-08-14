@@ -59,7 +59,7 @@ const Newsletter = () => {
         yoyo: true,
         scrollTrigger: {
           trigger: '.newsletter_img',
-          start: 'top 70%'
+          start: 'top center'
         }
       });
 

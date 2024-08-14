@@ -12,6 +12,7 @@ const OurTeamIntro = () => {
   useGSAP(
     () => {
       tl.current = gsap.timeline({
+        delay: 0.75,
         scrollTrigger: {
           trigger: container.current
         }

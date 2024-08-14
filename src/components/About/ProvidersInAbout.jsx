@@ -122,7 +122,7 @@ const ProvidersInAbout = () => {
 
     tl.current = gsap.timeline({
       scrollTrigger: {
-        trigger: '#aboutProviders',
+        trigger: '.providers_text',
         start: 'top 70%'
       }
     });
@@ -133,25 +133,26 @@ const ProvidersInAbout = () => {
         opacity: 0,
         ease: 'easeIn'
       })
-      .from('.providers_text', {
-        y: 50,
-        opacity: 0,
-        ease: 'easeIn'
-      }, '-=0.3')
       .from(
-        '.providers_images',
+        '.providers_text',
         {
-          scale: 0.5,
           y: 50,
           opacity: 0,
-          ease: 'easeIn',
-          duration: 1
+          ease: 'easeIn'
         },
-      );
+        '-=0.3'
+      )
+      .from('.providers_images', {
+        scale: 0.5,
+        y: 50,
+        opacity: 0,
+        ease: 'easeIn',
+        duration: 1
+      });
   }, []);
 
   return (
-    <div id="aboutProviders" className="px-5 sm:~px-8/12">
+    <div className="px-5 sm:~px-8/12">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="heading mb-4 providers_title">Meet Our Providers</h2>
         <p className="~mt-4/6 ~mb-6/[3.25rem] max-w-[65.75rem] mx-auto text-center providers_text">
