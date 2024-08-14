@@ -35,9 +35,9 @@ const ContactUs = () => {
   return (
     <div
       ref={container}
-      className="bg-dotted bg-[#f6f7fc] bg-cover pt-8 ~pb-[3.22rem]/16"
+      className="bg-dotted bg-[#f6f7fc] bg-cover pt-8 ~pb-[3.22rem]/12"
     >
-      <div className="px-5 overflow-y-hidden">
+      <div className="px-5 overflow-y-hidden pb-6">
         <h2 className="heading ~text-lg/[2rem] mt-4 ~mb-4/6">
           Have any Question?
         </h2>
