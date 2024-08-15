@@ -24,7 +24,6 @@ const TeamInAbout = () => {
   const shuffledIndicesRef = useRef([]);
   const currentIndexRef = useRef(0);
   const intervalRef = useRef(null);
-  const tl = useRef(null);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -116,33 +115,29 @@ const TeamInAbout = () => {
   }, [teamData.length]);
 
   useGSAP(() => {
-    gsap.defaults({ duration: 0.7 });
-
-    tl.current = gsap.timeline({
+    gsap.from('.about_team_title', {
+      opacity: 0,
+      y: 50,
       scrollTrigger: {
-        trigger: '.team_image',
+        trigger: '.about_team_title',
         start: 'top 70%'
       }
     });
 
-    tl.current
-      .from('.about_team_title', {
-        opacity: 0,
-        y: 50
-      })
-      .from(
-        '.team_image',
-        {
-          opacity: 0,
-          x: 500,
-          duration: 1.5,
-          stagger: {
-            amount: 1,
-            grid: 'auto'
-          }
-        },
-        '-=0.6'
-      );
+    gsap.from('.team_image', {
+      opacity: 0,
+      x: 500,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: '.team_image',
+        start: 'top 65%'
+      },
+      delay: 0.5,
+      stagger: {
+        amount: 1,
+        grid: 'auto'
+      }
+    });
   }, []);
 
   return (

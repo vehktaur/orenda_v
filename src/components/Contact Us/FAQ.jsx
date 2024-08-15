@@ -37,12 +37,17 @@ const FAQ = () => {
           rotateX: 90,
           stagger: 0.45,
           ease: 'back'
-        })
-        .from('.faq_last_text > p', {
-          opacity: 0,
-          y: 100,
-          stagger: 0.2
         });
+
+      gsap.from('.faq_last_text > p', {
+        opacity: 0,
+        y: 100,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: '.faq_last_text',
+          start: 'top 70%'
+        }
+      });
     },
     { dependencies: [], scope: container }
   );

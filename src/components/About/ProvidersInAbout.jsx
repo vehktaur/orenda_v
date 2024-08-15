@@ -141,14 +141,19 @@ const ProvidersInAbout = () => {
           ease: 'easeIn'
         },
         '-=0.3'
-      )
-      .from('.providers_images', {
-        scale: 0.5,
-        y: 50,
-        opacity: 0,
-        ease: 'easeIn',
-        duration: 1
-      });
+      );
+
+    gsap.from('.providers_images', {
+      scale: 0.5,
+      y: 50,
+      opacity: 0,
+      ease: 'easeIn',
+      duration: 1,
+      scrollTrigger: {
+        trigger: '.providers_images',
+        start: 'top 70%'
+      }
+    });
   }, []);
 
   return (
