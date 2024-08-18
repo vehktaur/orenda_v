@@ -13,8 +13,9 @@ const GetStarted = () => {
         <a
           target="_blank"
           href="https://www.zocdoc.com/wl/orendapsych/search?address=10016&after_5pm=false&before_10am=false&day_filter=AnyDay&dr_specialty=405&filters=%7B%7D&gender=-1&insurance_carrier=-1&insurance_plan=-1&language=-1&offset=0&parentSearchRequestId=5ad6e11b-e197-4dc6-8576-3101647da281&ppsSelectionId=f697582c-2de0-4006-ab39-53b075bb2ef4&reason_visit=493&searchOriginator=SearchBar&searchQueryGuid=8d62bd4a-fe91-43fa-bbec-391fc97eecdb&searchType=specialty&search_query=Adult+Psychiatric+%26+Mental+Health+Nurse+Practitioner&sees_children=false&sort_type=Default&visitType=inPersonAndVirtualVisits"
-          className="block bg-white hover:bg-transparent transition-colors text-orenda-purple hover:text-white hover:border hover:border-white px-4 py-2 font-semibold rounded-[2.5rem] ~max-w-[12rem]/[23rem] mx-auto text-[1.125rem] text-center"
+          className="block bg-white transition-colors text-orenda-purple hover:text-white hover:border hover:border-white px-4 py-2 font-semibold rounded-[2.5rem] ~max-w-[12rem]/[23rem] mx-auto text-[1.125rem] text-center relative group overflow-hidden z-[1]"
         >
+          <span className="block absolute top-0 left-0 h-full w-0 group-hover:w-full bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
           Get Started
         </a>
       </div>

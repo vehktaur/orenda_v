@@ -70,7 +70,7 @@ const FAQ = () => {
           ))}
         </div>
         <div className="font-bold text-center ~mt-8/10 faq_last_text">
-          <p className="~text-base/lg">Can't find your question?</p>
+          <p className="~text-[0.9rem]/lg">Can't find your question?</p>
           <p className="flex justify-center items-center gap-4 mt-4 ~text-sm/lg font-medium">
             <span className="flex items-center gap-2 mr-4">
               <a

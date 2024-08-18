@@ -42,8 +42,8 @@ const ContactUs = () => {
           Have any Question?
         </h2>
         <Link to="/contact-us">
-          <button className="flex items-center justify-center bg-transparent hover:border-none transition-colors text-orenda-purple hover:text-white border border-orenda-purple px-4 py-2 font-semibold rounded-[2.5rem] w-full ~max-w-[16.75rem]/[25rem] mx-auto text-[1.125rem] overflow-hidden group z-[1] relative">
-            <span className="block absolute top-0 left-0 bottom-0 w-0 group-hover:w-full bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+          <button className="flex items-center justify-center bg-transparent transition-colors text-orenda-purple hover:text-white border border-orenda-purple px-4 py-2 font-semibold rounded-[2.5rem] w-full ~max-w-[16.75rem]/[25rem] mx-auto text-[1.125rem] overflow-hidden group z-[1] relative">
+            <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
             Contact Us
           </button>
         </Link>

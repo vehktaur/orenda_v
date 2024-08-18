@@ -152,9 +152,9 @@ const ContactUsPage = () => {
                   </a>
                   <a
                     href="sms:+13477077735"
-                    className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:border-none transition-colors relative overflow-hidden group cursor-pointer z-[1]"
+                    className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl transition-colors relative overflow-hidden group cursor-pointer z-[1]"
                   >
-                    <span className="block absolute top-0 left-0 bottom-0 w-0 group-hover:w-full bg-indigo-300 transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+                    <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-indigo-300 transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
                     Text
                     <span>
                       <img src={text} alt="text icon" />
@@ -162,9 +162,9 @@ const ContactUsPage = () => {
                   </a>
                   <a
                     href="mailto:admin@orendapsych.com"
-                    className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl hover:border-none transition-colors relative overflow-hidden group cursor-pointer z-[1]"
+                    className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl transition-colors relative overflow-hidden group cursor-pointer z-[1]"
                   >
-                    <span className="block absolute top-0 left-0 bottom-0 w-0 group-hover:w-full bg-indigo-300 transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+                    <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-indigo-300 transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
                     Email
                     <span>
                       <img src={email} alt="email icon" />
@@ -264,9 +264,9 @@ const ContactUsPage = () => {
                 />
                 <button
                   disabled={isSubmitting}
-                  className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:border-transparent hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg relative z-1 overflow-hidden group"
+                  className="font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg relative z-1 overflow-hidden group"
                 >
-                  <span className="block absolute top-0 left-0 bottom-0 w-0 group-hover:w-full bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+                  <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
                   Submit
                 </button>
               </form>
