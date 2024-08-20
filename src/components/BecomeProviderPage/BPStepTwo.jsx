@@ -81,7 +81,7 @@ const BPStepTwo = ({ register, errors, setFile }) => {
                 {uploadedFileName}
               </p>
             )}
-            <p className="text-sm text-red-500 mt-2 text-center max-w-[70%]">
+            <p className="text-sm text-red-500 mt-2 text-center max-w-[25.5rem] px-6">
               {errors?.['CV/Resume']?.message}
             </p>
             <input
