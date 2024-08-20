@@ -17,7 +17,7 @@ const BecomeProviderPage = () => {
     watch,
     clearErrors,
     resetField,
-    formState: { errors, isDirty, isValid }
+    formState: { errors, isDirty, isValid, isSubmitting }
   } = useForm();
 
   const onSubmit = async (data) => {
@@ -57,6 +57,8 @@ const BecomeProviderPage = () => {
         } catch (error) {
           toast.error('Error! Please try again');
           console.log(`Email not sent. Error ${JSON.stringify(error)}`);
+        } finally {
+          setFormComplete(false);
         }
       };
     }
@@ -117,7 +119,8 @@ const BecomeProviderPage = () => {
             {formStep === 3 && <BPApplied />}
 
             <BPNav
-              isSubmitting={false}
+              isSubmitting={isSubmitting}
+              formComplete={formComplete}
               formStep={formStep}
               handleNext={handleNext}
               handlePrev={handlePrev}

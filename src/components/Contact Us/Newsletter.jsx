@@ -166,10 +166,12 @@ const Newsletter = () => {
 
               <button
                 disabled={isSubmitting}
-                className="font-open-sans w-full max-w-[16.31rem] mx-auto sm:mx-0 block border border-orenda-purple text-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] ~mt-10/12 rounded-3xl font-bold ~text-sm/lg relative overflow-hidden group z-[1]"
+                className={`font-open-sans w-full max-w-[16.31rem] mx-auto sm:mx-0 block border border-orenda-purple text-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] ~mt-10/12 rounded-3xl font-bold ~text-sm/lg relative overflow-hidden group z-[1] ${
+                  isSubmitting ? 'italic' : ''
+                }`}
               >
                 <span className="inline-block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 z-[-1] rounded-3xl border hover:border-orenda-purple" />
-                Subscribe
+                {isSubmitting ? 'Submitting...' : 'Subscribe'}
               </button>
             </form>
           </div>
