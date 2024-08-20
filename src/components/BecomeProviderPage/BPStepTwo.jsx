@@ -70,7 +70,7 @@ const BPStepTwo = ({ register, errors, setFile }) => {
             </label>
             <p className="~text-sm/base">Upload your CV/Resume</p>
             <small className="~text-xs/sm text-[#626262]">
-              Pdf & Docx only
+              Pdf only
             </small>
             <label
               htmlFor="uploadCV"
@@ -100,13 +100,11 @@ const BPStepTwo = ({ register, errors, setFile }) => {
                 required: { value: true, message: 'Please add your CV/Resume' },
                 validate: {
                   acceptedFormats: (files) =>
-                    [
-                      'application/pdf',
-                      'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-                    ].includes(files[0]?.type) || 'Pdf & Docx Only!'
+                    ['application/pdf'].includes(files[0]?.type) ||
+                    'Pdf Only!'
                 }
               })}
-              accept="application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              accept="application/pdf"
             />
           </div>
         </div>
