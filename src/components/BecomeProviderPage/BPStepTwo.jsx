@@ -69,9 +69,7 @@ const BPStepTwo = ({ register, errors, setFile }) => {
               <img src={upload} alt="upload file" />
             </label>
             <p className="~text-sm/base">Upload your CV/Resume</p>
-            <small className="~text-xs/sm text-[#626262]">
-              Pdf only
-            </small>
+            <small className="~text-xs/sm text-[#626262]">Pdf only</small>
             <label
               htmlFor="uploadCV"
               className="border border-orenda-purple px-4 py-[0.62rem] rounded-3xl text-orenda-purple font-semibold ~text-sm/lg cursor-pointer hover:bg-orenda-purple hover:text-white transition-colors duration-300"
@@ -83,7 +81,7 @@ const BPStepTwo = ({ register, errors, setFile }) => {
                 {uploadedFileName}
               </p>
             )}
-            <p className="text-sm text-red-500 mt-2">
+            <p className="text-sm text-red-500 mt-2 text-center max-w-[70%]">
               {errors?.['CV/Resume']?.message}
             </p>
             <input
@@ -101,7 +99,7 @@ const BPStepTwo = ({ register, errors, setFile }) => {
                 validate: {
                   acceptedFormats: (files) =>
                     ['application/pdf'].includes(files[0]?.type) ||
-                    'Pdf Only!'
+                    'Please submit file in pdf format only. You can use a file converter to convert to pdf format.'
                 }
               })}
               accept="application/pdf"
