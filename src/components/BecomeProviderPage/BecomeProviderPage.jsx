@@ -9,6 +9,7 @@ import { toast } from 'react-toastify';
 
 const BecomeProviderPage = () => {
   const [formStep, setFormStep] = useState(1);
+  const [formComplete, setFormComplete] = useState(false);
   const [file, setFile] = useState(null);
   const {
     register,
@@ -20,9 +21,9 @@ const BecomeProviderPage = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    if (formStep === 3) {
+    if (formComplete) {
       console.log(data);
-      setFormStep(2);
+
       const reader = new FileReader();
       reader.readAsDataURL(file);
 
@@ -68,9 +69,13 @@ const BecomeProviderPage = () => {
 
   const handleNext = () => {
     if (isValid && isDirty) {
-      setFormStep((step) => Math.min(step + 1, 3));
-      setTimeout(() => clearErrors(), 1);
-      window.scrollTo(0, 100);
+      if (formStep === 2) {
+        setFormComplete(true);
+      } else {
+        setFormStep(2);
+        setTimeout(() => clearErrors(), 1);
+        window.scrollTo(0, 100);
+      }
     }
   };
 
@@ -112,6 +117,7 @@ const BecomeProviderPage = () => {
             {formStep === 3 && <BPApplied />}
 
             <BPNav
+              isSubmitting={false}
               formStep={formStep}
               handleNext={handleNext}
               handlePrev={handlePrev}

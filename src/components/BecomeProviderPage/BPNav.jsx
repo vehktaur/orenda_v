@@ -1,4 +1,4 @@
-const BPNav = ({ formStep, handleNext, handlePrev }) => {
+const BPNav = ({ isSubmitting, formStep, handleNext, handlePrev }) => {
   return (
     <div className="~mt-6/10 flex flex-col-reverse sm:flex-row items-center ~gap-6/[4.12rem]">
       {formStep === 2 && (
@@ -12,6 +12,7 @@ const BPNav = ({ formStep, handleNext, handlePrev }) => {
         </button>
       )}
       <button
+        disabled={formStep === 2 && isSubmitting}
         onClick={() => handleNext()}
         className={`block w-[80%] ~text-sm/lg mx-auto px-4 py-[0.62rem] text-orenda-purple hover:text-white border border-orenda-purple overflow-hidden relative z-[1] group rounded-3xl font-semibold transition-colors duration-300 ${
           formStep === 3 ? 'hidden' : ''
@@ -19,7 +20,11 @@ const BPNav = ({ formStep, handleNext, handlePrev }) => {
         type="submit"
       >
         <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
-        {formStep === 1 ? 'Proceed' : 'Submit form'}
+        {formStep === 1
+          ? 'Proceed'
+          : isSubmitting
+          ? 'Submitting...'
+          : 'Submit form'}
       </button>
     </div>
   );

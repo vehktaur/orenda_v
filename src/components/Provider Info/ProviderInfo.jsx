@@ -82,8 +82,17 @@ const ProviderInfo = () => {
                   />
                 </div>
                 <div className="md:max-w-[50%] sm:~px-2/8 sm:py-6">
-                  <h1 className="~text-base/[2rem] font-bold ~mt-[0.63rem]/[2.56rem] mb-2">
+                  <h1 className="~text-base/[2rem] font-bold ~mt-[1.5rem]/[2.56rem] mb-2 flex justify-between items-center">
                     {provider?.provider_name}
+
+                    <a
+                      target="_blank"
+                      href={provider?.booking_link}
+                      className="rounded-3xl ~text-base/lg font-bold border border-orenda-purple w-full ~max-w-[6rem]/[7.75rem] ~py-1/2 px-2 text-orenda-purple hover:text-white transition-colors text-center relative group z-[1] overflow-hidden"
+                    >
+                      <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+                      Book
+                    </a>
                   </h1>
                   <p className="text-[#7C7C7C] ~text-xs/sm font-bold text-left ">
                     <span>{provider?.provider_code}</span>
@@ -243,15 +252,16 @@ const ProviderInfo = () => {
             </div>
 
             <div className="mt-12 ~mb-[6.13rem]/[11.44rem] sm:~mr-0/[3rem]">
-              <div className="flex flex-col items-center sm:flex-row sm:justify-end">
+              {/* <div className="flex flex-col items-center sm:flex-row sm:justify-end">
                 <a
                   target="_blank"
                   href={provider?.booking_link}
-                  className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors text-center"
+                  className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors text-center relative group z-[1] overflow-hidden"
                 >
+                           <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl border hover:border-orenda-purple" />
                   Book
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </main>
