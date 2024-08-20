@@ -82,21 +82,24 @@ const ProviderInfo = () => {
                   />
                 </div>
                 <div className="md:max-w-[50%] sm:~px-2/8 sm:py-6">
-                  <h1 className="~text-base/[2rem] font-bold ~mt-[1.5rem]/[2.56rem] mb-2 flex justify-between items-center">
-                    {provider?.provider_name}
-
+                  <div className="flex justify-between items-center ~mt-[1.5rem]/[2.56rem]">
+                    <div className=''>
+                      <h1 className="~text-base/[2rem] font-bold mb-2">
+                        {provider?.provider_name}
+                      </h1>
+                      <p className="text-[#7C7C7C] ~text-xs/sm font-bold text-left">
+                        <span>{provider?.provider_code}</span>
+                      </p>
+                    </div>
                     <a
                       target="_blank"
                       href={provider?.booking_link}
-                      className="rounded-3xl ~text-base/lg font-bold border border-orenda-purple w-full ~max-w-[6rem]/[7.75rem] ~py-1/2 px-2 text-orenda-purple hover:text-white transition-colors text-center relative group z-[1] overflow-hidden"
+                      className="rounded-3xl ~text-base/lg font-bold border border-orenda-purple w-full ~max-w-[5.5rem]/[6rem] ~py-1/2 px-2 text-orenda-purple hover:text-white transition-colors text-center relative group z-[1] overflow-hidden me-4"
                     >
                       <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
                       Book
                     </a>
-                  </h1>
-                  <p className="text-[#7C7C7C] ~text-xs/sm font-bold text-left ">
-                    <span>{provider?.provider_code}</span>
-                  </p>
+                  </div>
                   {provider?.do_therapy && (
                     <p className="border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-left ~mt-2/[1.38rem] ~text-xs/sm text-nowrap">
                       Offers Talk Therapy Sessions

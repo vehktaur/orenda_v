@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useFormContext } from 'react-hook-form';
 
 const BPNav = ({ formComplete, formStep, handleNext, handlePrev }) => {
   const [isDisabled, setIsDisabled] = useState(true);
+
+  const {
+    formState: { isSubmitting }
+  } = useFormContext();
 
   useEffect(() => {
     if (formComplete) {
@@ -25,7 +30,7 @@ const BPNav = ({ formComplete, formStep, handleNext, handlePrev }) => {
       )}
       <button
         onClick={() => handleNext()}
-        disabled={isDisabled}
+        disabled={isSubmitting}
         className={`block w-[80%] ~text-sm/lg mx-auto px-4 py-[0.62rem] text-orenda-purple hover:text-white border border-orenda-purple overflow-hidden relative z-[1] group rounded-3xl font-semibold transition-colors duration-300 ${
           formStep === 3 ? 'hidden' : formComplete ? 'italic' : ''
         }`}
