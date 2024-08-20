@@ -96,7 +96,7 @@ const PrivacyPolicy = () => {
               may affect the availability or quality use of our services.
             </p>
           </div>
-          <div>
+          {/* <div>
             <h2 className="font-heading ~text-base/[1.375rem] ~mb-2/4 font-bold">
               International Data Transfer:
             </h2>
@@ -105,7 +105,7 @@ const PrivacyPolicy = () => {
               borders for processing or storage. We ensure all data transfers
               comply with international privacy standards and regulations.
             </p>
-          </div>
+          </div> */}
           <div>
             <h2 className="font-heading ~text-base/[1.375rem] ~mb-2/4 font-bold">
               Cookies and Website Usage:

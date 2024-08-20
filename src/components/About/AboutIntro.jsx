@@ -108,9 +108,9 @@ const AboutIntro = () => {
               We believe in providing compassionate and comprehensive mental
               health care to our clients, and we recognize that each person is
               unique and requires personalized care. We understand that seeking
-              therapy can be a significant step towards healing and personal
-              growth. Our dedicated team of experienced therapists is here to
-              support you on your journey to emotional well-being.
+              mental health support can be a significant step towards healing and personal
+              growth. Our dedicated team of experienced providers are here to
+              support you on your journey to emotional and mental well-being.
             </p>
           </div>
         </div>

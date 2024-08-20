@@ -245,6 +245,7 @@ const ProviderInfo = () => {
             <div className="mt-12 ~mb-[6.13rem]/[11.44rem] sm:~mr-0/[3rem]">
               <div className="flex flex-col items-center sm:flex-row sm:justify-end">
                 <a
+                  target="_blank"
                   href={provider?.booking_link}
                   className="rounded-3xl font-bold border border-orenda-purple w-full max-w-[18.75rem] py-[0.625rem] px-4 text-orenda-purple hover:text-white hover:bg-orenda-purple transition-colors text-center"
                 >

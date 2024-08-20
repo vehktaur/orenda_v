@@ -161,12 +161,13 @@ const ProvidersInAbout = () => {
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="heading mb-4 providers_title">Meet Our Providers</h2>
         <p className="~mt-4/6 ~mb-6/[3.25rem] max-w-[65.75rem] mx-auto text-center providers_text">
-          We believe in providing compassionate and comprehensive mental health
-          care to our clients, and we recognize that each person is unique and
-          requires personalized care. We understand that seeking therapy can be
-          a significant step towards healing and personal growth. Our dedicated
-          team of experienced therapists is here to support you on your journey
-          to emotional well-being.
+          Our team consists of licensed, board-certified Psychiatric & Mental
+          Health Nurse Practitioners who are dedicated to providing
+          compassionate and client-centered care in partnership with our
+          dedicated HIPPA-certified support team. We are committed to ongoing
+          professional development and staying abreast of the latest research
+          and therapeutic techniques to ensure that our patients receive the
+          highest standards of care. 
         </p>
         <div className="container mx-auto ~p-0/4 max-w-[67.75rem] providers_images">
           {!providers.isLoading && !providers.isError && (

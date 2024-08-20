@@ -61,6 +61,7 @@ const ProviderCard = ({ provider, index }) => {
         </div>
         <div className={`grid gap-4`}>
           <a
+            target="_blank"
             href={provider?.bookingLink}
             className="border block rounded-3xl px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6 font-medium text-center"
           >
@@ -119,6 +120,7 @@ const ProviderCard = ({ provider, index }) => {
             </span>
           )}
           <a
+            target="_blank"
             href={provider?.bookingLink}
             className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans py-[0.62rem] min-w-[9rem] ~px-2/4`}
           >
