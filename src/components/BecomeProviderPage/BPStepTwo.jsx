@@ -99,7 +99,10 @@ const BPStepTwo = ({ register, errors, setFile }) => {
                 validate: {
                   acceptedFormats: (files) =>
                     ['application/pdf'].includes(files[0]?.type) ||
-                    'Please submit file in pdf format only. You can use a file converter to convert to pdf format.'
+                    'Please submit file in pdf format only. You can use a file converter to convert to pdf format.',
+                  moreThan2MB: (files) =>
+                    Math.round(files[0]?.size / (1024 * 1024)) < 2 ||
+                    'File size limit should be 2MB'
                 }
               })}
               accept="application/pdf"

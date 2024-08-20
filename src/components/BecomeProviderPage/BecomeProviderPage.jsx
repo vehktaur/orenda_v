@@ -22,7 +22,7 @@ const BecomeProviderPage = () => {
   const onSubmit = async (data) => {
     if (formStep === 3) {
       console.log(data);
-
+      setFormStep(2);
       const reader = new FileReader();
       reader.readAsDataURL(file);
 
@@ -54,7 +54,6 @@ const BecomeProviderPage = () => {
           console.log('Email sent successfully');
           setFormStep(3);
         } catch (error) {
-          setFormStep(2);
           toast.error('Error! Please try again');
           console.log(`Email not sent. Error ${JSON.stringify(error)}`);
         }
