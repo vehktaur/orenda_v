@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
+import { useRef, useState } from 'react';
 
 const ProviderInfoUl = ({ h2, listArray, classes }) => {
   const effectiveListArray =
@@ -8,6 +10,15 @@ const ProviderInfoUl = ({ h2, listArray, classes }) => {
 
   const moreItems = listArray.slice(8);
   const [showMoreItems, setShowMoreItems] = useState(false);
+  const showMoreButton = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(showMoreButton?.current, {
+      opacity: 0,
+      xPercent: -100,
+      duration: 0.7
+    });
+  }, [showMoreItems]);
 
   return (
     <div>
@@ -31,6 +42,7 @@ const ProviderInfoUl = ({ h2, listArray, classes }) => {
           })}
           {moreItems.length > 0 && !showMoreItems && (
             <button
+              ref={showMoreButton}
               onClick={() => setShowMoreItems(true)}
               className="~text-sm/lg font-semibold hover:underline ~ps-1.5/3 text-[#333] italic"
             >
