@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useForm, FormProvider } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import BPStepOne from './BPStepOne';
 import BPStepTwo from './BPStepTwo';
 import BPApplied from './BPApplied';
@@ -11,9 +11,6 @@ const BecomeProviderPage = () => {
   const [formStep, setFormStep] = useState(1);
   const [formComplete, setFormComplete] = useState(false);
   const [file, setFile] = useState(null);
-
-  const methods = useForm();
-
   const {
     register,
     handleSubmit,
@@ -21,7 +18,7 @@ const BecomeProviderPage = () => {
     clearErrors,
     resetField,
     formState: { errors, isDirty, isValid, isSubmitting }
-  } = methods;
+  } = useForm();
 
   const onSubmit = async (data) => {
     if (formComplete) {
@@ -98,40 +95,37 @@ const BecomeProviderPage = () => {
               <strong>Step {formStep} of 2</strong>
             </p>
           )}
-
-          <FormProvider {...methods}>
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="~mt-6/8 max-w-[43.13rem] mx-auto"
-            >
-              {formStep === 1 && (
-                <BPStepOne
-                  register={register}
-                  watch={watch}
-                  errors={errors}
-                  resetField={resetField}
-                />
-              )}
-
-              {formStep === 2 && (
-                <BPStepTwo
-                  register={register}
-                  errors={errors}
-                  setFile={setFile}
-                />
-              )}
-
-              {formStep === 3 && <BPApplied />}
-
-              <BPNav
-                isSubmitting={isSubmitting}
-                formComplete={formComplete}
-                formStep={formStep}
-                handleNext={handleNext}
-                handlePrev={handlePrev}
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="~mt-6/8 max-w-[43.13rem] mx-auto"
+          >
+            {formStep === 1 && (
+              <BPStepOne
+                register={register}
+                watch={watch}
+                errors={errors}
+                resetField={resetField}
               />
-            </form>
-          </FormProvider>
+            )}
+
+            {formStep === 2 && (
+              <BPStepTwo
+                register={register}
+                errors={errors}
+                setFile={setFile}
+              />
+            )}
+
+            {formStep === 3 && <BPApplied />}
+
+            <BPNav
+              isSubmitting={isSubmitting}
+              formComplete={formComplete}
+              formStep={formStep}
+              handleNext={handleNext}
+              handlePrev={handlePrev}
+            />
+          </form>
         </div>
       </div>
     </main>
