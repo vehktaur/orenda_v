@@ -24,7 +24,7 @@ const ProviderInfoUl = ({ h2, listArray, classes }) => {
     <div>
       <h2 className="~text-sm/xl font-bold ~mb-2/4">{h2}</h2>
       <div
-        className={`md:max-h-[28rem] overflow-y-auto scrollbar-thin scrollbar-thumb-[#ccc] `}
+        className={`md:max-h-[28rem] ${showMoreItems ? 'overflow-y-auto' : 'overflow-y-hidden'} scrollbar-thin scrollbar-thumb-[#ccc] `}
       >
         <ul className={`list-image-dot ps-4 ~space-y-2/[1.06rem]`}>
           {effectiveListArray.slice(0, 8).map((item) => {
