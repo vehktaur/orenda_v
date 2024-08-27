@@ -76,8 +76,9 @@ const ProviderCard = ({ provider, setProvidersData }) => {
           <a
             target="_blank"
             href={provider?.booking_link}
-            className="border block rounded-3xl px-2 py-1 text-[0.875rem] hover:bg-white hover:text-black transition-colors mt-6 font-medium text-center"
+            className="border block rounded-3xl px-2 py-1 text-[0.875rem] hover:text-black transition-colors mt-6 font-medium text-center relative overflow-hidden group z-[1]"
           >
+            <span className="block absolute -top-[1px] -left-[1.3px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-white transition-all duration-500 rounded-3xl z-[-1] border" />
             Book now
           </a>
           <div className="flex justify-center">

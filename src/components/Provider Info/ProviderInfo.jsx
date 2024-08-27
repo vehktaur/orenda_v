@@ -96,7 +96,7 @@ const ProviderInfo = () => {
                       href={provider?.booking_link}
                       className="rounded-3xl ~text-base/lg font-bold border border-orenda-purple w-full ~max-w-[5.5rem]/[6rem] ~py-1/2 px-2 text-orenda-purple hover:text-white transition-colors text-center relative group z-[1] overflow-hidden me-4"
                     >
-                      <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+                      <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1]" />
                       Book
                     </a>
                   </div>

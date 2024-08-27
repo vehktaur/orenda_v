@@ -19,7 +19,7 @@ const BPNav = ({ formComplete, formStep, handleNext, handlePrev }) => {
           className="block w-[80%] ~text-sm/lg mx-auto px-4 py-[0.62rem] text-orenda-purple hover:text-white border border-orenda-purple overflow-hidden z-[1] group relative rounded-3xl font-semibold transition-colors duration-300"
           type="button"
         >
-          <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+          <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1]" />
           Back
         </button>
       )}
@@ -31,7 +31,7 @@ const BPNav = ({ formComplete, formStep, handleNext, handlePrev }) => {
         }`}
         type="submit"
       >
-        <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+        <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1]" />
         {formStep === 1
           ? 'Proceed'
           : formComplete
