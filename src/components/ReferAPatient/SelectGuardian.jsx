@@ -33,17 +33,17 @@ const SelectGuardian = ({
       <h3 className="font-medium flex ~gap-1/2 items-baseline">{label}</h3>
 
       <div className="mt-6 ~text-sm/xl">
-        <div className="px-1 pt-2 pb-3 border-b  border-[#C9C9C9] ">
+        <div className="pt-2 pb-3 border rounded border-[#C9C9C9] ">
           <button
             type="button"
             onClick={() => {
               setSelectOpen((prev) => !prev);
             }}
-            className="w-full block relative bg-arrow bg-arrow-position bg-arrow-size bg-no-repeat text-[#070707] text-left pr-8"
+            className="w-full block relative bg-arrow bg-arrow-position bg-arrow-size bg-no-repeat text-[#070707] text-left pr-6 px-4 "
           >
             {selected}
             <div
-              className={`absolute bg-white border border-[#C9C9C9] rounded-lg top-[130%] left-0 right-0 transition-all duration-300 ease-in-out grid justify-items-start overflow-hidden max-h-[13rem] overflow-y-auto p-2 scrollbar scrollbar-thumb-slate-800 scrollbar-track-slate-200 scrollbar-thumb-rounded-lg scrollbar-track-rounded-md sm:mr-2 z-10 ${
+              className={`absolute bg-white border border-[#C9C9C9] rounded-lg top-[140%] left-0 right-0 transition-all duration-300 ease-in-out grid justify-items-start overflow-hidden max-h-[13rem] overflow-y-auto p-2 scrollbar scrollbar-thumb-slate-800 scrollbar-track-slate-200 scrollbar-thumb-rounded-lg scrollbar-track-rounded-md  z-10 space-y-2 ${
                 selectOpen
                   ? 'visible opacity-100'
                   : 'hidden invisible opacity-0'
@@ -97,9 +97,9 @@ const SelectGuardian = ({
         <p className="text-sm text-red-500 ps-1">{errors?.[name]?.message}</p>
 
         {watch(name) === 'Guardian' && (
-          <div className="grid grid-cols-2 items-center w-full gap-4 mt-8 ">
+          <div className="flex flex-col gap-4 mt-12 border-l-4 w-2/3 px-4">
             <Input
-              label="First Name"
+              label="Guardian’s First Name"
               type="text"
               id="guardiansFName"
               register={register}

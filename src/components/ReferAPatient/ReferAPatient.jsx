@@ -38,7 +38,9 @@ const ReferAPatient = () => {
             >
               <div className="space-y-6">
                 <fieldset className="fieldset">
-                  <h3 className="mb-10 font-medium">Referrer's Information</h3>
+                  <h3 className="mb-10 font-medium">
+                    1. Referrer's Information
+                  </h3>
                   <div className="~space-y-10/12">
                     {[
                       { label: 'First Name', type: 'text', id: 'firstName' },
@@ -69,7 +71,7 @@ const ReferAPatient = () => {
 
                 <fieldset className="fieldset">
                   <h3 className="mb-10 font-medium">
-                    Referred Patient's Information
+                    2. Referred Patient's Information
                   </h3>
                   <div className="~space-y-10/12 bg-white">
                     {[
@@ -109,7 +111,7 @@ const ReferAPatient = () => {
 
                 <fieldset className="fieldset">
                   <h3 className="mb-10 font-medium">
-                    Patient's Contact Information
+                    3. Patient's Contact Information
                   </h3>
                   <div className="~space-y-10/12 bg-white">
                     <Input
@@ -150,7 +152,7 @@ const ReferAPatient = () => {
                 <fieldset className="fieldset">
                   <div className="~space-y-10/12 bg-white pt-6">
                     <h3 className="mb-10 font-medium">
-                      Anything else you'd like us to know?{' '}
+                      4. Anything else you'd like us to know?{' '}
                       <small className=" text-gray-500">(optional)</small>
                     </h3>
                     <Input
@@ -165,7 +167,7 @@ const ReferAPatient = () => {
                   </div>
                 </fieldset>
               </div>
-              <div className='mt-8'>
+              <div className="mt-8">
                 <button
                   disabled={isSubmitting}
                   className={`block w-[80%] ~text-sm/lg mx-auto px-4 py-[0.62rem] text-orenda-purple hover:text-white border border-orenda-purple overflow-hidden relative z-[1] group rounded-3xl font-semibold transition-colors duration-300 `}
