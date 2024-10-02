@@ -2,6 +2,8 @@ import { FormProvider, useForm } from 'react-hook-form';
 import Input from '../Input';
 import { useEffect } from 'react';
 import SelectGuardian from './SelectGuardian';
+import { toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
 
 const ReferAPatient = () => {
   const methods = useForm();
@@ -14,7 +16,37 @@ const ReferAPatient = () => {
   } = methods;
 
   const onSubmit = async (data) => {
-    console.log(data);
+    const templateParams = {
+      from: 'Orenda',
+      section: 'Referrer',
+      firstName: data['First Name'],
+      lastName: data['Last Name'],
+      referrerEmail: data['Referrer’s Email'],
+      Organization: data['Organization'],
+      patientFirstName: data['Patient’s First Name'],
+      patientLastNameInitial: data['Patient’s Last Name Initial'],
+      patientInsurancePlan: data['Patient’s Insurance Plan'],
+      phoneNumber: data['Phone Number'],
+      numberOwner: data['Number Owner'],
+      guardianLastNameInitial: data['Guardian Last Name Initial'],
+      contactEmail: data['Contact Email'],
+      bestTimeToContact: data['Best time to contact patient'],
+      additionalInfo: data['Please place additional information here']
+    };
+
+    try {
+      await emailjs.send(
+        'service_97cba7m',
+        'template_h56f47p',
+        templateParams,
+        'Wv61Pn9AOeH61J_Jm'
+      );
+
+      toast.success('Submitted!');
+    } catch (error) {
+      console.log(`Email not sent. Error: ${JSON.stringify(error)}}`);
+      toast.error('Error!. Please try again');
+    }
   };
 
   useEffect(() => {
@@ -81,7 +113,7 @@ const ReferAPatient = () => {
                         id: 'patientsFirstName'
                       },
                       {
-                        label: 'Last Name Initial',
+                        label: 'Patient’s Last Name Initial',
                         type: 'text',
                         id: 'lastNameInitial'
                       },
