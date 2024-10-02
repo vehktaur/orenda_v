@@ -18,6 +18,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import ReferAPatient from './components/ReferAPatient/ReferAPatient';
 
 function App() {
   const queryClient = useQueryClient();
@@ -41,6 +42,7 @@ function App() {
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="provider/:name" element={<ProviderInfo />} />
           <Route path="become-a-provider" element={<BecomeProviderPage />} />
+          <Route path="refer-a-patient" element={<ReferAPatient />} />
         </Route>
       </Routes>
     </>

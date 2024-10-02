@@ -4,7 +4,7 @@ import { PageNumberContext } from './Insurance/Insurance';
 const Input = ({ before, label, type, id, register, watch, errors }) => {
   const [isFocus, setIsFocus] = useState(false);
   const handleFocus = () => setIsFocus(true);
-  const notRequired = ['address2', 'groupNumber'];
+  const notRequired = ['address2', 'groupNumber', 'moreInfo'];
 
   const handleBlur = () => {
     if (watch(label) === '') {
@@ -36,7 +36,7 @@ const Input = ({ before, label, type, id, register, watch, errors }) => {
           {...register(label, {
             onBlur: () => handleBlur(),
             required: {
-              value: true,
+              value: !notRequired.includes(id),
               message: 'This field is required'
             },
             pattern: pattern
