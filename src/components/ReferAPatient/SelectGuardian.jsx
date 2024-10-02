@@ -2,12 +2,7 @@ import { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import Input from '../Input';
 
-const SelectGuardian = ({
-  label,
-  options,
-
-  name
-}) => {
+const SelectGuardian = ({ label, options, name }) => {
   const {
     register,
     resetField,
@@ -56,8 +51,8 @@ const SelectGuardian = ({
                 }`}
                 onClick={(event) => {
                   event.stopPropagation();
-                  clearSelect('Other (select)');
-                  resetField(label);
+                  clearSelect();
+                  resetField(name);
                 }}
               >
                 Select
@@ -94,10 +89,12 @@ const SelectGuardian = ({
           </button>
         </div>
 
-        <p className="text-sm text-red-500 ps-1">{errors?.[name]?.message}</p>
+        <p className="text-sm text-red-500 ps-1 mt-2">
+          {errors?.[name]?.message}
+        </p>
 
         {watch(name) === 'Guardian' && (
-          <div className="flex flex-col gap-4 mt-12 border-l-4 w-2/3 px-4">
+          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 w-2/3 px-4">
             <Input
               label="Guardian’s First Name"
               type="text"
