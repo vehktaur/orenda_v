@@ -24,19 +24,22 @@ const ReferAPatient = () => {
       referrerEmail: data['Referrer’s Email'],
       Organization: data['Organization'],
       patientFirstName: data['Patient’s First Name'],
-      patientLastNameInitial: data['Patient’s Last Name Initial'],
+      patientLastNameInitial: data['Patient’s Last Name Initials'],
       patientInsurancePlan: data['Patient’s Insurance Plan'],
       phoneNumber: data['Phone Number'],
-      numberOwner: data['Number Owner'],
-      guardianLastNameInitial: data['Guardian Last Name Initial'],
+      numberOwner: data['Numbers Owner'],
+      guardianFirstName: data['Guardian’s First Name'],
+      guardianLastNameInitial: data['Guardian’s Last Name Initials'],
       contactEmail: data['Contact Email'],
       bestTimeToContact: data['Best time to contact patient'],
       additionalInfo: data['Please place additional information here']
     };
 
+    console.log(templateParams);
+
     try {
       await emailjs.send(
-        'service_97cba7m',
+        'service_xal9mrc',
         'template_h56f47p',
         templateParams,
         'Wv61Pn9AOeH61J_Jm'
@@ -113,7 +116,7 @@ const ReferAPatient = () => {
                         id: 'patientsFirstName'
                       },
                       {
-                        label: 'Patient’s Last Name Initial',
+                        label: 'Patient’s Last Name Initials',
                         type: 'text',
                         id: 'lastNameInitial'
                       },
@@ -148,7 +151,7 @@ const ReferAPatient = () => {
                   <div className="~space-y-10/12 bg-white">
                     <Input
                       key="patientsTel"
-                      label="Phone number"
+                      label="Phone Number"
                       type="tel"
                       id="patientsTel"
                       register={register}

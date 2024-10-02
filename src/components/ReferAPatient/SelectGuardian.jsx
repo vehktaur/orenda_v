@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import Input from '../Input';
 
@@ -7,7 +7,7 @@ const SelectGuardian = ({ label, options, name }) => {
     register,
     resetField,
     watch,
-    formState: { errors }
+    formState: { errors, isSubmitSuccessful }
   } = useFormContext();
 
   const [selectOpen, setSelectOpen] = useState(false);
@@ -22,6 +22,12 @@ const SelectGuardian = ({ label, options, name }) => {
     setSelected('Select');
     setSelectOpen(false);
   };
+
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      clearSelect();
+    }
+  }, [isSubmitSuccessful]);
 
   return (
     <div>
