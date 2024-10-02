@@ -35,8 +35,6 @@ const ReferAPatient = () => {
       additionalInfo: data['Please place additional information here']
     };
 
-    console.log(templateParams);
-
     try {
       await emailjs.send(
         'service_xal9mrc',
