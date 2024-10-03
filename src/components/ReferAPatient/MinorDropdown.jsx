@@ -105,7 +105,7 @@ const MinorDropdown = ({ label, options, name }) => {
 
         {watch(name) === 'Yes' && (
           <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 border-[#666] rounded-l ps-3 w-full sm:w-2/3">
-            <h4 className="font-medium text-sm">Enter Guardian's Details *</h4>
+            <h4 className="font-medium ~text-xs/sm">Enter Guardian's Details *</h4>
             <InputPro
               label="First Name"
               type="text"
@@ -139,7 +139,7 @@ const MinorDropdown = ({ label, options, name }) => {
 
         {watch(name) === 'No' && (
           <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 border-[#666] rounded-l ps-3 w-full sm:w-2/3">
-            <h4 className="font-medium text-sm">Enter Patient's Details *</h4>
+            <h4 className="font-medium ~text-xs/sm">Enter Patient's Details *</h4>
             <InputPro
               label="Phone Number"
               type="tel"
