@@ -44,7 +44,7 @@ const Dropdown = ({ label, options, name }) => {
           >
             {selected}
             <div
-              className={`absolute bg-white border border-[#C9C9C9] rounded-lg top-[140%] left-0 right-0 transition-all duration-300 ease-in-out grid justify-items-start overflow-hidden overflow-y-auto p-2 scrollbar-thin scrollbar-thumb-[#666] scrollbar-track-slate-200 scrollbar-thumb-rounded scrollbar-track-rounded  z-10 space-y-2 ${
+              className={`absolute bg-white border border-[#C9C9C9] rounded-lg top-[140%] left-0 right-0 transition-all duration-300 ease-in-out grid justify-items-start overflow-hidden overflow-y-auto p-2 scrollbar-thin scrollbar-thumb-[#666] scrollbar-track-slate-200 scrollbar-thumb-rounded scrollbar-track-rounded z-[1] space-y-2 ${
                 selectOpen
                   ? 'visible opacity-100'
                   : 'hidden invisible opacity-0'
@@ -72,7 +72,7 @@ const Dropdown = ({ label, options, name }) => {
                   }}
                   key={radio}
                   className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
-                    selected === radio ? 'bg-violet-100' : 'hover:bg-violet-200'
+                    selected === radio ? 'bg-violet-100' : 'hover:bg-violet-100'
                   }`}
                 >
                   {radio}
