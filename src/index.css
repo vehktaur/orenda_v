@@ -103,6 +103,11 @@
     @apply border border-[#D6D6D6] font-dm-sans rounded-2xl ~pt-6/[1.69rem] ~pb-[3.25rem]/[4.06rem] ~pl-4/[3.63rem] ~pr-4/[4.75rem];
   }
 
+
+  .rap-fieldset {
+    @apply border border-[#D6D6D6] font-dm-sans rounded-2xl ~pt-6/[1.69rem] ~pb-[2.75rem]/[3.5rem] ~pl-4/[3.25rem] ~pr-4/[4rem];
+  }
+
   .card__shadow {
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
   }

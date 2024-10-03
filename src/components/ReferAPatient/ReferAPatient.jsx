@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import emailjs from '@emailjs/browser';
 import InputPro from './InputPro';
 import MinorDropdown from './MinorDropdown';
+import Dropdown from './Dropdown';
 
 const ReferAPatient = () => {
   const methods = useForm();
@@ -69,11 +70,11 @@ const ReferAPatient = () => {
               className="~mt-6/8 max-w-[43.13rem] mx-auto"
             >
               <div className="space-y-6">
-                <fieldset className="fieldset">
-                  <h3 className="mb-10 font-medium ~text-sm/lg">
+                <fieldset className="rap-fieldset">
+                  <h3 className="mb-10 font-medium ~text-sm/xl">
                     1. Referrer's Information
                   </h3>
-                  <div className="~space-y-10/12">
+                  <div className="~space-y-10/12 ~ps-2/4">
                     {[
                       {
                         label: `Referring Provider's Full Name`,
@@ -108,72 +109,82 @@ const ReferAPatient = () => {
                   </div>
                 </fieldset>
 
-                <fieldset className="fieldset">
-                  <h3 className="mb-10 font-medium ~text-sm/lg">
+                <fieldset className="rap-fieldset">
+                  <h3 className="mb-10 font-medium ~text-sm/xl">
                     2. Referred Patient's Information
                   </h3>
-                  <div className="~space-y-10/12 bg-[#E6e4ef]">
-                    {[
-                      {
-                        label: 'Patient’s First Name',
-                        type: 'text',
-                        id: 'patientsFirstName'
-                      },
-                      {
-                        label: 'Patient’s Last Name Initials',
-                        type: 'text',
-                        id: 'lastNameInitial'
-                      },
-                      {
-                        label: 'Patient’s Date of Birth',
-                        type: 'date',
-                        id: 'patientsDOB'
-                      },
-                      {
-                        label: 'Patient’s Insurance Plan',
-                        type: 'text',
-                        id: 'patientsInsurance'
-                      }
-                    ].map((field) => (
-                      <InputPro
-                        key={field.id}
-                        label={field.label}
-                        type={field.type}
-                        id={field.id}
-                        name={field.id}
-                        required={true}
-                      />
-                    ))}
+                  <div className="~space-y-10/12 ~ps-2/4 bg-[#E6e4ef]">
+                    <InputPro
+                      label="Patient’s First Name"
+                      type="text"
+                      id="patientsFirstName"
+                      name="patientsFirstName"
+                      required={true}
+                    />
+                    <InputPro
+                      label="Patient’s Last Name"
+                      type="text"
+                      id="patientsLastName"
+                      name="patientsLastName"
+                      required={true}
+                    />
+                    <Dropdown
+                      label="Age range of Patient"
+                      options={[
+                        '5 - 12 years',
+                        '13 - 17 years',
+                        '18 - 64 years',
+                        '65 + years'
+                      ]}
+                      name="patientAgeRange"
+                    />
+                    <InputPro
+                      label="Patient’s Insurance Plan"
+                      type="text"
+                      id="patientsInsurance"
+                      name="patientsInsurance"
+                      required={true}
+                    />
                   </div>
                 </fieldset>
 
-                <fieldset className="fieldset">
-                  <h3 className="mb-10 font-medium ~text-sm/lg">
+                <fieldset className="rap-fieldset">
+                  <h3 className="mb-10 font-medium ~text-sm/xl">
                     3. Patient's Contact Information
                   </h3>
-                  <div>
+                  <div className="~space-y-10/12 ~ps-2/4">
                     <MinorDropdown
                       label="Is the patient a minor?"
                       options={['Yes', 'No']}
                       name="isPatientMinor"
                     />
+                    <InputPro
+                      label="DX codes applicable for Patient"
+                      type="text"
+                      id="patientsDXCodes"
+                      name="patientsDXCodes"
+                      required={false}
+                      optional={'text'}
+                    />
                   </div>
                 </fieldset>
 
-                <fieldset className="fieldset">
-                  <div className="~space-y-10/12 pt-6">
-                    <h3 className="mb-10 font-medium ~text-sm/lg">
+                <fieldset className="rap-fieldset">
+                  <div className="~space-y-10/12">
+                    <h3 className="mb-10 font-medium ~text-sm/xl">
                       4. Anything else you'd like us to know?{' '}
                       <small className=" text-gray-500">(optional)</small>
                     </h3>
-                    <InputPro
-                      key="moreInfo"
-                      label="Please place additional information here"
-                      type="textarea"
-                      id="moreInfo"
-                      name="moreInfo"
-                      required={false}
-                    />
+                    <div className='~ps-2/4'>
+                      <InputPro
+                        key="moreInfo"
+                        label="Please place additional information here"
+                        type="textarea"
+                        id="moreInfo"
+                        name="moreInfo"
+                        required={false}
+                      />
+                    </div>
                   </div>
                 </fieldset>
               </div>
@@ -190,14 +201,17 @@ const ReferAPatient = () => {
 
               <div className="mt-20 ~ps-2/5">
                 <p className="~text-sm/base">
-                  You can also send a written referral to us using this fax
-                  line:
+                  You can also send a written referral to us using this{' '}
+                  <strong>fax line:</strong>
                   <span className="block">+1 (347) 745-0992</span>
                 </p>
 
-                <p className='~text-sm/base mt-2'>
+                <p className="~text-sm/base mt-2">
                   Please download the referral form for fax{' '}
-                  <a className="hover:underline font-semibold" href="#">
+                  <a
+                    className="underline font-semibold text-orenda-green underline-offset-2"
+                    href="#"
+                  >
                     here
                   </a>
                 </p>
