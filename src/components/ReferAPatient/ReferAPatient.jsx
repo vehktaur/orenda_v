@@ -29,7 +29,7 @@ const ReferAPatient = () => {
       phoneNumber: data['Phone Number'],
       numberOwner: data['Numbers Owner'],
       guardianFirstName: data['Guardian’s First Name'],
-      guardianLastNameInitial: data['Guardian’s Last Name Initials'],
+      guardianLastNameInitial: data['Last Name Initials'],
       contactEmail: data['Contact Email'],
       bestTimeToContact: data['Best time to contact patient'],
       additionalInfo: data['Please place additional information here']

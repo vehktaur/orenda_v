@@ -100,7 +100,7 @@ const SelectGuardian = ({ label, options, name }) => {
         </p>
 
         {watch(name) === 'Guardian' && (
-          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 w-2/3 px-4">
+          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 ps-3 w-2/3">
             <Input
               label="Guardian’s First Name"
               type="text"
@@ -110,7 +110,7 @@ const SelectGuardian = ({ label, options, name }) => {
               errors={errors}
             />
             <Input
-              label="Guardian’s Last Name Initials"
+              label="Last Name Initials"
               type="text"
               id="guardiansInitials"
               register={register}
