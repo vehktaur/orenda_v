@@ -56,7 +56,7 @@ const MinorDropdown = ({ label, options, name }) => {
                 key="Select"
                 className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
                   selected === 'Select'
-                    ? 'bg-violet-100'
+                    ? 'bg-violet-200'
                     : 'hover:bg-violet-100'
                 }`}
                 onClick={(event) => {
@@ -74,7 +74,7 @@ const MinorDropdown = ({ label, options, name }) => {
                   }}
                   key={radio}
                   className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
-                    selected === radio ? 'bg-violet-100' : 'hover:bg-violet-200'
+                    selected === radio ? 'bg-violet-200' : 'hover:bg-violet-100'
                   }`}
                 >
                   {radio}
