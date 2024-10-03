@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import InputPro from './InputPro';
 
-const SelectGuardian = ({ label, options, name }) => {
+const MinorDropdown = ({ label, options, name }) => {
   const {
     register,
     resetField,
@@ -31,7 +31,9 @@ const SelectGuardian = ({ label, options, name }) => {
 
   return (
     <div>
-      <h3 className="font-medium flex ~gap-1/2 items-baseline ~text-sm/lg">{label}</h3>
+      <h3 className="font-medium flex ~gap-1/2 items-baseline ~text-sm/lg">
+        {label}
+      </h3>
 
       <div className="mt-6 ~text-sm/lg">
         <div className="pt-2 pb-3 border rounded border-[#C9C9C9] ">
@@ -53,7 +55,9 @@ const SelectGuardian = ({ label, options, name }) => {
               <label
                 key="Select"
                 className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
-                  selected === 'Select' ? 'bg-[#ecf5eb]' : 'hover:bg-[#ecf5eb]'
+                  selected === 'Select'
+                    ? 'bg-violet-100'
+                    : 'hover:bg-violet-100'
                 }`}
                 onClick={(event) => {
                   event.stopPropagation();
@@ -70,7 +74,7 @@ const SelectGuardian = ({ label, options, name }) => {
                   }}
                   key={radio}
                   className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
-                    selected === radio ? 'bg-[#ecf5eb]' : 'hover:bg-[#ecf5eb]'
+                    selected === radio ? 'bg-violet-100' : 'hover:bg-violet-200'
                   }`}
                 >
                   {radio}
@@ -99,21 +103,61 @@ const SelectGuardian = ({ label, options, name }) => {
           {errors?.[name]?.message}
         </p>
 
-        {watch(name) === 'Guardian' && (
-          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 ps-3 w-2/3">
+        {watch(name) === 'Yes' && (
+          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 border-[#666] rounded-l ps-3 w-2/3">
             <InputPro
-              label="Guardian’s First Name"
+              label="Guardian's First Name"
               type="text"
               id="guardiansFName"
               name="guardiansFName"
               required={true}
             />
             <InputPro
-              label="Last Name Initials"
+              label="Guardian's Last Name"
               type="text"
-              id="guardiansInitials"
-              name="guardiansInitials"
+              id="guardiansLName"
+              name="guardiansLName"
               required={true}
+            />
+            <InputPro
+              label="Guardian's Phone Number"
+              type="tel"
+              id="guardiansPhoneNumber"
+              name="guardiansPhoneNumber"
+              required={true}
+            />
+            <InputPro
+              label="Guardian's Email"
+              type="email"
+              id="guardiansEmail"
+              name="guardiansEmail"
+              required={true}
+            />
+          </div>
+        )}
+
+        {watch(name) === 'No' && (
+          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 border-[#666] rounded-l ps-3 w-2/3">
+            <InputPro
+              label="Patient's Phone Number"
+              type="tel"
+              id="patientsPhoneNumber"
+              name="patientsPhoneNumber"
+              required={true}
+            />
+            <InputPro
+              label="Patient's Email"
+              type="email"
+              id="patientsEmail"
+              name="patientsEmail"
+              required={true}
+            />
+            <InputPro
+              label="DX codes applicable for Patient (optional)"
+              type="text"
+              id="patientsDXCodes"
+              name="patientsDXCodes"
+              required={false}
             />
           </div>
         )}
@@ -122,4 +166,4 @@ const SelectGuardian = ({ label, options, name }) => {
   );
 };
 
-export default SelectGuardian;
+export default MinorDropdown;
