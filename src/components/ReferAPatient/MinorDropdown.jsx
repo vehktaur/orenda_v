@@ -104,30 +104,31 @@ const MinorDropdown = ({ label, options, name }) => {
         </p>
 
         {watch(name) === 'Yes' && (
-          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 border-[#666] rounded-l ps-3 w-2/3">
+          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 border-[#666] rounded-l ps-3 w-full sm:w-2/3">
+            <h4 className="font-medium text-sm">Enter Guardian's Details *</h4>
             <InputPro
-              label="Guardian's First Name"
+              label="First Name"
               type="text"
               id="guardiansFName"
               name="guardiansFName"
               required={true}
             />
             <InputPro
-              label="Guardian's Last Name"
+              label="Last Name"
               type="text"
               id="guardiansLName"
               name="guardiansLName"
               required={true}
             />
             <InputPro
-              label="Guardian's Phone Number"
+              label="Phone Number"
               type="tel"
               id="guardiansPhoneNumber"
               name="guardiansPhoneNumber"
               required={true}
             />
             <InputPro
-              label="Guardian's Email"
+              label="Email"
               type="email"
               id="guardiansEmail"
               name="guardiansEmail"
@@ -137,27 +138,29 @@ const MinorDropdown = ({ label, options, name }) => {
         )}
 
         {watch(name) === 'No' && (
-          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 border-[#666] rounded-l ps-3 w-2/3">
+          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 border-[#666] rounded-l ps-3 w-full sm:w-2/3">
+            <h4 className="font-medium text-sm">Enter Patient's Details *</h4>
             <InputPro
-              label="Patient's Phone Number"
+              label="Phone Number"
               type="tel"
               id="patientsPhoneNumber"
               name="patientsPhoneNumber"
               required={true}
             />
             <InputPro
-              label="Patient's Email"
+              label="Email"
               type="email"
               id="patientsEmail"
               name="patientsEmail"
               required={true}
             />
             <InputPro
-              label="DX codes applicable for Patient (optional)"
+              label="DX codes applicable for Patient"
               type="text"
               id="patientsDXCodes"
               name="patientsDXCodes"
               required={false}
+              optional={'text'}
             />
           </div>
         )}

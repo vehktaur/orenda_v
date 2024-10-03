@@ -1,7 +1,16 @@
 import { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-const InputPro = ({ before, label, type, id, name, required, placeholder }) => {
+const InputPro = ({
+  before,
+  label,
+  type,
+  id,
+  name,
+  required,
+  placeholder,
+  optional
+}) => {
   const [isFocus, setIsFocus] = useState(false);
   const handleFocus = () => setIsFocus(true);
 
@@ -76,7 +85,10 @@ const InputPro = ({ before, label, type, id, name, required, placeholder }) => {
         } `}
         htmlFor={id}
       >
-        {label}
+        {label}{' '}
+        {optional && optional === 'text' && (
+          <small className=" text-gray-500">(optional)</small>
+        )}
       </label>
 
       <p className="text-sm text-red-500 mt-2">{errors?.[name]?.message}</p>
