@@ -113,7 +113,7 @@ const ReferAPatient = () => {
                   <h3 className="mb-10 font-medium ~text-sm/xl">
                     2. Referred Patient's Information
                   </h3>
-                  <div className="~space-y-10/12 ~ps-2/4 bg-[#E6e4ef]">
+                  <div className="~space-y-10/12 ~ps-2/4">
                     <InputPro
                       label="Patient’s First Name"
                       type="text"
@@ -175,7 +175,7 @@ const ReferAPatient = () => {
                       4. Anything else you'd like us to know?{' '}
                       <small className=" text-gray-500">(optional)</small>
                     </h3>
-                    <div className='~ps-2/4'>
+                    <div className="~ps-2/4">
                       <InputPro
                         key="moreInfo"
                         label="Please place additional information here"
