@@ -8,7 +8,7 @@ import ScrollToTop from './components/ScrollToTop';
 import PrivacyPolicy from './components/Privacy/PrivacyPolicy';
 import ProviderInfo from './components/Provider Info/ProviderInfo';
 import BecomeProviderPage from './components/BecomeProviderPage/BecomeProviderPage';
-import Contacted from './components/Contact Us/Successful';
+import Successful from './components/Contact Us/Successful';
 
 import { useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
@@ -33,16 +33,24 @@ function App() {
     <>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="about" element={<About />} />
-          <Route path="our-team/:slide" element={<OurTeam />} />
-          <Route path="contact-us" element={<ContactUsPage />} />
-          <Route path="contact-us/message-sent" element={<Contacted />} />
-          <Route path="insurance" element={<Insurance />} />
-          <Route path="privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="provider/:name" element={<ProviderInfo />} />
-          <Route path="become-a-provider" element={<BecomeProviderPage />} />
-          <Route path="refer-a-patient" element={<ReferAPatient />} />
+        <Route path='/' element={<Layout />}>
+          <Route path='about' element={<About />} />
+          <Route path='our-team/:slide' element={<OurTeam />} />
+          <Route path='contact-us' element={<ContactUsPage />} />
+          {/* <Route
+            path='message-sent'
+            element={
+              <Successful
+                title='Thank You for Your Referral to Orenda Psychiatry!'
+                content='Thank you for referring a patient to Orenda Psychiatry! A dedicated member of our team will respond to you soon.'
+              />
+            }
+          /> */}
+          <Route path='insurance' element={<Insurance />} />
+          <Route path='privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='provider/:name' element={<ProviderInfo />} />
+          <Route path='become-a-provider' element={<BecomeProviderPage />} />
+          <Route path='refer-a-patient' element={<ReferAPatient />} />
         </Route>
       </Routes>
     </>

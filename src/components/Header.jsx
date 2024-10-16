@@ -47,7 +47,7 @@ const Header = () => {
       )}
       <header className='p-5 text-center ~text-sm/[1.1rem] font-dm-sans sticky bg-white top-0 z-10'>
         <div className='max-w-[90rem] mx-auto flex justify-between items-center'>
-          <div className={`~w-20/[6.8125rem] flex-shrink-0`}>
+          <div className={`~w-20/[5.8125rem] flex-shrink-0`}>
             <img width={150} height={100} src={logo} alt='Orenda Psychiatry' />
           </div>
           <div className=' hidden forProviders:block'>

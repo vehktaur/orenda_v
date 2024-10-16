@@ -106,7 +106,7 @@
   .rap-fieldset {
     @apply border border-[#D6D6D6] font-dm-sans rounded-2xl ~pt-6/[1.69rem] ~pb-[2.75rem]/[3.5rem] ~pl-4/[3.25rem] ~pr-4/[4rem] bg-[#f5f5f5];
 
-    &div {
+    div {
       @apply bg-[#f5f5f5];
     }
   }

@@ -39,7 +39,7 @@ const InputPro = ({
   }
 
   return (
-    <div className="relative text-justify bg-inherit">
+    <div className='relative text-justify bg-inherit'>
       {type == 'textarea' ? (
         <textarea
           type={type}
@@ -70,7 +70,7 @@ const InputPro = ({
           })}
           id={id}
           onFocus={handleFocus}
-          className={`~text-sm/[0.95rem] outline-none block bg-transparent w-full border-b border-[#D1D1D1] pb-2 peer`}
+          className={`~text-sm/[0.95rem] placeholder:text-sm outline-none block bg-transparent w-full border-b border-[#D1D1D1] pb-2 peer`}
         />
       )}
       <label
@@ -86,12 +86,12 @@ const InputPro = ({
         htmlFor={id}
       >
         {label}{' '}
-        {optional && optional === 'text' && (
-          <small className=" text-gray-500">(optional)</small>
+        {optional && (
+          <small className={`text-gray-500 ~text-xs/sm`}>{optional}</small>
         )}
       </label>
 
-      <p className="text-sm text-red-500 mt-2">{errors?.[name]?.message}</p>
+      <p className='text-sm text-red-500 mt-2'>{errors?.[name]?.message}</p>
     </div>
   );
 };
