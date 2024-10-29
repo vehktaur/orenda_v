@@ -18,7 +18,7 @@ const executives = [
   {
     image: executiveImages.kimberly,
     name: 'Tim Ichniowski',
-    position: 'Chief of Staff',
+    position: 'Chief Of Staff',
     bio: ``
   }
 ];
