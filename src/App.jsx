@@ -19,6 +19,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import ReferAPatient from './components/ReferAPatient/ReferAPatient';
+import ExecutiveInfo from './components/Executive Info/ExecutiveInfo';
 
 function App() {
   const queryClient = useQueryClient();
@@ -49,6 +50,7 @@ function App() {
           <Route path='insurance' element={<Insurance />} />
           <Route path='privacy-policy' element={<PrivacyPolicy />} />
           <Route path='provider/:name' element={<ProviderInfo />} />
+          <Route path='executive/:name' element={<ExecutiveInfo />} />
           <Route path='become-a-provider' element={<BecomeProviderPage />} />
           <Route path='refer-a-patient' element={<ReferAPatient />} />
         </Route>
