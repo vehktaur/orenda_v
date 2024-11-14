@@ -58,7 +58,6 @@ const Header = () => {
                   ['Meet Our Team', '/our-team/1'],
                   ['Insurance', '/insurance'],
                   ['About', '/about'],
-                  ['Blog', '/'],
                   ['Privacy Policy', '/privacy-policy'],
                   ['Contact Us', '/contact-us'],
                   ['Join Our Team', '/become-a-provider'],

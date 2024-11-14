@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { states } from '../../data/dataArrays';
 
 const SelectCheckboxes = ({
   number,
@@ -7,63 +8,13 @@ const SelectCheckboxes = ({
   register,
   errors,
   name,
+  disabled,
   resetField
 }) => {
   const [selectOpen, setSelectOpen] = useState(false);
   const [selected, setSelected] = useState(['Other (select)']);
 
-  const otherCheckboxes = [
-    'Alabama',
-    'Alaska',
-    'Arizona',
-    'Arkansas',
-    'California',
-    'Colorado',
-    'Connecticut',
-    'Delaware',
-    'Florida',
-    'Georgia',
-    'Hawaii',
-    'Idaho',
-    'Illinois',
-    'Indiana',
-    'Iowa',
-    'Kansas',
-    'Kentucky',
-    'Louisiana',
-    'Maine',
-    'Maryland',
-    'Massachusetts',
-    'Michigan',
-    'Minnesota',
-    'Mississippi',
-    'Missouri',
-    'Montana',
-    'Nebraska',
-    'Nevada',
-    'New Hampshire',
-    'New Jersey',
-    'New Mexico',
-    'New York',
-    'North Carolina',
-    'North Dakota',
-    'Ohio',
-    'Oklahoma',
-    'Oregon',
-    'Pennsylvania',
-    'Rhode Island',
-    'South Carolina',
-    'South Dakota',
-    'Tennessee',
-    'Texas',
-    'Utah',
-    'Vermont',
-    'Virginia',
-    'Washington',
-    'West Virginia',
-    'Wisconsin',
-    'Wyoming'
-  ];
+  const otherCheckboxes = states.filter((state) => !options.includes(state));
   const handleSelect = (checkbox) => {
     setSelected((prevSelected) => {
       // Remove 'Other (select)' from the previous selection
@@ -109,27 +60,27 @@ const SelectCheckboxes = ({
   };
 
   return (
-    <fieldset className="fieldset font-dm-sans text-left">
-      <h3 className="font-medium flex ~gap-1/2 items-baseline">
+    <>
+      <h3 className='font-medium flex ~gap-1/2 items-baseline'>
         <span>{number}.</span>
         {label}
       </h3>
-      <p className="text-[#737373] pl-3">(select all that apply)</p>
+      <p className='text-[#737373] pl-3'>(select all that apply)</p>
 
-      <div className="mt-6 space-y-5 ~text-sm/xl">
+      <div className='mt-6 space-y-5 ~text-sm/xl'>
         {options.map((option) => {
           if (option === 'Others') {
             return (
               <div
                 key={number + option}
-                className="px-4 ~py-[0.94rem]/[1.19rem] border border-[#C9C9C9] rounded-lg"
+                className='px-4 ~py-[0.94rem]/[1.19rem] border border-[#C9C9C9] rounded-lg'
               >
                 <button
-                  type="button"
+                  type='button'
                   onClick={() => {
                     setSelectOpen(!selectOpen);
                   }}
-                  className="w-full block relative bg-arrow bg-arrow-position bg-arrow-size bg-no-repeat text-[#070707] text-left pr-8"
+                  className='w-full block relative bg-arrow bg-arrow-position bg-arrow-size bg-no-repeat text-[#070707] text-left pr-8'
                 >
                   {showSelected(selected)}
                   <div
@@ -140,7 +91,7 @@ const SelectCheckboxes = ({
                     }`}
                   >
                     <label
-                      key="Other"
+                      key='Other'
                       className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
                         selected.includes('Other (select)')
                           ? 'bg-[#ecf5eb]'
@@ -149,7 +100,7 @@ const SelectCheckboxes = ({
                       onClick={(event) => {
                         event.stopPropagation();
                         clearSelect('Other (select)');
-                        resetField('States Licensed');
+                        resetField(name);
                       }}
                     >
                       Other (select)
@@ -173,13 +124,14 @@ const SelectCheckboxes = ({
                             event.stopPropagation();
                             handleSelect(checkbox);
                           }}
-                          type="checkbox"
+                          type='checkbox'
                           value={checkbox}
                           {...register(name, {
                             required: {
                               value: true,
                               message: 'Please select at least one'
-                            }
+                            },
+                            disabled: disabled
                           })}
                         />
                       </label>
@@ -192,22 +144,23 @@ const SelectCheckboxes = ({
             return (
               <div
                 key={number + option}
-                className="flex ~gap-2/4 items-center px-4 ~py-[0.94rem]/[1.19rem] border border-[#C9C9C9] rounded-lg hover:border-[#ecf5eb] hover:bg-[#ecf5eb]"
+                className='flex ~gap-2/4 items-center px-4 ~py-[0.94rem]/[1.19rem] border border-[#C9C9C9] rounded-lg hover:border-[#ecf5eb] hover:bg-[#ecf5eb]'
               >
                 <input
-                  className="~size-[1.125rem]/6 border border-[#C9C9C9] rounded-sm"
-                  type="checkbox"
+                  className='~size-[1.125rem]/6 border border-[#C9C9C9] rounded-sm'
+                  type='checkbox'
                   value={option}
                   id={number + option}
                   {...register(name, {
                     required: {
                       value: true,
                       message: 'Please select at least one'
-                    }
+                    },
+                    disabled: disabled
                   })}
                 />
                 <label
-                  className="text-[#070707] w-full cursor-pointer"
+                  className='text-[#070707] w-full cursor-pointer'
                   htmlFor={number + option}
                 >
                   {option}
@@ -217,9 +170,9 @@ const SelectCheckboxes = ({
           }
         })}
 
-        <p className="text-sm text-red-500 ps-1">{errors?.[name]?.message}</p>
+        <p className='text-sm text-red-500 ps-1'>{errors?.[name]?.message}</p>
       </div>
-    </fieldset>
+    </>
   );
 };
 

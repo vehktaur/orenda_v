@@ -6,6 +6,7 @@ import InputPro from './InputPro';
 import MinorDropdown from './MinorDropdown';
 import Dropdown from './Dropdown';
 import Successful from '../Contact Us/Successful';
+import { specialties } from '../../data/dataArrays';
 
 const ReferAPatient = () => {
   const [modal, setModal] = useState(false);
@@ -184,9 +185,52 @@ const ReferAPatient = () => {
                   </fieldset>
 
                   <fieldset className='rap-fieldset'>
+                    <h3 className='mb-10 font-medium ~text-sm/xl'>
+                      4. Requirements{' '}
+                      <small className=' text-gray-500'>(optional)</small>
+                    </h3>
+                    <div className='~ps-2/4'>
+                      <div className='~space-y-8/10'>
+                        <h4 className='font-medium flex ~gap-1/2 items-baseline ~text-sm/lg'>
+                          Would you like to refer to a specific Psych NP at our
+                          practice? If so, please provide their name below:
+                        </h4>
+
+                        <InputPro
+                          key='specificPsych'
+                          label='Specific Psych NP (if any)'
+                          id='specificPsych'
+                          name='specificPsych'
+                          required={false}
+                        />
+
+                        <div className='~space-y-10/12'>
+                          <Dropdown
+                            className='~text-sm/lg'
+                            label='Required Specialty (Visit Reason)'
+                            options={specialties}
+                            name='requiredSpecialty'
+                            required={false}
+                          />
+
+                          <div className='px-2'>
+                            <InputPro
+                              key='someOtherRequiredSpecialty'
+                              label='Other'
+                              id='someOtherRequiredSpecialty'
+                              name='someOtherRequiredSpecialty'
+                              required={false}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset className='rap-fieldset'>
                     <div className='~space-y-10/12'>
                       <h3 className='mb-10 font-medium ~text-sm/xl'>
-                        4. Anything else you'd like us to know?{' '}
+                        5. Anything else you'd like us to know?{' '}
                         <small className=' text-gray-500'>(optional)</small>
                       </h3>
                       <div className='~ps-2/4'>

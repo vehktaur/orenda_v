@@ -31,9 +31,9 @@ const MinorDropdown = ({ label, options, name }) => {
 
   return (
     <div>
-      <h3 className="font-medium flex ~gap-1/2 items-baseline ~text-sm/lg">
+      <h4 className="font-medium flex ~gap-1/2 items-baseline ~text-sm/lg">
         {label}
-      </h3>
+      </h4>
 
       <div className="mt-6 ~text-sm/[0.95rem]">
         <div className="pt-2 pb-3 border rounded border-[#C9C9C9] ">

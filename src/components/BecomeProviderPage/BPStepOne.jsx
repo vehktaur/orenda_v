@@ -4,6 +4,20 @@ import Radios from './Radios';
 import SelectCheckboxes from './SelectCheckboxes';
 
 const BPStepOne = ({ register, watch, errors, resetField }) => {
+  const statesLicensed = watch('States Licensed');
+
+  // const enabled =
+  //   statesLicensed &&
+  //   statesLicensed?.length > 0 &&
+  //   ['N/A', 'I am currently a student'].every((option) =>
+  //     !statesLicensed.includes(option)
+  //   );
+
+  const disabled =
+    statesLicensed &&
+    ['N/A', 'I am currently a student'].some((option) =>
+      statesLicensed.includes(option)
+    );
   return (
     <div className='space-y-6'>
       <fieldset className='fieldset'>
@@ -28,38 +42,56 @@ const BPStepOne = ({ register, watch, errors, resetField }) => {
         </div>
       </fieldset>
 
-      <SelectCheckboxes
-        number='2'
-        label='Do you hold a license in any of the following states?'
-        options={[
-          'New York',
-          'New Jersey',
-          'Connecticut',
-          'Massachusetts',
-          'I am currently a student',
-          'N/A',
-          'Others'
-        ]}
-        register={register}
-        errors={errors}
-        name='States Licensed'
-        resetField={resetField}
-      />
+      <fieldset className='fieldset font-dm-sans text-left'>
+        <SelectCheckboxes
+          number='2'
+          label='Do you hold a license in any of the following states?'
+          options={[
+            'New York',
+            'New Jersey',
+            'Connecticut',
+            'Massachusetts',
+            'I am currently a student',
+            'N/A',
+            'Others'
+          ]}
+          register={register}
+          errors={errors}
+          name='States Licensed'
+          resetField={resetField}
+        />
 
-      <SelectCheckboxes
-        number='3'
-        label='Do you have DEA in any of the following states?'
-        options={[
-          'New York',
-          'New Jersey',
-          'Connecticut',
-          'Massachusetts',
-          'Others'
-        ]}
-        register={register}
-        errors={errors}
-        name='States with DEA'
-      />
+        {/* {enabled
+          ) && (
+            <div className='ps-4 py-6 border-l-8 border-l-[#666] border rounded-xl'>
+              <Radios
+                label='Do you have a DEA in this state?'
+                register={register}
+                errors={errors}
+                name='DEAState'
+              />
+            </div>
+          )} */}
+      </fieldset>
+
+      <fieldset className='fieldset font-dm-sans text-left'>
+        <SelectCheckboxes
+          number='3'
+          label='Do you have DEA in any of the following states?'
+          options={[
+            'New York',
+            'New Jersey',
+            'Connecticut',
+            'Massachusetts',
+            'Others'
+          ]}
+          register={register}
+          errors={errors}
+          name='States with DEA'
+          resetField={resetField}
+          disabled={disabled}
+        />
+      </fieldset>
 
       <fieldset className='fieldset space-y-14'>
         <Radios

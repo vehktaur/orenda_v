@@ -8,7 +8,6 @@ import ScrollToTop from './components/ScrollToTop';
 import PrivacyPolicy from './components/Privacy/PrivacyPolicy';
 import ProviderInfo from './components/Provider Info/ProviderInfo';
 import BecomeProviderPage from './components/BecomeProviderPage/BecomeProviderPage';
-import Successful from './components/Contact Us/Successful';
 
 import { useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
