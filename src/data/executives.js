@@ -16,10 +16,10 @@ const executives = [
     bio: `Ted joined Orenda in 2021. Prior to Orenda he worked in consulting for KPMG, where he built his expertise in financial management and strategic planning. He holds his bachelor's degree from Columbia University, and with his extensive background in financial analysis and consulting, Ted has played a crucial role in optimizing Orenda’s billing systems and financial infrastructure, ensuring affordability and streamlined access to care for patients. His leadership continues to support Orenda’s mission to deliver exceptional, accessible mental health services.`
   },
   {
-    image: executiveImages.kimberly,
+    image: executiveImages.tim,
     name: 'Tim Ichniowski',
     position: 'Chief Of Staff',
-    bio: ``
+    bio: `Timothy Ichniowski is the Chief of Staff at Orenda Psychiatry, where he leverages over a decade of experience in management consulting and data analytics to elevate mental health services. With 13 years at Ernst & Young, Timothy developed deep expertise in strategic operations and data-driven solutions, which he now brings to the healthcare sector. At Orenda, he plays a pivotal role in overseeing daily operations, leading innovative initiatives, and enhancing care delivery through strategies focused on both provider excellence and patient well-being.`
   }
 ];
 

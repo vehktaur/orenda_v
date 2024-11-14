@@ -13,7 +13,7 @@ const ExecutiveInfo = () => {
           <div className='flex flex-col md:rounded-t-lg md:flex-row md:~gap-0/[3.5rem] sm:border md:border-[#EFEBDF]'>
             <div className='md:order-last bg-[#f1f1f1] rounded-t-lg w-full md:flex sm:flex-col md:justify-end md:max-w-[39.25rem] relative ~pt-8/12'>
               <img
-                className={`mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[12rem]/[20rem] md:max-h-[28rem] h-auto block object-contain`}
+                className={`mx-auto ~/md:~max-w-[80%]/[22rem] ~/md:~max-h-[16rem]/[20rem] md:max-h-[28rem] h-auto block object-fit`}
                 src={executive?.image}
                 alt={executive?.name}
               />
