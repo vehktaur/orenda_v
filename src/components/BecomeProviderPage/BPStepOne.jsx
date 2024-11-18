@@ -103,7 +103,7 @@ const BPStepOne = ({ register, watch, errors, resetField }) => {
         />
         <Radios
           number='5'
-          label='Are you certified as an FNP, or do you hold any other board certifications?'
+          label='Do you hold any additional board certifications, such as FNP, AGACNP, PNP, etc.??'
           register={register}
           errors={errors}
           name='FNPCertifiedOrOthers'
