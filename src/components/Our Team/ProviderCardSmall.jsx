@@ -105,7 +105,7 @@ const ProviderCard = ({ provider, setProvidersData }) => {
         /> */}
         <img
           className='size-full block object-cover object-top'
-          src='/test.jpg'
+          src='/test2.jpg'
           alt={provider?.provider_name}
           width={100}
           height={100}

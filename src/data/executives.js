@@ -19,7 +19,7 @@ const executives = [
     image: executiveImages.tim,
     name: 'Tim Ichniowski',
     position: 'Chief Of Staff',
-    bio: `Timothy Ichniowski is the Chief of Staff at Orenda Psychiatry, where he leverages over a decade of experience in management consulting and data analytics to elevate mental health services. With 13 years at Ernst & Young, Timothy developed deep expertise in strategic operations and data-driven solutions, which he now brings to the healthcare sector. At Orenda, he plays a pivotal role in overseeing daily operations, leading innovative initiatives, and enhancing care delivery through strategies focused on both provider excellence and patient well-being.`
+    bio: `Timothy Ichniowski is the Chief of Staff at Orenda Psychiatry, where he leverages over a decade of experience in management consulting and data analytics to elevate mental health services. He got his Bachelor's degree from Columbia University, and with 13 years at Ernst & Young, Timothy developed deep expertise in strategic operations and data-driven solutions, which he now brings to the healthcare sector. At Orenda, he plays a pivotal role in overseeing daily operations, leading innovative initiatives, and enhancing care delivery through strategies focused on both provider excellence and patient well-being.`
   }
 ];
 

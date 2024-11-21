@@ -29,7 +29,10 @@ const ExecutiveTeam = () => {
 
         <div className='grid grid-cols-1 sm:grid-cols-3 ~gap-4/8'>
           {executives.map((executive) => (
-            <div className='rounded-2xl overflow-hidden max-w-64 mx-auto' key={executive.name}>
+            <div
+              className='rounded-2xl overflow-hidden max-w-64 mx-auto'
+              key={executive.name}
+            >
               <div className='~h-[10rem]/[20rem] w-full rounded-2xl overflow-hidden max-h-[21rem] bg-gray-50'>
                 <img
                   className='size-full object-cover'
@@ -40,21 +43,14 @@ const ExecutiveTeam = () => {
               <div className='px-2 py-5 pt-2'>
                 <h3 className='font-medium ~text-base/lg'>{executive.name}</h3>
                 <p className='flex gap-2 items-center mt-1 mb-2'>
-                  <span className='size-2'>
+                  <span className='size-2 fill-orenda-green'>
                     <svg
                       width='8'
                       height='8'
                       viewBox='0 0 8 8'
-                      fill='none'
                       xmlns='http://www.w3.org/2000/svg'
                     >
-                      <circle
-                        id='Ellipse 263'
-                        cx='4'
-                        cy='4'
-                        r='4'
-                        fill='#C2C2C2'
-                      />
+                      <circle id='Ellipse 263' cx='4' cy='4' r='4' />
                     </svg>
                   </span>
                   <span className='~text-xs/sm font-open-sans'>
@@ -62,7 +58,9 @@ const ExecutiveTeam = () => {
                   </span>
                 </p>
 
-                <p className='text-justify text-sm line-clamp-5'>{executive.bio}</p>
+                <p className='text-justify text-sm line-clamp-5'>
+                  {executive.bio}
+                </p>
 
                 <p>
                   <Link
