@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { IoLocationOutline } from 'react-icons/io5';
+import { MdLocationPin } from 'react-icons/md';
 
 const ProviderCard = ({ provider, setProvidersData }) => {
   const showStatesLicensed = (states) => {
@@ -65,7 +67,7 @@ const ProviderCard = ({ provider, setProvidersData }) => {
         } justify-between rounded-md cursor-pointer`}
       >
         <div className={`grid gap-2`}>
-          <h3 className="font-semibold">About Provider</h3>
+          <h3 className='font-semibold'>About Provider</h3>
           <p className={`line-clamp-[9] overflow-hidden text-[0.85rem]`}>
             {provider?.provider_description.replace(/(\.\n|\n)/g, (match) => {
               return match === '.\n' ? '.\n\n' : ' ';
@@ -74,16 +76,16 @@ const ProviderCard = ({ provider, setProvidersData }) => {
         </div>
         <div className={`grid gap-2`}>
           <a
-            target="_blank"
+            target='_blank'
             href={provider?.booking_link}
-            className="border block rounded-3xl px-2 py-1 text-[0.875rem] hover:text-black transition-colors mt-6 font-medium text-center relative overflow-hidden group z-[1]"
+            className='border block rounded-3xl px-2 py-1 text-[0.875rem] hover:text-black transition-colors mt-6 font-medium text-center relative overflow-hidden group z-[1]'
           >
-            <span className="block absolute -top-[1px] -left-[1.3px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-white transition-all duration-500 rounded-3xl z-[-1] border" />
+            <span className='block absolute -top-[1px] -left-[1.3px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-white transition-all duration-500 rounded-3xl z-[-1] border' />
             Book now
           </a>
-          <div className="flex justify-center">
+          <div className='flex justify-center'>
             <Link
-              className="text-[0.875rem] font-semibold hover:underline"
+              className='text-[0.875rem] font-semibold hover:underline'
               to={`/provider/${provider.provider_name}`}
             >
               See Profile
@@ -92,11 +94,18 @@ const ProviderCard = ({ provider, setProvidersData }) => {
         </div>
       </div>
       <div
-        className={`bg-[#f1f1f1] ~h-[9.5rem]/[7.25rem] flex items-end justify-center rounded-t-md`}
+        className={`bg-[#f1f1f1] ~h-[9.5rem]/[13.25rem] flex items-end justify-center rounded-t-md overflow-hidden`}
       >
-        <img
-          className="size-[90%] block object-contain"
+        {/* <img
+          className='size-[90%] block object-contain'
           src={provider?.provider_image_url}
+          alt={provider?.provider_name}
+          width={100}
+          height={100}
+        /> */}
+        <img
+          className='size-full block object-cover'
+          src='/test.jpg'
           alt={provider?.provider_name}
           width={100}
           height={100}
@@ -109,34 +118,36 @@ const ProviderCard = ({ provider, setProvidersData }) => {
         <h3 className={`~text-base/lg font-bold font-open-sans py-1`}>
           {provider?.provider_name}
         </h3>
-        <div className="pt-1 px-1 pb-2 bg-[#f5f5f5] rounded-[0.25rem]">
-          <p className="text-[0.8rem] font-medium font-dm-sans text-[#6A6A6A] pb-1">
+        <div className='pt-1 px-1 pb-2 bg-[#f5f5f5] h-[3.7rem] rounded-[0.25rem]'>
+          <p className='text-[0.7rem] font-medium font-dm-sans text-[#6A6A6A] pb-[1px]'>
             Ages seen
           </p>
           <p className={`text-[0.7rem] font-open-sans`}>
             {showAgesSeen(provider?.age_group)}
           </p>
         </div>
-        <div className="pt-[0.62rem] mt-auto">
-          <h3 className="font-medium font-dm-sans text-[#6A6A6A] text-[0.8rem]">
+        <div className='pt-[0.62rem] mt-auto'>
+          {/* <h3 className="font-medium font-dm-sans text-[#6A6A6A] text-[0.8rem]">
             States Licensed
           </h3>
           <p className={`text-xs font-medium font-dm-sans`}>
             {showStatesLicensed(provider?.licensed_states)}
+          </p> */}
+          <h3 className='font-medium font-dm-sans text-[#6A6A6A] text-[0.8rem] flex gap-1 items-center'>
+            States Licensed
+            <MdLocationPin className='text-orenda-green flex-shrink-0 size-[0.85rem] font-bold -mt-[2px]' />
+          </h3>
+          <p
+            className={`text-xs font-medium font-dm-sans flex gap-1 items-center`}
+          >
+            <span>{showStatesLicensed(provider?.licensed_states)}</span>
           </p>
         </div>
-        <div className="flex justify-between pt-4 gap-3">
-          {provider.status && (
-            <span
-              className={`rounded-lg grid place-items-center border border-[#E1EEE4] bg-[#F0FDF3] text-nowrap p-1 px-1.5 text-[0.7rem] font-dm-sans`}
-            >
-              Available Today
-            </span>
-          )}
+        <div className='flex justify-between pt-2 gap-3'>
           <a
-            target="_blank"
+            target='_blank'
             href={provider?.booking_link}
-            className={`w-fit block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans py-2 min-w-[7.5rem] ~px-2/3`}
+            className={`w-full block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans py-2 min-w-[7.5rem] ~px-2/3`}
           >
             Book online
           </a>
