@@ -62,14 +62,14 @@ const ExecutiveTeam = () => {
                   {executive.bio}
                 </p>
 
-                <p>
+             
                   <Link
-                    className='font-medium'
+                    className='font-medium ~text-sm block mt-1'
                     to={`/executive/${executive.name}`}
                   >
                     Read more
                   </Link>
-                </p>
+                
               </div>
             </div>
           ))}

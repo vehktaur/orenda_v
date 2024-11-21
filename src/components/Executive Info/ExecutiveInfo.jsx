@@ -21,10 +21,10 @@ const ExecutiveInfo = () => {
             <div className='md:max-w-[50%] sm:~px-2/8 sm:py-6'>
               <div className='flex justify-between items-center ~mt-[1.5rem]/[2.56rem]'>
                 <div className=''>
-                  <h1 className='~text-base/[2rem] font-bold mb-2'>
+                  <h1 className='~text-xl/4xl font-bold mb-2'>
                     {executive?.name}
                   </h1>
-                  <p className='text-[#7C7C7C] ~text-xs/sm font-bold text-left'>
+                  <p className='text-[#7C7C7C] ~text-base/lg font-bold text-left'>
                     <span>{executive.position}</span>
                   </p>
                 </div>
