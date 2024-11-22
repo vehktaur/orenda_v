@@ -96,16 +96,9 @@ const ProviderCard = ({ provider, setProvidersData }) => {
       <div
         className={`bg-[#f1f1f1] ~h-[9.5rem]/[13.25rem] flex items-end justify-center rounded-t-md overflow-hidden`}
       >
-        {/* <img
-          className='size-[90%] block object-contain'
-          src={provider?.provider_image_url}
-          alt={provider?.provider_name}
-          width={100}
-          height={100}
-        /> */}
         <img
           className='size-full block object-cover object-top'
-          src='/test2.jpg'
+          src={provider?.provider_image_url}
           alt={provider?.provider_name}
           width={100}
           height={100}
