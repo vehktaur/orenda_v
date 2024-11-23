@@ -57,7 +57,7 @@ const ProviderCard = ({ provider, setProvidersData }) => {
           }))
         )
       }
-      className={`pb-[0.94rem] max-w-[18.625rem] h-[23.5rem] md:h-[unset] w-full rounded-md relative card__shadow flex flex-col cursor-pointer`}
+      className={`pb-[0.94rem] max-w-[18.625rem] h-[27.25rem] md:h-[unset] w-full rounded-md relative card__shadow flex flex-col cursor-pointer`}
     >
       <div
         className={`absolute inset-0 bg-black opacity-0 md:hover:opacity-100 transition-opacity duration-1000 text-white flex flex-col gap-1 px-3 py-4 md:visible md:animate-none ${
@@ -94,7 +94,7 @@ const ProviderCard = ({ provider, setProvidersData }) => {
         </div>
       </div>
       <div
-        className={`bg-[#f1f1f1] ~h-[9.5rem]/[13.25rem] flex items-end justify-center rounded-t-md overflow-hidden`}
+        className={`bg-[#f1f1f1] h-[13.25rem] flex items-end justify-center rounded-t-md overflow-hidden`}
       >
         <img
           className='size-full block object-cover object-top'

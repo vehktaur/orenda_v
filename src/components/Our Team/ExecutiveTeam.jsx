@@ -33,7 +33,7 @@ const ExecutiveTeam = () => {
               className='rounded-2xl overflow-hidden max-w-64 mx-auto'
               key={executive.name}
             >
-              <div className='~h-[10rem]/[20rem] w-full rounded-2xl overflow-hidden max-h-[21rem] bg-gray-50'>
+              <div className='~h-[15rem]/[18rem] w-full rounded-2xl overflow-hidden max-h-[21rem] bg-gray-50'>
                 <img
                   className='size-full object-cover'
                   src={executive.image}
