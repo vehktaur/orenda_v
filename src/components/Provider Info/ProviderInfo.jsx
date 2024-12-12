@@ -67,9 +67,9 @@ const ProviderInfo = () => {
       <>
         <main className='px-4 sm:~px-6/10 font-dm-sans ~mt-7/[5.5rem]'>
           <div className='max-w-7xl mx-auto'>
-            <div className='rounded-lg sm:border sm:border-[#EFEBDF]'>
+            <div className='rounded-lg sm:border border-[#EFEBDF]'>
               <div className='flex flex-col md:rounded-t-lg md:flex-row md:~gap-0/[3.5rem] sm:border md:border-[#EFEBDF]'>
-                <div className='md:order-last bg-[#f6f7fc] bg-dotted bg-cover rounded-t-lg w-full md:flex sm:flex-col md:justify-center md:items-center md:max-w-[39.25rem] relative ~pt-8/12'>
+                <div className='md:order-last md:border-l border-[#EFEBDF] rounded-t-lg w-full md:flex sm:flex-col md:justify-center md:items-center md:max-w-[39.25rem] relative ~pt-8/12'>
                   <div className='w-4/5 ~max-w-80/[28rem] ~max-h-72/[28rem] md:max-h-none overflow-hidden mx-auto md:mx-0 md:size-[28rem]'>
                     <img
                       className={`mx-auto size-full block object-cover`}

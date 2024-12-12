@@ -20,6 +20,20 @@ const executives = [
     name: 'Tim Ichniowski',
     position: 'Chief Of Staff',
     bio: `Timothy Ichniowski is the Chief of Staff at Orenda Psychiatry, where he leverages over a decade of experience in management consulting and data analytics to elevate mental health services. He got his Bachelor's degree from Columbia University, and with 13 years at Ernst & Young, Timothy developed deep expertise in strategic operations and data-driven solutions, which he now brings to the healthcare sector. At Orenda, he plays a pivotal role in overseeing daily operations, leading innovative initiatives, and enhancing care delivery through strategies focused on both provider excellence and patient well-being.`
+  },
+  {
+    image: executiveImages.andrea,
+    name: 'Andrea Eigel',
+    position: '',
+    bio: `Andrea Eigel brings over 15 years of leadership experience in business operations, specializing in guiding entrepreneurial and family-operated global manufacturing and distribution companies. Her expertise includes leading organizations through private equity sales and seamlessly managing acquisition and merger integrations.
+    
+    With a broad background in business and supply chain operations, Andrea has a deep passion for supporting entrepreneurs in navigating critical transitions, helping them prepare for growth, change, and successful exits.
+    
+    Andrea holds an MBA from Harvard Business School and has worked with renowned companies such as Bain & Co. and Urnex Brands. Her career is marked by a hands-on, results-oriented approach to building efficient, scalable operations.
+    
+    Residing just north of Manhattan with her husband and teenage children, Andrea balances her professional life with a strong commitment to community service. She dedicates her free time as a volunteer firefighter and EMT, embodying a spirit of service and teamwork that aligns with Orenda’s mission.
+    
+    As Orenda’s COO, Andrea brings her extensive experience, strategic acumen, and operational excellence to drive the company's growth and success.`
   }
 ];
 

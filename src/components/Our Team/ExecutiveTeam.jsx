@@ -27,7 +27,7 @@ const ExecutiveTeam = () => {
       <div className='max-w-[70rem] mx-auto'>
         <h2 className='heading ~mb-8/12'>Executive Team</h2>
 
-        <div className='grid grid-cols-1 sm:grid-cols-3 ~gap-4/8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ~gap-4/8'>
           {executives.map((executive) => (
             <div
               className='rounded-2xl overflow-hidden max-w-64 mx-auto'

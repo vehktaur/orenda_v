@@ -105,7 +105,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
               )
             : normalize(query[key], '');
 
-        filteredProviders = filteredProviders.filter((provider) => {
+        filteredProviders = filteredProviders?.filter((provider) => {
           let providerValues = [];
           if (key === 'States') {
             providerValues =
