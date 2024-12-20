@@ -82,12 +82,15 @@
     opacity: 0.5;
     pointer-events: all;
   }
+  :root {
+    --radius: 0.5rem;
+  }
 }
 
 @layer components {
   main p,
   main li {
-    @apply ~text-sm/xl font-dm-sans text-justify;
+    @apply ~text-sm/lg font-dm-sans text-justify;
   }
   form h3 {
     @apply ~text-sm/xl font-dm-sans;
@@ -113,5 +116,11 @@
 
   .card__shadow {
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@layer utilities {
+  .padding-inline {
+    @apply px-5 sm:~px-8/10;
   }
 }

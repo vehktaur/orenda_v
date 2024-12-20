@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 import fluid, { extract, screens, fontSize } from 'fluid-tailwind';
+import animate from 'tailwindcss-animate';
 
 export default {
   content: { files: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'], extract },
@@ -20,7 +21,8 @@ export default {
         arrow: 'url(/src/assets/select.svg)',
         logo: 'url(/src/assets/logo-circle-0.15.png)',
         dotted: 'url(/src/assets/dotted.png)',
-        search: 'url(/src/assets/search.svg)'
+        search: 'url(/src/assets/search.svg)',
+        christmas: 'url(/src/assets/christmas_tree_bg.jpg)'
       },
       backgroundPosition: {
         'footer-positions': 'top left, bottom right, bottom right',
@@ -36,7 +38,8 @@ export default {
       },
       colors: {
         'orenda-purple': '#2E0086',
-        'orenda-green': '#127801'
+        'orenda-green': '#127801',
+        lime: '#ecf5eb'
       },
       content: {
         email: 'url("/src/assets/dark_email.svg")',
@@ -77,6 +80,7 @@ export default {
   },
   plugins: [
     fluid,
+    animate,
     require('tailwind-scrollbar')({
       nocompatible: true,
       preferredStrategy: 'pseudoelements'

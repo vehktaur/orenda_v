@@ -12,7 +12,7 @@ const Layout = () => {
 
       <Footer />
       <ToastContainer
-        position="top-right"
+        position='top-right'
         autoClose={1500}
         hideProgressBar
         newestOnTop={false}
@@ -21,7 +21,7 @@ const Layout = () => {
         pauseOnFocusLoss
         draggable={false}
         pauseOnHover
-        theme="light"
+        theme='light'
         transition:Slide
       />
     </>

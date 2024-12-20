@@ -4,14 +4,63 @@ import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
+  const header = useRef();
   let navMenu = useRef();
   let navMenuLayer = useRef();
 
+  const menuItems = [
+    { label: 'Home', path: '/', icon: 'fa-solid fa-house' },
+    {
+      label: 'Meet Our Team',
+      path: '/our-team/1',
+      icon: 'fa-solid fa-people-group'
+    },
+    { label: 'Insurance', path: '/insurance', icon: 'fa-solid fa-hands-bound' },
+    { label: 'About', path: '/about', icon: 'fa-solid fa-address-card' },
+    { label: 'Blog', path: '/blog', icon: 'fa-solid fa-blog' },
+    {
+      label: 'Privacy Policy',
+      path: '/privacy-policy',
+      icon: 'fa-solid fa-file-shield'
+    },
+    {
+      label: 'Contact Us',
+      path: '/contact-us',
+      icon: 'fa-solid fa-comment-dots'
+    },
+    {
+      label: 'Join Our Team',
+      path: '/become-a-provider',
+      icon: 'fa-solid fa-person-circle-plus'
+    },
+    {
+      label: 'Refer A Patient',
+      path: '/refer-a-patient',
+      icon: 'fa-solid fa-user-group'
+    }
+  ];
+
   const timeline = useRef();
+
+  // useGSAP(() => {
+  //   gsap.to(header.current, {
+  //     backgroundColor: 'rgb(255 255 255)',
+  //     scrollTrigger: {
+  //       start: 'top+=70',
+  //       end: '+=0',
+  //       toggleActions: 'play none none reverse',
+  //       scrub: 2
+  //     },
+  //     ease: 'power1.inOut'
+  //   });
+  // }, []);
 
   useGSAP(() => {
     timeline.current = gsap.timeline({ paused: true });
@@ -45,7 +94,10 @@ const Header = () => {
           className='fixed inset-0 z-[2] opacity-5 bg-purple-200'
         ></div>
       )}
-      <header className='p-5 text-center ~text-sm/[1.1rem] font-dm-sans sticky bg-white top-0 z-10'>
+      <header
+        ref={header}
+        className='p-5 text-center ~text-sm/[1.1rem] font-dm-sans sticky bg-white top-0 z-10'
+      >
         <div className='max-w-[90rem] mx-auto flex justify-between items-center'>
           <div className={`~w-20/[5.8125rem] flex-shrink-0`}>
             <img width={150} height={100} src={logo} alt='Orenda Psychiatry' />
@@ -53,34 +105,25 @@ const Header = () => {
           <div className=' hidden forProviders:block'>
             <nav>
               <ul className='flex items-center justify-between ~forProviders/2xl:~gap-6/8 transition duration-1000 '>
-                {[
-                  ['Home', '/'],
-                  ['Meet Our Team', '/our-team/1'],
-                  ['Insurance', '/insurance'],
-                  ['About', '/about'],
-                  ['Privacy Policy', '/privacy-policy'],
-                  ['Contact Us', '/contact-us'],
-                  ['Join Our Team', '/become-a-provider'],
-                  ['Refer A Patient', '/refer-a-patient']
-                ].map(([title, url]) => (
-                  <li key={title}>
+                {menuItems.map(({ label, path }) => (
+                  <li key={label}>
                     <NavLink
                       className={({ isActive }) =>
                         isActive
                           ? `font-bold ${
-                              title === 'Join Our Team'
+                              label === 'Join Our Team'
                                 ? 'text-green-700'
                                 : 'text-orenda-purple '
                             }`
                           : `hover:font-bold ${
-                              title === 'Join Our Team'
+                              label === 'Join Our Team'
                                 ? 'text-green-700 font-medium'
                                 : 'hover:text-orenda-purple '
                             }`
                       }
-                      to={url}
+                      to={path}
                     >
-                      {title}
+                      {label}
                     </NavLink>
                   </li>
                 ))}
@@ -132,37 +175,11 @@ const Header = () => {
             >
               <nav className='grid items-start gap-5 h-full'>
                 <ul className='grid gap-1 justify-items-start'>
-                  {[
-                    ['Home', '/', 'fa-solid fa-house'],
-                    [
-                      'Meet Our Team',
-                      '/our-team/1',
-                      'fa-solid fa-people-group'
-                    ],
-                    ['Insurance', '/insurance', 'fa-solid fa-hands-bound'],
-                    ['About', '/about', 'fa-solid fa-address-card'],
-                    ['Blog', '/', 'fa-solid fa-blog'],
-                    [
-                      'Privacy Policy',
-                      '/privacy-policy',
-                      'fa-solid fa-file-shield'
-                    ],
-                    ['Contact Us', '/contact-us', 'fa-solid fa-comment-dots'],
-                    [
-                      'Join Our Team',
-                      '/become-a-provider',
-                      'fa-solid fa-person-circle-plus'
-                    ],
-                    [
-                      'Refer A Patient',
-                      '/refer-a-patient',
-                      'fa-solid fa-user-group'
-                    ]
-                  ].map(([title, url, icon]) => (
+                  {menuItems.map(({ label, path, icon }) => (
                     <li
                       onClick={() => displayMenu()}
                       className='w-full text-left'
-                      key={title}
+                      key={label}
                     >
                       <NavLink
                         className={({ isActive }) =>
@@ -170,12 +187,12 @@ const Header = () => {
                             ? 'block ~px-5/12 ~py-2/3 w-full ~text-base/xl bg-[#eee] text-[#333] font-medium transition-colors duration-300'
                             : 'block ~px-5/12 ~py-2/3 w-full ~text-base/xl text-white hover:bg-[#eee] hover:text-[#333] font-medium transition-colors duration-300'
                         }
-                        to={url}
+                        to={path}
                       >
                         <span className='mr-3 hover:text-[#333]'>
                           <FontAwesomeIcon icon={icon} />
                         </span>
-                        {title}
+                        {label}
                       </NavLink>
                     </li>
                   ))}
