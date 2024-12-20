@@ -278,7 +278,7 @@ const Blog = () => {
               </div>
             </div>
 
-            <div className="mt-16">
+            <div className="~mt-8/16">
               <h2 className="font-heading font-bold ~text-xl/3xl ~mb-2/4">
                 When To Seek Help
               </h2>
