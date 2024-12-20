@@ -1,8 +1,19 @@
 import { Checkbox } from "../ui/checkbox";
 import blogs from "@/data/blogData";
+import { FaClipboardQuestion } from "react-icons/fa6";
+import Button from "../ui/Button";
+import GetStarted from "../About/GetStarted";
 
 const Blog = () => {
   const blog = blogs[0];
+
+  const listItems = [
+    "Gift Shopping",
+    "Financial pressure",
+    "Lack of time",
+    "Family dynamics",
+    "Grief",
+  ];
 
   return (
     <section className="~text-sm/base">
@@ -21,7 +32,7 @@ const Blog = () => {
               {blog.title}
             </h1>
             <p className="max-w-2xl ~text-base/xl">{blog.subtitle}</p>
-            <div className="mt-8 flex items-center font-medium ~text-xs/base ~gap-2/4 *:rounded-md *:border *:border-white *:py-1 *:backdrop-blur-sm *:~px-2/3">
+            <div className="mt-8 flex select-none items-center font-medium ~text-xs/sm ~gap-2/4 *:cursor-pointer *:rounded-md *:border *:border-white *:py-1 *:backdrop-blur-sm *:~px-2/3">
               {blog.tags.map((tag) => (
                 <span key={tag}>{tag}</span>
               ))}
@@ -67,10 +78,10 @@ const Blog = () => {
                 Now, why exactly do holidays bring stress?
               </h2>
 
-              <div className="mb-10 ~mt-6/10 max-w-2xl overflow-hidden rounded-3xl">
+              <div className="mb-10 max-w-2xl overflow-hidden rounded-3xl ~mt-6/10">
                 <img
                   className="size-full object-cover"
-                  src={blog.image}
+                  src={blog.image[0]}
                   alt={blog.title}
                   width={840}
                   height={480}
@@ -121,129 +132,183 @@ const Blog = () => {
                   </p>
                 </li>
               </ol>
+            </div>
 
-              <div className="mt-10 rounded-3xl bg-orenda-purple bg-logo bg-[length:7.5rem] bg-fixed bg-repeat-round text-white ~px-4/8 ~py-8/14">
-                <div>
-                  <h2 className="font-heading font-bold ~text-lg/3xl">
-                    What stresses you out the most during the holidays?
-                  </h2>
-
-                  <ul className="mt-6 ~text-xs/base ~space-y-4/6">
-                    <li>
-                      <label className="flex items-center gap-3">
-                        <Checkbox className="peer size-5 rounded-md" />
-                        <span className="peer-data-[state=checked]:line-through">
-                          Gift Shopping
-                        </span>
-                      </label>
-                    </li>
-                    <li>
-                      <label className="flex items-center gap-3">
-                        <Checkbox className="peer size-5 rounded-md" />
-                        <span className="peer-data-[state=checked]:line-through">
-                          Financial pressure
-                        </span>
-                      </label>
-                    </li>
-                    <li>
-                      <label className="flex items-center gap-3">
-                        <Checkbox className="peer size-5 rounded-md" />
-                        <span className="peer-data-[state=checked]:line-through">
-                          Lack of time
-                        </span>
-                      </label>
-                    </li>
-                    <li>
-                      <label className="flex items-center gap-3">
-                        <Checkbox className="peer size-5 rounded-md" />
-                        <span className="peer-data-[state=checked]:line-through">
-                          Family dynamics
-                        </span>
-                      </label>
-                    </li>
-                    <li>
-                      <label className="flex items-center gap-3">
-                        <Checkbox className="peer size-5 rounded-md" />
-                        <span className="peer-data-[state=checked]:line-through">
-                          Grief
-                        </span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-16">
-                <h2 className="font-heading font-bold ~text-xl/3xl ~mb-2/5">
-                  Practical Tips to Manage Holiday Stress
+            <div className="mt-10 flex justify-between rounded-3xl bg-orenda-purple bg-logo bg-[length:7.5rem] bg-fixed bg-repeat-round text-white ~px-4/8 ~py-7/14">
+              <div>
+                <h2 className="font-heading font-bold ~text-lg/3xl">
+                  What stresses you out the most during the holidays?
                 </h2>
 
-                <p className="mb-5">
-                  Here are some effective strategies to help you stay grounded
-                  and make the most of the season:
-                </p>
+                <ul className="~text-xs/base ~mt-4/6 ~space-y-3/6">
+                  {listItems.map((item) => {
+                    return (
+                      <li key={item}>
+                        <label className="flex items-center ~gap-2/3">
+                          <Checkbox className="peer rounded-md ~size-4/5" />
+                          <span className="peer-data-[state=checked]:line-through">
+                            {item}
+                          </span>
+                        </label>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+
+              <div className="content-center">
+                <FaClipboardQuestion className="rotate-[10deg] text-[#ecf5eb] ~size-24/56" />
+              </div>
+            </div>
+
+            <div className="mt-16">
+              <h2 className="font-heading font-bold ~text-xl/3xl ~mb-2/5">
+                Practical Tips to Manage Holiday Stress
+              </h2>
+
+              <p className="mb-5">
+                Here are some effective strategies to help you stay grounded and
+                make the most of the season:
+              </p>
+
+              <ol className="list-decimal ~space-y-4/6 ~ps-4/8 marker:font-bold marker:~text-lg/xl">
+                <li>
+                  <h3 className="mb-2 font-bold ~text-lg/xl">
+                    Set Realistic Expectations
+                  </h3>
+                  <p>
+                    Not every moment has to be perfect. Focus on what truly
+                    matters to you and let go of the need to meet everyone's
+                    expectations. Remember, your presence is more valuable than
+                    the presents.
+                  </p>
+                </li>
+                <li>
+                  <h3 className="mb-2 font-bold ~text-lg/xl">Stay Active</h3>
+                  <p>
+                    Physical activity is a natural stress reliever. Go for a
+                    brisk walk, try a holiday-themed workout, or even dance to
+                    your favorite festive tunes. Exercise boosts endorphins and
+                    helps counteract the effects of stress.
+                  </p>
+                </li>
+                <li>
+                  <h3 className="mb-2 font-bold ~text-lg/xl">
+                    Create a Budget
+                  </h3>
+                  <p>
+                    Plan your holiday spending in advance. Allocate specific
+                    amounts for gifts, decorations, and events—and stick to it.
+                    Homemade gifts or shared experiences can be just as
+                    meaningful as expensive items.
+                  </p>
+                </li>
+                <li>
+                  <h3 className="mb-2 font-bold ~text-lg/xl">Set Boundaries</h3>
+                  <p>
+                    It's okay to say no. Whether it's declining an invitation or
+                    setting limits on how much you take on, protecting your time
+                    and energy is essential.
+                  </p>
+                </li>
+                <li>
+                  <h3 className="mb-2 font-bold ~text-lg/xl"> Seek Support</h3>
+                  <p>
+                    If feelings of stress or sadness become overwhelming, reach
+                    out. Talk to a trusted friend, family member, or mental
+                    health professional. Sometimes, sharing your thoughts can
+                    provide relief and perspective.
+                  </p>
+                </li>
+              </ol>
+            </div>
+
+            <div className="mt-5 pt-8">
+              <h3 className="mb-6 font-heading font-bold ~text-sm/base">
+                Orenda Tip
+              </h3>
+
+              <h2 className="font-heading font-bold ~text-xl/3xl">
+                Fun Ways to Infuse Joy into Your Holidays
+              </h2>
+
+              <div className="~mt-6/10 lg:flex lg:flex-row-reverse lg:~gap-5/10">
+                <div className="mb-10 max-w-md overflow-hidden rounded-3xl">
+                  <img
+                    className="size-full object-cover"
+                    src={blog.image[1]}
+                    alt={blog.title}
+                    width={840}
+                    height={480}
+                  />
+                </div>
 
                 <ol className="list-decimal ~space-y-4/6 ~ps-4/8 marker:font-bold marker:~text-lg/xl">
                   <li>
                     <h3 className="mb-2 font-bold ~text-lg/xl">
-                      Set Realistic Expectations
+                      Start a New Tradition
                     </h3>
                     <p>
-                      Not every moment has to be perfect. Focus on what truly
-                      matters to you and let go of the need to meet everyone's
-                      expectations. Remember, your presence is more valuable
-                      than the presents.
-                    </p>
-                  </li>
-                  <li>
-                    <h3 className="mb-2 font-bold ~text-lg/xl">Stay Active</h3>
-                    <p>
-                      Physical activity is a natural stress reliever. Go for a
-                      brisk walk, try a holiday-themed workout, or even dance to
-                      your favorite festive tunes. Exercise boosts endorphins
-                      and helps counteract the effects of stress.
+                      Feeling weighed down by old routines? Create a new
+                      tradition that brings you joy—like a movie night, baking
+                      cookies with friends, or volunteering at a local shelter.
                     </p>
                   </li>
                   <li>
                     <h3 className="mb-2 font-bold ~text-lg/xl">
-                      Create a Budget
+                      Create a “Joy Jar”
                     </h3>
                     <p>
-                      Plan your holiday spending in advance. Allocate specific
-                      amounts for gifts, decorations, and events—and stick to
-                      it. Homemade gifts or shared experiences can be just as
-                      meaningful as expensive items.
+                      Write down small moments of happiness throughout the
+                      season and add them to a jar. At the end of the holidays,
+                      read them to reflect on the positive highlights.
                     </p>
                   </li>
                   <li>
                     <h3 className="mb-2 font-bold ~text-lg/xl">
-                      Set Boundaries
+                      Unplug from Technology
                     </h3>
                     <p>
-                      It's okay to say no. Whether it's declining an invitation
-                      or setting limits on how much you take on, protecting your
-                      time and energy is essential.
-                    </p>
-                  </li>
-                  <li>
-                    <h3 className="mb-2 font-bold ~text-lg/xl">
-                      {" "}
-                      Seek Support
-                    </h3>
-                    <p>
-                      If feelings of stress or sadness become overwhelming,
-                      reach out. Talk to a trusted friend, family member, or
-                      mental health professional. Sometimes, sharing your
-                      thoughts can provide relief and perspective.
+                      Take a break from social media and screens. Engage in
+                      activities like board games, crafting, or storytelling to
+                      foster meaningful connections with loved ones.
                     </p>
                   </li>
                 </ol>
               </div>
             </div>
+
+            <div className="mt-16">
+              <h2 className="font-heading font-bold ~text-xl/3xl ~mb-2/4">
+                When To Seek Help
+              </h2>
+
+              <p className="mb-4">
+                If holiday stress is something you deal with, it may be time to
+                seek professional help. Signs to watch for include:
+              </p>
+
+              <ul className="mb-4 list-disc space-y-2 ~ps-4/8 marker:font-bold marker:~text-lg/xl">
+                <li>Persistent feelings of sadness or hopelessness.</li>
+                <li>Difficulty sleeping or changes in appetite.</li>
+                <li>Lack of interest in activities you usually enjoy.</li>
+                <li>Trouble concentrating or making decisions.</li>
+              </ul>
+
+              <p>
+                At Orenda Psychiatry, we're here to support you. Our
+                compassionate providers can help you navigate the complexities
+                of the holiday season with tailored strategies and care.
+              </p>
+
+              <p className="mt-8 font-semibold italic text-orenda-green">
+                It is YOUR holiday, so make it YOURS.
+              </p>
+            </div>
           </section>
 
           {/* Right column */}
-          <aside className="md:basis-[30%]">
+          <aside className="border-t border-black pt-8 md:basis-[30%] md:border-none md:pt-0">
             <div className="flex items-center gap-5">
               <div className="size-14 overflow-hidden rounded-full border border-[#999]">
                 <img
@@ -255,18 +320,35 @@ const Blog = () => {
 
               <div>
                 <h3 className="text-base font-medium">{blog.author.name}</h3>
-                <p className="~text-xs/sm">{blog.author.credentials}</p>
+                <p className="~text-xs/[0.8rem]">{blog.author.credentials}</p>
               </div>
             </div>
 
-            <hr className="h-[1px] rounded-full border-none border-black bg-[#ccc] ~my-5/8" />
+            <hr className="hidden h-[1px] rounded-full border-none border-black bg-[#ccc] ~mt-5/8 md:block" />
 
-            <div>
-              <h2>Feeling Overwhelmed?</h2>
+            <div className="mt-12 rounded-3xl border border-orenda-purple bg-purple-100 px-5 pb-8 pt-10 text-center md:mt-16">
+              <h2 className="mb-4 font-heading font-bold ~text-lg/2xl">
+                Feeling Overwhelmed?
+              </h2>
+
+              <p className="~text-sm/[0.9rem]">
+                Don't hesitate to reach out. Schedule a session with Orenda
+                Psychiatry today and take the first step towards improving your
+                mental health
+              </p>
+
+              <Button
+                link="href"
+                className="mt-6 max-w-32 cursor-pointer py-2 sm:mx-auto"
+                href=""
+              >
+                Book Now
+              </Button>
             </div>
           </aside>
         </div>
       </div>
+      <GetStarted />
     </section>
   );
 };
