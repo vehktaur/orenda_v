@@ -337,7 +337,7 @@ const Blog = () => {
                     If holiday stress is something you deal with, it may be time
                     to seek professional help.
                   </p>
-                  <p classNaame="mb-4">Signs to watch for include:</p>
+                  <p className="mb-4">Signs to watch for include:</p>
 
                   <ul className="list-disc space-y-2 text-left ~mb-4/6 ~ps-4/8 *:mx-auto *:w-[24rem] marker:font-bold marker:~text-lg/xl">
                     <li>Persistent feelings of sadness or hopelessness.</li>
