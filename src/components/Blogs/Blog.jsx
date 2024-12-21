@@ -339,7 +339,7 @@ const Blog = () => {
                   </p>
                   <p className="mb-4">Signs to watch for include:</p>
 
-                  <ul className="list-disc space-y-2 text-left ~mb-4/6 ~ps-4/8 *:mx-auto *:w-[24rem] marker:font-bold marker:~text-lg/xl">
+                  <ul className="list-disc space-y-2 text-left ~mb-4/6 ~ps-4/8 *:mx-auto *:max-w-[24rem] marker:font-bold marker:~text-lg/xl">
                     <li>Persistent feelings of sadness or hopelessness.</li>
                     <li>Difficulty sleeping or changes in appetite.</li>
                     <li>Lack of interest in activities you usually enjoy.</li>
