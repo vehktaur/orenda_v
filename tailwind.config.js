@@ -51,6 +51,7 @@ export default {
         'dm-sans': ['"DM Sans"', 'sans-serif']
       },
       gridTemplateColumns: {
+        blog: 'minmax(25rem, 70%), minmax(25rem, 30%)',
         team: 'repeat(4, minmax(0, 15.625rem))',
         network: 'minmax(150px, 17rem), minmax(57.5%, 1fr)',
         autofill: 'repeat(auto-fill, minmax(15.2rem, 1fr))',

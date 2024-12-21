@@ -1,6 +1,13 @@
-const GetStarted = () => {
+import clsx from "clsx";
+
+const GetStarted = ({ className }) => {
   return (
-    <div className="mt-8 bg-orenda-purple bg-logo bg-[length:100px] bg-fixed bg-center bg-repeat-round ~pt-8/[9.69rem] ~pb-[3.22rem]/[9.69rem] sm:bg-[length:150px]">
+    <div
+      className={clsx(
+        "mt-8 bg-orenda-purple bg-logo bg-[length:100px] bg-fixed bg-center bg-repeat-round ~pt-8/[9.69rem] ~pb-[3.22rem]/[9.69rem] sm:bg-[length:150px]",
+        className,
+      )}
+    >
       <div className="px-5">
         <h2 className="heading mb-4 text-white">Get Started</h2>
         <p className="mx-auto max-w-[42.44rem] text-center text-white ~text-sm/lg ~mb-8/10">
