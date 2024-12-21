@@ -85,9 +85,9 @@ const Blog = () => {
 
       {/* Main Content */}
       <div className="pt-10 font-open-sans">
-        <div className="mx-auto grid ~gap-8/16 sm:~px-4/8 md:grid-cols-blog">
+        <div className="mx-auto grid ~gap-6/16 md:grid-cols-blog">
           {/* Left Column */}
-          <section className="col-span-2 px-5 md:col-span-1">
+          <section className="col-span-2 px-5 sm:~ps-7/10 md:col-span-1">
             <div className="mx-auto max-w-[48rem]">
               <div className="space-y-6">
                 <p className="first-letter:float-left first-letter:-mt-1 first-letter:mr-2 first-letter:font-medium first-letter:leading-none first-letter:~text-4xl/6xl">
@@ -272,7 +272,7 @@ const Blog = () => {
           </section>
 
           <div className="col-span-2 md:order-last">
-            <div className="mx-auto mt-5 max-w-7xl px-5 md:mt-0">
+            <div className="mx-auto mt-5 max-w-7xl padding-inline md:mt-0">
               <OrendaTipHeading className="sm:hidden" />
 
               <div className="items-center ~mt-6/10 sm:mt-0 sm:flex sm:flex-row-reverse sm:~gap-10/20">
