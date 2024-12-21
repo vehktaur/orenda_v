@@ -338,7 +338,7 @@ const Blog = () => {
                     to seek professional help. <br/> Signs to watch for include:
                   </p>
 
-                  <ul className="list-disc space-y-2 text-left ~mb-4/6 ~ps-4/8 *:mx-auto *:w-[22rem] marker:font-bold marker:~text-lg/xl">
+                  <ul className="list-disc space-y-2 text-left ~mb-4/6 ~ps-4/8 *:mx-auto *:w-[24rem] marker:font-bold marker:~text-lg/xl">
                     <li>Persistent feelings of sadness or hopelessness.</li>
                     <li>Difficulty sleeping or changes in appetite.</li>
                     <li>Lack of interest in activities you usually enjoy.</li>
@@ -363,7 +363,7 @@ const Blog = () => {
           {/* Right column */}
           <aside className="col-span-2 px-5 md:col-span-1 md:mr-auto lg:~pe-0/16">
             <div className="border-t border-black pt-8 md:mr-auto md:max-w-80 md:border-none md:pt-0">
-              <div className="flex items-center gap-5 pb-10 sm:pb-5">
+              <div className="flex items-center gap-5 pb-10 sm:pb-2">
                 <div className="size-14 overflow-hidden rounded-full border border-[#999]">
                   <img
                     className="size-full object-cover"
@@ -379,7 +379,7 @@ const Blog = () => {
               <hr className="mt-4 hidden h-[1px] rounded-full border-none border-black bg-[#ccc] md:block" />
               <FeelingOverwhelmed className="hidden md:block" />
 
-              <div className="rounded-3xl border font-semibold border-orenda-green bg-[#ecf5eb] px-9 py-10 ~mt-0/16 ~mb-8/16">
+              <div className="rounded-3xl border font-semibold italic border-orenda-green bg-[#ecf5eb] px-9 py-10 ~mt-0/16 ~mb-8/16">
                 <blockquote>
                   &mdash; <q>It is the season, and society sometimes poses some
                   unrealistic expectations. Be kind to yourself and remember
