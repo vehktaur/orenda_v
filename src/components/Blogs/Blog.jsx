@@ -85,7 +85,7 @@ const Blog = () => {
 
       {/* Main Content */}
       <div className="pt-10 font-open-sans">
-        <div className="mx-auto grid ~gap-6/16 md:grid-cols-blog">
+        <div className="mx-auto grid grid-cols-1 ~gap-6/16 md:grid-cols-blog">
           {/* Left Column */}
           <section className="col-span-2 px-5 sm:~ps-7/10 md:col-span-1">
             <div className="mx-auto max-w-[48rem]">
