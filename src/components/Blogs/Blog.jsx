@@ -271,7 +271,7 @@ const Blog = () => {
             </div>
           </section>
 
-{/* Orenda Tip and When to Seek Help */}
+          {/* Orenda Tip and When to Seek Help */}
           <div className="md:col-span-2 md:order-last">
             <div className="mx-auto mt-5 max-w-7xl padding-inline md:mt-0">
               <OrendaTipHeading className="sm:hidden" />
