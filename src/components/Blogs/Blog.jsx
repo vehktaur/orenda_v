@@ -33,6 +33,18 @@ const FeelingOverwhelmed = ({ className }) => {
   );
 };
 
+const OrendaTipHeading = ({ className }) => {
+  return (
+    <div className={cn(className)}>
+      <h3 className="mb-6 font-bold ~text-sm/base">Orenda Tip</h3>
+
+      <h2 className="font-heading font-bold ~text-xl/3xl">
+        Fun Ways to Infuse Joy into Your Holidays
+      </h2>
+    </div>
+  );
+};
+
 const Blog = () => {
   const blog = blogs[0];
 
@@ -73,7 +85,7 @@ const Blog = () => {
 
       {/* Main Content */}
       <div className="pt-10 font-open-sans">
-        <div className="mx-auto grid ~gap-8/20 sm:~px-4/8 md:grid-cols-blog">
+        <div className="mx-auto grid ~gap-8/16 sm:~px-4/8 md:grid-cols-blog">
           {/* Left Column */}
           <section className="col-span-2 px-5 md:col-span-1">
             <div className="mx-auto max-w-[48rem]">
@@ -246,10 +258,7 @@ const Blog = () => {
                     </p>
                   </li>
                   <li>
-                    <h3 className="mb-2 font-bold ~text-lg/xl">
-                      {" "}
-                      Seek Support
-                    </h3>
+                    <h3 className="mb-2 font-bold ~text-lg/xl">Seek Support</h3>
                     <p>
                       If feelings of stress or sadness become overwhelming,
                       reach out. Talk to a trusted friend, family member, or
@@ -264,13 +273,7 @@ const Blog = () => {
 
           <div className="col-span-2 md:order-last">
             <div className="mx-auto mt-5 max-w-7xl px-5 md:mt-0">
-              <div className="sm:hidden">
-                <h3 className="mb-6 font-bold ~text-sm/base">Orenda Tip</h3>
-
-                <h2 className="font-heading font-bold ~text-xl/3xl">
-                  Fun Ways to Infuse Joy into Your Holidays
-                </h2>
-              </div>
+              <OrendaTipHeading className="sm:hidden" />
 
               <div className="items-center ~mt-6/10 sm:mt-0 sm:flex sm:flex-row-reverse sm:~gap-10/20">
                 <div className="mb-10 max-w-sm overflow-hidden rounded-3xl sm:mb-0">
@@ -284,13 +287,7 @@ const Blog = () => {
                 </div>
 
                 <div>
-                  <div className="mb-8">
-                    <h3 className="mb-6 font-bold ~text-sm/base">Orenda Tip</h3>
-
-                    <h2 className="font-heading font-bold ~text-xl/3xl">
-                      Fun Ways to Infuse Joy into Your Holidays
-                    </h2>
-                  </div>
+                  <OrendaTipHeading className="mb-8 hidden sm:block" />
                   <ol className="list-decimal ~space-y-4/6 ~ps-4/8 marker:font-bold marker:~text-lg/xl">
                     <li>
                       <h3 className="mb-2 font-bold ~text-lg/xl">
