@@ -333,10 +333,11 @@ const Blog = () => {
                     When To Seek Help
                   </h2>
 
-                  <p className="mb-4">
+                  <p className="mb-2">
                     If holiday stress is something you deal with, it may be time
-                    to seek professional help. <br/> Signs to watch for include:
+                    to seek professional help.
                   </p>
+                  <p classNaame="mb-4">Signs to watch for include:</p>
 
                   <ul className="list-disc space-y-2 text-left ~mb-4/6 ~ps-4/8 *:mx-auto *:w-[24rem] marker:font-bold marker:~text-lg/xl">
                     <li>Persistent feelings of sadness or hopelessness.</li>
