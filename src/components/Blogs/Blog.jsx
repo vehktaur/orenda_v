@@ -4,6 +4,7 @@ import { FaClipboardQuestion } from "react-icons/fa6";
 import Button from "../ui/Button";
 import GetStarted from "../About/GetStarted";
 import { cn } from "@/lib/utils";
+import { useParams } from "react-router-dom";
 
 const FeelingOverwhelmed = ({ className }) => {
   return (
@@ -46,7 +47,9 @@ const OrendaTipHeading = ({ className }) => {
 };
 
 const Blog = () => {
-  const blog = blogs[0];
+  const { title } = useParams();
+
+  const blog = blogs.find((blog) => blog.title === decodeURIComponent(title));
 
   const listItems = [
     "Gift Shopping",
@@ -64,7 +67,7 @@ const Blog = () => {
         <div className="z-[1] mx-auto flex w-full max-w-7xl flex-col justify-between gap-4 sm:flex-row-reverse sm:items-end">
           {/* Date Published*/}
           <div className="sm:mb-2">
-            <p>{blog.date}</p>
+            <p>{blog.created_at}</p>
           </div>
 
           {/* Title and description */}
@@ -74,7 +77,7 @@ const Blog = () => {
             </h1>
             <p className="max-w-2xl ~text-base/xl">{blog.subtitle}</p>
             <div className="mt-8 flex select-none items-center font-medium ~text-xs/sm ~gap-2/4 *:cursor-pointer *:rounded-md *:border *:border-white *:py-1 *:backdrop-blur-sm *:~px-2/3">
-              {blog.tags.map((tag) => (
+              {blog.categories.map((tag) => (
                 <span key={tag}>{tag}</span>
               ))}
               <span>{blog.duration}</span>
@@ -272,7 +275,7 @@ const Blog = () => {
           </section>
 
           <div className="col-span-2 md:order-last">
-            <div className="mx-auto mt-5 max-w-7xl padding-inline md:mt-0">
+            <div className="padding-inline mx-auto mt-5 max-w-7xl md:mt-0">
               <OrendaTipHeading className="sm:hidden" />
 
               <div className="items-center ~mt-6/10 sm:mt-0 sm:flex sm:flex-row-reverse sm:~gap-10/20">

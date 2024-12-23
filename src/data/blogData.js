@@ -3,11 +3,12 @@ import wishlist from "../assets/christmas_wishlist.jpg";
 import christmas from "../assets/christmas.jpg";
 const blogs = [
   {
+    id: "1",
     title: `When Holidays Bring Stress`,
-    subtitle: `Understanding how stress relates to holiday seasons and practical tips to make the most of the season without losing our minds in the process.`,
+    description: `Understanding how stress relates to holiday seasons and practical tips to make the most of the season without losing our minds in the process.`,
     hero_img: "",
-    tags: [`Holidays`, `Anxiety`],
-    date: "December, 2024",
+    categories: [`Holidays`, `Anxiety`],
+    created_at: "December, 2024",
     duration: "4 min",
     author: {
       image: providersImages.Kimberly_Levitt,
