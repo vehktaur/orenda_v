@@ -4,8 +4,8 @@ export const LeftArrowIcon = (props) => {
       <path
         d="M13.9998 6L8.70696 11.2929C8.31643 11.6834 8.31643 12.3166 8.70696 12.7071L13.9998 18"
         stroke="#B4B4B4"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
@@ -16,8 +16,8 @@ export const RightArrowIcon = (props) => {
       <path
         d="M10.0002 18L15.293 12.7071C15.6836 12.3166 15.6836 11.6834 15.293 11.2929L10.0002 6"
         stroke="#B4B4B4"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
@@ -28,8 +28,8 @@ export const LineIcon = (props) => {
       <path
         d="M1 21.1826L6.17638 1.8641"
         stroke="#B4B4B4"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
