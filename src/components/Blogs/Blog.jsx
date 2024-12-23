@@ -88,9 +88,9 @@ const Blog = () => {
 
       {/* Main Content */}
       <div className="pt-10 font-open-sans">
-        <div className="mx-auto grid ~gap-6/16 md:grid-cols-blog">
+        <div className="mx-auto grid grid-cols-1 ~gap-6/16 md:grid-cols-blog">
           {/* Left Column */}
-          <section className="col-span-2 px-5 sm:~ps-7/10 md:col-span-1">
+          <section className="px-5 sm:~ps-7/10">
             <div className="mx-auto max-w-[48rem]">
               <div className="space-y-6">
                 <p className="first-letter:float-left first-letter:-mt-1 first-letter:mr-2 first-letter:font-medium first-letter:leading-none first-letter:~text-4xl/6xl">
@@ -274,8 +274,9 @@ const Blog = () => {
             </div>
           </section>
 
-          <div className="col-span-2 md:order-last">
-            <div className="padding-inline mx-auto mt-5 max-w-7xl md:mt-0">
+          {/* Orenda Tip and When to Seek Help */}
+          <div className="md:col-span-2 md:order-last">
+            <div className="mx-auto mt-5 max-w-7xl padding-inline md:mt-0">
               <OrendaTipHeading className="sm:hidden" />
 
               <div className="items-center ~mt-6/10 sm:mt-0 sm:flex sm:flex-row-reverse sm:~gap-10/20">
@@ -336,12 +337,13 @@ const Blog = () => {
                     When To Seek Help
                   </h2>
 
-                  <p className="mb-4">
+                  <p className="mb-2">
                     If holiday stress is something you deal with, it may be time
-                    to seek professional help. Signs to watch for include:
+                    to seek professional help.
                   </p>
+                  <p className="mb-4">Signs to watch for include:</p>
 
-                  <ul className="list-disc space-y-2 text-left ~mb-4/6 ~ps-4/8 *:mx-auto *:w-[22rem] marker:font-bold marker:~text-lg/xl">
+                  <ul className="list-disc space-y-2 text-left ~mb-4/6 ~ps-4/8 *:mx-auto *:max-w-[24rem] marker:font-bold marker:~text-lg/xl">
                     <li>Persistent feelings of sadness or hopelessness.</li>
                     <li>Difficulty sleeping or changes in appetite.</li>
                     <li>Lack of interest in activities you usually enjoy.</li>
@@ -364,9 +366,9 @@ const Blog = () => {
           </div>
 
           {/* Right column */}
-          <aside className="col-span-2 px-5 md:col-span-1 md:mr-auto lg:~pe-0/16">
+          <aside className="px-5 md:mr-auto lg:~pe-0/16">
             <div className="border-t border-black pt-8 md:mr-auto md:max-w-80 md:border-none md:pt-0">
-              <div className="flex items-center gap-5 pb-10">
+              <div className="flex items-center gap-5 pb-10 sm:pb-2">
                 <div className="size-14 overflow-hidden rounded-full border border-[#999]">
                   <img
                     className="size-full object-cover"
@@ -382,11 +384,11 @@ const Blog = () => {
               <hr className="mt-4 hidden h-[1px] rounded-full border-none border-black bg-[#ccc] md:block" />
               <FeelingOverwhelmed className="hidden md:block" />
 
-              <div className="rounded-3xl border border-orenda-green bg-[#ecf5eb] px-9 py-10 ~mt-0/16 ~mb-8/16">
+              <div className="rounded-3xl border font-semibold italic border-orenda-green bg-[#ecf5eb] px-9 py-10 ~mt-0/16 ~mb-8/16">
                 <blockquote>
-                  &mdash; It is the season, and society sometimes poses some
+                  &mdash; <q>It is the season, and society sometimes poses some
                   unrealistic expectations. Be kind to yourself and remember
-                  that it's okay to take a step back.
+                  that it's okay to take a step back.</q>
                 </blockquote>
               </div>
             </div>
