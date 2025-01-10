@@ -75,7 +75,7 @@ const Blog = () => {
             <h1 className="font-heading font-bold ~text-2xl/5xl ~mb-4/8">
               {blog.title}
             </h1>
-            <p className="max-w-2xl ~text-base/xl">{blog.subtitle}</p>
+            <p className="max-w-2xl ~text-base/xl">{blog.description}</p>
             <div className="mt-8 flex select-none items-center font-medium ~text-xs/sm ~gap-2/4 *:cursor-pointer *:rounded-md *:border *:border-white *:py-1 *:backdrop-blur-sm *:~px-2/3">
               {blog.categories.map((tag) => (
                 <span key={tag}>{tag}</span>
@@ -275,8 +275,8 @@ const Blog = () => {
           </section>
 
           {/* Orenda Tip and When to Seek Help */}
-          <div className="md:col-span-2 md:order-last">
-            <div className="mx-auto mt-5 max-w-7xl padding-inline md:mt-0">
+          <div className="md:order-last md:col-span-2">
+            <div className="padding-inline mx-auto mt-5 max-w-7xl md:mt-0">
               <OrendaTipHeading className="sm:hidden" />
 
               <div className="items-center ~mt-6/10 sm:mt-0 sm:flex sm:flex-row-reverse sm:~gap-10/20">
@@ -384,11 +384,14 @@ const Blog = () => {
               <hr className="mt-4 hidden h-[1px] rounded-full border-none border-black bg-[#ccc] md:block" />
               <FeelingOverwhelmed className="hidden md:block" />
 
-              <div className="rounded-3xl border font-semibold italic border-orenda-green bg-[#ecf5eb] px-9 py-10 ~mt-0/16 ~mb-8/16">
+              <div className="rounded-3xl border border-orenda-green bg-[#ecf5eb] px-9 py-10 font-semibold italic ~mt-0/16 ~mb-8/16">
                 <blockquote>
-                  &mdash; <q>It is the season, and society sometimes poses some
-                  unrealistic expectations. Be kind to yourself and remember
-                  that it's okay to take a step back.</q>
+                  &mdash;{" "}
+                  <q>
+                    It is the season, and society sometimes poses some
+                    unrealistic expectations. Be kind to yourself and remember
+                    that it's okay to take a step back.
+                  </q>
                 </blockquote>
               </div>
             </div>
