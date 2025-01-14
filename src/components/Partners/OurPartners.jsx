@@ -8,9 +8,11 @@ const OurPartners = () => {
   return (
     <div>
       <PartnersHero />
+
       <PartnersList />
 
       <ReferPatientSection />
+
       <ContactUsSection />
     </div>
   );

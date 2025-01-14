@@ -1,18 +1,13 @@
 import Button from "../ui/custom-button";
 import partners from "@/assets/partners.png";
+import Partnerships from "./ui/Partnerships";
 
 const PartnersHero = () => {
   return (
     <section className="padding-inline ~pt-6/16">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between ~gap-6/28 sm:flex-row-reverse">
         {/* Partner Hero Image */}
-        <div className="size-52 flex-shrink-0 sm:~size-32/[26.6rem]">
-          <img
-            className="size-full object-contain"
-            src={partners}
-            alt="All partners"
-          />
-        </div>
+        <Partnerships />
 
         {/* Partner Hero Intro */}
         <div className="max-w-[40rem]">

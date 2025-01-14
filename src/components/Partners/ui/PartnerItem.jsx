@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const PartnerItem = ({ partner }) => {
+const PartnerItem = ({ partner, children }) => {
   return (
     <AccordionItem
       className="padding-inline transition-colors ~text-sm/lg ~py-5/[1.94rem] [&[data-state=open]]:bg-purple-mist"
@@ -49,6 +49,8 @@ const PartnerItem = ({ partner }) => {
             Biography
           </h4>
           <p>{partner.biography}</p>
+
+          {children}
         </AccordionContent>
       </div>
     </AccordionItem>

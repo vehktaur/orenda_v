@@ -192,7 +192,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                 onClick={() => toggleFilterMenu()}
                 className="block size-6 rounded-full bg-[#F5F5F5]"
               >
-                <XIcon />pnpm dlx shadcn@latest add sidebar
+                <XIcon />
 
               </button>
             </div>
