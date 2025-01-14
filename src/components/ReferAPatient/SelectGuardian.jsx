@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react';
-import { useFormContext } from 'react-hook-form';
-import InputPro from './InputPro';
+import { useEffect, useState } from "react";
+import { useFormContext } from "react-hook-form";
+import InputPro from "./InputPro";
 
 const SelectGuardian = ({ label, options, name }) => {
   const {
     register,
     resetField,
     watch,
-    formState: { errors, isSubmitSuccessful }
+    formState: { errors, isSubmitSuccessful },
   } = useFormContext();
 
   const [selectOpen, setSelectOpen] = useState(false);
-  const [selected, setSelected] = useState('Select');
+  const [selected, setSelected] = useState("Select");
 
   const handleSelect = (radio) => {
     setSelected(radio);
@@ -19,7 +19,7 @@ const SelectGuardian = ({ label, options, name }) => {
   };
 
   const clearSelect = () => {
-    setSelected('Select');
+    setSelected("Select");
     setSelectOpen(false);
   };
 
@@ -31,29 +31,31 @@ const SelectGuardian = ({ label, options, name }) => {
 
   return (
     <div>
-      <h3 className="font-medium flex ~gap-1/2 items-baseline ~text-sm/lg">{label}</h3>
+      <h3 className="flex items-baseline font-medium ~text-sm/lg ~gap-1/2">
+        {label}
+      </h3>
 
       <div className="mt-6 ~text-sm/lg">
-        <div className="pt-2 pb-3 border rounded border-[#C9C9C9] ">
+        <div className="rounded border border-[#C9C9C9] pb-3 pt-2">
           <button
             type="button"
             onClick={() => {
               setSelectOpen((prev) => !prev);
             }}
-            className="w-full block relative bg-arrow bg-arrow-position bg-arrow-size bg-no-repeat text-[#070707] text-left pr-6 px-4 "
+            className="relative block w-full bg-arrow bg-arrow-size bg-arrow-position bg-no-repeat px-4 pr-6 text-left text-[#070707]"
           >
             {selected}
             <div
-              className={`absolute bg-white border border-[#C9C9C9] rounded-lg top-[140%] left-0 right-0 transition-all duration-300 ease-in-out grid justify-items-start overflow-hidden max-h-[13rem] overflow-y-auto p-2 scrollbar scrollbar-thumb-slate-800 scrollbar-track-slate-200 scrollbar-thumb-rounded-lg scrollbar-track-rounded-md  z-10 space-y-2 ${
+              className={`absolute left-0 right-0 top-[140%] z-10 grid max-h-[13rem] justify-items-start space-y-2 overflow-hidden overflow-y-auto rounded-lg border border-[#C9C9C9] bg-white p-2 transition-all duration-300 ease-in-out scrollbar scrollbar-track-slate-200 scrollbar-thumb-slate-800 scrollbar-track-rounded-md scrollbar-thumb-rounded-lg ${
                 selectOpen
-                  ? 'visible opacity-100'
-                  : 'hidden invisible opacity-0'
+                  ? "visible opacity-100"
+                  : "invisible hidden opacity-0"
               }`}
             >
               <label
                 key="Select"
-                className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
-                  selected === 'Select' ? 'bg-[#ecf5eb]' : 'hover:bg-[#ecf5eb]'
+                className={`block w-full cursor-pointer rounded-md px-2 py-1.5 text-left ${
+                  selected === "Select" ? "bg-lime" : "hover:bg-lime"
                 }`}
                 onClick={(event) => {
                   event.stopPropagation();
@@ -69,8 +71,8 @@ const SelectGuardian = ({ label, options, name }) => {
                     event.stopPropagation();
                   }}
                   key={radio}
-                  className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
-                    selected === radio ? 'bg-[#ecf5eb]' : 'hover:bg-[#ecf5eb]'
+                  className={`block w-full cursor-pointer rounded-md px-2 py-1.5 text-left ${
+                    selected === radio ? "bg-lime" : "hover:bg-lime"
                   }`}
                 >
                   {radio}
@@ -85,8 +87,8 @@ const SelectGuardian = ({ label, options, name }) => {
                     {...register(name, {
                       required: {
                         value: true,
-                        message: 'Please select at least one'
-                      }
+                        message: "Please select at least one",
+                      },
                     })}
                   />
                 </label>
@@ -95,12 +97,12 @@ const SelectGuardian = ({ label, options, name }) => {
           </button>
         </div>
 
-        <p className="text-sm text-red-500 ps-1 mt-2">
+        <p className="mt-2 ps-1 text-sm text-red-500">
           {errors?.[name]?.message}
         </p>
 
-        {watch(name) === 'Guardian' && (
-          <div className="flex flex-col gap-8 mt-8 pt-4 border-l-4 ps-3 w-2/3">
+        {watch(name) === "Guardian" && (
+          <div className="mt-8 flex w-2/3 flex-col gap-8 border-l-4 ps-3 pt-4">
             <InputPro
               label="Guardian’s First Name"
               type="text"

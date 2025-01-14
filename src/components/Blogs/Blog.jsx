@@ -1,7 +1,7 @@
 import { Checkbox } from "../ui/checkbox";
 import blogs from "@/data/blogData";
 import { FaClipboardQuestion } from "react-icons/fa6";
-import Button from "../ui/Button";
+import Button from "../ui/custom-button";
 import GetStarted from "../About/GetStarted";
 import { cn } from "@/lib/utils";
 import { useParams } from "react-router-dom";
@@ -204,7 +204,7 @@ const Blog = () => {
                 </div>
 
                 <div className="content-center">
-                  <FaClipboardQuestion className="rotate-[10deg] text-[#ecf5eb] ~size-24/56" />
+                  <FaClipboardQuestion className="rotate-[10deg] text-lime ~size-24/56" />
                 </div>
               </div>
 
@@ -384,7 +384,7 @@ const Blog = () => {
               <hr className="mt-4 hidden h-[1px] rounded-full border-none border-black bg-[#ccc] md:block" />
               <FeelingOverwhelmed className="hidden md:block" />
 
-              <div className="rounded-3xl border border-orenda-green bg-[#ecf5eb] px-9 py-10 font-semibold italic ~mt-0/16 ~mb-8/16">
+              <div className="rounded-3xl border border-orenda-green bg-lime px-9 py-10 font-semibold italic ~mt-0/16 ~mb-8/16">
                 <blockquote>
                   &mdash;{" "}
                   <q>

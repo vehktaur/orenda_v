@@ -1,26 +1,26 @@
-import Team from '../Our Team/Team';
-import call from '../../assets/call.svg';
-import text from '../../assets/text.svg';
-import email from '../../assets/email.svg';
-import uhc from '../../assets/uhc_insurance.svg';
-import aetna from '../../assets/aetna_insurance.svg';
-import oscar from '../../assets/oscar_insurance.png';
-import tricare from '../../assets/tricare_insurance.png';
-import cigna from '../../assets/cigna_insurance.png';
-import compsych from '../../assets/compsych_insurance.png';
-import abc from '../../assets/abc_insurance.png';
-import multiplan from '../../assets/multiplan_insurance.png';
-import FAQ from './FAQ';
-import Newsletter from './Newsletter';
-import Input from '../Input';
-import { useEffect, useRef, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import emailjs from '@emailjs/browser';
-import { toast } from 'react-toastify';
-import Successful from './Successful';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Team from "../Our Team/Team";
+import call from "../../assets/call.svg";
+import text from "../../assets/text.svg";
+import email from "../../assets/email.svg";
+import uhc from "../../assets/uhc_insurance.svg";
+import aetna from "../../assets/aetna_insurance.svg";
+import oscar from "../../assets/oscar_insurance.png";
+import tricare from "../../assets/tricare_insurance.png";
+import cigna from "../../assets/cigna_insurance.png";
+import compsych from "../../assets/compsych_insurance.png";
+import abc from "../../assets/abc_insurance.png";
+import multiplan from "../../assets/multiplan_insurance.png";
+import FAQ from "./FAQ";
+import Newsletter from "./Newsletter";
+import Input from "../Input";
+import { useEffect, useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import Successful from "./Successful";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,7 +30,7 @@ const ContactUsPage = () => {
     handleSubmit,
     watch,
     reset,
-    formState: { errors, isSubmitting, isSubmitSuccessful }
+    formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
 
   const container = useRef(null);
@@ -38,26 +38,26 @@ const ContactUsPage = () => {
 
   const onSubmit = async (data) => {
     const templateParams = {
-      from: 'Orenda',
-      section: 'Contact Us',
-      name: data['Your Name'],
-      email: data['Email Address'],
-      phone: data['Phone Number'],
-      subject: data['Subject'],
-      message: data['Message']
+      from: "Orenda",
+      section: "Contact Us",
+      name: data["Your Name"],
+      email: data["Email Address"],
+      phone: data["Phone Number"],
+      subject: data["Subject"],
+      message: data["Message"],
     };
 
     try {
       await emailjs.send(
-        'service_d7svcgq',
-        'template_h74ln0c',
+        "service_d7svcgq",
+        "template_h74ln0c",
         templateParams,
-        'f_xOBciJvcABV_wmq'
+        "f_xOBciJvcABV_wmq",
       );
       setModal(true);
     } catch (error) {
       console.log(`Email not sent. Error: ${JSON.stringify(error)}}`);
-      toast.error('Error!. Please try again');
+      toast.error("Error!. Please try again");
     }
   };
 
@@ -69,12 +69,12 @@ const ContactUsPage = () => {
 
   useGSAP(
     () => {
-      const subHeadings = gsap.utils.toArray('h2');
-      const paragraphs = gsap.utils.toArray('p');
-      const links = gsap.utils.toArray('a');
-      const buttons = gsap.utils.toArray('button');
+      const subHeadings = gsap.utils.toArray("h2");
+      const paragraphs = gsap.utils.toArray("p");
+      const links = gsap.utils.toArray("a");
+      const buttons = gsap.utils.toArray("button");
       const inputs = gsap.utils.toArray(
-        'form .relative.text-justify.bg-inherit'
+        "form .relative.text-justify.bg-inherit",
       );
 
       const elements = [...subHeadings, ...paragraphs, ...buttons, ...links];
@@ -85,8 +85,8 @@ const ContactUsPage = () => {
           y: 100,
           scrollTrigger: {
             trigger: el,
-            start: 'bottom bottom'
-          }
+            start: "bottom bottom",
+          },
         });
       });
 
@@ -95,25 +95,25 @@ const ContactUsPage = () => {
           xPercent: -150,
           scrollTrigger: {
             trigger: input,
-            start: 'bottom bottom'
-          }
+            start: "bottom bottom",
+          },
         });
       });
 
-      gsap.from('#insuranceProviders span', {
+      gsap.from("#insuranceProviders span", {
         x: 500,
         opacity: 0,
         scrollTrigger: {
-          trigger: '#insuranceProviders',
-          start: 'bottom bottom'
+          trigger: "#insuranceProviders",
+          start: "bottom bottom",
         },
         stagger: {
           amount: 1,
-          grid: 'auto'
-        }
+          grid: "auto",
+        },
       });
     },
-    { dependencies: [], scope: container }
+    { dependencies: [], scope: container },
   );
 
   return (
@@ -126,24 +126,24 @@ const ContactUsPage = () => {
           setModal={setModal}
         />
       )}
-      <main ref={container} className="px-5 md:~px-10/14 ~mt-8/[7.5rem]">
-        <div className="max-w-7xl mx-auto">
+      <main ref={container} className="px-5 ~mt-8/[7.5rem] md:~px-10/14">
+        <div className="mx-auto max-w-7xl">
           <h1 className="heading">Contact Us</h1>
-          <div className="~mt-8/[3.75rem] text-center md:text-left md:flex gap-10">
+          <div className="gap-10 text-center ~mt-8/[3.75rem] md:flex md:text-left">
             <div className="md:flex-1">
               <div>
-                <h2 className="font-heading font-bold ~text-lg/[1.375rem] mb-4">
+                <h2 className="mb-4 font-heading font-bold ~text-lg/[1.375rem]">
                   Providing Mental Healthcare with Convenience
                 </h2>
-                <p className="~leading-6/8 max-w-[32.13rem] mx-auto md:mx-0 text-center md:text-justify">
+                <p className="mx-auto max-w-[32.13rem] text-center ~leading-6/8 md:mx-0 md:text-justify">
                   We have a team of over 30 Customer support specialists and
                   registered nurses, contact them over your preferred choice of
                   communication
                 </p>
-                <div className="grid gap-4 mt-8  max-w-[27.5rem] mx-auto md:mx-0">
+                <div className="mx-auto mt-8 grid max-w-[27.5rem] gap-4 md:mx-0">
                   <a
                     href="tel:+13477077735"
-                    className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple bg-orenda-purple text-white rounded-3xl cursor-pointer"
+                    className="flex cursor-pointer items-center justify-center gap-2 rounded-3xl border border-orenda-purple bg-orenda-purple px-4 font-open-sans font-semibold text-white ~py-2/3"
                   >
                     <span>
                       <img className="w-6" src={call} alt="call icon" />
@@ -152,9 +152,9 @@ const ContactUsPage = () => {
                   </a>
                   <a
                     href="sms:+13477077735"
-                    className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl transition-colors relative overflow-hidden group cursor-pointer z-[1]"
+                    className="group relative z-[1] flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-3xl border border-orenda-purple px-4 font-open-sans font-semibold transition-colors ~py-2/3"
                   >
-                    <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-indigo-300 transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+                    <span className="absolute -left-[1px] -top-[1px] z-[-1] block h-[calc(100%+2px)] w-0 rounded-3xl border bg-indigo-300 transition-all duration-500 group-hover:w-[calc(100%+2px)] hover:border-orenda-purple" />
                     Text
                     <span>
                       <img src={text} alt="text icon" />
@@ -162,9 +162,9 @@ const ContactUsPage = () => {
                   </a>
                   <a
                     href="mailto:admin@orendapsych.com"
-                    className="font-open-sans px-4 ~py-2/3 border font-semibold flex justify-center gap-2 items-center border-orenda-purple rounded-3xl transition-colors relative overflow-hidden group cursor-pointer z-[1]"
+                    className="group relative z-[1] flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-3xl border border-orenda-purple px-4 font-open-sans font-semibold transition-colors ~py-2/3"
                   >
-                    <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-indigo-300 transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
+                    <span className="absolute -left-[1px] -top-[1px] z-[-1] block h-[calc(100%+2px)] w-0 rounded-3xl border bg-indigo-300 transition-all duration-500 group-hover:w-[calc(100%+2px)] hover:border-orenda-purple" />
                     Email
                     <span>
                       <img src={email} alt="email icon" />
@@ -172,7 +172,7 @@ const ContactUsPage = () => {
                   </a>
                 </div>
               </div>
-              <div className="hidden md:block ~mt-10/16 ~space-y-10/12">
+              <div className="hidden ~mt-10/16 ~space-y-10/12 md:block">
                 <div>
                   <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
                     Operating Hours
@@ -181,7 +181,7 @@ const ContactUsPage = () => {
                     <p>
                       <strong className="font-medium">
                         Mondays - Sundays:
-                      </strong>{' '}
+                      </strong>{" "}
                       <br />
                       8:00 AM - 6:00 PM
                     </p>
@@ -189,21 +189,21 @@ const ContactUsPage = () => {
                 </div>
                 <div>
                   <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
-                    Emergency Contact Information{' '}
+                    Emergency Contact Information{" "}
                   </h2>
                   <p className="max-w-[32rem] ~text-sm/lg">
                     If you are experiencing a psychiatric emergency, please
                     call:
-                    <br />{' '}
-                    <span className="text-red-900 font-semibold">911</span>,
-                    <span className="text-red-900 font-semibold">
-                      {' '}
+                    <br />{" "}
+                    <span className="font-semibold text-red-900">911</span>,
+                    <span className="font-semibold text-red-900">
+                      {" "}
                       1-800-LIFE-NET
-                    </span>{' '}
-                    (within the 5 boroughs of NYC), <br />{' '}
-                    <span className="text-red-900 font-semibold">
+                    </span>{" "}
+                    (within the 5 boroughs of NYC), <br />{" "}
+                    <span className="font-semibold text-red-900">
                       1-800-273-TALK
-                    </span>{' '}
+                    </span>{" "}
                     (nationwide), or go directly to your nearest emergency room.
                   </p>
                 </div>
@@ -211,10 +211,10 @@ const ContactUsPage = () => {
             </div>
             <div className="flex-1">
               <form
-                className="text-justify bg-[#fafafa] border rounded-2xl ~px-[1.69rem]/10 ~space-y-10/[3.5rem] ~pt-[2.38rem]/10 ~pb-[2.81rem]/20 mt-10 md:mt-0 overflow-hidden"
+                className="mt-10 overflow-hidden rounded-2xl border bg-off-white text-justify ~space-y-10/[3.5rem] ~px-[1.69rem]/10 ~pt-[2.38rem]/10 ~pb-[2.81rem]/20 md:mt-0"
                 onSubmit={handleSubmit(onSubmit)}
               >
-                <h2 className="font-bold font-dm-sans ~mb-2/4 ~text-lg/[1.75rem]">
+                <h2 className="font-dm-sans font-bold ~text-lg/[1.75rem] ~mb-2/4">
                   Send Us a Message
                 </h2>
                 <Input
@@ -264,18 +264,18 @@ const ContactUsPage = () => {
                 />
                 <button
                   disabled={isSubmitting}
-                  className={`font-open-sans w-full max-w-[31.5rem] mx-auto block border border-orenda-purple text-orenda-purple hover:text-white transition-colors px-4 py-[0.62rem] rounded-3xl font-bold ~text-sm/lg relative z-[1] overflow-hidden group ${
-                    isSubmitting ? 'italic' : ''
+                  className={`group relative z-[1] mx-auto block w-full max-w-[31.5rem] overflow-hidden rounded-3xl border border-orenda-purple px-4 py-[0.62rem] font-open-sans font-bold text-orenda-purple transition-colors ~text-sm/lg hover:text-white ${
+                    isSubmitting ? "italic" : ""
                   }`}
                 >
-                  <span className="block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1] border hover:border-orenda-purple" />
-                  {isSubmitting ? 'Submitting...' : 'Submit'}
+                  <span className="absolute -left-[1px] -top-[1px] z-[-1] block h-[calc(100%+2px)] w-0 rounded-3xl border bg-orenda-purple transition-all duration-500 group-hover:w-[calc(100%+2px)] hover:border-orenda-purple" />
+                  {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
               </form>
             </div>
           </div>
-          <div className="text-center md:text-left mt-6 space-y-10 md:flex mb-10 ~md/2xl:~gap-8/[15rem]">
-            <div className="md:hidden sm:flex gap-20 items-start">
+          <div className="mb-10 mt-6 space-y-10 text-center ~md/2xl:~gap-8/[15rem] md:flex md:text-left">
+            <div className="items-start gap-20 sm:flex md:hidden">
               <div className="flex-shrink-0">
                 <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
                   Operating Hours
@@ -292,20 +292,20 @@ const ContactUsPage = () => {
               </div>
               <div className="mt-10 sm:mt-0">
                 <h2 className="font-heading font-bold ~text-lg/[1.375rem] ~mb-2/4">
-                  Emergency Contact Information{' '}
+                  Emergency Contact Information{" "}
                 </h2>
                 <p className="text-center md:text-left">
                   If you are experiencing a psychiatric emergency, please call:
-                  <br /> <span className="text-red-900 font-semibold">911</span>
+                  <br /> <span className="font-semibold text-red-900">911</span>
                   ,
-                  <span className="text-red-900 font-semibold">
-                    {' '}
+                  <span className="font-semibold text-red-900">
+                    {" "}
                     1-800-LIFE-NET
-                  </span>{' '}
-                  (within the 5 boroughs of NYC), <br />{' '}
-                  <span className="text-red-900 font-semibold">
+                  </span>{" "}
+                  (within the 5 boroughs of NYC), <br />{" "}
+                  <span className="font-semibold text-red-900">
                     1-800-273-TALK
-                  </span>{' '}
+                  </span>{" "}
                   (nationwide), or go directly to your nearest emergency room.
                 </p>
               </div>
@@ -316,14 +316,14 @@ const ContactUsPage = () => {
                   Main Contact Information
                 </h2>
                 <div>
-                  <p className="text-center md:text-left ~text-sm/lg">
+                  <p className="text-center ~text-sm/lg md:text-left">
                     Phone: <a href="tel:+13477077735">(347) 707-7735</a>
                   </p>
-                  <p className="text-center md:text-left ~text-sm/lg">
+                  <p className="text-center ~text-sm/lg md:text-left">
                     Fax: (347) 745-0992
                   </p>
-                  <p className="text-center md:text-left ~text-sm/lg">
-                    Email:{' '}
+                  <p className="text-center ~text-sm/lg md:text-left">
+                    Email:{" "}
                     <a
                       className="underline"
                       href="mailto:admin@orendapsych.com"
@@ -331,14 +331,14 @@ const ContactUsPage = () => {
                       admin@orendapsych.com
                     </a>
                   </p>
-                  <p className="grid ~gap-2/4 text-center md:text-left mt-4 ~text-sm/lg">
-                    <address className="not-italic font-dm-sans">
-                      <strong className="font-medium">New York Office:</strong>{' '}
+                  <p className="mt-4 grid text-center ~text-sm/lg ~gap-2/4 md:text-left">
+                    <address className="font-dm-sans not-italic">
+                      <strong className="font-medium">New York Office:</strong>{" "}
                       <br />
                       80 Fifth Avenue, Office #903-10, New York, NY 10011.
                     </address>
-                    <address className="not-italic font-dm-sans">
-                      <strong className="font-medium">Boston Office:</strong>{' '}
+                    <address className="font-dm-sans not-italic">
+                      <strong className="font-medium">Boston Office:</strong>{" "}
                       <br />
                       75 Arlington Street, Ste 500 Boston, MA 02116.
                     </address>
@@ -352,7 +352,7 @@ const ContactUsPage = () => {
                     intake@orendapsych.com
                   </a>
                 </p>
-                <p className="flex flex-col text-center md:text-left overflow-hidden">
+                <p className="flex flex-col overflow-hidden text-center md:text-left">
                   <strong>For billing questions, please email: </strong>
                   <a
                     className="underline"
@@ -370,11 +370,11 @@ const ContactUsPage = () => {
                 </h2>
                 <p className="text-center md:text-left">
                   <a
-                    className="text-orenda-purple font-semibold underline"
+                    className="font-semibold text-orenda-purple underline"
                     href="tel:+13477077735"
                   >
                     Call us
-                  </a>{' '}
+                  </a>{" "}
                   to book an appointment
                 </p>
               </div>
@@ -387,7 +387,7 @@ const ContactUsPage = () => {
                 </p>
                 <div
                   id="insuranceProviders"
-                  className="flex flex-wrap gap-6 items-center justify-center md:justify-start mt-8 overflow-x-hidden"
+                  className="mt-8 flex flex-wrap items-center justify-center gap-6 overflow-x-hidden md:justify-start"
                 >
                   <span className="max-w-[8.54rem]">
                     <img
@@ -395,7 +395,7 @@ const ContactUsPage = () => {
                       alt="United Health Care Insurance Provider"
                     />
                   </span>
-                  <span className=" max-w-[3.6rem]">
+                  <span className="max-w-[3.6rem]">
                     <img src={oscar} alt="Oscar Insurance Provider" />
                   </span>
                   <span className="max-w-[3.7rem]">

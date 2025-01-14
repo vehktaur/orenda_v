@@ -1,15 +1,15 @@
-import ProviderInfoUl from './ProviderInfoUl';
-import { useParams } from 'react-router-dom';
+import ProviderInfoUl from "./ProviderInfoUl";
+import { useParams } from "react-router-dom";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import ReviewsNavigation from './ReviewsNavigation';
-import fetchProviders from '../../data/fetchProviders';
-import Loading from '../Our Team/Loading';
-import { useProviders } from '../../services/queries';
-import Error from '../Our Team/Error';
+import { Swiper, SwiperSlide } from "swiper/react";
+import ReviewsNavigation from "./ReviewsNavigation";
+import fetchProviders from "../../data/fetchProviders";
+import Loading from "../Our Team/Loading";
+import { useProviders } from "../../services/queries";
+import Error from "../Our Team/Error";
 
 const HR = () => (
-  <div className='sm:hidden bg-[rgb(239,235,223)] max-w-[63.75rem] mx-auto mt-6 mb-4'>
+  <div className="mx-auto mb-4 mt-6 max-w-[63.75rem] bg-[rgb(239,235,223)] sm:hidden">
     <hr />
   </div>
 );
@@ -24,90 +24,90 @@ const ProviderInfo = () => {
     if (states) {
       return states.map((state, index) => {
         if (index === states.length - 2) {
-          return state + ' & ';
+          return state + " & ";
         } else if (index === states.length - 1) {
           return state;
         } else {
-          return state + ', ';
+          return state + ", ";
         }
       });
     } else {
-      return 'Nil';
+      return "Nil";
     }
   };
 
   const showAgesSeen = (agesSeen) => {
     if (agesSeen) {
       return agesSeen.map((category, index, array) => {
-        const divider = index === array.length - 1 ? '.' : ', ';
+        const divider = index === array.length - 1 ? "." : ", ";
 
-        if (category === 'Children') {
+        if (category === "Children") {
           return `${category} (<13 yrs)${divider}`;
-        } else if (category === 'Teens') {
+        } else if (category === "Teens") {
           return `${category} (13-17 yrs)${divider}`;
-        } else if (category === 'Adults') {
+        } else if (category === "Adults") {
           return `${category} (18-64 yrs)${divider}`;
-        } else if (category === 'Seniors') {
+        } else if (category === "Seniors") {
           return `${category} (65+ yrs)${divider}`;
         } else {
           return `${category}${divider}`;
         }
       });
     } else {
-      return 'Nil';
+      return "Nil";
     }
   };
 
   if (providers.isLoading) {
-    return <Loading data={'Provider'} />;
+    return <Loading data={"Provider"} />;
   } else if (providers.isError) {
     return <Error />;
   } else {
     return (
       <>
-        <main className='px-4 sm:~px-6/10 font-dm-sans ~mt-7/[5.5rem]'>
-          <div className='max-w-7xl mx-auto'>
-            <div className='rounded-lg sm:border border-[#EFEBDF]'>
-              <div className='flex flex-col md:rounded-t-lg md:flex-row md:~gap-0/[3.5rem] sm:border md:border-[#EFEBDF]'>
-                <div className='md:order-last md:border-l border-[#EFEBDF] rounded-t-lg w-full md:flex sm:flex-col md:justify-center md:items-center md:max-w-[39.25rem] relative ~pt-8/12'>
-                  <div className='w-4/5 ~max-w-80/[28rem] ~max-h-72/[28rem] md:max-h-none overflow-hidden mx-auto md:mx-0 md:size-[28rem]'>
+        <main className="px-4 font-dm-sans ~mt-7/[5.5rem] sm:~px-6/10">
+          <div className="mx-auto max-w-7xl">
+            <div className="rounded-lg border-[#EFEBDF] sm:border">
+              <div className="flex flex-col sm:border md:flex-row md:rounded-t-lg md:border-[#EFEBDF] md:~gap-0/[3.5rem]">
+                <div className="relative w-full rounded-t-lg border-[#EFEBDF] ~pt-8/12 sm:flex-col md:order-last md:flex md:max-w-[39.25rem] md:items-center md:justify-center md:border-l">
+                  <div className="mx-auto w-4/5 overflow-hidden ~max-h-72/[28rem] ~max-w-80/[28rem] md:mx-0 md:size-[28rem] md:max-h-none">
                     <img
-                      className={`mx-auto size-full block object-cover`}
+                      className={`mx-auto block size-full object-cover`}
                       src={provider?.provider_image_url}
                       alt={provider?.provider_name}
                     />
                   </div>
                 </div>
-                <div className='md:max-w-[50%] sm:~px-2/8 sm:py-6'>
-                  <div className='flex justify-between items-center ~mt-[1.5rem]/[2.56rem]'>
-                    <div className=''>
-                      <h1 className='~text-base/[2rem] font-bold mb-2'>
+                <div className="sm:py-6 sm:~px-2/8 md:max-w-[50%]">
+                  <div className="flex items-center justify-between ~mt-[1.5rem]/[2.56rem]">
+                    <div className="">
+                      <h1 className="mb-2 font-bold ~text-base/[2rem]">
                         {provider?.provider_name}
                       </h1>
-                      <p className='text-[#7C7C7C] ~text-xs/sm font-bold text-left'>
+                      <p className="text-left font-bold text-[#7C7C7C] ~text-xs/sm">
                         <span>{provider?.provider_code}</span>
                       </p>
                     </div>
                     <a
-                      target='_blank'
+                      target="_blank"
                       href={provider?.booking_link}
-                      className='rounded-3xl ~text-base/lg font-bold border border-orenda-purple w-full ~max-w-[5.5rem]/[6rem] ~py-1/2 px-2 text-orenda-purple hover:text-white transition-colors text-center relative group z-[1] overflow-hidden me-4'
+                      className="group relative z-[1] me-4 w-full overflow-hidden rounded-3xl border border-orenda-purple px-2 text-center font-bold text-orenda-purple transition-colors ~text-base/lg ~max-w-[5.5rem]/[6rem] ~py-1/2 hover:text-white"
                     >
-                      <span className='block absolute -top-[1px] -left-[1px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-orenda-purple transition-all duration-500 rounded-3xl z-[-1]' />
+                      <span className="absolute -left-[1px] -top-[1px] z-[-1] block h-[calc(100%+2px)] w-0 rounded-3xl bg-orenda-purple transition-all duration-500 group-hover:w-[calc(100%+2px)]" />
                       Book
                     </a>
                   </div>
                   {provider?.do_therapy && (
-                    <p className='border border-[#E8DDFF] bg-[#F8F8FF] font-semibold rounded-lg px-2 py-[0.38rem] text-orenda-purple w-fit min-w-[10.94rem] text-left ~mt-2/[1.38rem] ~text-xs/sm text-nowrap'>
+                    <p className="w-fit min-w-[10.94rem] text-nowrap rounded-lg border border-[#E8DDFF] bg-purple-mist px-2 py-[0.38rem] text-left font-semibold text-orenda-purple ~text-xs/sm ~mt-2/[1.38rem]">
                       Offers Talk Therapy Sessions
                     </p>
                   )}
-                  <p className='whitespace-pre-line ~text-sm/base ~mt-5/6 '>
+                  <p className="whitespace-pre-line ~text-sm/base ~mt-5/6">
                     {provider?.provider_description.replace(
                       /(\.\n|\n)/g,
                       (match) => {
-                        return match === '.\n' ? '.\n\n' : ' ';
-                      }
+                        return match === ".\n" ? ".\n\n" : " ";
+                      },
                     )}
                   </p>
                 </div>
@@ -115,27 +115,27 @@ const ProviderInfo = () => {
 
               <HR />
 
-              <div className='sm:flex sm:border border-t-0 sm:border-[#EFEBDF]'>
-                <div className='flex flex-col gap-6 sm:gap-0 sm:basis-1/2'>
-                  <div className='sm:border-b sm:border-[#EFEBDF] sm:~px-2/4 sm:~py-3/6'>
-                    <h2 className='font-bold ~text-sm/xl ~mb-2/4'>Ages Seen</h2>
-                    <p className='~text-sm/lg'>
+              <div className="border-t-0 sm:flex sm:border sm:border-[#EFEBDF]">
+                <div className="flex flex-col gap-6 sm:basis-1/2 sm:gap-0">
+                  <div className="sm:border-b sm:border-[#EFEBDF] sm:~px-2/4 sm:~py-3/6">
+                    <h2 className="font-bold ~text-sm/xl ~mb-2/4">Ages Seen</h2>
+                    <p className="~text-sm/lg">
                       {showAgesSeen(provider?.age_group)}
                     </p>
                   </div>
-                  <div className='flex flex-col sm:items-center gap-6 sm:gap-0 sm:~px-2/4 sm:~py-3/6 sm:flex-row sm:border-y sm:border-[#EFEBDF]'>
+                  <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-0 sm:border-y sm:border-[#EFEBDF] sm:~px-2/4 sm:~py-3/6">
                     <div>
-                      <h2 className='font-bold ~text-sm/xl ~mb-2/4'>
+                      <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                         Practice Name
                       </h2>
-                      <p className='~text-sm/lg'>Orenda Psychiatry</p>
+                      <p className="~text-sm/lg">Orenda Psychiatry</p>
                     </div>
-                    <div className='hidden sm:block h-[80%] max-h-[3.5rem] w-[2px] rounded-lg bg-[#D0D0D0] mx-7'></div>
+                    <div className="mx-7 hidden h-[80%] max-h-[3.5rem] w-[2px] rounded-lg bg-[#D0D0D0] sm:block"></div>
                     <div>
-                      <h2 className='font-bold ~text-sm/xl ~mb-2/4'>
+                      <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                         Languages Spoken
                       </h2>
-                      <p className='~text-sm/lg'>
+                      <p className="~text-sm/lg">
                         {provider?.languages.map(
                           (language, index, languages) => {
                             if (index === languages.length - 1) {
@@ -143,32 +143,32 @@ const ProviderInfo = () => {
                             } else {
                               return `${language}, `;
                             }
-                          }
+                          },
                         )}
                       </p>
                     </div>
                   </div>
-                  <div className='sm:~px-2/4 sm:~py-3/6 sm:border-b border-[#EFEBDF]'>
-                    <h2 className='font-bold ~text-sm/xl ~mb-2/4'>
+                  <div className="border-[#EFEBDF] sm:border-b sm:~px-2/4 sm:~py-3/6">
+                    <h2 className="font-bold ~text-sm/xl ~mb-2/4">
                       States Licensed
                     </h2>
-                    <p className='~text-sm/lg'>
+                    <p className="~text-sm/lg">
                       {showStatesLicensed(provider?.licensed_states)}
                     </p>
                   </div>
-                  <div className='hidden ~space-y-6/10 sm:block sm:~px-2/4 sm:~py-3/6'>
+                  <div className="hidden ~space-y-6/10 sm:block sm:~px-2/4 sm:~py-3/6">
                     <ProviderInfoUl
-                      h2='Education'
+                      h2="Education"
                       listArray={provider?.education}
                       classes={{ mb: 1.31 }}
                     />
                     <ProviderInfoUl
-                      h2='Board Certification'
+                      h2="Board Certification"
                       listArray={provider?.certification}
                       classes={{ mb: 1.06 }}
                     />
                     <ProviderInfoUl
-                      h2='Treatment Approaches'
+                      h2="Treatment Approaches"
                       listArray={provider?.treatment_approaches}
                       classes={{ mb: 1.06 }}
                     />
@@ -179,35 +179,35 @@ const ProviderInfo = () => {
 
                 <HR />
 
-                <div className='sm:border-l space-y-6 sm:space-y-0 mb-6 sm:mb-0 sm:border-[#EFEBDF] sm:basis-1/2'>
-                  <div className='sm:border-b  sm:border-[#EFEBDF] sm:~px-4/8 sm:~py-5/10'>
+                <div className="mb-6 space-y-6 sm:mb-0 sm:basis-1/2 sm:space-y-0 sm:border-l sm:border-[#EFEBDF]">
+                  <div className="sm:border-b sm:border-[#EFEBDF] sm:~px-4/8 sm:~py-5/10">
                     <ProviderInfoUl
-                      h2='Specialties'
+                      h2="Specialties"
                       listArray={provider?.specialisation}
                       classes={{ mb: 1.06 }}
                     />
                   </div>
-                  <div className='sm:~px-4/8 sm:~py-5/10'>
+                  <div className="sm:~px-4/8 sm:~py-5/10">
                     <ProviderInfoUl
-                      h2='Focus Areas'
+                      h2="Focus Areas"
                       listArray={provider?.focus_areas}
                       classes={{ mb: 1.06 }}
                     />
                   </div>
                 </div>
-                <div className='sm:hidden ~space-y-6/8'>
+                <div className="~space-y-6/8 sm:hidden">
                   <ProviderInfoUl
-                    h2='Education'
+                    h2="Education"
                     listArray={provider?.education}
                     classes={{ mb: 1.31 }}
                   />
                   <ProviderInfoUl
-                    h2='Board Certification'
+                    h2="Board Certification"
                     listArray={provider?.certification}
                     classes={{ mb: 1.06 }}
                   />
                   <ProviderInfoUl
-                    h2='Treatment Approaches'
+                    h2="Treatment Approaches"
                     listArray={provider?.treatment_approaches}
                     classes={{ mb: 1.06 }}
                   />
@@ -216,26 +216,26 @@ const ProviderInfo = () => {
               </div>
 
               {provider?.reviews && provider?.reviews.length > 0 && (
-                <div className='sm:~px-3/6 ~py-4/8 max-w-[80ch] mx-auto'>
-                  <h2 className='font-bold ~text-sm/xl ~mb-2/4 md:text-center'>
+                <div className="mx-auto max-w-[80ch] ~py-4/8 sm:~px-3/6">
+                  <h2 className="font-bold ~text-sm/xl ~mb-2/4 md:text-center">
                     Reviews from Clients
                   </h2>
                   <Swiper
                     spaceBetween={50}
                     breakpoints={{
                       768: {
-                        autoHeight: true
-                      }
+                        autoHeight: true,
+                      },
                     }}
                   >
                     {provider?.reviews.map((review) => (
-                      <SwiperSlide className='swiper-no-swiping'>
+                      <SwiperSlide className="swiper-no-swiping">
                         <div>
-                          <blockquote className=' ~text-sm/base leading-7 text-justify'>
+                          <blockquote className="text-justify leading-7 ~text-sm/base">
                             {review.review}
                           </blockquote>
                           {review.name && (
-                            <p className='flex justify-end font-medium ~text-sm/base italic'>
+                            <p className="flex justify-end font-medium italic ~text-sm/base">
                               &#8212; {review.name}
                             </p>
                           )}
@@ -251,7 +251,7 @@ const ProviderInfo = () => {
               )}
             </div>
 
-            <div className='mt-12 ~mb-[6.13rem]/[11.44rem] sm:~mr-0/[3rem]'>
+            <div className="mt-12 ~mb-[6.13rem]/[11.44rem] sm:~mr-0/[3rem]">
               {/* <div className="flex flex-col items-center sm:flex-row sm:justify-end">
                 <a
                   target="_blank"

@@ -21,6 +21,7 @@ import ReferAPatient from "./components/ReferAPatient/ReferAPatient";
 import ExecutiveInfo from "./components/Executive Info/ExecutiveInfo";
 import Blog from "./components/Blogs/Blog";
 import Blogs from "./components/Blogs/Blogs";
+import OurPartners from "./components/Partners/OurPartners";
 
 function App() {
   const queryClient = useQueryClient();
@@ -56,6 +57,7 @@ function App() {
           <Route path="blog/:title" element={<Blog />} />
           <Route path="become-a-provider" element={<BecomeProviderPage />} />
           <Route path="refer-a-patient" element={<ReferAPatient />} />
+          <Route path="our-partners" element={<OurPartners />} />
         </Route>
       </Routes>
     </>

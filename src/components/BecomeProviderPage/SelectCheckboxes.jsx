@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { states } from '../../data/dataArrays';
+import { useState } from "react";
+import { states } from "../../data/dataArrays";
 
 const SelectCheckboxes = ({
   number,
@@ -9,17 +9,17 @@ const SelectCheckboxes = ({
   errors,
   name,
   disabled,
-  resetField
+  resetField,
 }) => {
   const [selectOpen, setSelectOpen] = useState(false);
-  const [selected, setSelected] = useState(['Other (select)']);
+  const [selected, setSelected] = useState(["Other (select)"]);
 
   const otherCheckboxes = states.filter((state) => !options.includes(state));
   const handleSelect = (checkbox) => {
     setSelected((prevSelected) => {
       // Remove 'Other (select)' from the previous selection
       let updatedSelected = prevSelected.filter(
-        (item) => item !== 'Other (select)'
+        (item) => item !== "Other (select)",
       );
 
       if (updatedSelected.includes(checkbox)) {
@@ -28,7 +28,7 @@ const SelectCheckboxes = ({
 
         // If removing the checkbox leaves the selection empty, add 'Other (select)'
         if (updatedSelected.length === 0) {
-          updatedSelected = ['Other (select)'];
+          updatedSelected = ["Other (select)"];
         }
       } else {
         // If the checkbox is not selected, add it to the selection
@@ -44,13 +44,13 @@ const SelectCheckboxes = ({
     if (selected && selected.length > 0) {
       return selected
         .map((item, index, array) => {
-          const divider = index === array.length - 1 ? '' : ', ';
+          const divider = index === array.length - 1 ? "" : ", ";
           return item + divider;
         })
-        .join('');
+        .join("");
     } else {
-      setSelected(['Other (select)']);
-      return 'Other (select)';
+      setSelected(["Other (select)"]);
+      return "Other (select)";
     }
   };
 
@@ -61,45 +61,45 @@ const SelectCheckboxes = ({
 
   return (
     <>
-      <h3 className='font-medium flex ~gap-1/2 items-baseline'>
+      <h3 className="flex items-baseline font-medium ~gap-1/2">
         <span>{number}.</span>
         {label}
       </h3>
-      <p className='text-[#737373] pl-3'>(select all that apply)</p>
+      <p className="pl-3 text-[#737373]">(select all that apply)</p>
 
-      <div className='mt-6 space-y-5 ~text-sm/xl'>
+      <div className="mt-6 space-y-5 ~text-sm/xl">
         {options.map((option) => {
-          if (option === 'Others') {
+          if (option === "Others") {
             return (
               <div
                 key={number + option}
-                className='px-4 ~py-[0.94rem]/[1.19rem] border border-[#C9C9C9] rounded-lg'
+                className="rounded-lg border border-[#C9C9C9] px-4 ~py-[0.94rem]/[1.19rem]"
               >
                 <button
-                  type='button'
+                  type="button"
                   onClick={() => {
                     setSelectOpen(!selectOpen);
                   }}
-                  className='w-full block relative bg-arrow bg-arrow-position bg-arrow-size bg-no-repeat text-[#070707] text-left pr-8'
+                  className="relative block w-full bg-arrow bg-arrow-size bg-arrow-position bg-no-repeat pr-8 text-left text-[#070707]"
                 >
                   {showSelected(selected)}
                   <div
-                    className={`absolute bg-white border border-[#C9C9C9] rounded-lg top-[120%] left-0 right-0 transition-all duration-300 ease-in-out grid justify-items-start overflow-hidden max-h-[13rem] overflow-y-scroll p-2 scrollbar scrollbar-thumb-slate-800 scrollbar-track-slate-200 scrollbar-thumb-rounded-lg scrollbar-track-rounded-md sm:mr-2 ${
+                    className={`absolute left-0 right-0 top-[120%] grid max-h-[13rem] justify-items-start overflow-hidden overflow-y-scroll rounded-lg border border-[#C9C9C9] bg-white p-2 transition-all duration-300 ease-in-out scrollbar scrollbar-track-slate-200 scrollbar-thumb-slate-800 scrollbar-track-rounded-md scrollbar-thumb-rounded-lg sm:mr-2 ${
                       selectOpen
-                        ? 'visible opacity-100'
-                        : 'hidden invisible opacity-0'
+                        ? "visible opacity-100"
+                        : "invisible hidden opacity-0"
                     }`}
                   >
                     <label
-                      key='Other'
-                      className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
-                        selected.includes('Other (select)')
-                          ? 'bg-[#ecf5eb]'
-                          : 'hover:bg-[#ecf5eb]'
+                      key="Other"
+                      className={`block w-full cursor-pointer rounded-md px-2 py-1.5 text-left ${
+                        selected.includes("Other (select)")
+                          ? "bg-lime"
+                          : "hover:bg-lime"
                       }`}
                       onClick={(event) => {
                         event.stopPropagation();
-                        clearSelect('Other (select)');
+                        clearSelect("Other (select)");
                         resetField(name);
                       }}
                     >
@@ -111,10 +111,10 @@ const SelectCheckboxes = ({
                           event.stopPropagation();
                         }}
                         key={checkbox}
-                        className={`py-1.5 px-2 rounded-md block w-full text-left cursor-pointer ${
+                        className={`block w-full cursor-pointer rounded-md px-2 py-1.5 text-left ${
                           selected.includes(checkbox)
-                            ? 'bg-[#ecf5eb]'
-                            : 'hover:bg-[#ecf5eb]'
+                            ? "bg-lime"
+                            : "hover:bg-lime"
                         }`}
                       >
                         {checkbox}
@@ -124,14 +124,14 @@ const SelectCheckboxes = ({
                             event.stopPropagation();
                             handleSelect(checkbox);
                           }}
-                          type='checkbox'
+                          type="checkbox"
                           value={checkbox}
                           {...register(name, {
                             required: {
                               value: true,
-                              message: 'Please select at least one'
+                              message: "Please select at least one",
                             },
-                            disabled: disabled
+                            disabled: disabled,
                           })}
                         />
                       </label>
@@ -144,23 +144,23 @@ const SelectCheckboxes = ({
             return (
               <div
                 key={number + option}
-                className='flex ~gap-2/4 items-center px-4 ~py-[0.94rem]/[1.19rem] border border-[#C9C9C9] rounded-lg hover:border-[#ecf5eb] hover:bg-[#ecf5eb]'
+                className="flex items-center rounded-lg border border-[#C9C9C9] px-4 ~gap-2/4 ~py-[0.94rem]/[1.19rem] hover:border-lime hover:bg-lime"
               >
                 <input
-                  className='~size-[1.125rem]/6 border border-[#C9C9C9] rounded-sm'
-                  type='checkbox'
+                  className="rounded-sm border border-[#C9C9C9] ~size-[1.125rem]/6"
+                  type="checkbox"
                   value={option}
                   id={number + option}
                   {...register(name, {
                     required: {
                       value: true,
-                      message: 'Please select at least one'
+                      message: "Please select at least one",
                     },
-                    disabled: disabled
+                    disabled: disabled,
                   })}
                 />
                 <label
-                  className='text-[#070707] w-full cursor-pointer'
+                  className="w-full cursor-pointer text-[#070707]"
                   htmlFor={number + option}
                 >
                   {option}
@@ -170,7 +170,7 @@ const SelectCheckboxes = ({
           }
         })}
 
-        <p className='text-sm text-red-500 ps-1'>{errors?.[name]?.message}</p>
+        <p className="ps-1 text-sm text-red-500">{errors?.[name]?.message}</p>
       </div>
     </>
   );

@@ -46,7 +46,7 @@ const Blogs = () => {
             <button
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "border-light-grey w-fit flex-shrink-0 rounded-3xl border px-4 py-2 transition-colors hover:bg-purple-50 md:flex-shrink",
+                "w-fit flex-shrink-0 rounded-3xl border border-light-grey px-4 py-2 transition-colors hover:bg-purple-50 md:flex-shrink",
                 {
                   "bg-purple-mist": activeCategory === category,
                 },

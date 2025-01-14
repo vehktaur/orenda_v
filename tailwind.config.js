@@ -4,6 +4,7 @@ import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 import animate from "tailwindcss-animate";
 
 export default {
+  darkMode: ["class"],
   content: { files: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"], extract },
   theme: {
     screens,
@@ -12,6 +13,8 @@ export default {
       animation: {
         fadeIn: "fadeIn 0.5s ease-in forwards",
         fadeOut: "fadeOut 0.5s ease-out forwards",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
         "m-footer":
@@ -39,19 +42,29 @@ export default {
       colors: {
         "orenda-purple": "#2E0086",
         "orenda-green": "#127801",
-        lime: "#ecf5eb",
+        lime: "#ECF5EB",
         "light-grey": "#E5E5E5",
         "off-white": "#FAFAFA",
-        "purple-mist": "#F8F8FF"
+        "purple-mist": "#F8F8FF",
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
       },
       content: {
         email: 'url("/src/assets/dark_email.svg")',
         phone: 'url("/src/assets/dark_call.svg")',
       },
       fontFamily: {
-        "open-sans": ['"Open Sans"', "sans-serif"],
-        heading: ["'Ogg Text TRIAL'", "serif"],
-        "dm-sans": ['"DM Sans"', "sans-serif"],
+        "open-sans": ['Open Sans"', "sans-serif"],
+        heading: ["Ogg Text TRIAL", "serif"],
+        "dm-sans": ['DM Sans"', "sans-serif"],
       },
       gridTemplateColumns: {
         blog: "minmax(25rem, 70%), minmax(25rem, 30%)",
@@ -62,13 +75,41 @@ export default {
       },
       keyframes: {
         fadeIn: {
-          "0%": { opacity: "0", visibility: "hidden" },
-          "100%": { opacity: "1", visibility: "visible" },
+          "0%": {
+            opacity: "0",
+            visibility: "hidden",
+          },
+          "100%": {
+            opacity: "1",
+            visibility: "visible",
+          },
         },
         fadeOut: {
-          "0%": { opacity: "1" },
-          "90%": { opacity: "0" },
-          "100%": { visibility: "hidden" },
+          "0%": {
+            opacity: "1",
+          },
+          "90%": {
+            opacity: "0",
+          },
+          "100%": {
+            visibility: "hidden",
+          },
+        },
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       listStyleImage: {
@@ -77,7 +118,7 @@ export default {
       screens: {
         xs: "20rem",
         forLabel: "23.75rem",
-        forNav: "",
+        forNav: "75rem",
         forProviders: "70rem",
       },
     },

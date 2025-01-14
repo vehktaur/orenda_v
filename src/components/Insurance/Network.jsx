@@ -1,24 +1,24 @@
-import Marquee from 'react-fast-marquee';
-import metro from '../../assets/metro.png';
-import emblem from '../../assets/emblem.png';
-import cms from '../../assets/cms.png';
-import ghi from '../../assets/ghi.png';
-import united from '../../assets/uhc_insurance.svg';
-import oscar from '../../assets/oscar_insurance.png';
-import aetna from '../../assets/aetna_insurance.svg';
-import cigna from '../../assets/cigna_insurance.png';
-import anthem from '../../assets/abc_insurance.png';
-import tricare from '../../assets/tricare_insurance.png';
-import compsych from '../../assets/compsych_insurance.png';
-import multiplan from '../../assets/multiplan_insurance.png';
-import fidelis from '../../assets/fidelis-care-logo-vector.png';
+import Marquee from "react-fast-marquee";
+import metro from "../../assets/metro.png";
+import emblem from "../../assets/emblem.png";
+import cms from "../../assets/cms.png";
+import ghi from "../../assets/ghi.png";
+import united from "../../assets/uhc_insurance.svg";
+import oscar from "../../assets/oscar_insurance.png";
+import aetna from "../../assets/aetna_insurance.svg";
+import cigna from "../../assets/cigna_insurance.png";
+import anthem from "../../assets/abc_insurance.png";
+import tricare from "../../assets/tricare_insurance.png";
+import compsych from "../../assets/compsych_insurance.png";
+import multiplan from "../../assets/multiplan_insurance.png";
+import fidelis from "../../assets/fidelis-care-logo-vector.png";
 
 const Network = () => {
   return (
-    <div className="~pt-8/16 bg-dotted ~pb-10/20 relative border-t-[0rem] border-orenda-purple">
+    <div className="relative border-t-[0rem] border-orenda-purple bg-dotted ~pt-8/16 ~pb-10/20">
       <div className="sm:px-5">
         <div className="~gap-y-4/6">
-          <h1 className="font-heading font-bold text-center ~text-base/xl bg-[#F8F8FF] text-[#070707] rounded-lg ~py-2/3 border border-[#E8DDFF] ~max-w-[10rem]/[13rem] mx-auto ">
+          <h1 className="mx-auto rounded-lg border border-[#E8DDFF] bg-purple-mist text-center font-heading font-bold text-[#070707] ~text-base/xl ~max-w-[10rem]/[13rem] ~py-2/3">
             In network with
           </h1>
 
@@ -29,7 +29,7 @@ const Network = () => {
               </div>
               <div className="~mx-8/16">
                 <img
-                  className="~w-[5.55rem]/[10.99rem] h-8 sm:h-auto"
+                  className="h-8 ~w-[5.55rem]/[10.99rem] sm:h-auto"
                   src={aetna}
                   alt=""
                 />
@@ -45,7 +45,7 @@ const Network = () => {
               </div>
               <div className="~mx-8/16">
                 <img
-                  className="~w-[7.21rem]/[15rem] h-8 sm:h-auto"
+                  className="h-8 ~w-[7.21rem]/[15rem] sm:h-auto"
                   src={compsych}
                   alt=""
                 />
@@ -63,11 +63,11 @@ const Network = () => {
             </Marquee>
           </div>
 
-          <h2 className="font-heading font-medium text-center ~text-base/xl bg-[#F3F3F3] text-[#070707] rounded-lg ~py-2/3 border border-[#D0D0D0] ~max-w-[8.4rem]/[11rem] mx-auto ~mt-6/12 ~mb-4/10">
+          <h2 className="mx-auto rounded-lg border border-[#D0D0D0] bg-[#F3F3F3] text-center font-heading font-medium text-[#070707] ~text-base/xl ~mt-6/12 ~mb-4/10 ~max-w-[8.4rem]/[11rem] ~py-2/3">
             Out of network
           </h2>
 
-          <div className="hidden sm:flex justify-center items-center sm:~gap-12/16">
+          <div className="hidden items-center justify-center sm:flex sm:~gap-12/16">
             <div>
               <img src={emblem} alt="" className="~w-[9.47rem]/[12.34rem]" />
             </div>
