@@ -58,7 +58,7 @@ const NavbarAccordion = ({ link, closeMenu, navOpen }) => {
             >
               {link.label}
 
-              <RightArrowIcon2 className="mr-5 size-5 transition-all duration-300 ![rotate:z_0deg] group-hover/link:mr-0" />
+              <RightArrowIcon2 className="mr-5 mt-0.5 size-5 transition-all duration-300 ![rotate:z_0deg] group-hover/link:mr-0" />
             </NavLink>
           ))}
         </div>
