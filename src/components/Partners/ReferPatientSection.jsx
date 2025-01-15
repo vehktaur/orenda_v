@@ -14,7 +14,7 @@ const ReferPatientSection = () => {
 
         <Button
           className="mt-10 bg-orenda-purple text-white hover:text-orenda-purple sm:mx-auto"
-          hoverClass="bg-white"
+          hoverClass="bg-purple-mist"
           link
           to="/refer-a-patient"
         >
