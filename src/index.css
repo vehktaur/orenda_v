@@ -122,7 +122,7 @@
   }
 
   .fieldset {
-    @apply rounded-2xl border border-[#D6D6D6] font-dm-sans ~pt-6/[1.69rem] ~pr-4/[4.75rem] ~pb-[3.25rem]/[4.06rem] ~pl-4/[3.63rem];
+    @apply rounded-2xl border border-[#D6D6D6] font-dm-sans pt-[1.69rem] ~pr-4/[4.75rem] ~pb-[3.25rem]/[4.06rem] ~pl-4/[3.63rem];
   }
 
   .rap-fieldset {

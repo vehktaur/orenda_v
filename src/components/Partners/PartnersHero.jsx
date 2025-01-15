@@ -4,7 +4,7 @@ import Partnerships from "./ui/Partnerships";
 
 const PartnersHero = () => {
   return (
-    <section className="padding-inline ~pt-6/16">
+    <section className="padding-inline overflow-clip ~pt-6/16">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between ~gap-6/28 sm:flex-row-reverse">
         {/* Partner Hero Image */}
         <Partnerships />

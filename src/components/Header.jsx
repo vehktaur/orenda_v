@@ -1,18 +1,19 @@
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/logo1.png";
 import { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { cn } from "@/lib/utils";
+import { cn, linkIsActive } from "@/lib/utils";
 import { DownArrowIcon, RightArrowIcon2 } from "@/assets/svgs";
+import NavbarAccordion from "./ui/NavbarAccordion";
+import { Accordion } from "./ui/accordion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const { pathname } = useLocation();
 
   const header = useRef();
   let navMenu = useRef();
@@ -98,8 +99,6 @@ const Header = () => {
     setNavOpen((prev) => !prev);
   };
 
-  console.log(pathname);
-
   return (
     <>
       {navOpen && (
@@ -120,14 +119,14 @@ const Header = () => {
           {/* Desktop Menu */}
           <div className="hidden forNav:block">
             <nav>
-              <ul className="~forNav/2xl:~gap-6/8 flex items-center justify-between transition duration-1000">
+              <ul className="flex items-center justify-between transition duration-1000 ~forNav/2xl:~gap-6/8">
                 {menuItems.map(({ label, path }) => {
                   return (
                     <li key={label}>
                       <NavLink
                         className={({ isActive }) =>
                           cn({
-                            "font-medium hover:font-bold": true,
+                            "hover:font-bold": true,
                             "font-bold text-orenda-purple": isActive,
                             "text-green-700": label === "Join Our Team",
                           })
@@ -145,17 +144,15 @@ const Header = () => {
                     <li key={link.label}>
                       <button
                         className={cn(
-                          "group relative flex items-center gap-1.5 font-medium text-orenda-purple hover:font-bold",
+                          "group relative flex items-center gap-1.5 text-orenda-purple hover:font-bold",
                           {
-                            "font-bold": link.sublinks.some((link) =>
-                              link.path.includes(pathname),
-                            ),
+                            "font-bold": linkIsActive(link),
                           },
                         )}
                       >
                         {link.label}
 
-                        <DownArrowIcon className="size-5 stroke-orenda-purple" />
+                        <DownArrowIcon className="size-5 stroke-orenda-purple transition-transform duration-300 group-hover:rotate-180" />
 
                         <ul className="absolute left-1/2 top-full hidden min-w-72 -translate-x-1/2 animate-fadeIn rounded-2xl border border-[#EAEAEA] bg-white px-6 py-1 text-left text-black shadow-sm duration-300 ~text-sm/base zoom-in group-hover:block">
                           {link.sublinks.map((link) => (
@@ -165,13 +162,13 @@ const Header = () => {
                             >
                               <NavLink
                                 className={cn(
-                                  "flex justify-between gap-2 font-medium transition duration-500 hover:font-semibold",
+                                  "group/link flex items-center justify-between gap-2 font-medium transition duration-500 hover:font-bold",
                                 )}
                                 to={link.path}
                               >
                                 {link.label}
 
-                                <RightArrowIcon2 className="size-5" />
+                                <RightArrowIcon2 className="mr-2 mt-0.5 size-5 transition-all duration-300 group-hover/link:mr-0" />
                               </NavLink>
                             </li>
                           ))}
@@ -251,47 +248,17 @@ const Header = () => {
                       </NavLink>
                     </li>
                   ))}
-
-                  {linkWithSubLinks.map((link) => {
-                    return (
-                      <li className="w-full text-left" key={link.label}>
-                        <button
-                          className={cn(
-                            "group flex w-full items-center justify-between font-medium text-white transition-colors duration-300 ~text-base/xl ~px-5/12 ~py-2/3 hover:bg-[#eee] hover:text-[#333]",
-                            {
-                              "bg-[#eee] text-[#333]": link.sublinks.some(
-                                (link) => link.path.includes(pathname),
-                              ),
-                            },
-                          )}
-                        >
-                          {link.label}
-
-                          <DownArrowIcon className="size-6 stroke-white transition-colors duration-300 group-hover:stroke-[#333]" />
-
-                          <ul className="absolute left-1/2 top-full hidden min-w-72 -translate-x-1/2 rounded-2xl border border-[#EAEAEA] bg-white px-6 py-1 text-left text-black shadow-sm ~text-sm/base group-hover:block">
-                            {link.sublinks.map((link) => (
-                              <li
-                                key={link.path}
-                                className="border-[#d6d6d6] first:border-b first:*:pb-4 last:*:pt-4"
-                              >
-                                <NavLink
-                                  className={cn(
-                                    "flex justify-between gap-2 font-medium transition duration-500 hover:font-semibold",
-                                  )}
-                                  to={link.path}
-                                >
-                                  {link.label}
-
-                                  <RightArrowIcon2 className="size-5" />
-                                </NavLink>
-                              </li>
-                            ))}
-                          </ul>
-                        </button>
-                      </li>
-                    );
-                  })}
+                  <Accordion type="single" collapsible className="w-full">
+                    {linkWithSubLinks.map((link) => {
+                      return (
+                        <NavbarAccordion
+                          key={link.path}
+                          link={link}
+                          closeMenu={displayMenu}
+                        />
+                      );
+                    })}
+                  </Accordion>
                 </ul>
                 <a
                   target="_blank"

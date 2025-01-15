@@ -30,7 +30,7 @@ const Partnerships = () => {
         </div>
       </div>
 
-      <div className="relative grid animate-spin place-items-center rounded-full border-2 border-light-grey ~size-40/80 [animation-duration:20000ms]">
+      <div className="relative grid animate-spin place-items-center rounded-full border-2 border-light-grey ~size-40/80 [animation-duration:20s]">
         <Image
           src={partnersImages.greenpoint}
           className="left-0 top-[15%] -translate-x-[15%]"

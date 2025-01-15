@@ -7,8 +7,8 @@ export default {
   darkMode: ["class"],
   content: { files: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"], extract },
   theme: {
-    screens,
     fontSize,
+    screens,
     extend: {
       animation: {
         fadeIn: "fadeIn 0.5s ease-in forwards",
@@ -106,6 +106,22 @@ export default {
         "accordion-up": {
           from: {
             height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+        "filter-open": {
+          from: {
+            width: "0",
+          },
+          to: {
+            height: "20rem",
+          },
+        },
+        "filter-close": {
+          from: {
+            width: "20rem",
           },
           to: {
             height: "0",
