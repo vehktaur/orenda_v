@@ -15,6 +15,8 @@ export default {
         fadeOut: "fadeOut 0.5s ease-out forwards",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "filter-open": "filter-open 0.2s ease-out",
+        "filter-close": "filter-close 0.2s ease-out",
       },
       backgroundImage: {
         "m-footer":
@@ -62,9 +64,9 @@ export default {
         phone: 'url("/src/assets/dark_call.svg")',
       },
       fontFamily: {
-        "open-sans": ['Open Sans"', "sans-serif"],
+        "open-sans": ["Open Sans", "sans-serif"],
         heading: ["Ogg Text TRIAL", "serif"],
-        "dm-sans": ['DM Sans"', "sans-serif"],
+        "dm-sans": ["DM Sans", "sans-serif"],
       },
       gridTemplateColumns: {
         blog: "minmax(25rem, 70%), minmax(25rem, 30%)",

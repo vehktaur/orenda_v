@@ -9,6 +9,8 @@ import { cn, linkIsActive } from "@/lib/utils";
 import { DownArrowIcon, RightArrowIcon2 } from "@/assets/svgs";
 import NavbarAccordion from "./ui/NavbarAccordion";
 import { Accordion } from "./ui/accordion";
+import Button from "./ui/custom-button";
+import { zocLink } from "@/lib/definitions";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -180,14 +182,14 @@ const Header = () => {
               </ul>
             </nav>
           </div>
-          <a
+          <Button
+            link
             target="_blank"
-            href="https://www.zocdoc.com/wl/orendapsych/search?address=10016&after_5pm=false&before_10am=false&day_filter=AnyDay&dr_specialty=405&filters=%7B%7D&gender=-1&insurance_carrier=-1&insurance_plan=-1&language=-1&offset=0&parentSearchRequestId=5ad6e11b-e197-4dc6-8576-3101647da281&ppsSelectionId=f697582c-2de0-4006-ab39-53b075bb2ef4&reason_visit=493&searchOriginator=SearchBar&searchQueryGuid=8d62bd4a-fe91-43fa-bbec-391fc97eecdb&searchType=specialty&search_query=Adult+Psychiatric+%26+Mental+Health+Nurse+Practitioner&sees_children=false&sort_type=Default&visitType=inPersonAndVirtualVisits"
-            className="group relative z-[1] hidden overflow-hidden rounded-3xl border border-orenda-purple px-4 py-2 font-semibold text-orenda-purple transition-colors hover:text-white forNav:block"
+            to={zocLink}
+            className="hidden w-fit px-4 py-2 font-semibold ~text-sm/base forNav:block"
           >
-            <span className="absolute -left-[1px] -top-[1px] z-[-1] block h-[calc(100%+2px)] w-0 rounded-3xl bg-orenda-purple transition-all duration-500 group-hover:w-[calc(100%+2px)]" />
             Book Now
-          </a>
+          </Button>
           <div className="relative ~xs/xl:~size-6/8 forNav:hidden">
             <button
               onClick={() => displayMenu()}
@@ -262,7 +264,7 @@ const Header = () => {
                 </ul>
                 <a
                   target="_blank"
-                  href="https://www.zocdoc.com/wl/orendapsych/search?address=10016&after_5pm=false&before_10am=false&day_filter=AnyDay&dr_specialty=405&filters=%7B%7D&gender=-1&insurance_carrier=-1&insurance_plan=-1&language=-1&offset=0&parentSearchRequestId=5ad6e11b-e197-4dc6-8576-3101647da281&ppsSelectionId=f697582c-2de0-4006-ab39-53b075bb2ef4&reason_visit=493&searchOriginator=SearchBar&searchQueryGuid=8d62bd4a-fe91-43fa-bbec-391fc97eecdb&searchType=specialty&search_query=Adult+Psychiatric+%26+Mental+Health+Nurse+Practitioner&sees_children=false&sort_type=Default&visitType=inPersonAndVirtualVisits"
+                  href={zocLink}
                   className="mx-8 mb-8 mt-auto rounded-3xl border bg-[#eee] px-4 py-2 font-semibold text-[#333] transition-colors hover:bg-[#ccc]"
                 >
                   Book Now

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import magnifier from "../../assets/magnifier.gif";
+import Button from "../ui/custom-button";
 
 const BecomeProvider = ({ bg }) => {
   return (
@@ -17,13 +17,14 @@ const BecomeProvider = ({ bg }) => {
             to start with us.
           </p>
 
-          <Link
+          <Button
+            link
             to="/become-a-provider"
-            className="bp_btn group relative z-[1] mx-auto mt-[2.12rem] block w-full overflow-hidden rounded-[2.5rem] border border-orenda-green px-4 py-2.5 text-center font-semibold text-orenda-green transition-colors ~text-sm/xl hover:text-white sm:mx-0 sm:max-w-[15.125rem]"
+            className="mt-[2.12rem] rounded-[2.5rem] border-orenda-green text-center text-orenda-green ~text-sm/xl hover:text-white sm:mx-0 sm:max-w-[15.125rem]"
+            hoverClass="bg-orenda-green"
           >
-            <span className="absolute -left-[1px] -top-[1px] z-[-1] block h-[calc(100%+2px)] w-0 rounded-3xl bg-orenda-green transition-all duration-500 group-hover:w-[calc(100%+2px)]" />
             Start Now
-          </Link>
+          </Button>
         </div>
       </div>
     </div>

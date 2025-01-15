@@ -21,6 +21,7 @@ import gsap from "gsap";
 import { useForm } from "react-hook-form";
 import SearchBar from "../ui/SearchBar";
 import { XIcon } from "@/assets/svgs";
+import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(useGSAP);
 
@@ -178,11 +179,13 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
           //Side Filter Menu, also just for the Our Team Page (Not for homepage)
           <aside
             ref={filterMenuRef}
-            className={`absolute left-0 top-20 z-[3] flex w-0 min-w-0 flex-col overflow-hidden rounded-r-lg border-r border-[#E7E7E7] bg-white pt-10 md:static md:rounded-none md:py-5 ${
-              filterMenu
-                ? "max-h-[74.65rem]"
-                : "max-h-[74.65rem] sm:max-h-[30rem]"
-            }`}
+            className={cn(
+              "absolute left-0 top-20 z-[3] flex w-0 min-w-0 flex-col overflow-hidden rounded-r-lg border-r border-[#E7E7E7] bg-white pt-10 md:static md:rounded-none md:py-5",
+              {
+                "max-h-[74.65rem]": filterMenu,
+                "max-h-[74.65rem] sm:max-h-[30rem]": !filterMenu,
+              },
+            )}
           >
             <div className="mx-auto flex w-full max-w-[16.75rem] flex-nowrap items-center justify-between px-5">
               <h2 className="flex-shrink-0 font-dm-sans font-bold ~text-base/xl">
@@ -193,7 +196,6 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
                 className="block size-6 rounded-full bg-[#F5F5F5]"
               >
                 <XIcon />
-
               </button>
             </div>
 

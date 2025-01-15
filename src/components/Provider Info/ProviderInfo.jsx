@@ -7,6 +7,7 @@ import fetchProviders from "../../data/fetchProviders";
 import Loading from "../Our Team/Loading";
 import { useProviders } from "../../services/queries";
 import Error from "../Our Team/Error";
+import Button from "../ui/custom-button";
 
 const HR = () => (
   <div className="mx-auto mb-4 mt-6 max-w-[63.75rem] bg-[rgb(239,235,223)] sm:hidden">
@@ -88,14 +89,14 @@ const ProviderInfo = () => {
                         <span>{provider?.provider_code}</span>
                       </p>
                     </div>
-                    <a
+                    <Button
+                      link
                       target="_blank"
-                      href={provider?.booking_link}
-                      className="group relative z-[1] me-4 w-full overflow-hidden rounded-3xl border border-orenda-purple px-2 text-center font-bold text-orenda-purple transition-colors ~text-base/lg ~max-w-[5.5rem]/[6rem] ~py-1/2 hover:text-white"
+                      to={provider?.booking_link}
+                      className="me-4 px-2 text-center font-bold ~text-base/lg ~max-w-[5.5rem]/[6rem] ~py-1/2"
                     >
-                      <span className="absolute -left-[1px] -top-[1px] z-[-1] block h-[calc(100%+2px)] w-0 rounded-3xl bg-orenda-purple transition-all duration-500 group-hover:w-[calc(100%+2px)]" />
                       Book
-                    </a>
+                    </Button>
                   </div>
                   {provider?.do_therapy && (
                     <p className="w-fit min-w-[10.94rem] text-nowrap rounded-lg border border-[#E8DDFF] bg-purple-mist px-2 py-[0.38rem] text-left font-semibold text-orenda-purple ~text-xs/sm ~mt-2/[1.38rem]">

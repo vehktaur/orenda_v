@@ -5,6 +5,7 @@ import Button from "../ui/custom-button";
 import GetStarted from "../About/GetStarted";
 import { cn } from "@/lib/utils";
 import { useParams } from "react-router-dom";
+import { zocLink } from "@/lib/definitions";
 
 const FeelingOverwhelmed = ({ className }) => {
   return (
@@ -24,9 +25,9 @@ const FeelingOverwhelmed = ({ className }) => {
       </p>
 
       <Button
-        link="href"
+        link
         className="mt-6 max-w-32 cursor-pointer py-2 sm:mx-auto"
-        href="https://www.zocdoc.com/wl/orendapsych/search?address=10016&after_5pm=false&before_10am=false&day_filter=AnyDay&dr_specialty=405&filters=%7B%7D&gender=-1&insurance_carrier=-1&insurance_plan=-1&language=-1&offset=0&parentSearchRequestId=5ad6e11b-e197-4dc6-8576-3101647da281&ppsSelectionId=f697582c-2de0-4006-ab39-53b075bb2ef4&reason_visit=493&searchOriginator=SearchBar&searchQueryGuid=8d62bd4a-fe91-43fa-bbec-391fc97eecdb&searchType=specialty&search_query=Adult+Psychiatric+%26+Mental+Health+Nurse+Practitioner&sees_children=false&sort_type=Default&visitType=inPersonAndVirtualVisits"
+        to={zocLink}
       >
         Book Now
       </Button>

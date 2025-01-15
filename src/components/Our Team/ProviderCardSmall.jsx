@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
-import { IoLocationOutline } from 'react-icons/io5';
-import { MdLocationPin } from 'react-icons/md';
+import { Link } from "react-router-dom";
+import { IoLocationOutline } from "react-icons/io5";
+import { MdLocationPin } from "react-icons/md";
+import Button from "../ui/custom-button";
 
 const ProviderCard = ({ provider, setProvidersData }) => {
   const showStatesLicensed = (states) => {
@@ -11,29 +12,29 @@ const ProviderCard = ({ provider, setProvidersData }) => {
     } else if (states && states.length > 2) {
       return `${states[0]}, ${states[1]} & more.`;
     } else {
-      return 'Nil';
+      return "Nil";
     }
   };
 
   const showAgesSeen = (agesSeen) => {
     if (agesSeen) {
       return agesSeen.map((category, index, array) => {
-        const divider = index === array.length - 1 ? '.' : ', ';
+        const divider = index === array.length - 1 ? "." : ", ";
 
-        if (category === 'Children') {
+        if (category === "Children") {
           return `${category} (<13 yrs)${divider}`;
-        } else if (category === 'Teens') {
+        } else if (category === "Teens") {
           return `${category} (13-17 yrs)${divider}`;
-        } else if (category === 'Adults') {
+        } else if (category === "Adults") {
           return `${category} (18-64 yrs)${divider}`;
-        } else if (category === 'Seniors') {
+        } else if (category === "Seniors") {
           return `${category} (65+ yrs)${divider}`;
         } else {
           return `${category}${divider}`;
         }
       });
     } else {
-      return 'Nil';
+      return "Nil";
     }
   };
 
@@ -45,47 +46,49 @@ const ProviderCard = ({ provider, setProvidersData }) => {
           prevProviders.map((oldProvider) =>
             oldProvider.provider_name === provider.provider_name
               ? { ...oldProvider, mobileOverlay: true }
-              : { ...oldProvider, mobileOverlay: false }
-          )
+              : { ...oldProvider, mobileOverlay: false },
+          ),
         );
       }}
       onMouseLeave={() =>
         setProvidersData((prevProviders) =>
           prevProviders.map((oldProvider) => ({
             ...oldProvider,
-            mobileOverlay: false
-          }))
+            mobileOverlay: false,
+          })),
         )
       }
-      className={`pb-[0.94rem] max-w-[18.625rem] h-[27.25rem] md:h-[unset] w-full rounded-md relative card__shadow flex flex-col cursor-pointer`}
+      className={`card__shadow relative flex h-[27.25rem] w-full max-w-[18.625rem] cursor-pointer flex-col rounded-md pb-[0.94rem] md:h-[unset]`}
     >
+      {/* Card Overlay */}
       <div
-        className={`absolute inset-0 bg-black opacity-0 md:hover:opacity-100 transition-opacity duration-1000 text-white flex flex-col gap-1 px-3 py-4 md:visible md:animate-none ${
+        className={`absolute inset-0 flex flex-col gap-1 bg-black px-3 py-4 text-white opacity-0 transition-opacity duration-1000 md:visible md:animate-none md:hover:opacity-100 ${
           provider?.mobileOverlay
-            ? 'flex animate-fadeIn md:opacity-0'
-            : 'md:flex invisible'
-        } justify-between rounded-md cursor-pointer`}
+            ? "flex animate-fadeIn md:opacity-0"
+            : "invisible md:flex"
+        } cursor-pointer justify-between rounded-md`}
       >
         <div className={`grid gap-2`}>
-          <h3 className='font-semibold'>About Provider</h3>
+          <h3 className="font-semibold">About Provider</h3>
           <p className={`line-clamp-[9] overflow-hidden text-[0.85rem]`}>
             {provider?.provider_description.replace(/(\.\n|\n)/g, (match) => {
-              return match === '.\n' ? '.\n\n' : ' ';
+              return match === ".\n" ? ".\n\n" : " ";
             })}
           </p>
         </div>
         <div className={`grid gap-2`}>
-          <a
-            target='_blank'
-            href={provider?.booking_link}
-            className='border block rounded-3xl px-2 py-1 text-[0.875rem] hover:text-black transition-colors mt-6 font-medium text-center relative overflow-hidden group z-[1]'
+          <Button
+            link
+            target="_blank"
+            to={provider?.booking_link}
+            className="border-white px-2 py-1 text-center text-sm font-medium text-white hover:text-black"
+            hoverClass="bg-white"
           >
-            <span className='block absolute -top-[1px] -left-[1.3px] h-[calc(100%+2px)] w-0 group-hover:w-[calc(100%+2px)] bg-white transition-all duration-500 rounded-3xl z-[-1] border' />
             Book now
-          </a>
-          <div className='flex justify-center'>
+          </Button>
+          <div className="flex justify-center">
             <Link
-              className='text-[0.875rem] font-semibold hover:underline'
+              className="text-sm font-semibold hover:underline"
               to={`/provider/${provider.provider_name}`}
             >
               See Profile
@@ -94,53 +97,53 @@ const ProviderCard = ({ provider, setProvidersData }) => {
         </div>
       </div>
       <div
-        className={`bg-[#f1f1f1] h-[13.25rem] flex items-end justify-center rounded-t-md overflow-hidden`}
+        className={`flex h-[13.25rem] items-end justify-center overflow-hidden rounded-t-md bg-[#f1f1f1]`}
       >
         <img
-          className='size-full block object-cover object-top'
+          className="block size-full object-cover object-top"
           src={provider?.provider_image_url}
           alt={provider?.provider_name}
           width={100}
           height={100}
         />
       </div>
-      <div className={`flex flex-col flex-1 px-3`}>
-        <p className={`text-xs mt-2 font-medium font-dm-sans`}>
+      <div className={`flex flex-1 flex-col px-3`}>
+        <p className={`mt-2 font-dm-sans text-xs font-medium`}>
           {provider?.provider_code}
         </p>
-        <h3 className={`~text-base/lg font-bold font-open-sans py-1`}>
+        <h3 className={`py-1 font-open-sans font-bold ~text-base/lg`}>
           {provider?.provider_name}
         </h3>
-        <div className='pt-1 px-1 pb-2 bg-[#f5f5f5] h-[3.7rem] rounded-[0.25rem]'>
-          <p className='text-[0.7rem] font-medium font-dm-sans text-[#6A6A6A] pb-[1px]'>
+        <div className="h-[3.7rem] rounded-[0.25rem] bg-[#f5f5f5] px-1 pb-2 pt-1">
+          <p className="pb-[1px] font-dm-sans text-[0.7rem] font-medium text-[#6A6A6A]">
             Ages seen
           </p>
-          <p className={`text-[0.7rem] font-open-sans`}>
+          <p className={`font-open-sans text-[0.7rem]`}>
             {showAgesSeen(provider?.age_group)}
           </p>
         </div>
-        <div className='pt-[0.62rem] mt-auto'>
+        <div className="mt-auto pt-[0.62rem]">
           {/* <h3 className="font-medium font-dm-sans text-[#6A6A6A] text-[0.8rem]">
             States Licensed
           </h3>
           <p className={`text-xs font-medium font-dm-sans`}>
             {showStatesLicensed(provider?.licensed_states)}
           </p> */}
-          <h3 className='font-medium font-dm-sans text-[#6A6A6A] text-[0.8rem] flex gap-1 items-center'>
+          <h3 className="flex items-center gap-1 font-dm-sans text-[0.8rem] font-medium text-[#6A6A6A]">
             States Licensed
-            <MdLocationPin className='text-orenda-green flex-shrink-0 size-[0.85rem] font-bold -mt-[2px]' />
+            <MdLocationPin className="-mt-[2px] size-[0.85rem] flex-shrink-0 font-bold text-orenda-green" />
           </h3>
           <p
-            className={`text-xs font-medium font-dm-sans flex gap-1 items-center`}
+            className={`flex items-center gap-1 font-dm-sans text-xs font-medium`}
           >
             <span>{showStatesLicensed(provider?.licensed_states)}</span>
           </p>
         </div>
-        <div className='flex justify-between pt-2 gap-3'>
+        <div className="flex justify-between gap-3 pt-2">
           <a
-            target='_blank'
+            target="_blank"
             href={provider?.booking_link}
-            className={`w-full block ms-auto rounded-3xl text-white text-xs text-center bg-orenda-purple md:min-w-[2.81rem] xl:min-w-fit font-open-sans py-2 min-w-[7.5rem] ~px-2/3`}
+            className={`ms-auto block w-full min-w-[7.5rem] rounded-3xl bg-orenda-purple py-2 text-center font-open-sans text-xs text-white ~px-2/3 md:min-w-[2.81rem] xl:min-w-fit`}
           >
             Book online
           </a>

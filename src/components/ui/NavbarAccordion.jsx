@@ -34,7 +34,7 @@ const NavbarAccordion = ({ link, closeMenu }) => {
               onClick={() => closeMenu()}
               asChild
             >
-              <NavLink className="" to={link.path}>
+              <NavLink to={link.path}>
                 {link.label}
 
                 <RightArrowIcon2 className="mr-5 size-5 transition-all duration-300 ![rotate:z_0deg] group-hover/link:mr-0" />
