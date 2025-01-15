@@ -41,7 +41,7 @@ const Accordion = ({ question, answer, isOpen, setIsOpen }) => {
         </button>
         <div
           className={`grid overflow-hidden ${
-            isOpen ? "py-2" : ""
+            isOpen && "py-2"
           } text-slate-600 transition-all duration-300 ease-in-out ~text-sm/base ${
             isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
           }`}

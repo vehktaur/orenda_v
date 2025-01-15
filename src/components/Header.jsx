@@ -250,17 +250,17 @@ const Header = () => {
                       </NavLink>
                     </li>
                   ))}
-                  <Accordion type="single" collapsible className="w-full">
-                    {linkWithSubLinks.map((link) => {
-                      return (
-                        <NavbarAccordion
-                          key={link.path}
-                          link={link}
-                          closeMenu={displayMenu}
-                        />
-                      );
-                    })}
-                  </Accordion>
+
+                  {linkWithSubLinks.map((link) => {
+                    return (
+                      <NavbarAccordion
+                        key={link.path}
+                        link={link}
+                        closeMenu={displayMenu}
+                        navOpen={navOpen}
+                      />
+                    );
+                  })}
                 </ul>
                 <a
                   target="_blank"
