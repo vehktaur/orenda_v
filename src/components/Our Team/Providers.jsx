@@ -80,6 +80,7 @@ const Providers = ({ itemsPerPage, numberOfColumns, forHome }) => {
           width: "20rem",
           minWidth: "20rem",
           duration: 0.4,
+          ease: "sine.inOut",
         },
       );
     }

@@ -186,7 +186,7 @@ const Header = () => {
             link
             target="_blank"
             to={zocLink}
-            className="hidden w-fit px-4 py-2 font-semibold ~text-sm/base forNav:block"
+            className="hidden w-fit px-4 py-[0.62rem] font-semibold ~text-sm/lg forNav:block"
           >
             Book Now
           </Button>
