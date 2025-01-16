@@ -7,15 +7,15 @@ import { useSearchParams } from "react-router-dom";
 const Blogs = () => {
   const categories = [
     "",
-    "Holidays",
-    "Anxiety",
-    "Depression",
-    "Therapy",
-    "Psychology",
+    "holidays",
+    "anxiety",
+    "depression",
+    "therapy",
+    "psychology",
   ];
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const activeCategory = searchParams.get("category") || "";
+  const activeCategory = searchParams.get("category") ?? "";
 
   const setActiveCategory = (category) => {
     if (category === "") {
@@ -46,7 +46,7 @@ const Blogs = () => {
             <button
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "w-fit flex-shrink-0 rounded-3xl border border-light-grey px-4 py-2 transition-colors hover:bg-purple-50 md:flex-shrink",
+                "w-fit flex-shrink-0 rounded-3xl border border-light-grey px-4 py-2 capitalize transition-colors hover:bg-purple-50 md:flex-shrink",
                 {
                   "bg-purple-mist": activeCategory === category,
                 },

@@ -7,7 +7,7 @@ const blogs = [
     title: `When Holidays Bring Stress`,
     description: `Understanding how stress relates to holiday seasons and practical tips to make the most of the season without losing our minds in the process.`,
     hero_img: "",
-    categories: [`Holidays`, `Anxiety`],
+    categories: [`holidays`, `anxiety`],
     created_at: "December, 2024",
     duration: "4 min",
     author: {
