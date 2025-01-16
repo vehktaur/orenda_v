@@ -27,8 +27,8 @@ const NavbarAccordion = ({ link, closeMenu, navOpen }) => {
 
         <DownArrowIcon
           className={cn(
-            "mt-0.5 size-6 stroke-white transition-colors duration-300 group-hover:stroke-[#333]",
-            { "stroke-[#333]": linkIsActive(link) },
+            "mt-0.5 size-6 stroke-white transition-all duration-300 group-hover:stroke-[#333]",
+            { "stroke-[#333]": linkIsActive(link), "rotate-180":isOpen },
           )}
         />
       </button>

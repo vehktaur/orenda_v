@@ -1,4 +1,3 @@
-import FilterSidebar from "../ui/Sidebar/FilterSidebar";
 import ContactUsSection from "./ContactUsSection";
 import PartnersHero from "./PartnersHero";
 import PartnersList from "./PartnersList";

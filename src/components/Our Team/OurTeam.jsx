@@ -1,9 +1,9 @@
-import BecomeProvider from '../About/BecomeProvider';
-import ContactUs from './ContactUs';
-import ExecutiveTeam from './ExecutiveTeam';
-import OurTeamIntro from './OurTeamIntro';
-import Providers from './Providers';
-import Team from './Team';
+import BecomeProvider from "../About/BecomeProvider";
+import ContactUs from "./ContactUs";
+import ExecutiveTeam from "./ExecutiveTeam";
+import OurTeamIntro from "./OurTeamIntro";
+import Providers from "./Providers";
+import Team from "./Team";
 
 const OurTeam = () => {
   return (
