@@ -75,7 +75,7 @@ export const partners = [
     name: "Charlie Health",
     operatingStates: "United States",
     image: partnersImages.charlie_health,
-    about: "Intensive out-patient care",
+    about: "Intensive outpatient care",
     biography: (
       <>
         <a
@@ -86,15 +86,15 @@ export const partners = [
         >
           Charlie Health
         </a>{" "}
-        is an intensive outpatient mental health care provider designed
-        specifically for adolescents and adults up to 50. They offer
+        is a virtual intensive outpatient mental health care provider designed
+        specifically for adolescents and adults ages 11-50. They offer
         personalized, evidence-based care through group, individual, and family
         therapy, tailored to those facing complex mental health challenges such
         as depression, anxiety, trauma, and substance use disorders. Charlie
-        Health is available across the U.S. and uses telehealth services to make
-        treatment more accessible. Their team of licensed professionals also
-        emphasize family involvement and community support as integral parts of
-        the healing process.
+        Health is available in 35 states across the U.S. and uses telehealth
+        services to make treatment even more accessible. Their team of licensed
+        professionals also emphasize family involvement and community support as
+        integral parts of the healing process.
       </>
     ),
   },
