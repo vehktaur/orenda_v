@@ -31,15 +31,15 @@ export const partners = [
     biography: `Charlie Health is an intensive outpatient mental health care provider designed specifically for adolescents and adults up to 50. They offer personalized, evidence-based care through group, individual, and family therapy, tailored to those facing complex mental health challenges such as depression, anxiety, trauma, and substance use disorders. Charlie Health is available across the U.S. and uses telehealth services to make treatment more accessible. Their team of licensed professionals also emphasize family involvement and community support as integral parts of the healing process.
 `,
   },
-  {
-    id: "k2l",
-    name: "Wondermed",
-    operatingStates: "New York",
-    image: partnersImages.wondermed,
-    about: "Ketamine therapy for treatment-resistant conditions",
-    biography:
-      "Wondermed offers a unique, science-based approach to mental health care through ketamine-assisted therapy. Their platform provides clients with guided therapeutic sessions that utilize ketamine, a well-researched psychedelic medication, to help treat conditions like anxiety and depression. Wondermed combines telemedicine with personalized care, offering online consultations, virtual support, and comprehensive monitoring by licensed professionals. Their mission is to unlock mental wellness through innovative, alternative therapies grounded in scientific research.",
-  },
+  // {
+  //   id: "k2l",
+  //   name: "Wondermed",
+  //   operatingStates: "New York",
+  //   image: partnersImages.wondermed,
+  //   about: "Ketamine therapy for treatment-resistant conditions",
+  //   biography:
+  //     "Wondermed offers a unique, science-based approach to mental health care through ketamine-assisted therapy. Their platform provides clients with guided therapeutic sessions that utilize ketamine, a well-researched psychedelic medication, to help treat conditions like anxiety and depression. Wondermed combines telemedicine with personalized care, offering online consultations, virtual support, and comprehensive monitoring by licensed professionals. Their mission is to unlock mental wellness through innovative, alternative therapies grounded in scientific research.",
+  // },
   {
     id: "j1kl",
     name: "Mountainside",
@@ -60,14 +60,14 @@ export const partners = [
       ),
     },
   },
-  {
-    id: "9i0j",
-    name: "The Renfrew Center",
-    operatingStates:
-      "Nationwide (Multiple locations and virtual treatment options)",
-    image: partnersImages.renfrew,
-    about: "Eating Disorder Treatment Center",
-    biography:
-      "The Renfrew Center specializes in eating disorder treatment, dedicated to empowering women, adolescents, transgender, and non-binary individuals toward recovery. Established in 1985, it has treated over 100,000 individuals through evidence-based programs that emphasize respect for the unique psychology of each person and the importance of collaborative therapeutic relationships. With residential centers in Philadelphia, PA, and Coconut Creek, FL, and multiple outpatient sites nationwide, Renfrew offers a range of services, including inpatient and outpatient programs, specialized offerings for various populations, and virtual treatment options.",
-  },
+  // {
+  //   id: "9i0j",
+  //   name: "The Renfrew Center",
+  //   operatingStates:
+  //     "Nationwide (Multiple locations and virtual treatment options)",
+  //   image: partnersImages.renfrew,
+  //   about: "Eating Disorder Treatment Center",
+  //   biography:
+  //     "The Renfrew Center specializes in eating disorder treatment, dedicated to empowering women, adolescents, transgender, and non-binary individuals toward recovery. Established in 1985, it has treated over 100,000 individuals through evidence-based programs that emphasize respect for the unique psychology of each person and the importance of collaborative therapeutic relationships. With residential centers in Philadelphia, PA, and Coconut Creek, FL, and multiple outpatient sites nationwide, Renfrew offers a range of services, including inpatient and outpatient programs, specialized offerings for various populations, and virtual treatment options.",
+  // },
 ];
